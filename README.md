@@ -1,10 +1,10 @@
 # CareerLens — Precision Cognitive AI Career Recommendation System
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-carrerlens--a3d1.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://carrerlens-a3d1.onrender.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-carrerlens--a3dl.onrender.com-brightgreen?style=for-the-badge&logo=render)](https://carrerlens-a3dl.onrender.com)
 [![Release](https://img.shields.io/badge/Release-v2.1.0-blue?style=for-the-badge&logo=github)](https://github.com/Shashank531/CarrerLens/releases)
 [![Python](https://img.shields.io/badge/Python-3.11-yellow?style=for-the-badge&logo=python)](https://python.org)
 
-> **🌐 Live Application URL**: [https://carrerlens-a3d1.onrender.com](https://carrerlens-a3d1.onrender.com)  
+> **🌐 Live Application URL**: [https://carrerlens-a3dl.onrender.com](https://carrerlens-a3dl.onrender.com)  
 > Anyone can access the full web application directly without local installation.
 
 ---
