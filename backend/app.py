@@ -20,6 +20,7 @@ import sys
 import json
 import random
 import string
+from functools import lru_cache
 from pathlib import Path
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -45,12 +46,6 @@ DB_PATH   = BASE / "careerlens.db"
 db        = Database(str(DB_PATH))
 db.init_schema()
 
-# Export initial userdata CSV on startup
-try:
-    export_userdata_to_csv(str(DB_PATH))
-except Exception as e:
-    print(f"[Warning] Failed initial userdata CSV export: {e}")
-
 QUESTIONS        = load_questions(str(DATA / "questions.csv"))
 SKILL_CONFIDENCE = skill_confidence(QUESTIONS)
 fuzzy            = FuzzyEngine(data_dir=str(DATA))
@@ -60,6 +55,27 @@ roadmap_builder  = RoadmapBuilder(data_dir=str(DATA))
 
 
 # ── helpers ───────────────────────────────────────────────────────
+
+@lru_cache(maxsize=256)
+def _rank_all_cached(profile_key: tuple) -> tuple:
+    """
+    Score every career for a given skill profile, memoised.
+
+    The same profile is scored by /api/submit, then again by /api/results and
+    again by each PDF request; the rule base is static at runtime, so the
+    ranking only depends on the profile itself.
+    """
+    ranked = fuzzy.score_all(dict(profile_key), confidence=SKILL_CONFIDENCE)
+    return tuple((r["career"], r["compatibility"]) for r in ranked)
+
+
+def rank_all(skill_profile: dict) -> list:
+    """Cached ranking for a profile, returned as fresh dicts each call."""
+    key = tuple(sorted((skill, round(float(score), 4)) for skill, score in skill_profile.items()))
+    return [{"career": career, "compatibility": compatibility}
+            for career, compatibility in _rank_all_cached(key)]
+
+
 def _generate_code(name: str) -> str:
     """
     Returns a unique login code like  ARJUN-4827
@@ -97,10 +113,6 @@ def register():
                 break
 
         user_id = db.create_user(name=name, education=education, unique_code=code)
-        try:
-            export_userdata_to_csv(str(DB_PATH))
-        except Exception as e:
-            print(f"[Warning] Failed to export userdata CSV: {e}")
         return jsonify({"user_id": user_id, "unique_code": code, "name": name}), 201
     except Exception as e:
         import traceback
@@ -156,10 +168,6 @@ def save_draft():
 
     answers = {str(k): int(v) for k, v in answers.items()}
     assessment_id = db.save_draft(int(user_id), answers)
-    try:
-        export_userdata_to_csv(str(DB_PATH))
-    except Exception as e:
-        print(f"[Warning] Failed to export userdata CSV: {e}")
     return jsonify({
         "status": "saved",
         "assessment_id": assessment_id,
@@ -207,7 +215,7 @@ def submit():
         db.complete_assessment(assessment_id)
 
         skill_profile = extract_features(answers, QUESTIONS)
-        ranked        = fuzzy.score_all(skill_profile, confidence=SKILL_CONFIDENCE)
+        ranked        = rank_all(skill_profile)
         top5          = rec_engine.recommend(skill_profile, ranked, top_n=5)
 
         # Compute full score ranking for all 105 careers
@@ -229,11 +237,6 @@ def submit():
             roadmaps[name]   = roadmap_builder.build(name, gaps)
 
         db.save_results(assessment_id, skill_profile, top5, top30, skill_gaps, roadmaps)
-
-        try:
-            export_userdata_to_csv(str(DB_PATH))
-        except Exception as e:
-            print(f"[Warning] Failed to export userdata CSV: {e}")
 
         return jsonify({
             "assessment_id": assessment_id,
@@ -261,7 +264,7 @@ def _hydrate_result(result: dict) -> dict:
     skill_profile = result.get("skill_profile", {})
     
     # Calculate full 105-career score map
-    ranked = fuzzy.score_all(skill_profile, confidence=SKILL_CONFIDENCE)
+    ranked = rank_all(skill_profile)
     result["all_scores"] = {r["career"]: r["compatibility"] for r in ranked}
     
     if not result.get("top30"):
