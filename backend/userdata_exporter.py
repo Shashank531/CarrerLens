@@ -27,7 +27,7 @@ def export_userdata_to_csv(db_path: Optional[str] = None):
     if db_path is None:
         db_path = str(BASE_DIR / "careerlens.db")
 
-    conn = sqlite3.connect(db_path)
+    conn = sqlite3.connect(db_path, timeout=30.0)
     conn.row_factory = sqlite3.Row
 
     # Ensure destination directories exist

@@ -1994,7 +1994,7 @@
             });
 
             reportBtn.addEventListener('click', async () => {
-                const userId = sessionStorage.getItem('cl_user_id');
+                const userId = sessionStorage.getItem('cl_user_id') || localStorage.getItem('cl_user_id');
                 if (!userId) {
                     if (confirm("You're not logged in.\nResults won't be saved.\nGo to login?")) {
                         window.location.href = 'login.html';
@@ -2009,7 +2009,8 @@
                 reportBtn.textContent = 'Analysing…';
                 try {
                     const base = (window.CAREERLENS_CONFIG && window.CAREERLENS_CONFIG.API_BASE) || (window.location.protocol === 'file:' ? 'http://localhost:5000/api' : '/api');
-                    const res = await fetch(`${base}/submit`, {
+                    const endpoint = base.endsWith('/') ? `${base}submit` : `${base}/submit`;
+                    const res = await fetch(endpoint, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ user_id: Number(userId), answers: answerMap })
@@ -2018,7 +2019,7 @@
                     try {
                         data = await res.json();
                     } catch (jsonErr) {
-                        throw new Error('Server returned an invalid response. Make sure Flask is running: python app.py');
+                        throw new Error('Server returned an invalid response. Make sure backend is running.');
                     }
                     if (!res.ok) throw new Error(data.error || `Server error (HTTP ${res.status})`);
                     sessionStorage.setItem('cl_results', JSON.stringify(data));
@@ -2027,6 +2028,7 @@
                     sessionStorage.removeItem('cl_saved_answers');
                     window.location.href = 'results.html';
                 } catch (err) {
+                    console.error('Submission error:', err);
                     alert('Could not submit: ' + err.message);
                     reportBtn.disabled = false;
                     reportBtn.textContent = 'See the Report →';

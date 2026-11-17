@@ -82,25 +82,30 @@ def register():
     Body: { "name": "Arjun", "education": "B.Tech" }   (education optional)
     Returns: { "user_id": 3, "unique_code": "ARJUN-4827", "name": "Arjun" }
     """
-    data = request.get_json(silent=True) or {}
-    name = (data.get("name") or "").strip()
-    if not name:
-        return _err("name is required")
-
-    education = (data.get("education") or "").strip() or None
-
-    # generate a unique code; retry on collision (extremely rare)
-    for _ in range(10):
-        code = _generate_code(name)
-        if not db.get_user_by_code(code):
-            break
-
-    user_id = db.create_user(name=name, education=education, unique_code=code)
     try:
-        export_userdata_to_csv(str(DB_PATH))
+        data = request.get_json(silent=True) or {}
+        name = (data.get("name") or "").strip()
+        if not name:
+            return _err("name is required")
+
+        education = (data.get("education") or "").strip() or None
+
+        # generate a unique code; retry on collision (extremely rare)
+        for _ in range(10):
+            code = _generate_code(name)
+            if not db.get_user_by_code(code):
+                break
+
+        user_id = db.create_user(name=name, education=education, unique_code=code)
+        try:
+            export_userdata_to_csv(str(DB_PATH))
+        except Exception as e:
+            print(f"[Warning] Failed to export userdata CSV: {e}")
+        return jsonify({"user_id": user_id, "unique_code": code, "name": name}), 201
     except Exception as e:
-        print(f"[Warning] Failed to export userdata CSV: {e}")
-    return jsonify({"user_id": user_id, "unique_code": code, "name": name}), 201
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": f"Registration failed: {str(e)}"}), 500
 
 
 @app.route("/api/login", methods=["POST"])
@@ -109,23 +114,28 @@ def login():
     Body: { "unique_code": "ARJUN-4827" }
     Returns: { "user_id": 3, "name": "Arjun", "history": [...] }
     """
-    data = request.get_json(silent=True) or {}
-    code = (data.get("unique_code") or "").strip().upper()
-    if not code:
-        return _err("unique_code is required")
+    try:
+        data = request.get_json(silent=True) or {}
+        code = (data.get("unique_code") or "").strip().upper()
+        if not code:
+            return _err("unique_code is required")
 
-    user = db.get_user_by_code(code)
-    if not user:
-        return _err("No account found with that code. Check the code and try again.", 404)
+        user = db.get_user_by_code(code)
+        if not user:
+            return _err("No account found with that code. Check the code and try again.", 404)
 
-    history = db.get_user_history(user["id"])
-    return jsonify({
-        "user_id":     user["id"],
-        "name":        user["name"],
-        "education":   user["education"],
-        "unique_code": user["unique_code"],
-        "history":     history,
-    })
+        history = db.get_user_history(user["id"])
+        return jsonify({
+            "user_id":     user["id"],
+            "name":        user["name"],
+            "education":   user["education"],
+            "unique_code": user["unique_code"],
+            "history":     history,
+        })
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": f"Login failed: {str(e)}"}), 500
 
 
 @app.route("/api/assessment/draft", methods=["POST"])
@@ -178,61 +188,66 @@ def submit():
     Runs the full pipeline and returns results + saves to DB.
     Returns: { "skill_profile": {...}, "top5": [...], "skill_gaps": {...}, "roadmaps": {...} }
     """
-    data = request.get_json(silent=True) or {}
-    user_id = data.get("user_id")
-    answers  = data.get("answers", {})
-
-    if not user_id:
-        return _err("user_id is required")
-    if len(answers) < 10:
-        return _err("Too few answers submitted")
-
-    # convert string keys to expected format
-    answers = {str(k): int(v) for k, v in answers.items()}
-
-    # ── pipeline ──
-    assessment_id = db.start_assessment(user_id)
-    db.save_responses(assessment_id, answers)
-    db.complete_assessment(assessment_id)
-
-    skill_profile = extract_features(answers, QUESTIONS)
-    ranked        = fuzzy.score_all(skill_profile, confidence=SKILL_CONFIDENCE)
-    top5          = rec_engine.recommend(skill_profile, ranked, top_n=5)
-
-    # Compute full score ranking for all 105 careers
-    all_scores = {r["career"]: r["compatibility"] for r in ranked}
-
-    # top 30 — lightweight list (no explanation/roadmap, just name + score)
-    top30 = [
-        {"career": r["career"], "compatibility": r["compatibility"]}
-        for r in ranked[:30]
-    ]
-
-    # skill gaps + roadmaps for each top career
-    skill_gaps = {}
-    roadmaps   = {}
-    for career in top5:
-        name = career["career"]
-        gaps = gap_analyzer.analyze(name, skill_profile)
-        skill_gaps[name] = gaps
-        roadmaps[name]   = roadmap_builder.build(name, gaps)
-
-    db.save_results(assessment_id, skill_profile, top5, top30, skill_gaps, roadmaps)
-
     try:
-        export_userdata_to_csv(str(DB_PATH))
-    except Exception as e:
-        print(f"[Warning] Failed to export userdata CSV: {e}")
+        data = request.get_json(silent=True) or {}
+        user_id = data.get("user_id")
+        answers  = data.get("answers", {})
 
-    return jsonify({
-        "assessment_id": assessment_id,
-        "skill_profile": skill_profile,
-        "top5":          top5,
-        "top30":         top30,
-        "all_scores":    all_scores,
-        "skill_gaps":    skill_gaps,
-        "roadmaps":      roadmaps,
-    })
+        if not user_id:
+            return _err("user_id is required")
+        if len(answers) < 10:
+            return _err("Too few answers submitted")
+
+        # convert string keys to expected format
+        answers = {str(k): int(v) for k, v in answers.items()}
+
+        # ── pipeline ──
+        assessment_id = db.start_assessment(user_id)
+        db.save_responses(assessment_id, answers)
+        db.complete_assessment(assessment_id)
+
+        skill_profile = extract_features(answers, QUESTIONS)
+        ranked        = fuzzy.score_all(skill_profile, confidence=SKILL_CONFIDENCE)
+        top5          = rec_engine.recommend(skill_profile, ranked, top_n=5)
+
+        # Compute full score ranking for all 105 careers
+        all_scores = {r["career"]: r["compatibility"] for r in ranked}
+
+        # top 30 — lightweight list (no explanation/roadmap, just name + score)
+        top30 = [
+            {"career": r["career"], "compatibility": r["compatibility"]}
+            for r in ranked[:30]
+        ]
+
+        # skill gaps + roadmaps for each top career
+        skill_gaps = {}
+        roadmaps   = {}
+        for career in top5:
+            name = career["career"]
+            gaps = gap_analyzer.analyze(name, skill_profile)
+            skill_gaps[name] = gaps
+            roadmaps[name]   = roadmap_builder.build(name, gaps)
+
+        db.save_results(assessment_id, skill_profile, top5, top30, skill_gaps, roadmaps)
+
+        try:
+            export_userdata_to_csv(str(DB_PATH))
+        except Exception as e:
+            print(f"[Warning] Failed to export userdata CSV: {e}")
+
+        return jsonify({
+            "assessment_id": assessment_id,
+            "skill_profile": skill_profile,
+            "top5":          top5,
+            "top30":         top30,
+            "all_scores":    all_scores,
+            "skill_gaps":    skill_gaps,
+            "roadmaps":      roadmaps,
+        })
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": f"Assessment processing failed: {str(e)}"}), 500
 
 
 

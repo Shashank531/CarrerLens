@@ -38,3 +38,5 @@ assessment_id,user_id,unique_code,user_name,education,started_at,completed_at,st
 36,37,PRIYA-8283,Priya Patel,B.Tech Computer Science,2026-08-28T16:07:26.729465+00:00,,in_progress,5,,,,,,,,
 37,37,PRIYA-8283,Priya Patel,B.Tech Computer Science,2026-08-28T16:07:26.794719+00:00,2026-08-28T16:07:26.795719+00:00,completed,70,Embedded Systems Engineer,96.0,Data Analyst,79.0,Blockchain Developer,78.1,Mechanical Engineer,Data Engineer
 38,44,MANYA-3615,Manya,,2026-09-01T02:49:29.959639+00:00,2026-09-01T02:49:29.963140+00:00,completed,70,Urban Planner,96.0,Interior Designer,95.5,Agronomist,95.1,Civil Services Officer,Paralegal
+40,48,TESTA-6474,Test Arjun,B.Tech,2026-11-17T12:08:15.000339+00:00,2026-11-17T12:08:15.000339+00:00,completed,70,Sports Analyst,96.0,Frontend Developer,82.2,Performance Marketing Specialist,82.2,Veterinarian,Business Intelligence Analyst
+41,49,PERFT-2146,Perf Test,B.Tech,2026-11-17T12:09:02.706669+00:00,2026-11-17T12:09:02.708685+00:00,completed,70,Sports Analyst,96.0,Frontend Developer,82.2,Performance Marketing Specialist,82.2,Veterinarian,Business Intelligence Analyst

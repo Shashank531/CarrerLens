@@ -44,7 +44,7 @@ const CareerAPI = (() => {
    * @returns {Promise<Object>} — { skill_profile, top5, skill_gaps, roadmaps }
    */
   async function submitAnswers(answers) {
-    const userId = sessionStorage.getItem("cl_user_id");
+    const userId = sessionStorage.getItem("cl_user_id") || localStorage.getItem("cl_user_id");
     if (!userId) throw new Error("Not logged in. Please register or log in first.");
     return _post("/submit", { user_id: Number(userId), answers });
   }
