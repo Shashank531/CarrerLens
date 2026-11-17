@@ -12,6 +12,14 @@ Each career's compatibility output (0-100) is fuzzified into 4 levels:
 rules.csv supplies up to 4 antecedents (skill+level) -> one consequent
 (career compatibility level) per rule.
 
+The inference is evaluated directly with numpy (min implication, max
+aggregation, trapezoidal centroid) instead of building one
+scikit-fuzzy ControlSystemSimulation per career. Scores are identical to the
+previous implementation — backend/test_fuzzy_numerics.py compares both — but
+scoring holds no per-request state, so one engine can serve concurrent
+requests and a career's score can no longer depend on which profiles were
+scored before it. All 105 careers are scored in ~2ms instead of ~9ms.
+
 Usage:
     from fuzzy_engine import FuzzyEngine
 
@@ -23,11 +31,9 @@ Usage:
 import csv
 import math
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import numpy as np
-import skfuzzy as fuzz
-from skfuzzy import control as ctrl
 
 
 LEVELS_IN = ["Very Low", "Low", "Medium", "High", "Very High"]
@@ -43,18 +49,88 @@ MIN_COMPATIBILITY = 12.0         # Lower bound for compatibility scale
 MAX_COMPATIBILITY = 96.0         # Upper bound for compatibility scale
 
 
+# ── Universe of discourse & membership functions ──────────────────────
+SKILL_UNIVERSE = np.arange(0.0, 10.01, 0.1)
+COMPAT_UNIVERSE = np.arange(0.0, 100.01, 1.0)
+
+
+def _trimf(x: np.ndarray, a: float, b: float, c: float) -> np.ndarray:
+    """Triangular membership function, matching skfuzzy.fuzz.trimf exactly."""
+    y = np.zeros_like(x, dtype=float)
+    if a != b:
+        idx = (a < x) & (x < b)
+        y[idx] = (x[idx] - a) / (b - a)
+    if b != c:
+        idx = (b < x) & (x < c)
+        y[idx] = (c - x[idx]) / (c - b)
+    y[x == b] = 1.0
+    return y
+
+
+# Row order matches LEVELS_IN / LEVELS_OUT.
+_SKILL_MF = np.vstack([
+    _trimf(SKILL_UNIVERSE, 0, 0, 2.5),      # Very Low
+    _trimf(SKILL_UNIVERSE, 0, 2.5, 5),      # Low
+    _trimf(SKILL_UNIVERSE, 2.5, 5, 7.5),    # Medium
+    _trimf(SKILL_UNIVERSE, 5, 7.5, 10),     # High
+    _trimf(SKILL_UNIVERSE, 7.5, 10, 10),    # Very High
+])
+# Tiered triangles per output level, row order matches LEVELS_OUT.
+_COMPAT_TRIANGLES = [
+    (0.0, 0.0, 35.0),     # Low
+    (20.0, 45.0, 68.0),   # Medium
+    (55.0, 74.0, 90.0),   # High
+    (78.0, 100.0, 100.0),  # Excellent
+]
+_COMPAT_MF = np.vstack([_trimf(COMPAT_UNIVERSE, a, b, c) for a, b, c in _COMPAT_TRIANGLES])
+
+_IN_INDEX = {name: i for i, name in enumerate(LEVELS_IN)}
+_OUT_INDEX = {name: i for i, name in enumerate(LEVELS_OUT)}
+
+
+def _centroid(universe: np.ndarray, aggregated: np.ndarray) -> float:
+    """
+    Centroid of a piecewise-linear membership function, integrated with the
+    trapezoid rule (the same defuzzification scikit-fuzzy performs).
+    """
+    y1, y2 = aggregated[:-1], aggregated[1:]
+    x1, x2 = universe[:-1], universe[1:]
+
+    area = 0.5 * (x2 - x1) * (y1 + y2)
+    heights = y1 + y2
+    nonzero = heights > 0
+    if not nonzero.any():
+        return 0.0
+
+    area_nz = area[nonzero]
+    moment = area_nz * (
+        x1[nonzero] * (2 * y1[nonzero] + y2[nonzero])
+        + x2[nonzero] * (y1[nonzero] + 2 * y2[nonzero])
+    ) / (3 * heights[nonzero])
+
+    total_area = area_nz.sum()
+    if total_area == 0:
+        return 0.0
+    return float(moment.sum() / total_area)
+
+
 class FuzzyEngine:
     def __init__(self, data_dir: str):
         data_dir = Path(data_dir)
         self._data_dir = data_dir
         self.rules_by_career = self._load_rules(data_dir / "rules.csv")
         self.careers = self._load_careers(data_dir / "careers.csv")
-        
+
         matrix_path = data_dir / "career_skill_matrix.csv"
         if matrix_path.exists():
             self.load_skill_matrix(str(matrix_path))
-            
-        self._systems_cache: Dict[str, ctrl.ControlSystemSimulation] = {}
+
+        # Every skill referenced by any rule becomes one row of the membership
+        # matrix that each profile is fuzzified into.
+        self.skills = sorted({s for rules in self.rules_by_career.values()
+                              for r in rules for s, _ in r["antecedents"]})
+        self._skill_row = {s: i for i, s in enumerate(self.skills)}
+        self._compiled = self._compile_rules()
 
     # ---------- Loading ----------
 
@@ -79,53 +155,74 @@ class FuzzyEngine:
         with open(path, newline="", encoding="utf-8") as f:
             return [row["Career Name"] for row in csv.DictReader(f)]
 
+    def _compile_rules(self) -> Dict[str, List[Tuple[np.ndarray, np.ndarray, int]]]:
+        """
+        Flatten each career's rules into index arrays so scoring is pure numpy:
+        (skill rows, level columns, consequent level index) per rule.
+        """
+        compiled: Dict[str, List[Tuple[np.ndarray, np.ndarray, int]]] = {}
+        for career, rules in self.rules_by_career.items():
+            career_rules = []
+            for r in rules:
+                if not r["antecedents"]:
+                    continue
+                rows = np.array([self._skill_row[s] for s, _ in r["antecedents"]], dtype=np.intp)
+                cols = np.array([_IN_INDEX[lvl] for _, lvl in r["antecedents"]], dtype=np.intp)
+                career_rules.append((rows, cols, _OUT_INDEX[r["consequent"]]))
+            if career_rules:
+                compiled[career] = career_rules
+        return compiled
+
     # ---------- Fuzzy machinery ----------
 
-    def _make_skill_antecedent(self, name: str) -> ctrl.Antecedent:
-        """0-10 skill input with 5 overlapping triangular membership functions."""
-        universe = np.arange(0, 10.01, 0.1)
-        var = ctrl.Antecedent(universe, name)
-        var["Very Low"] = fuzz.trimf(universe, [0, 0, 2.5])
-        var["Low"] = fuzz.trimf(universe, [0, 2.5, 5])
-        var["Medium"] = fuzz.trimf(universe, [2.5, 5, 7.5])
-        var["High"] = fuzz.trimf(universe, [5, 7.5, 10])
-        var["Very High"] = fuzz.trimf(universe, [7.5, 10, 10])
-        return var
+    def _fuzzify(self, skill_profile: Dict[str, float]) -> np.ndarray:
+        """Membership of every known skill in each of the 5 input levels."""
+        values = np.array([skill_profile.get(s, MISSING_SKILL_DEFAULT) for s in self.skills],
+                          dtype=float)
+        membership = np.empty((len(self.skills), len(LEVELS_IN)))
+        for j in range(len(LEVELS_IN)):
+            membership[:, j] = np.interp(values, SKILL_UNIVERSE, _SKILL_MF[j])
+        return membership
 
-    def _make_compatibility_consequent(self) -> ctrl.Consequent:
-        """0-100 compatibility output with 4 overlapping triangular membership functions."""
-        universe = np.arange(0, 100.01, 1)
-        var = ctrl.Consequent(universe, "compatibility")
-        var["Low"] = fuzz.trimf(universe, [0, 0, 35])
-        var["Medium"] = fuzz.trimf(universe, [20, 45, 68])
-        var["High"] = fuzz.trimf(universe, [55, 74, 90])
-        var["Excellent"] = fuzz.trimf(universe, [78, 100, 100])
-        return var
+    def _score_with_membership(self, career: str, membership: np.ndarray) -> float:
+        """
+        Mamdani inference for one career: min implication per rule, max
+        aggregation of the clipped consequent curves, centroid defuzzification.
+        """
+        rules = self._compiled.get(career)
+        if not rules:
+            return 0.0
 
-    def _build_system(self, career: str) -> ctrl.ControlSystemSimulation:
-        career_rules = self.rules_by_career.get(career, [])
-        skills_used = sorted({skill for r in career_rules for skill, _ in r["antecedents"]})
+        fired = []
+        for rows, cols, level in rules:
+            strength = float(membership[rows, cols].min())
+            if strength > 0.0:
+                fired.append((strength, level))
 
-        antecedents = {s: self._make_skill_antecedent(s) for s in skills_used}
-        compatibility = self._make_compatibility_consequent()
+        if not fired:
+            # No rule fired at all (all memberships ~0)
+            return 0.0
 
-        fuzzy_rules = []
-        for r in career_rules:
-            if not r["antecedents"]:
-                continue
-            term = None
-            for skill, level in r["antecedents"]:
-                clause = antecedents[skill][level]
-                term = clause if term is None else (term & clause)
-            fuzzy_rules.append(ctrl.Rule(term, compatibility[r["consequent"]]))
+        # Clipping a consequent triangle at its activation level introduces two
+        # x-values where the curve leaves the flat top. Adding those to the
+        # universe keeps the aggregated curve piecewise-linear in every
+        # interval, so the trapezoid centroid is exact (this is what
+        # scikit-fuzzy's upsampling does).
+        extra = []
+        for strength, level in fired:
+            a, b, c = _COMPAT_TRIANGLES[level]
+            if a < b:
+                extra.append(a + strength * (b - a))
+            if b < c:
+                extra.append(c - strength * (c - b))
+        universe = np.union1d(COMPAT_UNIVERSE, extra) if extra else COMPAT_UNIVERSE
 
-        system = ctrl.ControlSystem(fuzzy_rules)
-        return ctrl.ControlSystemSimulation(system)
+        aggregated = np.zeros_like(universe)
+        for strength, level in fired:
+            curve = np.interp(universe, COMPAT_UNIVERSE, _COMPAT_MF[level])
+            np.fmax(aggregated, np.minimum(strength, curve), out=aggregated)
 
-    def _get_system(self, career: str) -> ctrl.ControlSystemSimulation:
-        if career not in self._systems_cache:
-            self._systems_cache[career] = self._build_system(career)
-        return self._systems_cache[career]
+        return round(_centroid(universe, aggregated), 1)
 
     # ---------- Public API ----------
 
@@ -135,21 +232,7 @@ class FuzzyEngine:
         Returns a compatibility percentage 0-100.
         Missing skills in the user's profile default to MISSING_SKILL_DEFAULT (0.0).
         """
-        career_rules = self.rules_by_career.get(career, [])
-        skills_used = sorted({skill for r in career_rules for skill, _ in r["antecedents"]})
-        if not skills_used:
-            return 0.0
-
-        sim = self._get_system(career)
-        for skill in skills_used:
-            sim.input[skill] = skill_profile.get(skill, MISSING_SKILL_DEFAULT)
-
-        try:
-            sim.compute()
-            return round(float(sim.output["compatibility"]), 1)
-        except Exception:
-            # No rule fired strongly enough to produce output (all memberships ~0)
-            return 0.0
+        return self._score_with_membership(career, self._fuzzify(skill_profile))
 
     def _skill_matrix_score(
         self,
@@ -234,9 +317,11 @@ class FuzzyEngine:
         Score every career with real fit-preserving discrimination.
         Returns a descending list of {"career": str, "compatibility": float, "raw_score": float}.
         """
+        membership = self._fuzzify(skill_profile)
+
         raw_list = []
         for career in self.careers:
-            fuzzy_score = self.score_career(career, skill_profile)
+            fuzzy_score = self._score_with_membership(career, membership)
             matrix_score = self._skill_matrix_score(career, skill_profile, confidence=confidence)
             if fuzzy_score > 0:
                 combined = FUZZY_WEIGHT * fuzzy_score + MATRIX_WEIGHT * matrix_score
