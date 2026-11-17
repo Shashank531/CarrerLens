@@ -1,0 +1,38 @@
+# Python byte-code and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+ENV/
+
+# IDE / Editors / Temp Office files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
+
+# SQLite temporary journal and lock files
+*.db-shm
+*.db-wal
+*.db-journal
+
+# Antigravity agent scratch & cache
+.agents/

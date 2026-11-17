@@ -1,0 +1,1455 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CareerLens — a career, not a category</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Space+Grotesk:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/music.css">
+  <style>
+    /* ===== LIGHT / DARK VARIABLES ===== */
+    :root {
+      --void: #F2EEE4;
+      --ink: #14120F;
+      --text-body: #1F1C18;
+      --text-muted: #4A443A;
+      --rust: #B5502E;
+      --plum: #5B4B63;
+      --dust: #4A443A;
+      --line: rgba(28, 26, 22, .18);
+      --surface: rgba(242, 238, 228, .92);
+      --shadow: rgba(28, 26, 22, .08);
+      --card-bg: #F2EEE4;
+      --toggle-bg: #e0dcd2;
+      --toggle-dot: #1C1A16;
+      --halo-color: #1C1A16;
+      --halo-opacity: .22;
+      --compare-bg: #F2EEE4;
+      --border-light: rgba(28, 26, 22, .18);
+      --compare-text: #14120F;
+      --compare-label: #4A443A;
+      --compare-li-color: #1F1C18;
+      --player-bg: rgba(242, 238, 228, .92);
+    }
+
+    [data-theme="dark"] {
+      --void: #171512;
+      --ink: #FAF6ED;
+      --text-body: #FAF5EB;
+      --text-muted: #D6CEBF;
+      --rust: #E0734D;
+      --plum: #9D8DA8;
+      --dust: #D6CEBF;
+      --line: rgba(234, 230, 220, .16);
+      --surface: rgba(23, 21, 18, .95);
+      --shadow: rgba(0, 0, 0, .45);
+      --card-bg: #1E1B17;
+      --toggle-bg: #3a3630;
+      --toggle-dot: #EAE6DC;
+      --halo-color: #EAE6DC;
+      --halo-opacity: .12;
+      --compare-bg: #1E1B17;
+      --border-light: rgba(234, 230, 220, .14);
+      --compare-text: #FAF6ED;
+      --compare-label: #D6CEBF;
+      --compare-li-color: #FAF5EB;
+      --player-bg: rgba(30, 27, 23, .92);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(196, 90, 50, 0.45) transparent;
+    }
+
+    [data-theme="dark"] * {
+      scrollbar-color: rgba(224, 122, 84, 0.45) transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(196, 90, 50, 0.35);
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background-clip: padding-box;
+      transition: background 0.25s ease;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--rust);
+    }
+    [data-theme="dark"] ::-webkit-scrollbar-thumb {
+      background: rgba(224, 122, 84, 0.35);
+    }
+    [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+      background: var(--rust);
+    }
+    ::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-button {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    html {
+      background: var(--void);
+      scroll-behavior: smooth;
+      transition: background .4s ease, color .4s ease;
+    }
+
+    body {
+      margin: 0;
+      background: var(--void);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      cursor: crosshair;
+      overflow-x: hidden;
+      transition: background .4s ease, color .4s ease;
+      padding-bottom: 0;
+    }
+
+    #field {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: .05;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+      transition: opacity .4s ease;
+    }
+
+    [data-theme="dark"] .grain {
+      opacity: .07;
+    }
+
+    .chrome {
+      position: relative;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    .chrome a,
+    .chrome button,
+    .chrome input {
+      pointer-events: auto !important;
+    }
+
+    a,
+    button,
+    input,
+    select,
+    .theme-toggle,
+    .header-btn,
+    .command,
+    .music-player,
+    .music-player * {
+      pointer-events: auto !important;
+      cursor: pointer;
+    }
+
+    header {
+      height: 68px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 0 28px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: background .4s ease, border-color .4s ease;
+      pointer-events: auto !important;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font: 500 20px/1 'DM Mono', monospace;
+      letter-spacing: -.06em;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color .4s ease;
+    }
+
+    .logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+      transition: opacity 0.3s ease;
+    }
+
+    .logo b {
+      font: 500 11px 'DM Mono', monospace;
+      vertical-align: top;
+      letter-spacing: 0;
+      color: var(--rust);
+      transition: color .4s ease;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .header-btn {
+      pointer-events: auto;
+      appearance: none;
+      background: var(--rust);
+      border: none;
+      color: #fff;
+      padding: 10px 22px;
+      font: 10px 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: background .3s, transform .25s, box-shadow .3s;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 2px 12px rgba(181, 80, 46, .25);
+    }
+
+    .header-btn:hover {
+      background: #c95d37;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(181, 80, 46, .35);
+    }
+
+    [data-theme="dark"] .header-btn {
+      background: var(--rust);
+      color: #171512;
+      box-shadow: 0 2px 16px rgba(217, 106, 68, .25);
+    }
+
+    [data-theme="dark"] .header-btn:hover {
+      background: #e07a54;
+      color: #171512;
+    }
+
+    .theme-toggle {
+      position: relative;
+      width: 44px;
+      height: 24px;
+      border: none;
+      border-radius: 14px;
+      background: var(--toggle-bg);
+      cursor: pointer;
+      transition: background .35s ease;
+      flex-shrink: 0;
+      padding: 0;
+      appearance: none;
+      -webkit-appearance: none;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, .12);
+    }
+
+    .theme-toggle::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--toggle-dot);
+      transition: transform .35s cubic-bezier(.4, 0, .2, 1), background .35s ease;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    }
+
+    [data-theme="dark"] .theme-toggle::after {
+      transform: translateX(20px);
+    }
+
+    .theme-toggle .icon-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5px;
+      pointer-events: none;
+      font-size: 11px;
+      line-height: 1;
+      color: var(--ink);
+      opacity: .5;
+      transition: color .4s ease, opacity .4s ease;
+    }
+
+    [data-theme="dark"] .theme-toggle .icon-wrap {
+      opacity: .7;
+    }
+
+    .cursor-orbit {
+      position: fixed;
+      z-index: 4;
+      width: 34px;
+      height: 34px;
+      border: 1px solid rgba(28, 26, 22, .4);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: width .4s, height .4s, background .4s, border-color .4s;
+    }
+
+    [data-theme="dark"] .cursor-orbit {
+      border-color: rgba(234, 230, 220, .3);
+    }
+
+    .cursor-orbit.pulse {
+      width: 86px;
+      height: 86px;
+      background: rgba(181, 80, 46, .09);
+    }
+
+    [data-theme="dark"] .cursor-orbit.pulse {
+      background: rgba(217, 106, 68, .12);
+    }
+
+    .ripples {
+      position: fixed;
+      inset: 0;
+      z-index: 2;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .ripple {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--rust);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: ripple 1.4s cubic-bezier(.1, .6, .2, 1) forwards;
+      transition: border-color .4s ease;
+    }
+
+    @keyframes ripple {
+      to {
+        width: 280px;
+        height: 280px;
+        opacity: 0;
+      }
+    }
+
+    section {
+      position: relative;
+      z-index: 2;
+      min-height: 100svh;
+      padding: clamp(102px, 15vh, 170px) 5.5vw 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      pointer-events: none;
+      transition: color .4s ease;
+    }
+
+    .eyebrow {
+      font: 500 11px/1 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--text-muted);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .eyebrow {
+      text-shadow: 0 1px 6px rgba(242, 238, 228, 0.95);
+    }
+
+    .eyebrow:before {
+      content: '';
+      height: 1px;
+      width: 30px;
+      background: currentColor;
+      transition: background .4s ease;
+    }
+
+    .hero-title {
+      margin: 0;
+      max-width: 1050px;
+      font: clamp(4rem, 10.5vw, 11.5rem)/.8 'Playfair Display', serif;
+      letter-spacing: -.03em;
+      font-weight: 500;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .hero-title {
+      text-shadow: 0 2px 14px rgba(242, 238, 228, 0.9);
+    }
+
+    .hero-title i {
+      display: block;
+      font-style: italic;
+      color: var(--rust);
+      margin-left: 14vw;
+      transition: color .4s ease;
+    }
+
+    .hero-title .outline {
+      color: transparent;
+      -webkit-text-stroke: 1px var(--ink);
+      transition: -webkit-text-stroke-color .4s ease;
+    }
+
+    .bottom-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      pointer-events: auto;
+    }
+
+    .caption {
+      max-width: 380px;
+      margin: 0;
+      font: 500 13.5px/1.68 'DM Mono', monospace;
+      color: var(--text-body);
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.95), 0 0 2px rgba(0, 0, 0, 0.8);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .caption {
+      text-shadow: 0 1px 8px rgba(242, 238, 228, 0.95), 0 0 2px rgba(242, 238, 228, 0.9);
+    }
+
+    .caption b {
+      font-weight: 600;
+      color: var(--ink);
+      transition: color .4s ease;
+    }
+
+    .scroll-label {
+      font: 500 10.5px/1.5 'DM Mono', monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: right;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .scroll-label {
+      text-shadow: 0 1px 6px rgba(242, 238, 228, 0.95);
+    }
+
+    .scene-title {
+      font: clamp(3.4rem, 8.2vw, 8.5rem)/.85 'Playfair Display', serif;
+      letter-spacing: -.02em;
+      font-weight: 500;
+      max-width: 970px;
+      margin: 0;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .scene-title {
+      text-shadow: 0 2px 14px rgba(242, 238, 228, 0.9);
+    }
+
+    .scene-title i {
+      font-style: italic;
+      color: var(--rust);
+      transition: color .4s ease;
+    }
+
+    .scene-title .small {
+      font: 500 11px/1 'DM Mono', monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      display: block;
+      color: var(--text-muted);
+      margin: 0 0 26px 6px;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .scene-title .small {
+      text-shadow: 0 1px 6px rgba(242, 238, 228, 0.95);
+    }
+
+    .left-note {
+      max-width: 380px;
+      margin: 0;
+      font: 500 13.5px/1.68 'DM Mono', monospace;
+      color: var(--text-body);
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.95), 0 0 2px rgba(0, 0, 0, 0.8);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .left-note {
+      text-shadow: 0 1px 8px rgba(242, 238, 228, 0.95), 0 0 2px rgba(242, 238, 228, 0.9);
+    }
+
+    .chapters {
+      display: flex;
+      gap: 18px;
+      font: 500 11px/1 'DM Mono', monospace;
+      color: var(--text-muted);
+      letter-spacing: .1em;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .chapters {
+      text-shadow: 0 1px 6px rgba(242, 238, 228, 0.95);
+    }
+
+    .chapters span {
+      color: var(--rust);
+      font-weight: 600;
+      transition: color .4s ease;
+    }
+
+    .act-three {
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .act-three .eyebrow {
+      align-self: flex-start;
+    }
+
+    .act-three .scene-title {
+      max-width: 860px;
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .act-three .scene-title .small {
+      text-align: right;
+      margin: 0 0 26px auto;
+    }
+
+    .act-three .bottom-row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .act-three .left-note {
+      align-self: flex-start;
+      text-align: left;
+      max-width: 380px;
+    }
+
+    .command {
+      pointer-events: auto;
+      appearance: none;
+      background: var(--ink);
+      border: 0;
+      color: var(--void);
+      padding: 17px 24px;
+      font: 10px 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      cursor: pointer;
+      transition: background .3s, transform .25s, color .3s, box-shadow .3s;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 2px 12px var(--shadow);
+    }
+
+    .command:hover {
+      transform: scale(.97);
+      background: var(--rust);
+      color: #fff;
+    }
+
+    .command:active {
+      transform: scale(.92);
+    }
+
+    [data-theme="dark"] .command {
+      background: var(--rust);
+      color: #171512;
+      box-shadow: 0 2px 16px rgba(217, 106, 68, .25);
+    }
+
+    [data-theme="dark"] .command:hover {
+      background: #e07a54;
+      color: #171512;
+    }
+
+    .stat-row {
+      display: flex;
+      gap: 44px;
+      pointer-events: auto;
+      margin: 8px 0 0;
+    }
+
+    .stat b {
+      display: block;
+      font: 500 2.4rem/1 'Playfair Display', serif;
+      color: var(--ink);
+      transition: color .4s ease;
+    }
+
+    .stat span {
+      font: 500 10px 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--text-muted);
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+      transition: color .4s ease;
+    }
+
+    [data-theme="light"] .stat span {
+      text-shadow: 0 1px 6px rgba(242, 238, 228, 0.95);
+    }
+
+    /* ===== COMPARE BLOCK ===== */
+    .compare-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      pointer-events: auto;
+      margin-top: 10px;
+      max-width: 760px;
+      transition: background .4s ease;
+    }
+
+    .compare-col {
+      background: var(--compare-bg);
+      padding: 22px;
+      transition: background .4s ease;
+    }
+
+    .compare-col h4 {
+      font: 500 12px 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      margin: 0 0 14px;
+      color: var(--compare-label);
+      transition: color .4s ease;
+    }
+
+    .compare-col.hot h4 {
+      color: var(--rust);
+      transition: color .4s ease;
+    }
+
+    .compare-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .compare-col li {
+      font: 500 12.5px/1.55 'DM Mono', monospace;
+      color: var(--compare-li-color);
+      padding-left: 14px;
+      position: relative;
+      transition: color .4s ease;
+    }
+
+    .compare-col li:before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+      transition: color .4s ease;
+    }
+
+    .compare-col.hot li:before {
+      content: '✦';
+      color: var(--rust);
+      transition: color .4s ease;
+    }
+
+    footer {
+      position: relative;
+      z-index: 3;
+      border-top: 1px solid var(--line);
+      padding: 20px 28px calc(20px + 60px);
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font: 500 10px 'DM Mono', monospace;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      transition: color .4s ease, border-color .4s ease;
+      background: var(--void);
+    }
+
+    /* ===== MUSIC PLAYER (sticky footer) ===== */
+    .music-player {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--player-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-top: 1px solid var(--line);
+      padding: 10px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      transition: background var(--transition), border-color var(--transition);
+      flex-wrap: wrap;
+    }
+
+    .music-player .player-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      min-width: 150px;
+    }
+
+    .music-player .player-info .now-playing {
+      font: 11px 'DM Mono', monospace;
+      color: var(--dust);
+      letter-spacing: .04em;
+      transition: color var(--transition);
+    }
+
+    .music-player .player-info .now-playing strong {
+      color: var(--ink);
+      font-weight: 500;
+      transition: color var(--transition);
+    }
+
+    .music-player .player-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .music-player .player-controls button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      transition: color var(--transition), transform 0.15s ease;
+      border-radius: 4px;
+    }
+
+    .music-player .player-controls button:hover {
+      color: var(--rust);
+      transform: scale(1.1);
+    }
+
+    .music-player .player-controls .play-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--rust);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(181, 80, 46, 0.3);
+      transition: background var(--transition), transform 0.15s ease, box-shadow var(--transition);
+    }
+
+    .music-player .player-controls .play-btn:hover {
+      background: #c95d37;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    [data-theme="dark"] .music-player .player-controls .play-btn:hover {
+      background: #e07a54;
+    }
+
+    .music-player .player-volume {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 100px;
+    }
+
+    .music-player .player-volume input[type="range"] {
+      width: 80px;
+      height: 4px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--line);
+      border-radius: 4px;
+      outline: none;
+      transition: background var(--transition);
+    }
+
+    .music-player .player-volume input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--rust);
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+
+    .music-player .player-volume input[type="range"]::-moz-range-thumb {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--rust);
+      cursor: pointer;
+      border: none;
+      transition: background var(--transition);
+    }
+
+    .music-player .player-volume .vol-icon {
+      font-size: 16px;
+      color: var(--dust);
+      transition: color var(--transition);
+      cursor: pointer;
+    }
+
+    @media(max-width:680px) {
+      header {
+        padding: 0 16px;
+      }
+
+      .header-btn {
+        padding: 8px 16px;
+        font-size: 9px;
+      }
+
+      .cursor-orbit {
+        display: none;
+      }
+
+      section {
+        padding: 110px 8vw 32px;
+        min-height: 92svh;
+      }
+
+      .hero-title {
+        font-size: clamp(3.4rem, 17vw, 6.5rem);
+      }
+
+      .hero-title i {
+        margin-left: 5vw;
+      }
+
+      .bottom-row {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .scene-title {
+        font-size: clamp(2.8rem, 14vw, 5.5rem);
+      }
+
+      .chapters {
+        gap: 10px;
+      }
+
+      footer {
+        padding: 16px 16px calc(16px + 64px);
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .act-three {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .act-three .left-note {
+        align-self: auto;
+      }
+
+      .compare-block {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-row {
+        gap: 26px;
+      }
+
+      .header-right {
+        gap: 12px;
+      }
+
+      .theme-toggle {
+        width: 38px;
+        height: 22px;
+      }
+
+      .theme-toggle::after {
+        width: 16px;
+        height: 16px;
+        top: 3px;
+        left: 3px;
+      }
+
+      [data-theme="dark"] .theme-toggle::after {
+        transform: translateX(16px);
+      }
+
+      .music-player {
+        padding: 8px 16px;
+        gap: 10px;
+      }
+
+      .music-player .player-info .now-playing {
+        font-size: 9px;
+      }
+
+      .music-player .player-controls .play-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 18px;
+      }
+
+      .music-player .player-volume input[type="range"] {
+        width: 60px;
+      }
+
+      .logo-img {
+        height: 26px;
+      }
+    }
+
+    @media(max-width:440px) {
+      header {
+        height: 58px;
+        padding: 0 12px;
+      }
+
+      section {
+        padding: 90px 6vw 24px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .logo b {
+        font-size: 9px;
+      }
+
+      .header-btn {
+        padding: 6px 12px;
+        font-size: 8px;
+      }
+
+      body {
+        padding-bottom: 0;
+      }
+
+      footer {
+        padding: 16px 14px calc(16px + 105px);
+      }
+
+      .music-player {
+        padding: 6px 12px;
+        gap: 8px;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .music-player .player-info {
+        justify-content: center;
+        min-width: unset;
+      }
+
+      .music-player .player-controls {
+        justify-content: center;
+      }
+
+      .music-player .player-volume {
+        justify-content: center;
+        min-width: unset;
+      }
+
+      .music-player .player-volume input[type="range"] {
+        width: 100px;
+      }
+
+      .logo-img {
+        height: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <canvas id="field" aria-label="Interactive particle sculpture"></canvas>
+  <div class="grain"></div>
+  <div class="ripples"></div>
+  <div class="cursor-orbit"></div>
+
+  <div class="chrome">
+    <header>
+      <a href="#top" class="logo">
+        <img id="logo-img" src="Careerlens_light.png" alt="CareerLens" class="logo-img" />
+        CAREERLENS<b>®</b>
+      </a>
+      <div class="header-right">
+        <a href="evaluation.html" class="header-btn" style="background:transparent;border:1px solid var(--line);color:var(--ink);font-weight:500;">System Score ↗</a>
+        <a href="login.html" class="header-btn">Begin assessment ↗</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <span class="icon-wrap"><span>☀</span><span>☽</span></span>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="eyebrow">A precision fuzzy-logic AI engine</div>
+      <h1 class="hero-title">Your traits<br />aren't <i>yes or no.</i><span class="outline">Neither is this.</span></h1>
+      <div class="bottom-row">
+        <p class="caption">Most career quizzes sort you into a box. CareerLens measures 20 traits on a <b>sliding
+            scale</b> and blends them through a fuzzy inference engine — because "high" and "very high" were never the
+          same thing.</p>
+        <span class="scroll-label">Scroll / move / touch<br />1–4: shift · space: suspend</span>
+      </div>
+    </section>
+
+    <section id="one">
+      <div class="eyebrow">01 / The problem</div>
+      <h2 class="scene-title"><span class="small">Every quiz gives you one verdict</span>You are not
+        <i>one</i><br />data point.</h2>
+      <div class="bottom-row">
+        <p class="left-note">A binary test asks "are you a leader or not." A real person is 70% leader under pressure
+          and 40% on a slow Tuesday. Forcing that into a box throws away the truth.</p>
+        <div class="chapters"><span>01</span> — 02 — 03</div>
+      </div>
+    </section>
+
+    <section id="two">
+      <div class="eyebrow">02 / The method</div>
+      <h2 class="scene-title"><span class="small">Mamdani inference, not multiple choice</span>Every trait,
+        <i>blended,</i><br />not boxed.</h2>
+      <div class="bottom-row" style="align-items:flex-start;">
+        <div>
+          <p class="left-note" style="margin-bottom:18px;">70 questions score 20 traits from 0–10. A fuzzy engine — the
+            same class of logic used in real control systems — lets a trait be partly "high" and partly "very high" at
+            once, then ranks your fit against 105 careers.</p>
+          <div class="compare-block">
+            <div class="compare-col">
+              <h4>Typical quiz</h4>
+              <ul>
+                <li>Fixed categories (A/B/C/D)</li>
+                <li>One final "type"</li>
+                <li>No visible reasoning</li>
+              </ul>
+            </div>
+            <div class="compare-col hot">
+              <h4>CareerLens</h4>
+              <ul>
+                <li>Continuous 0–10 scoring</li>
+                <li>Ranked % match, top 5</li>
+                <li>Skill gaps + roadmap, explained</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="chapters"><span>02</span></div>
+      </div>
+    </section>
+
+    <section class="act-three" id="three">
+      <div class="eyebrow">03 / The Evaluation</div>
+      <h2 class="scene-title"><span class="small">Fifteen minutes, no login</span>Make the next<br />move <i>matter.</i>
+      </h2>
+      <div class="bottom-row">
+        <p class="left-note">70 questions. 105 careers scored. A ranked match, a skill-gap table, and a learning roadmap
+          the moment you finish.</p>
+        <div>
+          <div class="stat-row">
+            <div class="stat"><b>105</b><span>Careers scored</span></div>
+            <div class="stat"><b>20</b><span>Traits measured</span></div>
+            <div class="stat"><b>~15</b><span>Minutes</span></div>
+          </div>
+          <a href="login.html" class="command" style="margin-top:22px;">Begin the assessment ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>CareerLens / precision cognitive career intelligence</span>
+    <a href="evaluation.html" style="color:var(--rust);text-decoration:none;font-weight:600;font-family:'DM Mono', monospace;font-size:12px;margin-left:auto;margin-right:24px;">Model Accuracy &amp; System Score ↗</a>
+    <span>Click anywhere to disturb the field</span>
+  </footer>
+
+  <!-- ===== MUSIC PLAYER ===== -->
+  <div class="music-player" id="musicPlayer">
+    <div class="player-info">
+      <span class="now-playing">
+        <svg class="icon-svg icon-xs" viewBox="0 0 24 24"
+          style="display:inline-block;width:12px;height:12px;stroke-width:2;stroke:currentColor;fill:none;vertical-align:-1px;">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+        <strong>Now Playing:</strong> Fred again..
+      </span>
+    </div>
+    <div class="player-controls">
+      <button id="musicPlayer3dToggle" class="bg3d-toggle-btn" type="button" onclick="window.toggle3dBackground && window.toggle3dBackground()" aria-label="Toggle 3D Background" title="Toggle 3D Background (ON/OFF)"></button>
+      <button id="prevTrackBtn" onclick="window.playPrevTrack && window.playPrevTrack()" class="track-btn"
+        aria-label="Previous Track" title="Previous Track"
+        style="background:none;border:none;cursor:pointer;color:inherit;padding:6px;display:inline-flex;align-items:center;border-radius:6px;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <polygon points="19 20 9 12 19 4 19 20" />
+          <line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+      <button id="playPauseBtn" class="play-btn" aria-label="Play/Pause">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3" />
+        </svg>
+      </button>
+      <button id="nextTrackBtn" onclick="window.playNextTrack && window.playNextTrack()" class="track-btn"
+        aria-label="Next Track" title="Next Track"
+        style="background:none;border:none;cursor:pointer;color:inherit;padding:6px;display:inline-flex;align-items:center;border-radius:6px;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <polygon points="5 4 15 12 5 20 5 4" />
+          <line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2" />
+        </svg>
+      </button>
+      <button id="shuffleBtn" onclick="window.playRandomTrack && window.playRandomTrack()" class="track-btn"
+        aria-label="Shuffle Random Track" title="Shuffle / Random Track"
+        style="background:none;border:none;cursor:pointer;color:inherit;padding:6px;display:inline-flex;align-items:center;border-radius:6px;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="16 3 21 3 21 8" />
+          <line x1="4" y1="20" x2="21" y2="3" />
+          <polyline points="21 16 21 21 16 21" />
+          <line x1="15" y1="15" x2="21" y2="21" />
+          <line x1="4" y1="4" x2="9" y2="9" />
+        </svg>
+      </button>
+    </div>
+    <div class="player-volume">
+      <button class="vol-btn" id="muteBtn" aria-label="Mute/Unmute"
+        style="background:none;border:none;cursor:pointer;color:inherit;display:flex;align-items:center;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+        </svg>
+      </button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.1" />
+    </div>
+  </div>
+
+  <audio id="bgAudio" src="Fred_Again_Rooftop_live.mp3" preload="auto" loop></audio>
+
+  <script>
+    // ========== THEME MANAGEMENT ==========
+    (function () {
+      const STORAGE_KEY = 'careerlens-theme';
+      const html = document.documentElement;
+      const toggle = document.getElementById('themeToggle');
+      const logo = document.getElementById('logo-img');
+
+      function getStoredTheme() {
+        return localStorage.getItem(STORAGE_KEY) || 'light';
+      }
+
+      function updateLogo(theme) {
+        if (!logo) return;
+        if (theme === 'dark') {
+          logo.src = 'Careerlens_Dark.png';
+        } else {
+          logo.src = 'Careerlens_light.png';
+        }
+      }
+
+      function setTheme(theme, persist = true) {
+        html.setAttribute('data-theme', theme);
+        updateLogo(theme);
+        if (persist) localStorage.setItem(STORAGE_KEY, theme);
+        if (toggle) {
+          toggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        }
+      }
+
+      function toggleTheme() {
+        const current = getStoredTheme();
+        setTheme(current === 'light' ? 'dark' : 'light', true);
+      }
+
+      const stored = getStoredTheme();
+      setTheme(stored, false);
+
+      if (toggle) {
+        toggle.addEventListener('click', toggleTheme);
+        toggle.setAttribute('aria-label', stored === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+
+      window.addEventListener('storage', (e) => {
+        if (e.key === STORAGE_KEY && e.newValue) {
+          setTheme(e.newValue, false);
+        }
+      });
+
+      // Also observe data-theme changes (for safety)
+      const observer = new MutationObserver(() => {
+        const theme = html.getAttribute('data-theme') || 'light';
+        updateLogo(theme);
+      });
+      observer.observe(html, { attributes: true, attributeFilter: ['data-theme'] });
+    })();
+
+  </script>
+  <script src="js/config.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/bg3d-control.js"></script>
+  <script>
+
+    // ========== THREE.JS PARTICLE FIELD ==========
+    (function () {
+      const canvas = document.querySelector('#field');
+      if (!canvas) return;
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      script.onload = initThree;
+      document.head.appendChild(script);
+
+      function initThree() {
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(50, innerWidth / innerHeight, .1, 100);
+        camera.position.z = 7;
+        renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+        renderer.setSize(innerWidth, innerHeight);
+
+        const N = 4300;
+        const geometry = new THREE.BufferGeometry();
+        const positions = new Float32Array(N * 3);
+        const forms = [new Float32Array(N * 3), new Float32Array(N * 3), new Float32Array(N * 3)];
+        const sizes = new Float32Array(N);
+        const rand = (a, b) => a + Math.random() * (b - a);
+        for (let i = 0; i < N; i++) {
+          let u = i / N, v = (i * 0.61803398875) % 1;
+          let theta = 2 * Math.PI * v, phi = Math.acos(1 - 2 * u);
+          let r = 2.2 + rand(-.16, .16);
+          forms[0][i * 3] = r * Math.sin(phi) * Math.cos(theta);
+          forms[0][i * 3 + 1] = r * Math.cos(phi);
+          forms[0][i * 3 + 2] = r * Math.sin(phi) * Math.sin(theta);
+          const t = i / N * Math.PI * 8;
+          const rr = 1.8 + .8 * Math.cos(3 * t);
+          forms[1][i * 3] = rr * Math.cos(t);
+          forms[1][i * 3 + 1] = .7 * Math.sin(3 * t) + rand(-.13, .13);
+          forms[1][i * 3 + 2] = rr * Math.sin(t);
+          const a = Math.floor(i / 48), b = i % 48;
+          forms[2][i * 3] = (b - 24) * .12 + rand(-.04, .04);
+          forms[2][i * 3 + 1] = (a - 44) * .12 + rand(-.04, .04);
+          forms[2][i * 3 + 2] = Math.sin(b * .44) * .42 + Math.cos(a * .21) * .55;
+          sizes[i] = rand(.45, 1.45);
+        }
+        positions.set(forms[0]);
+        geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+        let pointColor = '#B5502E';
+        const material = new THREE.PointsMaterial({ color: pointColor, size: .026, transparent: true, opacity: .82, depthWrite: false, sizeAttenuation: true });
+        const points = new THREE.Points(geometry, material);
+        scene.add(points);
+
+        const halo = new THREE.Mesh(
+          new THREE.TorusGeometry(2.75, .007, 8, 140),
+          new THREE.MeshBasicMaterial({ color: '#1C1A16', transparent: true, opacity: .22 })
+        );
+        halo.rotation.x = 1.23;
+        scene.add(halo);
+
+        const links = 260;
+        const linePositions = new Float32Array(links * 6);
+        const lineGeometry = new THREE.BufferGeometry();
+        lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+        const filaments = new THREE.LineSegments(
+          lineGeometry,
+          new THREE.LineBasicMaterial({ color: '#1C1A16', transparent: true, opacity: .1, depthWrite: false })
+        );
+        scene.add(filaments);
+
+        function updateColors(theme) {
+          const isDark = theme === 'dark';
+          const rust = isDark ? '#D96A44' : '#B5502E';
+          const ink = isDark ? '#EAE6DC' : '#1C1A16';
+          material.color.set(rust);
+          filaments.material.color.set(ink);
+          halo.material.color.set(ink);
+          halo.material.opacity = isDark ? .12 : .22;
+          filaments.material.opacity = isDark ? .07 : .1;
+        }
+
+        const observer = new MutationObserver(() => {
+          const theme = document.documentElement.getAttribute('data-theme') || 'light';
+          updateColors(theme);
+        });
+        observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+        updateColors(document.documentElement.getAttribute('data-theme') || 'light');
+
+        let mouse = { x: 0, y: 0 }, aim = { x: 0, y: 0 }, spin = { x: 0, y: 0 }, burst = 0, held = false, scroll = 0, frozen = false;
+        const orbit = document.querySelector('.cursor-orbit');
+        const ripples = document.querySelector('.ripples');
+
+        function resize() { renderer.setSize(innerWidth, innerHeight); camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); }
+        addEventListener('scroll', () => {
+          const maxScroll = document.documentElement.scrollHeight - innerHeight;
+          if (maxScroll > 0) {
+            scroll = Math.min(3.0, (window.scrollY / maxScroll) * 3.0);
+          }
+        });
+        addEventListener('pointermove', e => {
+          mouse.x = e.clientX / innerWidth - .5;
+          mouse.y = e.clientY / innerHeight - .5;
+          if (orbit) { orbit.style.left = e.clientX + 'px'; orbit.style.top = e.clientY + 'px'; }
+          if (held) { spin.y += (e.movementX || 0) * .008; spin.x += (e.movementY || 0) * .008; }
+        });
+        addEventListener('pointerdown', e => {
+          if (e.target.closest('button, input, a')) return;
+          held = true;
+          burst = 1;
+          if (orbit) orbit.classList.add('pulse');
+          if (ripples) {
+            const r = document.createElement('i');
+            r.className = 'ripple';
+            r.style.left = e.clientX + 'px';
+            r.style.top = e.clientY + 'px';
+            ripples.append(r);
+            r.addEventListener('animationend', () => r.remove());
+          }
+        });
+        addEventListener('pointerup', () => { held = false; if (orbit) orbit.classList.remove('pulse'); });
+        addEventListener('keydown', e => {
+          if (e.target.matches('input, textarea, select')) return;
+          if (e.key === ' ') { e.preventDefault(); frozen = !frozen; }
+          if (['1', '2', '3', '4'].includes(e.key)) {
+            const idx = Number(e.key) - 1;
+            const sections = document.querySelectorAll('section');
+            if (sections[idx]) {
+              sections[idx].scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+              const maxScroll = document.documentElement.scrollHeight - innerHeight;
+              window.scrollTo({ top: maxScroll * (idx / 3), behavior: 'smooth' });
+            }
+            scroll = idx;
+            burst = .8;
+          }
+        });
+
+        let isRunning = true;
+        function frame(t) {
+          if (document.documentElement.getAttribute('data-3d') === 'off') {
+            isRunning = false;
+            return;
+          }
+          isRunning = true;
+          requestAnimationFrame(frame);
+          if (frozen) { renderer.render(scene, camera); return; }
+          aim.x += (mouse.x - aim.x) * .035;
+          aim.y += (mouse.y - aim.y) * .035;
+          const clampedScroll = Math.max(0, Math.min(3.0, scroll));
+          const phase = Math.floor(Math.min(2.0, clampedScroll));
+          const mix = clampedScroll <= 2.0 ? (clampedScroll - phase) : 0;
+          const target = forms[Math.min(2, Math.floor(clampedScroll))];
+          const next = forms[Math.min(2, Math.floor(clampedScroll) + 1)];
+          const p = geometry.attributes.position.array;
+          burst *= .955;
+          for (let i = 0; i < N; i++) {
+            let x = target[i * 3] + (next[i * 3] - target[i * 3]) * mix;
+            let y = target[i * 3 + 1] + (next[i * 3 + 1] - target[i * 3 + 1]) * mix;
+            let z = target[i * 3 + 2] + (next[i * 3 + 2] - target[i * 3 + 2]) * mix;
+            const d = Math.hypot(x - aim.x * 5, y + aim.y * 5, z);
+            const push = burst * Math.max(0, 1 - d / 2.4) * .7;
+            p[i * 3] += (x + (x - aim.x * 5) * push - p[i * 3]) * .09;
+            p[i * 3 + 1] += (y + (y + aim.y * 5) * push - p[i * 3 + 1]) * .09;
+            p[i * 3 + 2] += (z + z * push - p[i * 3 + 2]) * .09;
+          }
+          geometry.attributes.position.needsUpdate = true;
+          for (let j = 0; j < links; j++) {
+            const a = (j * 17) % N, b = (j * 83 + 271) % N, k = j * 6;
+            linePositions[k] = p[a * 3];
+            linePositions[k + 1] = p[a * 3 + 1];
+            linePositions[k + 2] = p[a * 3 + 2];
+            linePositions[k + 3] = p[b * 3];
+            linePositions[k + 4] = p[b * 3 + 1];
+            linePositions[k + 5] = p[b * 3 + 2];
+          }
+          lineGeometry.attributes.position.needsUpdate = true;
+
+          // 4th section effect: 90-degree tilt & zoom into the 3rd form (Wave Grid Matrix)
+          const tilt = Math.max(0, Math.min(1.0, clampedScroll - 2.0)); // 0.0 at section 3 -> 1.0 at section 4
+          
+          points.position.x = -tilt * 1.8;
+          filaments.position.x = -tilt * 1.8;
+          halo.position.x = -tilt * 1.8;
+
+          points.rotation.y = t * .00011 + aim.x * .45 + spin.y + tilt * 0.15;
+          points.rotation.x = (aim.y * .35 + spin.x) + tilt * (Math.PI * 0.48); // ~90 degree tilt flat
+          filaments.rotation.copy(points.rotation);
+          halo.rotation.z = t * .00013 + tilt * 0.4;
+          halo.rotation.x = 1.23 + tilt * 0.35;
+
+          // Camera zoom in & elevation above the horizontal wave plane on Section 4
+          camera.position.z = 7.0 - tilt * 2.2;
+          camera.position.y = -clampedScroll * .24 + tilt * 0.9;
+
+          renderer.render(scene, camera);
+        }
+
+        window.addEventListener('3dbgchange', e => {
+          if (e.detail && e.detail.state !== 'off' && !isRunning) {
+            frame(0);
+          }
+        });
+
+        frame(0);
+      }
+    })();
+  </script>
+</body>
+
+</html>

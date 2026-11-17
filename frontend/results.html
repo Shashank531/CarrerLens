@@ -1,0 +1,3898 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerLens — Your Results &amp; Blueprint</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="css/music.css" />
+  <style>
+    /* ─── Design Tokens & Theme Variables ─── */
+    :root {
+      --void:        #F2EEE4;
+      --ink:         #1C1A16;
+      --text-muted:  #8A8276;
+      --rust:        #C45A32;
+      --rust-hover:  #ad4b27;
+      --rust-glow:   rgba(196, 90, 50, 0.15);
+      --dust:        #8A8276;
+      --line:        rgba(28, 26, 22, 0.16);
+      --line-hover:  rgba(28, 26, 22, 0.28);
+      --surface:     rgba(242, 238, 228, 0.75);
+      --card-bg:     rgba(255, 253, 248, 0.94);
+      --card-border: rgba(28, 26, 22, 0.12);
+      --shadow:      0 20px 48px rgba(28, 26, 22, 0.09), 0 4px 12px rgba(28, 26, 22, 0.04);
+      --radius-sm:   2px;
+      --radius:      2px;
+      --tr:          0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --success:     #2E7D5E;
+      --danger:      #C45A32;
+    }
+
+    [data-theme="dark"] {
+      --void:        #171512;
+      --ink:         #EDE8DC;
+      --text-muted:  #9A9286;
+      --rust:        #E07A54;
+      --rust-hover:  #ea8a66;
+      --rust-glow:   rgba(224, 122, 84, 0.18);
+      --dust:        #9A9286;
+      --line:        rgba(234, 230, 220, 0.14);
+      --line-hover:  rgba(234, 230, 220, 0.28);
+      --surface:     rgba(23, 21, 18, 0.85);
+      --card-bg:     rgba(28, 25, 21, 0.94);
+      --card-border: rgba(234, 230, 220, 0.12);
+      --shadow:      0 24px 56px rgba(0, 0, 0, 0.55), 0 4px 16px rgba(0, 0, 0, 0.35);
+      --success:     #4ADE80;
+      --danger:      #E07A54;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(196, 90, 50, 0.45) transparent;
+    }
+
+    [data-theme="dark"] * {
+      scrollbar-color: rgba(224, 122, 84, 0.45) transparent;
+    }
+
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(196, 90, 50, 0.35);
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background-clip: padding-box;
+      transition: background 0.25s ease;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--rust);
+    }
+    [data-theme="dark"] ::-webkit-scrollbar-thumb {
+      background: rgba(224, 122, 84, 0.35);
+    }
+    [data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+      background: var(--rust);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      cursor: none;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--void);
+      color: var(--ink);
+      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 110px 24px 100px;
+      transition: background var(--tr), color var(--tr);
+      position: relative;
+      overflow-x: hidden;
+      cursor: none;
+    }
+
+    html, body, *, *::before, *::after,
+    a, button, input, select, textarea, [role="button"], label, .btn, .btn-retake, .btn-home, .btn-top30, .tier-chip, .btn-compare-chip,
+    .music-player, .music-player *, .floating-compare-dock, .floating-compare-dock *, .compare-modal-backdrop, .compare-modal-card, .compare-modal-card * {
+      cursor: none !important;
+    }
+
+    /* ─── Custom Interactive Cursor (Always On Top & Zero-Lag) ─── */
+    #cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: #C45A32;
+      border-radius: 50%;
+      pointer-events: none !important;
+      z-index: 2147483647 !important;
+      transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+      transition: opacity 0.15s ease, background-color 0.2s ease;
+      will-change: transform;
+      opacity: 0;
+    }
+
+    [data-theme="dark"] #cursor-dot {
+      background-color: #E07A54;
+    }
+
+    #cursor-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid #C45A32;
+      background-color: transparent;
+      border-radius: 50%;
+      pointer-events: none !important;
+      z-index: 2147483646 !important;
+      transform: translate3d(-100px, -100px, 0) translate(-50%, -50%);
+      transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease, opacity 0.15s ease;
+      will-change: transform, width, height;
+      opacity: 0;
+    }
+
+    [data-theme="dark"] #cursor-ring {
+      border-color: #E07A54;
+    }
+
+    body.cursor-hover #cursor-dot {
+      opacity: 0 !important;
+    }
+
+    body.cursor-hover #cursor-ring {
+      width: 52px;
+      height: 52px;
+      background-color: rgba(196, 90, 50, 0.15);
+    }
+
+    [data-theme="dark"] body.cursor-hover #cursor-ring {
+      background-color: rgba(224, 122, 84, 0.15);
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+      html, body, a, button, input, select, textarea, [role="button"], label, .btn, .btn-retake, .btn-home, .btn-top30, .tier-chip, .btn-compare-chip {
+        cursor: auto !important;
+      }
+      #cursor-dot, #cursor-ring {
+        display: none !important;
+      }
+    }
+
+    /* ─── Scroll-Driven Reveal ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── Vector Icon Helpers ─── */
+    .icon-svg {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      vertical-align: -2px;
+      stroke-width: 2;
+      stroke: currentColor;
+      fill: none;
+      flex-shrink: 0;
+    }
+
+    .icon-xs {
+      width: 12px;
+      height: 12px;
+      vertical-align: -1.5px;
+    }
+
+    .icon-md {
+      width: 18px;
+      height: 18px;
+      vertical-align: -3px;
+    }
+
+    /* ─── Topbar Navigation ─── */
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      height: 72px;
+      padding: 0 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--surface);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+      transition: background var(--tr), border-color var(--tr);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Mono', monospace;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: -.04em;
+      color: var(--ink);
+      text-decoration: none;
+      transition: opacity var(--tr);
+    }
+
+    .brand:hover {
+      opacity: 0.85;
+    }
+
+    .brand .logo-img {
+      height: 32px;
+      width: auto;
+      display: block;
+      transition: opacity 0.3s ease;
+    }
+
+    .brand .badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      color: var(--rust);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 2px;
+      border: 1px solid var(--rust);
+      background: rgba(196, 90, 50, 0.1);
+      margin-left: 4px;
+    }
+
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle {
+      position: relative;
+      width: 44px;
+      height: 26px;
+      background: var(--line);
+      border-radius: 13px;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+      transition: background var(--tr);
+    }
+
+    .theme-toggle::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--ink);
+      transition: transform var(--tr), background var(--tr);
+    }
+
+    [data-theme="dark"] .theme-toggle::after {
+      transform: translateX(18px);
+    }
+
+    .theme-toggle .icon-wrap {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5px;
+      pointer-events: none;
+      color: var(--ink);
+      opacity: .55;
+    }
+
+    .theme-toggle .icon-wrap svg {
+      width: 11px;
+      height: 11px;
+    }
+
+    /* ─── Editorial Container & Header ─── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .tag-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--rust);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-header {
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(34px, 4.5vw, 56px);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .sub {
+      font-family: 'DM Mono', monospace;
+      color: var(--dust);
+      font-size: 13px;
+      line-height: 1.6;
+      letter-spacing: 0.02em;
+    }
+
+    .section-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--dust);
+      margin: 48px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* ─── Editorial Career Match Rows ─── */
+    .career-card {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      box-shadow: none;
+      padding: 26px 20px 24px;
+      margin-bottom: 0;
+      position: relative;
+      transition: background var(--tr), border-color var(--tr), transform var(--tr);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .career-card:hover {
+      background: rgba(196, 90, 50, 0.04);
+      border-left: 3px solid var(--rust);
+      padding-left: 17px;
+    }
+
+    [data-theme="dark"] .career-card:hover {
+      background: rgba(224, 122, 84, 0.06);
+    }
+
+    .career-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .career-name-group {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .career-rank {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--rust);
+      flex-shrink: 0;
+      letter-spacing: 0.05em;
+    }
+
+    .career-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .career-pct {
+      font-family: 'DM Mono', monospace;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--rust);
+      letter-spacing: -0.02em;
+    }
+
+    .bar-wrap {
+      height: 3px;
+      background: var(--line);
+      border-radius: 0;
+      margin: 2px 0 6px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--rust);
+      border-radius: 0;
+      transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .career-why {
+      font-size: 13.5px;
+      color: var(--dust);
+      line-height: 1.6;
+    }
+
+    /* ─── Skill Profile Grid (Editorial Typographic Chips) ─── */
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .skill-chip {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 12px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color var(--tr);
+    }
+
+    .skill-chip:hover {
+      border-color: var(--rust);
+    }
+
+    .skill-chip .sname {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .skill-chip .sval {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--rust);
+    }
+
+    /* ─── Editorial Magazine Buttons ─── */
+    .btn-home,
+    .btn-retake,
+    .btn-top30,
+    .btn-view-latest {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 11px 22px;
+      border: 1.5px solid var(--ink);
+      border-radius: 2px;
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: none;
+    }
+
+    .btn-home:hover,
+    .btn-view-latest:hover {
+      background: var(--rust);
+      border-color: var(--rust);
+      color: #ffffff;
+    }
+
+    .btn-retake {
+      border-color: var(--line);
+      color: var(--dust);
+    }
+
+    .btn-retake:hover {
+      border-color: var(--rust);
+      color: var(--rust);
+      background: transparent;
+    }
+
+    [data-theme="dark"] .btn-home,
+    [data-theme="dark"] .btn-view-latest {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    [data-theme="dark"] .btn-home:hover,
+    [data-theme="dark"] .btn-view-latest:hover {
+      background: var(--rust);
+      border-color: var(--rust);
+      color: #ffffff;
+    }
+
+    /* ─── Top-30 Rankings Section ─── */
+    .btn-top30 {
+      width: 100%;
+      margin: 32px 0 0;
+      justify-content: space-between;
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .btn-top30:hover {
+      border-color: var(--rust);
+      color: var(--rust);
+    }
+
+    .btn-top30 .chevron {
+      transition: transform var(--tr);
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+    }
+
+    .btn-top30.open .chevron {
+      transform: rotate(180deg);
+    }
+
+    .top30-grid {
+      display: none;
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      overflow: hidden;
+      background: var(--card-bg);
+    }
+
+    .top30-grid.open {
+      display: block;
+    }
+
+    .top30-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--line);
+      transition: background var(--tr);
+    }
+
+    .top30-row:last-child {
+      border-bottom: none;
+    }
+
+    .top30-row:hover {
+      background: rgba(196, 90, 50, 0.04);
+    }
+
+    .top30-rank {
+      font-family: 'DM Mono', monospace;
+      font-size: 11.5px;
+      color: var(--dust);
+      width: 32px;
+      flex-shrink: 0;
+    }
+
+    .top30-name {
+      flex: 1;
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .top30-bar-wrap {
+      width: 120px;
+      height: 3px;
+      background: var(--line);
+      border-radius: 0;
+      flex-shrink: 0;
+    }
+
+    /* ─── Simulation Roast Easter Egg Banner ─── */
+    .sim-roast-banner {
+      display: none;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      margin: 18px 0 10px;
+      border-radius: 2px;
+      border: 1px solid var(--line);
+      animation: fadeInRoast 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeInRoast {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sim-roast-banner.all-max {
+      display: flex;
+      background: rgba(196, 90, 50, 0.08);
+      border-left: 4px solid var(--rust);
+      border-color: var(--rust);
+    }
+
+    .sim-roast-banner.all-zero {
+      display: flex;
+      background: rgba(224, 86, 36, 0.08);
+      border-left: 4px solid #d9534f;
+      border-color: #d9534f;
+    }
+
+    .sim-roast-icon {
+      font-size: 26px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .sim-roast-content h4 {
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 4px;
+      color: var(--ink);
+    }
+
+    .sim-roast-content p {
+      font-size: 12.5px;
+      color: var(--dust);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .top30-bar-fill {
+      height: 100%;
+      background: var(--rust);
+      border-radius: 0;
+    }
+
+    .top30-pct {
+      font-family: 'DM Mono', monospace;
+      font-size: 12.5px;
+      color: var(--rust);
+      width: 44px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* ─── History & Switcher Bar ─── */
+    .history-bar {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 18px 22px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .history-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .history-status-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge-report {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    .badge-report.updated {
+      background: var(--rust);
+      color: #fff;
+    }
+
+    .badge-report.past {
+      background: var(--line);
+      color: var(--dust);
+    }
+
+    .history-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 11.5px;
+      color: var(--dust);
+    }
+
+    .history-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .assessment-select {
+      height: 38px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      background: var(--void);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      outline: none;
+      cursor: pointer;
+      min-width: 220px;
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23C45A32' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 28px;
+    }
+
+    .old-report-banner {
+      background: rgba(196, 90, 50, 0.08);
+      border: 1px solid var(--rust);
+      border-radius: 2px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .old-report-banner .orb-text {
+      font-size: 13px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .old-report-banner strong {
+      color: var(--rust);
+    }
+
+    /* ─── Evolution & Trajectory Section ─── */
+    .evolution-section {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 28px 28px;
+      margin-top: 44px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .evolution-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .evolution-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .evolution-sub {
+      font-size: 13px;
+      color: var(--dust);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .evolution-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .evolution-select {
+      height: 34px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      background: var(--void);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .comp-col-header {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--dust);
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .comp-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13.5px;
+      gap: 12px;
+    }
+
+    .comp-row:last-child {
+      border-bottom: none;
+    }
+
+    .comp-career-name {
+      font-weight: 600;
+      flex: 1;
+    }
+
+    .comp-scores {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+    }
+
+    .comp-delta {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-weight: 600;
+    }
+
+    .comp-delta.pos {
+      background: rgba(46, 125, 94, 0.12);
+      color: var(--success);
+    }
+
+    .comp-delta.neg {
+      background: rgba(196, 90, 50, 0.12);
+      color: var(--rust);
+    }
+
+    .comp-delta.neu {
+      background: var(--line);
+      color: var(--dust);
+    }
+
+    .evolution-empty {
+      text-align: center;
+      padding: 32px 16px;
+      color: var(--dust);
+      font-size: 13px;
+      line-height: 1.6;
+      background: var(--void);
+      border-radius: 2px;
+      border: 1px dashed var(--line);
+    }
+
+    /* ─── Accordions (Skill Gap & Learning Roadmaps) ─── */
+    .accordion {
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      background: var(--card-bg);
+      transition: border-color var(--tr);
+    }
+
+    .accordion:hover {
+      border-color: var(--rust);
+    }
+
+    .acc-trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 20px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      text-align: left;
+      transition: background var(--tr);
+    }
+
+    .acc-trigger:hover {
+      background: rgba(196, 90, 50, 0.04);
+    }
+
+    .acc-trigger .acc-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .acc-trigger .acc-rank {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      color: var(--dust);
+      background: var(--line);
+      border-radius: 2px;
+      padding: 2px 7px;
+      flex-shrink: 0;
+    }
+
+    .acc-trigger .acc-pct {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--rust);
+      flex-shrink: 0;
+    }
+
+    .acc-chevron {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      color: var(--dust);
+      transition: transform var(--tr);
+    }
+
+    .acc-trigger[aria-expanded="true"] .acc-chevron {
+      transform: rotate(180deg);
+    }
+
+    .acc-body {
+      display: none;
+      background: var(--void);
+      border-top: 1px solid var(--line);
+      padding: 20px 24px 24px;
+    }
+
+    .acc-body.open {
+      display: block;
+    }
+
+    /* ─── Typographic Skill Gap Table ─── */
+    .gap-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .gap-table th {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--dust);
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .gap-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: middle;
+    }
+
+    .gap-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .gap-table tr.gap-critical td {
+      background: rgba(196, 90, 50, 0.05);
+    }
+
+    .gap-table tr.gap-critical td:first-child {
+      border-left: 2px solid var(--rust);
+    }
+
+    .badge-priority {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--rust);
+      border-radius: 2px;
+      padding: 1px 5px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .gap-score {
+      font-family: 'DM Mono', monospace;
+      font-size: 12.5px;
+    }
+
+    .gap-score.danger {
+      color: var(--rust);
+      font-weight: 600;
+    }
+
+    .mini-bar-wrap {
+      width: 70px;
+      height: 3px;
+      background: var(--line);
+      border-radius: 0;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .mini-bar-fill {
+      height: 100%;
+      background: var(--rust);
+    }
+
+    /* ─── Learning Roadmaps & Step Items ─── */
+    .roadmap-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .roadmap-step {
+      display: flex;
+      gap: 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 14px 16px;
+      transition: border-color var(--tr);
+    }
+
+    .roadmap-step.priority {
+      border-color: var(--rust);
+    }
+
+    .roadmap-step.step-done {
+      border-color: rgba(46, 125, 94, 0.35);
+      background: rgba(46, 125, 94, 0.04);
+    }
+
+    .roadmap-step .step-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 2px;
+      background: var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--dust);
+    }
+
+    .roadmap-step.priority .step-num {
+      background: var(--rust);
+      color: #fff;
+    }
+
+    .roadmap-step.step-done .step-num {
+      background: var(--success);
+      color: #fff;
+    }
+
+    .roadmap-step .step-body {
+      flex: 1;
+    }
+
+    .roadmap-step .step-desc {
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+
+    .roadmap-step.step-done .step-desc {
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+
+    .roadmap-step .step-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .step-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--dust);
+      background: var(--line);
+      border-radius: 2px;
+      padding: 2px 6px;
+    }
+
+    .badge-milestone {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'DM Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #8b5e00;
+      background: #fff3c4;
+      border: 1px solid #e6c857;
+      border-radius: 2px;
+      padding: 1px 5px;
+    }
+
+    [data-theme="dark"] .badge-milestone {
+      color: #f9d56e;
+      background: rgba(249, 213, 110, .12);
+      border-color: rgba(249, 213, 110, .3);
+    }
+
+    .badge-prio-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-family: 'DM Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--rust);
+      border-radius: 2px;
+      padding: 1px 5px;
+    }
+
+    .step-check-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      cursor: pointer;
+      color: var(--dust);
+      user-select: none;
+      margin-left: auto;
+    }
+
+    .step-check-label input {
+      accent-color: var(--rust);
+      width: 14px;
+      height: 14px;
+    }
+
+    .rm-progress-bar-wrap {
+      height: 3px;
+      background: var(--line);
+      border-radius: 0;
+      overflow: hidden;
+      margin: 10px 0 14px;
+    }
+
+    .rm-progress-bar {
+      height: 100%;
+      background: var(--success);
+      transition: width .35s ease;
+    }
+
+    /* ─── Simulation Lab ─── */
+    .sim-lab-card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 28px;
+      margin-top: 48px;
+      box-shadow: var(--shadow);
+    }
+
+    .sim-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 860px) {
+      .sim-grid { grid-template-columns: 1fr; }
+    }
+
+    .sim-slider-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 480px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    .sim-slider-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      background: var(--void);
+      padding: 9px 12px;
+      border-radius: 2px;
+      border: 1px solid var(--line);
+    }
+
+    .sim-slider-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      font-family: 'DM Mono', monospace;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .sim-slider-label span.score-val {
+      color: var(--rust);
+      font-weight: 600;
+    }
+
+    .sim-slider-row input[type="range"] {
+      width: 100%;
+      height: 3px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--line);
+      border-radius: 0;
+      outline: none;
+    }
+
+    .sim-slider-row input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--rust);
+    }
+
+    .sim-filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .sim-filter-select,
+    .sim-search-input {
+      background: var(--void);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      padding: 7px 10px;
+      font-size: 12px;
+      border-radius: 2px;
+      outline: none;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .sim-filter-select:focus,
+    .sim-search-input:focus {
+      border-color: var(--rust);
+    }
+
+    .sim-outcomes {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 440px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .sim-outcome-item {
+      background: var(--void);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sim-outcome-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .sim-rank-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      color: var(--rust);
+      background: rgba(196, 90, 50, 0.1);
+      padding: 1px 5px;
+      border-radius: 2px;
+      margin-right: 4px;
+    }
+
+    .sim-surge-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 2px;
+      background: rgba(224, 122, 84, 0.14);
+      color: var(--rust);
+      margin-left: 4px;
+      text-transform: uppercase;
+    }
+
+    .sim-delta-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 2px;
+      background: rgba(46, 125, 94, 0.12);
+      color: var(--success);
+    }
+
+    .sim-delta-badge.negative {
+      background: rgba(196, 90, 50, 0.1);
+      color: var(--rust);
+    }
+
+    /* ─── Career Explorer Section ─── */
+    .explorer-controls {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .explorer-search,
+    .explorer-select {
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      background: var(--card-bg);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      outline: none;
+    }
+
+    .explorer-search:focus,
+    .explorer-select:focus {
+      border-color: var(--rust);
+    }
+
+    .tier-chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .tier-chip {
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 5px 10px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 500;
+      color: var(--dust);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all var(--tr);
+    }
+
+    .tier-chip:hover {
+      border-color: var(--rust);
+      color: var(--ink);
+    }
+
+    .tier-chip.active {
+      background: var(--rust);
+      border-color: var(--rust);
+      color: #fff;
+    }
+
+    .explorer-results-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 11.5px;
+      color: var(--dust);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .explorer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 14px;
+    }
+
+    .career-explorer-card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: var(--shadow);
+      transition: border-color var(--tr);
+    }
+
+    .career-explorer-card:hover {
+      border-color: var(--rust);
+    }
+
+    .ec-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .ec-name {
+      font-size: 15.5px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .ec-category {
+      font-family: 'DM Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--dust);
+      background: var(--line);
+      border-radius: 2px;
+      padding: 2px 6px;
+    }
+
+    .fit-tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 2px;
+      text-transform: uppercase;
+    }
+
+    .tier-best {
+      background: rgba(196, 90, 50, .12);
+      color: var(--rust);
+      border: 1px solid var(--rust);
+    }
+
+    .tier-vhigh {
+      background: rgba(46, 125, 94, .12);
+      color: var(--success);
+      border: 1px solid var(--success);
+    }
+
+    .tier-high {
+      background: rgba(59, 130, 246, .12);
+      color: #2563eb;
+      border: 1px solid rgba(59, 130, 246, .3);
+    }
+
+    .tier-med {
+      background: rgba(234, 179, 8, .12);
+      color: #ca8a04;
+      border: 1px solid rgba(234, 179, 8, .3);
+    }
+
+    .tier-low {
+      background: rgba(148, 163, 184, .12);
+      color: #64748b;
+      border: 1px solid rgba(148, 163, 184, .3);
+    }
+
+    .tier-vlow {
+      background: rgba(244, 63, 94, .12);
+      color: #e11d48;
+      border: 1px solid rgba(244, 63, 94, .3);
+    }
+
+    .tier-avoid {
+      background: rgba(225, 29, 72, .14);
+      color: #be123c;
+      border: 1px solid rgba(225, 29, 72, .4);
+    }
+
+    .ec-desc {
+      font-size: 12.5px;
+      color: var(--dust);
+      line-height: 1.5;
+    }
+
+    .ec-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 2px;
+      align-items: center;
+    }
+
+    .ec-stat {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11.5px;
+      color: var(--dust);
+    }
+
+    .ec-stat strong {
+      color: var(--ink);
+    }
+
+    .ec-stat-sep {
+      color: var(--line);
+      font-size: 12px;
+    }
+
+    .demand-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 9.5px;
+      border-radius: 2px;
+      padding: 1px 6px;
+      text-transform: uppercase;
+    }
+
+    .demand-very-high, .demand-high {
+      background: rgba(46, 125, 94, .12);
+      color: var(--success);
+    }
+
+    .demand-medium {
+      background: rgba(234, 179, 8, .12);
+      color: #ca8a04;
+    }
+
+    .demand-low {
+      background: rgba(148, 163, 184, .12);
+      color: #64748b;
+    }
+
+    .btn-compare-chip {
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      padding: 3px 8px;
+      cursor: pointer;
+      color: var(--dust);
+      text-transform: uppercase;
+    }
+
+    .btn-compare-chip.active {
+      background: var(--rust);
+      border-color: var(--rust);
+      color: #fff;
+    }
+
+    /* ─── Floating Compare Dock ─── */
+    .floating-compare-dock {
+      position: fixed;
+      bottom: 84px;
+      left: 50%;
+      transform: translateX(-50%) translateY(200%);
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--rust);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+      border-radius: 2px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 100000;
+      opacity: 0;
+      transition: transform .35s cubic-bezier(.4, 0, .2, 1), opacity .35s ease;
+    }
+
+    .floating-compare-dock.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* ─── Compare Modal ─── */
+    .compare-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      backdrop-filter: blur(8px);
+      z-index: 100010;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .compare-modal-backdrop.show {
+      display: flex;
+    }
+
+    .compare-modal-card {
+      background: var(--card-bg);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      max-width: 860px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 700px) {
+      .compare-grid { grid-template-columns: 1fr; }
+    }
+
+    .compare-col {
+      background: var(--void);
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      padding: 16px;
+    }
+
+    /* ─── Responsive Media Queries ─── */
+    @media (max-width: 768px) {
+      .topbar {
+        padding: 0 16px;
+        height: 64px;
+      }
+      body {
+        padding: 90px 16px 80px;
+      }
+      .explorer-controls {
+        grid-template-columns: 1fr;
+      }
+      .explorer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom Cursor Elements -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="topbar">
+    <a href="index.html" class="brand" title="Return to CareerLens Home">
+      <img id="logo-img" src="Careerlens_light.png" alt="CareerLens Logo" class="logo-img" />
+      <span>CareerLens</span>
+      <span class="badge">CAREER OS</span>
+    </a>
+    <div class="topbar-right">
+      <button class="btn-retake" id="btnDownloadPdf" onclick="downloadPdfReport()" title="Download PDF report">
+        <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download PDF Report
+      </button>
+      <a href="dashboard.html" class="btn-retake">
+        <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <span class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero-header reveal">
+      <div class="tag-eyebrow">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+        </svg>
+        Multidimensional Inference Profile
+      </div>
+      <h1 id="pageTitle">Your Career Blueprint.</h1>
+      <p class="sub" id="pageSub">Here's what the fuzzy engine mapped for your trajectory.</p>
+    </div>
+
+    <!-- Assessment History & Report Switcher Bar -->
+    <div id="historyBarContainer"></div>
+
+    <!-- Alert Banner when inspecting older assessment -->
+    <div id="oldReportBanner" style="display:none;"></div>
+
+    <!-- Main Results (Top 5 Matches, Top 30, Skill Profile) -->
+    <div id="content"></div>
+
+    <!-- Assessment Evolution & Skill Trajectory Section -->
+    <div id="evolutionSection" class="evolution-section">
+      <div class="evolution-header">
+        <div class="evolution-title">
+          <svg class="icon-svg icon-md" viewBox="0 0 24 24">
+            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+            <polyline points="17 6 23 6 23 12" />
+          </svg>
+          Assessment Evolution &amp; Trajectory
+        </div>
+        <div class="evolution-controls" id="evolutionControls"></div>
+      </div>
+      <p class="evolution-sub" id="evolutionSubText">
+        Compare your skill progression and career compatibility trajectory across assessment attempts.
+      </p>
+      <div id="evolutionContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== SKILL GAP + ROADMAP SECTIONS ===== -->
+  <div class="container" id="extra-sections" style="display:none;">
+
+    <!-- ── Section 2: Skill Gap Analysis ─────────────────────────── -->
+    <div class="section-title">
+      <svg class="icon-svg" viewBox="0 0 24 24">
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
+      </svg>
+      Skill Gap Analysis
+    </div>
+    <p style="font-size:13px;color:var(--dust);margin-bottom:20px;line-height:1.6;">
+      Skills sorted by gap size — largest gaps highlighted with priority indicators. Focus on closing these first.
+    </p>
+    <div id="skill-gap-accordions"></div>
+
+    <!-- ── Section 3: Learning Roadmap ───────────────────────────── -->
+    <div class="section-title">
+      <svg class="icon-svg" viewBox="0 0 24 24">
+        <polygon points="12 2 2 7 12 12 22 7 12 2" />
+        <polyline points="2 17 12 22 22 17" />
+        <polyline points="2 12 12 17 22 12" />
+      </svg>
+      Learning Roadmaps
+    </div>
+    <p style="font-size:13px;color:var(--dust);margin-bottom:20px;line-height:1.6;">
+      Structured step-by-step paths customized for each career. Priority steps highlight your critical skill gaps, and
+      milestones mark core checkpoints.
+    </p>
+    <div id="roadmap-accordions"></div>
+
+    <!-- ── Dashboard & Next Steps Option ─────────────────────────── -->
+    <div class="roadmap-dashboard-card" style="margin-top:40px;background:var(--card-bg);border:1px solid var(--line);border-radius:2px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;box-shadow:var(--shadow);">
+      <div>
+        <div style="font-size:16px;font-weight:600;margin-bottom:4px;display:flex;align-items:center;gap:8px;">
+          <svg class="icon-svg" viewBox="0 0 24 24" style="color:var(--rust);"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Ready to Track Your Career Progression?
+        </div>
+        <p style="font-size:13px;color:var(--dust);line-height:1.5;margin:0;">
+          Save roadmap milestones, compare historical attempts, and manage your full profile in your dashboard.
+        </p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <a href="dashboard.html" class="btn-home">
+          <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Go to Dashboard
+        </a>
+        <a href="assessment.html" class="btn-retake">
+          <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Retake Assessment
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== WHAT-IF? SKILL SIMULATION LAB ===== -->
+  <div class="container" id="sim-section" style="margin-top:50px;">
+    <div class="sim-lab-card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;border-bottom:1px solid var(--line);padding-bottom:16px;">
+        <div>
+          <div class="tag-eyebrow" style="margin-top:0;">
+            <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            Interactive Trajectory Modeling
+          </div>
+          <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:600;margin-top:4px;">"What-If?" Skill Simulation Lab</div>
+          <p style="font-size:13px;color:var(--dust);line-height:1.5;margin-top:4px;margin-bottom:0;">
+            Drag the sliders to simulate skill upgrades and watch your career compatibility scores recalibrate in real-time.
+          </p>
+        </div>
+        <button class="btn-retake" onclick="resetSkillSimulation()">
+          <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><path d="M2.5 2v6h6M21.5 22v-6h-6"/><path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.3"/></svg>
+          Reset to Baseline
+        </button>
+      </div>
+
+      <div class="sim-grid">
+        <div>
+          <div style="font-size:12.5px;font-family:'DM Mono',monospace;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:10px;color:var(--ink);display:flex;justify-content:space-between;">
+            <span>Adjust Your Skills (0.0 – 10.0)</span>
+            <span style="font-size:11px;color:var(--dust);">Live Slider Control</span>
+          </div>
+          <div class="sim-slider-group" id="simSlidersContainer">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:12.5px;font-family:'DM Mono',monospace;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;">
+            <span>Simulated Match Outcomes</span>
+            <span id="simCountLabel" style="font-size:11px;color:var(--dust);">All 105 Careers</span>
+          </div>
+
+          <!-- Dynamic Roast Easter Egg Banner under Outcomes -->
+          <div id="simRoastBanner" class="sim-roast-banner" role="alert" style="margin: 8px 0 14px;">
+            <div class="sim-roast-icon" id="simRoastIcon">💀</div>
+            <div class="sim-roast-content">
+              <h4 id="simRoastTitle">You ain't that smart bro, keep trying lol 💀</h4>
+              <p id="simRoastText">Setting 10.0 on all 20 skills? That makes you a Master Neurosurgeon, Quantum Physicist, Commercial Airline Captain, and Haute Couture Fashion Designer all at once. Even Leonardo da Vinci had an off day. Dial it back to reality!</p>
+            </div>
+          </div>
+
+          <div class="sim-filter-bar">
+            <input type="search" id="simSearchInput" class="sim-search-input" placeholder="Search any career (e.g. AI, DevOps, Pilot, UX)..." oninput="onSimSearchChange(this.value)" />
+            <select id="simScopeSelect" class="sim-filter-select" onchange="onSimScopeChange(this.value)">
+              <option value="all">All 105 Careers</option>
+              <option value="5">Top 5 Trajectories</option>
+              <option value="10">Top 10 Careers</option>
+              <option value="25">Top 25 Careers</option>
+              <optgroup label="Major Industry Branches">
+                <option value="Business & Management">Business &amp; Management (28 careers)</option>
+                <option value="Technology & Engineering">Technology &amp; Engineering (32 careers)</option>
+                <option value="Healthcare & Sciences">Healthcare &amp; Sciences (17 careers)</option>
+                <option value="Design & Media">Design &amp; Media (12 careers)</option>
+                <option value="Finance & Banking">Finance &amp; Banking (6 careers)</option>
+                <option value="Marketing & Strategy">Marketing &amp; Strategy (8 careers)</option>
+                <option value="Public & Social Services">Public &amp; Social Services (10 careers)</option>
+              </optgroup>
+              <optgroup label="Specific Categories">
+                <option value="Business">Business (10)</option>
+                <option value="Management">Management (2)</option>
+                <option value="Finance">Finance (6)</option>
+                <option value="Marketing">Marketing (8)</option>
+                <option value="Human Resources">Human Resources (2)</option>
+                <option value="Technology">Technology (23)</option>
+                <option value="Design">Design (6)</option>
+                <option value="Engineering">Engineering (8)</option>
+                <option value="Healthcare">Healthcare (9)</option>
+                <option value="Science">Science (4)</option>
+                <option value="Media">Media (5)</option>
+                <option value="Legal">Legal (3)</option>
+                <option value="Education">Education (3)</option>
+                <option value="Government">Government (3)</option>
+                <option value="Hospitality">Hospitality (3)</option>
+                <option value="Sports">Sports (3)</option>
+                <option value="Research">Research (3)</option>
+                <option value="Agriculture">Agriculture (1)</option>
+                <option value="Aviation">Aviation (1)</option>
+                <option value="Social Services">Social Services (1)</option>
+                <option value="Language">Language (1)</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <div class="sim-outcomes" id="simOutcomesContainer">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CAREER EXPLORER SECTION ===== -->
+  <div class="container" id="explorer-section" style="margin-top:60px;">
+    <div class="explorer-header-wrap">
+      <div class="tag-eyebrow" style="margin-top:0;">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        Adjustable Career Navigator
+      </div>
+      <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:600;margin-bottom:6px;">Career Explorer &amp; Fit Navigator</div>
+      <p style="font-size:13.5px;color:var(--dust);line-height:1.6;">
+        Explore all 105 careers tailored directly to your fuzzy compatibility profile. Filter by branch, recommendation
+        level, or match tiers.
+      </p>
+    </div>
+
+    <!-- Explorer Controls: Search, Branch, Fit Tier, Sort -->
+    <div class="explorer-controls">
+      <input type="search" id="explorer-search" class="explorer-search" placeholder="Search careers or skills..."
+        aria-label="Search careers" />
+      <select id="explorer-category" class="explorer-select" aria-label="Filter by branch or category">
+        <option value="">All Branches / Fields</option>
+      </select>
+      <select id="explorer-tier" class="explorer-select" aria-label="Filter by recommendation fit tier">
+        <option value="">All Recommendation Tiers</option>
+        <option value="best">Best Option (75%+ Match)</option>
+        <option value="very_high">Very High (65% – 74%)</option>
+        <option value="high">High (55% – 64%)</option>
+        <option value="med">Medium (42% – 54%)</option>
+        <option value="low">Low (30% – 41%)</option>
+        <option value="very_low">Very Low (18% – 29%)</option>
+        <option value="avoid">Don't Even Think About It (&lt; 18%)</option>
+      </select>
+      <select id="explorer-sort" class="explorer-select" aria-label="Sort careers">
+        <option value="match_desc">Sort: Highest Match</option>
+        <option value="match_asc">Sort: Lowest Match</option>
+        <option value="salary_desc">Sort: Salary (High to Low)</option>
+        <option value="name_asc">Sort: Name (A – Z)</option>
+      </select>
+    </div>
+
+    <!-- Quick Fit Tier Filter Chips -->
+    <div class="tier-chips-wrap" id="tierChipsContainer"></div>
+
+    <div class="explorer-results-count" id="explorerCount">
+      <span>Loading catalog...</span>
+    </div>
+
+    <div id="explorer-grid" class="explorer-grid">
+      <div class="explorer-loading" style="color:var(--dust);font-size:13px;padding:24px;text-align:center;">Loading careers...</div>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING COMPARE DOCK ===== -->
+  <div class="floating-compare-dock" id="floatingCompareDock">
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;">
+      <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <span id="compareDockCount">Selected: 0/2</span>
+    </div>
+    <div id="compareDockNames" style="font-size:12px;color:var(--dust);max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;"></div>
+    <button class="btn-home" id="btnLaunchCompare" onclick="openCareerComparisonModal()" style="padding:6px 14px;font-size:11px;">Compare Now &rarr;</button>
+    <button class="btn-retake" onclick="clearCareerComparison()" style="padding:6px 10px;font-size:11px;">Clear</button>
+  </div>
+
+  <!-- ===== CAREER COMPARATOR MODAL ===== -->
+  <div class="compare-modal-backdrop" id="compareModalBackdrop" onclick="if(event.target===this) closeCareerComparisonModal()">
+    <div class="compare-modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:14px;">
+        <div style="font-size:18px;font-weight:600;font-family:'Playfair Display',serif;">Career Comparison Matrix</div>
+        <button class="btn-retake" onclick="closeCareerComparisonModal()" style="padding:4px 10px;font-size:12px;">Close &times;</button>
+      </div>
+      <div id="compareModalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script>
+    // ── Theme & Logo ─────────────────────────────────────────────
+    const html = document.documentElement;
+    const logo = document.getElementById("logo-img");
+
+    function updateLogo(theme) {
+      if (!logo) return;
+      logo.src = theme === "dark" ? "Careerlens_Dark.png" : "Careerlens_light.png";
+    }
+
+    function setTheme(theme) {
+      html.setAttribute("data-theme", theme);
+      updateLogo(theme);
+      localStorage.setItem("careerlens-theme", theme);
+      localStorage.setItem("cl-theme", theme);
+    }
+
+    const initialTheme = localStorage.getItem("careerlens-theme") || localStorage.getItem("cl-theme") || "light";
+    setTheme(initialTheme);
+
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      setTheme(next);
+    });
+
+    // Personalise heading
+    const userName = sessionStorage.getItem("cl_user_name");
+    if (userName) {
+      document.getElementById("pageTitle").textContent = `${userName}'s Career Blueprint.`;
+    }
+
+    /* ================================================================
+       CAREERLENS UNIFIED ENGINE (Zero Emojis, Robust Evolution)
+    ================================================================ */
+    const API_BASE = (window.CAREERLENS_CONFIG && window.CAREERLENS_CONFIG.API_BASE) || "http://localhost:5000/api";
+    let userAssessmentHistory = [];
+    let activeAssessmentId = null;
+    let currentResultsData = null;
+    let assessmentsCache = {}; // assessment_id -> results data
+    let comparedCareers = [];
+    let allCareers = [];
+    let selectedTierChip = "";
+
+    // ── Download PDF Report ───────────────────────────────────────
+    function downloadPdfReport() {
+      const userId = sessionStorage.getItem("cl_user_id") || localStorage.getItem("cl_user_id");
+      if (!userId) {
+        alert("Please log in or complete an assessment to download your PDF report.");
+        return;
+      }
+      window.open(`${API_BASE}/pdf/${userId}`, "_blank");
+    }
+
+    // Helper: escape HTML
+    function esc(str) {
+      return String(str ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    // Helper: chevron SVG
+    function chevronSVG() {
+      return `<svg class="acc-chevron" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>`;
+    }
+
+    // Helper: Demand badge class
+    function demandClass(demand) {
+      if (!demand) return "demand-medium";
+      const d = String(demand).toLowerCase();
+      if (d.includes("very high")) return "demand-very-high";
+      if (d.includes("high")) return "demand-high";
+      if (d.includes("medium")) return "demand-medium";
+      return "demand-low";
+    }
+
+    function demandBadge(demand) {
+      const cls = demandClass(demand);
+      return `<span class="demand-badge ${cls}">${esc(demand || 'Moderate')}</span>`;
+    }
+
+    // Format ISO date nicely
+    function formatDate(isoStr) {
+      if (!isoStr) return "";
+      try {
+        const d = new Date(isoStr);
+        return d.toLocaleDateString(undefined, {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit"
+        });
+      } catch (_) {
+        return isoStr;
+      }
+    }
+
+    // Map compatibility score (0-100) to Fit Tier
+    function getCompatibilityTier(score) {
+      const s = Number(score || 0);
+      if (s >= 75) return { key: "best", label: "Best Option", cls: "tier-best" };
+      if (s >= 65) return { key: "very_high", label: "Very High", cls: "tier-vhigh" };
+      if (s >= 55) return { key: "high", label: "High", cls: "tier-high" };
+      if (s >= 42) return { key: "med", label: "Medium", cls: "tier-med" };
+      if (s >= 30) return { key: "low", label: "Low", cls: "tier-low" };
+      if (s >= 18) return { key: "very_low", label: "Very Low", cls: "tier-vlow" };
+      return { key: "avoid", label: "Don't Even Think About It", cls: "tier-avoid" };
+    }
+
+    // ── Render Top 5 Matches + Top 30 + Skill Profile ────────────
+    function renderMainContent(profile, top5, top30) {
+      const content = document.getElementById("content");
+      if (!content) return;
+
+      let html = "";
+
+      // Check for extreme all-10s or all-0s profile in submitted report
+      if (profile && Object.keys(profile).length >= 10) {
+        const vals = Object.values(profile).map(Number);
+        if (vals.every(v => v >= 9.8)) {
+          html += `
+          <div class="sim-roast-banner all-max" style="display:flex;margin-bottom:24px;">
+            <div class="sim-roast-icon">💀</div>
+            <div class="sim-roast-content">
+              <h4>You ain't that smart bro, keep trying lol 💀</h4>
+              <p>Giving yourself 10/10 across all 20 skills means you're simultaneously a Neurosurgeon, Commercial Airline Pilot, Supreme Court Lawyer, and Haute Couture Fashion Designer. Even Leonardo da Vinci had an off day. Retake with honest ratings for authentic career direction!</p>
+            </div>
+          </div>`;
+        } else if (vals.every(v => v <= 0.5)) {
+          html += `
+          <div class="sim-roast-banner all-zero" style="display:flex;margin-bottom:24px;">
+            <div class="sim-roast-icon">🤨</div>
+            <div class="sim-roast-content">
+              <h4>Nobody is this dumb... or are you? Huh? 🤨</h4>
+              <p>Zero across all 20 human traits? Even a pet rock has at least 3.0 in Physical Stamina and Attention to Detail. Give yourself some credit and retake with your real strengths!</p>
+            </div>
+          </div>`;
+        }
+      }
+
+      // Top 5 careers
+      html += `<div class="section-title">
+        <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Top Career Matches
+      </div>`;
+
+      top5.forEach((c, i) => {
+        const pct = Math.round(c.score ?? c.compatibility ?? 0);
+        html += `
+        <div class="career-card reveal">
+          <div class="career-header">
+            <div class="career-name-group">
+              <span class="career-rank">0${i + 1} &mdash;</span>
+              <span class="career-name">${esc(c.career)}</span>
+            </div>
+            <div class="career-pct">${pct}%</div>
+          </div>
+          <div class="bar-wrap"><div class="bar-fill" style="width:${pct}%"></div></div>
+          <div class="career-why">${esc(c.explanation || c.reason || "")}</div>
+        </div>`;
+      });
+
+      // Top 30 expandable
+      if (top30 && top30.length > 0) {
+        html += `
+        <button class="btn-top30" id="btn-top30">
+          <span>See Top ${top30.length} Career Rankings</span>
+          <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="top30-grid" id="top30-grid">`;
+
+        top30.forEach((c, i) => {
+          const pct = Math.round(c.compatibility ?? 0);
+          const isTop5 = i < 5;
+          html += `
+          <div class="top30-row">
+            <span class="top30-rank">#${i + 1}</span>
+            <span class="top30-name" style="${isTop5 ? 'font-weight:700;color:var(--rust)' : ''}">${esc(c.career)}</span>
+            <div class="top30-bar-wrap"><div class="top30-bar-fill" style="width:${pct}%"></div></div>
+            <span class="top30-pct">${pct}%</span>
+          </div>`;
+        });
+
+        html += `</div>`;
+      }
+
+      // Skill Profile Grid
+      if (profile && Object.keys(profile).length > 0) {
+        html += `<div class="section-title">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Your Skill Profile
+        </div>`;
+        html += `<div class="skill-grid">`;
+        Object.entries(profile)
+          .sort((a, b) => b[1] - a[1])
+          .forEach(([skill, score]) => {
+            html += `
+            <div class="skill-chip">
+              <span class="sname">${esc(skill)}</span>
+              <span class="sval">${Number(score).toFixed(1)}/10</span>
+            </div>`;
+          });
+        html += `</div>`;
+      }
+
+      html += `<div style="display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;">
+        <a class="btn-home" href="dashboard.html">
+          <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Go to Dashboard
+        </a>
+        <a class="btn-retake" href="assessment.html">
+          Retake Assessment
+          <svg class="icon-svg" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a class="btn-retake" href="index.html">
+          <svg class="icon-svg" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to Home
+        </a>
+      </div>`;
+
+      content.innerHTML = html;
+
+      // Wire up top30 toggle
+      const btn = document.getElementById("btn-top30");
+      const grid = document.getElementById("top30-grid");
+      if (btn && grid) {
+        btn.addEventListener("click", () => {
+          const open = grid.classList.toggle("open");
+          btn.classList.toggle("open", open);
+          btn.querySelector("span:first-child").textContent =
+            open ? `Hide Career Rankings` : `See Top ${top30.length} Career Rankings`;
+        });
+      }
+
+      // Re-trigger reveal observer for newly inserted career cards
+      if (window.setupRevealObserver) {
+        window.setupRevealObserver();
+      }
+    }
+
+    // ── Render Skill Gaps ─────────────────────────────────────────
+    function renderSkillGaps(top5, topLevelGaps) {
+      const container = document.getElementById("skill-gap-accordions");
+      if (!container) return;
+
+      let html = "";
+      top5.forEach((career, idx) => {
+        const name = career.career;
+        const pct = Math.round(career.score ?? career.compatibility ?? 0);
+
+        let gaps = [];
+        if (Array.isArray(career.skill_gaps) && career.skill_gaps.length) {
+          gaps = career.skill_gaps;
+        } else if (topLevelGaps && topLevelGaps[name]) {
+          const g = topLevelGaps[name];
+          if (Array.isArray(g)) {
+            gaps = g;
+          } else if (g.gaps && Array.isArray(g.gaps)) {
+            gaps = g.gaps;
+          } else {
+            gaps = Object.entries(g).map(([skill, v]) => ({
+              skill,
+              user_score: v.user_score ?? v.your_score ?? 0,
+              required_score: v.required_score ?? v.required ?? 0,
+              gap: v.gap ?? (v.required_score - v.user_score) ?? 0,
+            }));
+          }
+        }
+
+        gaps = [...gaps].sort((a, b) => (b.gap ?? 0) - (a.gap ?? 0));
+        const bodyId = `gap-body-${idx}`;
+
+        html += `
+        <div class="accordion">
+          <button class="acc-trigger" aria-expanded="false" aria-controls="${bodyId}" id="gap-btn-${idx}">
+            <span class="acc-title-group">
+              <span class="acc-rank">#${idx + 1}</span>
+              <span>${esc(name)}</span>
+            </span>
+            <span style="display:flex;align-items:center;gap:10px;">
+              <span class="acc-pct">${pct}%</span>
+              ${chevronSVG()}
+            </span>
+          </button>
+          <div class="acc-body" id="${bodyId}" role="region" aria-labelledby="gap-btn-${idx}">`;
+
+        if (!gaps.length) {
+          html += `<p style="color:var(--dust);font-size:13px;">No skill gap data available for this career.</p>`;
+        } else {
+          html += `
+            <div style="overflow-x:auto;">
+              <table class="gap-table" role="table">
+                <thead>
+                  <tr>
+                    <th>Skill</th>
+                    <th>Your Score</th>
+                    <th>Required</th>
+                    <th>Gap</th>
+                  </tr>
+                </thead>
+                <tbody>`;
+
+          gaps.forEach(row => {
+            const gap = parseFloat(row.gap ?? 0);
+            const userScore = parseFloat(row.user_score ?? row.your_score ?? 0);
+            const reqScore = parseFloat(row.required_score ?? row.required ?? 0);
+            const isCrit = gap > 4;
+            const userPct = Math.min(100, (userScore / 10) * 100);
+
+            html += `
+                  <tr class="${isCrit ? 'gap-critical' : ''}">
+                    <td>
+                      ${esc(row.skill)}
+                      ${isCrit ? `<span class="badge-priority">Priority</span>` : ''}
+                    </td>
+                    <td>
+                      <span class="mini-bar-wrap">
+                        <span class="mini-bar-fill" style="width:${userPct}%"></span>
+                      </span>
+                      <span class="gap-score">${userScore.toFixed(1)}</span>
+                    </td>
+                    <td><span class="gap-score">${reqScore.toFixed(1)}</span></td>
+                    <td><span class="gap-score ${isCrit ? 'danger' : ''}">${gap.toFixed(1)}</span></td>
+                  </tr>`;
+          });
+
+          html += `
+                </tbody>
+              </table>
+            </div>`;
+        }
+
+        html += `</div></div>`;
+      });
+
+      container.innerHTML = html;
+      wireAccordions(container);
+    }
+
+    // Helper: step completion storage
+    function getStepKey(career, stepNum) {
+      return `cl_rm_${career.replace(/[^a-zA-Z0-9]/g, '_')}_step_${stepNum}`;
+    }
+
+    function isStepDone(career, stepNum) {
+      return localStorage.getItem(getStepKey(career, stepNum)) === 'true';
+    }
+
+    window.toggleStepComplete = function(career, stepNum, checked) {
+      localStorage.setItem(getStepKey(career, stepNum), String(checked));
+      if (currentResultsData) {
+        renderRoadmaps(currentResultsData.top5 || [], currentResultsData.roadmaps || {});
+      }
+    };
+
+    // ── Render Roadmaps ───────────────────────────────────────────
+    function renderRoadmaps(top5, topLevelRoadmaps) {
+      const container = document.getElementById("roadmap-accordions");
+      if (!container) return;
+
+      let html = "";
+      top5.forEach((career, idx) => {
+        const name = career.career;
+        const pct = Math.round(career.score ?? career.compatibility ?? 0);
+
+        let steps = [];
+        if (Array.isArray(career.roadmap) && career.roadmap.length) {
+          steps = career.roadmap;
+        } else if (topLevelRoadmaps && topLevelRoadmaps[name]) {
+          const r = topLevelRoadmaps[name];
+          if (Array.isArray(r)) {
+            steps = r;
+          } else if (r.steps && Array.isArray(r.steps)) {
+            steps = r.steps;
+          }
+        }
+
+        steps = [...steps].sort((a, b) => (a.step_order ?? a.order ?? 0) - (b.step_order ?? b.order ?? 0));
+        const bodyId = `rm-body-${idx}`;
+
+        const doneCount = steps.filter((s, si) => isStepDone(name, s.step_order ?? s.order ?? (si + 1))).length;
+        const donePct = steps.length ? Math.round((doneCount / steps.length) * 100) : 0;
+
+        html += `
+        <div class="accordion">
+          <button class="acc-trigger" aria-expanded="false" aria-controls="${bodyId}" id="rm-btn-${idx}">
+            <span class="acc-title-group">
+              <span class="acc-rank">#${idx + 1}</span>
+              <span>${esc(name)}</span>
+              ${doneCount > 0 ? `<span class="step-tag" style="background:rgba(46,125,94,0.12);color:var(--success);border:1px solid rgba(46,125,94,0.3);">${doneCount}/${steps.length} done</span>` : ''}
+            </span>
+            <span style="display:flex;align-items:center;gap:10px;">
+              <span class="acc-pct">${pct}%</span>
+              ${chevronSVG()}
+            </span>
+          </button>
+          <div class="acc-body" id="${bodyId}" role="region" aria-labelledby="rm-btn-${idx}">`;
+
+        if (!steps.length) {
+          html += `<p style="color:var(--dust);font-size:13px;">No roadmap data available for this career.</p>`;
+        } else {
+          html += `
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px;">
+              <div class="rm-progress-label" style="margin-bottom:0;font-size:12px;color:var(--dust);">
+                <span>Curriculum Progression: <strong>${doneCount} of ${steps.length}</strong> Steps (${donePct}%)</span>
+              </div>
+              <button class="btn-retake" onclick="exportRoadmapMarkdown('${esc(name)}')" style="font-size:11px;padding:3px 8px;gap:5px;">
+                <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Export (MD / Notion)
+              </button>
+            </div>
+            <div class="rm-progress-bar-wrap">
+              <div class="rm-progress-bar" style="width:${donePct}%;"></div>
+            </div>
+            <ol class="roadmap-list">`;
+
+          steps.forEach((step, si) => {
+            const isPriority = step.is_priority === true || step.is_priority === 'true' || step.is_priority === 1;
+            const isMilestone = step.milestone === true || step.milestone === 'true' || step.milestone === 1;
+            const stepNum = step.step_order ?? step.order ?? (si + 1);
+            const desc = step.step ?? step.description ?? step.title ?? '';
+            const skill = step.skill_targeted ?? step.skill ?? '';
+            const duration = step.duration ?? '';
+            const resType = step.resource_type ?? step.type ?? '';
+            const done = isStepDone(name, stepNum);
+
+            html += `
+              <li class="roadmap-step ${isPriority ? 'priority' : ''} ${done ? 'step-done' : ''}">
+                <div class="step-num">${done ? '&#10003;' : stepNum}</div>
+                <div class="step-body">
+                  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+                    <div class="step-desc">${esc(desc)}</div>
+                    <label class="step-check-label">
+                      <input type="checkbox" ${done ? 'checked' : ''} onchange="toggleStepComplete('${esc(name)}', ${stepNum}, this.checked)" />
+                      <span>${done ? 'Completed' : 'Mark Done'}</span>
+                    </label>
+                  </div>
+                  <div class="step-meta">
+                    ${skill ? `<span class="step-tag"><svg class="icon-svg icon-xs" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> ${esc(skill)}</span>` : ''}
+                    ${duration ? `<span class="step-tag"><svg class="icon-svg icon-xs" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> ${esc(duration)}</span>` : ''}
+                    ${resType ? `<span class="step-tag"><svg class="icon-svg icon-xs" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> ${esc(resType)}</span>` : ''}
+                    ${isPriority ? `<span class="badge-prio-step">Priority Focus</span>` : ''}
+                    ${isMilestone ? `<span class="badge-milestone"><svg class="icon-svg icon-xs" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Key Checkpoint</span>` : ''}
+                  </div>
+                </div>
+              </li>`;
+          });
+          html += `</ol>`;
+        }
+
+        html += `</div></div>`;
+      });
+
+      container.innerHTML = html;
+      wireAccordions(container);
+    }
+
+    // ── Export Roadmap to Markdown / Notion ────────────────────────
+    window.exportRoadmapMarkdown = function(careerName) {
+      if (!currentResultsData) return;
+      const top5 = currentResultsData.top5 || [];
+      const c = top5.find(x => x.career === careerName) || { career: careerName };
+      const score = Math.round(c.score ?? c.compatibility ?? 0);
+      let steps = [];
+      if (Array.isArray(c.roadmap) && c.roadmap.length) {
+        steps = c.roadmap;
+      } else if (currentResultsData.roadmaps && currentResultsData.roadmaps[careerName]) {
+        const r = currentResultsData.roadmaps[careerName];
+        steps = Array.isArray(r) ? r : (r.steps || []);
+      }
+      steps = [...steps].sort((a, b) => (a.step_order ?? a.order ?? 0) - (b.step_order ?? b.order ?? 0));
+
+      let md = `# 🎯 Learning Curriculum: ${careerName}\n`;
+      md += `*Generated by CareerLens Mamdani Fuzzy Inference Engine*\n\n`;
+      md += `## 📊 Profile Overview\n`;
+      md += `- **Compatibility Match**: ${score}%\n`;
+      md += `- **Category**: ${c.category || 'General'}\n`;
+      md += `- **Average Compensation**: INR ${c.avg_salary_lpa || '—'} LPA\n`;
+      md += `- **Future Market Demand**: ${c.future_demand || 'High'}\n\n`;
+      md += `## 📋 6-Stage Actionable Study Schedule\n\n`;
+
+      steps.forEach((s, idx) => {
+        const num = s.step_order ?? s.order ?? (idx + 1);
+        const desc = s.step ?? s.description ?? s.title ?? '';
+        const skill = s.skill_targeted ?? s.skill ?? 'General';
+        const dur = s.duration ?? '4-6 weeks';
+        const res = s.resource_type ?? s.type ?? 'Interactive Labs';
+        const isDone = isStepDone(careerName, num);
+
+        md += `- [${isDone ? 'x' : ' '}] **Step ${num}: ${desc}**\n`;
+        md += `  - **Target Skill**: ${skill}\n`;
+        md += `  - **Duration**: ${dur}\n`;
+        md += `  - **Resource**: ${res}\n\n`;
+      });
+
+      md += `---\n*Exported on ${new Date().toLocaleDateString()} — Ready to import into Notion or Obsidian*\n`;
+
+      const blob = new Blob([md], { type: 'text/markdown;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${careerName.replace(/[^a-zA-Z0-9]/g, '_')}_Roadmap.md`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    };
+
+    // Helper: wire accordion events
+    function wireAccordions(container) {
+      container.querySelectorAll(".acc-trigger").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const body = btn.nextElementSibling;
+          const isOpen = body.classList.toggle("open");
+          btn.setAttribute("aria-expanded", String(isOpen));
+        });
+      });
+    }
+
+    // ── Render Assessment History Switcher Bar ────────────────────
+    function renderHistoryBar(history, activeId, currentData) {
+      const container = document.getElementById("historyBarContainer");
+      const oldNotice = document.getElementById("oldReportBanner");
+      if (!container) return;
+
+      const completed = (history || []).filter(h => h.status === "completed");
+      if (!completed.length && !currentData) {
+        container.innerHTML = "";
+        if (oldNotice) oldNotice.style.display = "none";
+        return;
+      }
+
+      const latestItem = completed[0];
+      const isLatest = !activeId || (latestItem && activeId === latestItem.assessment_id);
+      const activeItem = completed.find(h => h.assessment_id === activeId) || latestItem;
+
+      let attemptIndex = completed.length || 1;
+      if (activeItem) {
+        const foundIdx = completed.findIndex(h => h.assessment_id === activeItem.assessment_id);
+        if (foundIdx !== -1) attemptIndex = completed.length - foundIdx;
+      }
+
+      const dateStr = formatDate(activeItem?.created_at || currentData?.created_at);
+
+      let selectOptions = "";
+      if (completed.length > 1) {
+        selectOptions = completed.map((item, idx) => {
+          const itemAttempt = completed.length - idx;
+          const isItemLatest = idx === 0;
+          const isSelected = item.assessment_id === activeId || (isLatest && isItemLatest);
+          const topC = item.top_careers && item.top_careers.length ? ` (${item.top_careers[0]})` : "";
+          const label = isItemLatest
+            ? `Attempt #${itemAttempt} (Latest / Updated Report)${topC}`
+            : `Attempt #${itemAttempt} (${formatDate(item.created_at)})${topC}`;
+          return `<option value="${item.assessment_id}" ${isSelected ? 'selected' : ''}>${esc(label)}</option>`;
+        }).join("");
+      }
+
+      container.innerHTML = `
+        <div class="history-bar">
+          <div class="history-meta">
+            <div class="history-status-line">
+              <span class="badge-report ${isLatest ? 'updated' : 'past'}">
+                <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                ${isLatest ? 'Updated Report (Latest)' : `Assessment Attempt #${attemptIndex}`}
+              </span>
+              ${dateStr ? `<span class="history-date">Completed: ${esc(dateStr)}</span>` : ''}
+            </div>
+            <div style="font-size:12px;color:var(--dust);margin-top:2px;">
+              ${isLatest ? 'Showing your latest and active recommendation profile.' : `Viewing historical assessment results. You can switch to your latest report anytime.`}
+            </div>
+          </div>
+          <div class="history-controls">
+            ${completed.length > 1 ? `
+              <select id="assessmentHistorySelect" class="assessment-select" aria-label="Switch assessment report">
+                ${selectOptions}
+              </select>
+            ` : ''}
+            <button onclick="downloadPdfReport()" class="btn-retake" style="cursor:pointer;" title="Download PDF report">
+              <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF Report
+            </button>
+            <a href="assessment.html" class="btn-retake">
+              <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Retake Assessment
+            </a>
+          </div>
+        </div>
+      `;
+
+      // Notice banner if viewing old report
+      if (oldNotice) {
+        if (!isLatest && latestItem) {
+          oldNotice.style.display = "block";
+          oldNotice.innerHTML = `
+            <div class="old-report-banner">
+              <div class="orb-text">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                <span><strong>Viewing Historical Results:</strong> You are looking at attempt #${attemptIndex} from ${esc(dateStr)}.</span>
+              </div>
+              <button class="btn-view-latest" id="btnJumpLatest" onclick="loadLatestReport()">
+                Switch to Updated Report (Latest)
+                <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          `;
+          document.getElementById("btnJumpLatest")?.addEventListener("click", () => {
+            loadLatestReport();
+          });
+        } else {
+          oldNotice.style.display = "none";
+        }
+      }
+
+      // Wire change on assessment dropdown
+      const sel = document.getElementById("assessmentHistorySelect");
+      if (sel) {
+        sel.addEventListener("change", (e) => {
+          const selectedId = Number(e.target.value);
+          if (selectedId) {
+            loadAssessmentById(selectedId);
+          }
+        });
+      }
+    }
+
+    // ── Dedicated Assessment Evolution Engine ──────────────────────
+    async function fetchAssessmentData(assessmentId) {
+      if (assessmentsCache[assessmentId]) return assessmentsCache[assessmentId];
+      try {
+        const res = await fetch(`${API_BASE}/assessment/${assessmentId}/results`);
+        if (!res.ok) return null;
+        const data = await res.json();
+        assessmentsCache[assessmentId] = data;
+        return data;
+      } catch (_) {
+        return null;
+      }
+    }
+
+    async function renderEvolutionSection(history) {
+      const evolutionContent = document.getElementById("evolutionContent");
+      const evolutionControls = document.getElementById("evolutionControls");
+      if (!evolutionContent) return;
+
+      const completed = (history || []).filter(h => h.status === "completed");
+
+      if (completed.length < 2) {
+        if (evolutionControls) evolutionControls.innerHTML = "";
+        evolutionContent.innerHTML = `
+          <div class="evolution-empty">
+            <div style="font-weight:600;font-size:14px;color:var(--ink);margin-bottom:6px;">
+              Trajectory Tracking Ready
+            </div>
+            <div>
+              Assessment Evolution activates automatically when you complete your next assessment. It calculates compatibility gains, tracks closing skill gaps, and graphs your career fit trajectory over time.
+            </div>
+            <div style="margin-top:14px;">
+              <a href="assessment.html" class="btn-home">
+                Take Assessment #2
+                <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      let primaryId = activeAssessmentId || completed[0].assessment_id;
+      let baselineId = completed.find(h => h.assessment_id !== primaryId)?.assessment_id || completed[1].assessment_id;
+
+      const optionsA = completed.map((h, i) => {
+        const num = completed.length - i;
+        return `<option value="${h.assessment_id}" ${h.assessment_id === primaryId ? 'selected' : ''}>Attempt #${num} (${formatDate(h.created_at)})</option>`;
+      }).join("");
+
+      const optionsB = completed.map((h, i) => {
+        const num = completed.length - i;
+        return `<option value="${h.assessment_id}" ${h.assessment_id === baselineId ? 'selected' : ''}>Attempt #${num} (${formatDate(h.created_at)})</option>`;
+      }).join("");
+
+      evolutionControls.innerHTML = `
+        <span style="font-size:12px;color:var(--dust);">Comparing:</span>
+        <select id="evoPrimarySelect" class="evolution-select">${optionsA}</select>
+        <span style="font-size:12px;color:var(--dust);">vs</span>
+        <select id="evoBaselineSelect" class="evolution-select">${optionsB}</select>
+      `;
+
+      async function updateEvolutionComparison(pId, bId) {
+        evolutionContent.innerHTML = `<div style="text-align:center;padding:24px;color:var(--dust);font-size:13px;">Calculating trajectory progression...</div>`;
+
+        const [primaryData, baselineData] = await Promise.all([
+          fetchAssessmentData(pId),
+          fetchAssessmentData(bId)
+        ]);
+
+        if (!primaryData || !baselineData) {
+          evolutionContent.innerHTML = `<div class="evolution-empty">Could not load comparison datasets.</div>`;
+          return;
+        }
+
+        const pTop5 = primaryData.top5 || [];
+        const bTop5 = baselineData.top5 || [];
+        const bScores = {};
+        bTop5.forEach(c => {
+          bScores[c.career] = Math.round(c.score ?? c.compatibility ?? 0);
+        });
+
+        let rowsHtml = "";
+        pTop5.forEach(c => {
+          const currScore = Math.round(c.score ?? c.compatibility ?? 0);
+          const oldScore = bScores[c.career];
+          let deltaHtml = `<span class="comp-delta neu">New Match</span>`;
+
+          if (oldScore !== undefined) {
+            const diff = currScore - oldScore;
+            if (diff > 0) {
+              deltaHtml = `<span class="comp-delta pos">+${diff}%</span>`;
+            } else if (diff < 0) {
+              deltaHtml = `<span class="comp-delta neg">${diff}%</span>`;
+            } else {
+              deltaHtml = `<span class="comp-delta neu">0%</span>`;
+            }
+          }
+
+          rowsHtml += `
+            <div class="comp-row">
+              <div class="comp-career-name">${esc(c.career)}</div>
+              <div class="comp-scores">
+                <span style="color:var(--dust);font-size:12px;">${oldScore !== undefined ? oldScore + '%' : '—'}</span>
+                <span style="color:var(--dust);">&rarr;</span>
+                <strong style="color:var(--rust);">${currScore}%</strong>
+                ${deltaHtml}
+              </div>
+            </div>
+          `;
+        });
+
+        const pSkills = primaryData.skill_profile || {};
+        const bSkills = baselineData.skill_profile || {};
+        const allSkillKeys = [...new Set([...Object.keys(pSkills), ...Object.keys(bSkills)])];
+
+        let skillShiftRows = "";
+        allSkillKeys.forEach(sk => {
+          const sCurr = pSkills[sk] !== undefined ? Number(pSkills[sk]) : null;
+          const sOld = bSkills[sk] !== undefined ? Number(bSkills[sk]) : null;
+          if (sCurr !== null && sOld !== null) {
+            const sDiff = sCurr - sOld;
+            if (Math.abs(sDiff) >= 0.1) {
+              const sign = sDiff > 0 ? `+${sDiff.toFixed(1)}` : `${sDiff.toFixed(1)}`;
+              const cls = sDiff > 0 ? 'pos' : 'neg';
+              skillShiftRows += `
+                <div class="comp-row" style="font-size:13px;padding:8px 0;">
+                  <div style="font-weight:500;">${esc(sk)}</div>
+                  <div class="comp-scores">
+                    <span style="color:var(--dust);font-size:11.5px;">${sOld.toFixed(1)}/10</span>
+                    <span style="color:var(--dust);">&rarr;</span>
+                    <strong>${sCurr.toFixed(1)}/10</strong>
+                    <span class="comp-delta ${cls}">${sign}</span>
+                  </div>
+                </div>
+              `;
+            }
+          }
+        });
+
+        if (!skillShiftRows) {
+          skillShiftRows = `<div style="color:var(--dust);font-size:12.5px;padding:8px 0;">No significant skill profile delta between these two attempts.</div>`;
+        }
+
+        evolutionContent.innerHTML = `
+          <div>
+            <div class="comp-col-header" style="margin-top:4px;">
+              <span>Career Match</span>
+              <span>Baseline &rarr; Selected (Compatibility Delta)</span>
+            </div>
+            ${rowsHtml}
+          </div>
+
+          <div style="margin-top:24px;border-top:1px solid var(--line);padding-top:18px;">
+            <div style="font-size:13.5px;font-weight:600;margin-bottom:8px;color:var(--ink);">
+              Skill Score Shifts (0-10 Scale)
+            </div>
+            <div class="comp-col-header">
+              <span>Skill</span>
+              <span>Baseline &rarr; Selected (Proficiency Delta)</span>
+            </div>
+            ${skillShiftRows}
+          </div>
+        `;
+      }
+
+      updateEvolutionComparison(primaryId, baselineId);
+
+      document.getElementById("evoPrimarySelect")?.addEventListener("change", (e) => {
+        primaryId = Number(e.target.value);
+        updateEvolutionComparison(primaryId, baselineId);
+      });
+
+      document.getElementById("evoBaselineSelect")?.addEventListener("change", (e) => {
+        baselineId = Number(e.target.value);
+        updateEvolutionComparison(primaryId, baselineId);
+      });
+    }
+
+    // ── Full Report Renderer ──────────────────────────────────────
+    function renderFullReport(data, isLatest = true, history = []) {
+      if (!data) return;
+      currentResultsData = data;
+      const { skill_profile, top5, top30, skill_gaps, roadmaps } = data;
+
+      if (data.assessment_id) {
+        assessmentsCache[data.assessment_id] = data;
+      }
+
+      renderHistoryBar(history, activeAssessmentId, data);
+      renderMainContent(skill_profile || {}, top5 || [], top30 || []);
+
+      const extra = document.getElementById("extra-sections");
+      if (extra && top5 && top5.length) {
+        extra.style.display = "";
+        renderSkillGaps(top5, skill_gaps || null);
+        renderRoadmaps(top5, roadmaps || null);
+      }
+
+      renderEvolutionSection(history);
+      initSkillSimulation(skill_profile || {}, top5 || []);
+
+      if (allCareers && allCareers.length > 0) {
+        renderTierChips();
+        filterExplorer();
+      }
+    }
+
+    // ── What-If? Skill Simulation Lab Controller ───────────────────
+    let simulatedSkills = {};
+    let simSearchQuery = "";
+    let simSelectedScope = "all";
+
+    window.onSimSearchChange = function(val) {
+      simSearchQuery = (val || "").toLowerCase().trim();
+      recalculateSimulatedOutcomes();
+    };
+
+    window.onSimScopeChange = function(val) {
+      simSelectedScope = val || "all";
+      recalculateSimulatedOutcomes();
+    };
+
+    const DOMAIN_SKILL_MAP = {
+      "Business": ["Business Thinking", "Leadership", "Decision Making", "Communication", "Problem Solving", "Adaptability"],
+      "Management": ["Leadership", "Decision Making", "Communication", "Discipline", "Empathy", "Problem Solving"],
+      "Finance": ["Math", "Logical Thinking", "Business Thinking", "Attention To Detail", "Decision Making", "Discipline"],
+      "Marketing": ["Communication", "Creativity", "Business Thinking", "Curiosity", "Innovation", "Adaptability"],
+      "Human Resources": ["Communication", "Empathy", "Leadership", "Decision Making", "Discipline", "Adaptability"],
+      "Technology": ["Programming", "Logical Thinking", "Problem Solving", "Learning Ability", "Innovation", "Math"],
+      "Engineering": ["Math", "Logical Thinking", "Problem Solving", "Attention To Detail", "Physical Stamina", "Innovation"],
+      "Design": ["Creativity", "Artistic Skill", "Innovation", "Attention To Detail", "Communication", "Curiosity"],
+      "Healthcare": ["Empathy", "Attention To Detail", "Communication", "Research Interest", "Discipline", "Learning Ability"],
+      "Science": ["Research Interest", "Logical Thinking", "Math", "Curiosity", "Learning Ability", "Attention To Detail"],
+      "Media": ["Communication", "Creativity", "Artistic Skill", "Curiosity", "Innovation", "Attention To Detail"],
+      "Legal": ["Logical Thinking", "Communication", "Attention To Detail", "Research Interest", "Decision Making", "Discipline"],
+      "Education": ["Communication", "Empathy", "Teaching Ability", "Learning Ability", "Leadership", "Curiosity"],
+      "Government": ["Leadership", "Decision Making", "Communication", "Discipline", "Problem Solving", "Adaptability"],
+      "Hospitality": ["Communication", "Empathy", "Discipline", "Adaptability", "Attention To Detail"],
+      "Sports": ["Physical Stamina", "Discipline", "Leadership", "Adaptability", "Decision Making"],
+      "Aviation": ["Physical Stamina", "Attention To Detail", "Decision Making", "Discipline", "Logical Thinking", "Math"],
+      "Agriculture": ["Physical Stamina", "Discipline", "Problem Solving", "Curiosity", "Adaptability", "Learning Ability"],
+      "Research": ["Research Interest", "Curiosity", "Logical Thinking", "Attention To Detail", "Learning Ability", "Math"],
+      "Social Services": ["Empathy", "Communication", "Discipline", "Leadership", "Adaptability"],
+      "Language": ["Communication", "Learning Ability", "Creativity", "Curiosity", "Attention To Detail"]
+    };
+
+    function matchCategoryScope(careerCat, scope) {
+      if (!scope || scope === "all" || scope === "5" || scope === "10" || scope === "25") return true;
+      const cCat = (careerCat || "").toLowerCase().trim();
+      const sScope = (scope || "").toLowerCase().trim();
+
+      if (cCat === sScope) return true;
+
+      // Group branch matching
+      if (sScope.includes("business") || sScope.includes("management")) {
+        return ["business", "management", "finance", "human resources", "marketing", "legal"].includes(cCat) ||
+               cCat.includes("business") || cCat.includes("management");
+      }
+      if (sScope.includes("tech") || sScope.includes("engineer")) {
+        return ["technology", "engineering", "aviation"].includes(cCat) || cCat.includes("tech") || cCat.includes("eng");
+      }
+      if (sScope.includes("design") || sScope.includes("media")) {
+        return ["design", "media", "language"].includes(cCat) || cCat.includes("design") || cCat.includes("media");
+      }
+      if (sScope.includes("health") || sScope.includes("science")) {
+        return ["healthcare", "science", "research", "agriculture"].includes(cCat) || cCat.includes("health") || cCat.includes("science");
+      }
+      if (sScope.includes("public") || sScope.includes("social")) {
+        return ["government", "education", "social services", "sports", "hospitality"].includes(cCat);
+      }
+      if (sScope.includes("finance")) {
+        return ["finance", "business"].includes(cCat);
+      }
+      if (sScope.includes("marketing")) {
+        return ["marketing", "business", "media"].includes(cCat);
+      }
+      if (sScope.includes("legal")) {
+        return ["legal", "government"].includes(cCat);
+      }
+      if (sScope.includes("media")) {
+        return ["media", "design", "language"].includes(cCat);
+      }
+      if (sScope.includes("healthcare")) {
+        return ["healthcare", "science"].includes(cCat);
+      }
+      if (sScope.includes("engineering")) {
+        return ["engineering", "technology", "aviation"].includes(cCat);
+      }
+
+      return cCat.includes(sScope) || sScope.includes(cCat);
+    }
+
+    function initSkillSimulation(skillProfile, top5) {
+      const slidersContainer = document.getElementById("simSlidersContainer");
+      const outcomesContainer = document.getElementById("simOutcomesContainer");
+      if (!slidersContainer || !outcomesContainer) return;
+
+      simulatedSkills = { ...skillProfile };
+      const skills = Object.keys(skillProfile);
+      if (!skills.length) {
+        const sec = document.getElementById("sim-section");
+        if (sec) sec.style.display = "none";
+        return;
+      }
+      const sec = document.getElementById("sim-section");
+      if (sec) sec.style.display = "";
+
+      slidersContainer.innerHTML = skills.map(sk => {
+        const val = Number(skillProfile[sk] || 5.0).toFixed(1);
+        const escSk = esc(sk);
+        const safeId = escSk.replace(/[^a-zA-Z0-9]/g, '_');
+        return `
+          <div class="sim-slider-row">
+            <div class="sim-slider-label">
+              <span>${escSk}</span>
+              <span><span class="score-val" id="sim-val-${safeId}">${val}</span> / 10.0</span>
+            </div>
+            <input type="range" min="0.0" max="10.0" step="0.5" value="${val}"
+              id="sim-range-${safeId}"
+              oninput="onSimSliderInput('${escSk}', this.value)" />
+          </div>
+        `;
+      }).join("");
+
+      recalculateSimulatedOutcomes();
+    }
+
+    window.onSimSliderInput = function(skillName, value) {
+      simulatedSkills[skillName] = parseFloat(value);
+      const safeId = skillName.replace(/[^a-zA-Z0-9]/g, '_');
+      const valEl = document.getElementById(`sim-val-${safeId}`);
+      if (valEl) valEl.textContent = parseFloat(value).toFixed(1);
+      recalculateSimulatedOutcomes();
+    };
+
+    function recalculateSimulatedOutcomes() {
+      const container = document.getElementById("simOutcomesContainer");
+      const countLabel = document.getElementById("simCountLabel");
+      if (!container) return;
+
+      const baseProfile = (currentResultsData && currentResultsData.skill_profile) || {};
+      const careerPool = (window.allCareers && window.allCareers.length > 0)
+        ? window.allCareers
+        : (allCareers && allCareers.length > 0)
+          ? allCareers
+          : ((currentResultsData && (currentResultsData.top30 || currentResultsData.top5)) || []);
+
+      if (!careerPool || !careerPool.length) {
+        container.innerHTML = `<div style="color:var(--dust);font-size:13px;padding:12px;">Loading career possibilities...</div>`;
+        return;
+      }
+
+      const baselineTop5Names = new Set((currentResultsData?.top5 || []).map(c => c.career));
+      const allKeys = Object.keys(simulatedSkills);
+
+      // Check for extreme all-10s or all-0s easter egg condition
+      const roastBanner = document.getElementById("simRoastBanner");
+      const roastIcon = document.getElementById("simRoastIcon");
+      const roastTitle = document.getElementById("simRoastTitle");
+      const roastText = document.getElementById("simRoastText");
+
+      if (roastBanner && allKeys.length > 0) {
+        const values = allKeys.map(sk => Number(simulatedSkills[sk] !== undefined ? simulatedSkills[sk] : (baseProfile[sk] || 5.0)));
+        const isAllMax = values.length >= 10 && values.every(v => v >= 9.8);
+        const isAllZero = values.length >= 10 && values.every(v => v <= 0.5);
+
+        if (isAllMax) {
+          roastBanner.className = "sim-roast-banner all-max";
+          if (roastIcon) roastIcon.textContent = "💀";
+          if (roastTitle) roastTitle.textContent = "You ain't that smart bro, keep trying lol 💀";
+          if (roastText) roastText.textContent = "Putting 10.0 across all 20 skills? That makes you a Master Neurosurgeon, Quantum Physicist, Commercial Airline Captain, and Haute Couture Fashion Designer all at once. Even Leonardo da Vinci had an off day. Dial it back to reality!";
+        } else if (isAllZero) {
+          roastBanner.className = "sim-roast-banner all-zero";
+          if (roastIcon) roastIcon.textContent = "🤨";
+          if (roastTitle) roastTitle.textContent = "Nobody is this dumb... or are you? Huh? 🤨";
+          if (roastText) roastText.textContent = "Zero across all 20 skills? Even a pet rock has at least 3.0 in Physical Stamina and Attention to Detail. Give yourself some credit and bump a few sliders up!";
+        } else {
+          roastBanner.className = "sim-roast-banner";
+        }
+      }
+
+      const calculatedList = careerPool.map(c => {
+        const cName = c.career;
+        const cCat = c.category || "General";
+        const baseScore = getCareerScore(cName);
+
+        const domainSkills = DOMAIN_SKILL_MAP[cCat] || ["Problem Solving", "Decision Making", "Communication", "Learning Ability", "Adaptability"];
+        
+        let domainSum = 0;
+        domainSkills.forEach(sk => {
+          const val = Number(simulatedSkills[sk] !== undefined ? simulatedSkills[sk] : (baseProfile[sk] || 5.0));
+          domainSum += val;
+        });
+        const avgDomainSkill = domainSum / domainSkills.length; // 0.0 to 10.0
+
+        const allKeys = Object.keys(simulatedSkills);
+        let totalSum = 0;
+        allKeys.forEach(sk => {
+          totalSum += Number(simulatedSkills[sk] || 0.0);
+        });
+        const avgTotalSkill = allKeys.length > 0 ? (totalSum / allKeys.length) : avgDomainSkill; // 0.0 to 10.0
+
+        // Blended competency factor (75% domain-specific, 25% holistic)
+        const blendedSkill = (avgDomainSkill * 0.75) + (avgTotalSkill * 0.25); // 0.0 to 10.0
+
+        // Responsive simulation calculation:
+        const rawSim = (blendedSkill / 10.0) * 88.0 + (baseScore / 100.0) * 11.0;
+        const simScore = Math.min(99.0, Math.max(12.0, Math.round(rawSim)));
+        const scoreDiff = Math.round(simScore - baseScore);
+
+        return {
+          career: cName,
+          category: cCat,
+          description: c.description || "",
+          baseScore: baseScore,
+          simScore: simScore,
+          scoreDiff: scoreDiff,
+          wasInTop5: baselineTop5Names.has(cName)
+        };
+      });
+
+      calculatedList.sort((a, b) => b.simScore - a.simScore);
+
+      calculatedList.forEach((item, index) => {
+        item.simRank = index + 1;
+      });
+
+      let filtered = calculatedList.filter(item => {
+        const matchesQuery = !simSearchQuery ||
+          item.career.toLowerCase().includes(simSearchQuery) ||
+          item.category.toLowerCase().includes(simSearchQuery);
+
+        let matchesScope = true;
+        if (simSelectedScope === "5") {
+          matchesScope = (item.simRank <= 5);
+        } else if (simSelectedScope === "10") {
+          matchesScope = (item.simRank <= 10);
+        } else if (simSelectedScope === "25") {
+          matchesScope = (item.simRank <= 25);
+        } else if (simSelectedScope !== "all") {
+          matchesScope = matchCategoryScope(item.category, simSelectedScope);
+        }
+
+        return matchesQuery && matchesScope;
+      });
+
+      if (countLabel) {
+        countLabel.textContent = `Showing ${filtered.length} of ${careerPool.length} careers (Ranked by Simulated Fit)`;
+      }
+
+      if (!filtered.length) {
+        container.innerHTML = `
+          <div style="text-align:center;padding:24px 12px;color:var(--dust);font-size:13px;background:var(--card-bg);border:1px solid var(--line);">
+            No career matches found for scope "<strong>${esc(simSelectedScope)}</strong>" ${simSearchQuery ? `with query "${esc(simSearchQuery)}"` : ''}.
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(c => {
+        const isPos = c.scoreDiff >= 0;
+        const diffText = isPos ? `+${c.scoreDiff}%` : `${c.scoreDiff}%`;
+        const isSurge = !c.wasInTop5 && (c.simRank <= 5);
+
+        return `
+          <div class="sim-outcome-item">
+            <div class="sim-outcome-header">
+              <div style="display:flex;align-items:center;flex-wrap:wrap;gap:4px;">
+                <span class="sim-rank-badge">#${c.simRank}</span>
+                <span style="font-weight:600;">${esc(c.career)}</span>
+                <span style="font-size:11px;color:var(--dust);">&middot; ${esc(c.category)}</span>
+                ${isSurge ? '<span class="sim-surge-badge">Top 5 Surge</span>' : ''}
+              </div>
+              <span class="sim-delta-badge ${isPos ? '' : 'negative'}">
+                ${diffText}
+              </span>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:11.5px;color:var(--dust);margin-top:2px;">
+              <span>Base: <strong>${Math.round(c.baseScore)}%</strong></span>
+              <span>Simulated: <strong style="color:var(--rust);">${c.simScore}%</strong></span>
+            </div>
+            <div class="bar-wrap" style="height:3px;margin:2px 0;">
+              <div class="bar-fill" style="width:${c.simScore}%;background:${c.simScore >= 65 ? 'var(--rust)' : 'var(--dust)'}"></div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    window.resetSkillSimulation = function() {
+      if (currentResultsData && currentResultsData.skill_profile) {
+        initSkillSimulation(currentResultsData.skill_profile, currentResultsData.top5 || []);
+      }
+    };
+
+    // ── Load specific assessment by ID ────────────────────────────
+    async function loadAssessmentById(assessmentId) {
+      const content = document.getElementById("content");
+      if (content) {
+        content.innerHTML = `<div style="text-align:center;padding:40px;color:var(--dust);">Loading assessment #${assessmentId}...</div>`;
+      }
+
+      try {
+        const data = await fetchAssessmentData(assessmentId);
+        if (!data) throw new Error("Could not load data.");
+        activeAssessmentId = assessmentId;
+        sessionStorage.setItem("cl_results", JSON.stringify(data));
+        const completed = (userAssessmentHistory || []).filter(h => h.status === "completed");
+        const isLatest = completed.length > 0 && completed[0].assessment_id === assessmentId;
+        renderFullReport(data, isLatest, userAssessmentHistory);
+      } catch (err) {
+        if (content) {
+          content.innerHTML = `
+            <div class="no-results" style="text-align:center;padding:40px;color:var(--dust);">
+              <p style="font-size:18px;margin-bottom:12px;">Could not load assessment.</p>
+              <p>${esc(err.message)}</p>
+              <button class="btn-home" onclick="loadLatestReport()">Reload Latest Report</button>
+            </div>`;
+        }
+      }
+    }
+
+    // ── Load latest report ────────────────────────────────────────
+    async function loadLatestReport() {
+      const completed = (userAssessmentHistory || []).filter(h => h.status === "completed");
+      if (completed.length > 0) {
+        const latestId = completed[0].assessment_id;
+        await loadAssessmentById(latestId);
+        return;
+      }
+
+      const userId = sessionStorage.getItem("cl_user_id");
+      if (!userId && currentResultsData) {
+        activeAssessmentId = null;
+        renderFullReport(currentResultsData, true, userAssessmentHistory);
+        return;
+      }
+
+      try {
+        const res = await fetch(`${API_BASE}/results/${userId}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        activeAssessmentId = data.assessment_id || (userAssessmentHistory[0]?.assessment_id);
+        sessionStorage.setItem("cl_results", JSON.stringify(data));
+        renderFullReport(data, true, userAssessmentHistory);
+      } catch (err) {
+        console.warn("Could not fetch latest results from API:", err);
+        if (currentResultsData) {
+          activeAssessmentId = null;
+          renderFullReport(currentResultsData, true, userAssessmentHistory);
+        }
+      }
+    }
+
+    window.loadLatestReport = loadLatestReport;
+    window.loadAssessmentById = loadAssessmentById;
+
+    // ── Career Explorer & Fit Navigator ───────────────────────────
+    function getCareerScore(careerName) {
+      if (!currentResultsData) return 50.0;
+      if (currentResultsData.all_scores && currentResultsData.all_scores[careerName] !== undefined) {
+        return Number(currentResultsData.all_scores[careerName]);
+      }
+      const top5Match = (currentResultsData.top5 || []).find(c => c.career === careerName);
+      if (top5Match) return Number(top5Match.score ?? top5Match.compatibility ?? 80);
+      const top30Match = (currentResultsData.top30 || []).find(c => c.career === careerName);
+      if (top30Match) return Number(top30Match.compatibility ?? 60);
+      return 35.0;
+    }
+
+    function renderExplorerCards(list) {
+      const grid = document.getElementById("explorer-grid");
+      const countEl = document.getElementById("explorerCount");
+      if (!grid) return;
+
+      if (countEl) {
+        countEl.innerHTML = `
+          <span>Showing <strong>${list.length}</strong> of <strong>${allCareers.length}</strong> careers</span>
+          <span style="font-size:11px;color:var(--dust);">Filtered by compatibility</span>
+        `;
+      }
+
+      if (!list.length) {
+        grid.innerHTML = `
+          <div class="explorer-empty" style="grid-column:1/-1;text-align:center;padding:36px;color:var(--dust);">
+            <div style="font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px;">No careers match this filter combination</div>
+            <div>Try selecting "All Recommendation Tiers" or clear your search keyword.</div>
+          </div>`;
+        return;
+      }
+
+      grid.innerHTML = list.map(c => {
+        const score = getCareerScore(c.career);
+        const tier = getCompatibilityTier(score);
+        const scorePct = Math.round(score);
+        const isComparing = comparedCareers.includes(c.career);
+
+        return `
+        <article class="career-explorer-card">
+          <div class="ec-header">
+            <div>
+              <div class="ec-name">${esc(c.career)}</div>
+              <div style="margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+                <span class="fit-tier-badge ${tier.cls}">
+                  ${esc(tier.label)} &middot; ${scorePct}%
+                </span>
+                <span class="ec-category">${esc(c.category)}</span>
+              </div>
+            </div>
+            <button class="btn-compare-chip ${isComparing ? 'active' : ''}" onclick="toggleCareerComparison('${esc(c.career)}')">
+              ${isComparing ? '&#10003; Comparing' : '+ Compare'}
+            </button>
+          </div>
+          <div class="bar-wrap" style="height:3px;margin:4px 0;">
+            <div class="bar-fill" style="width:${scorePct}%;background:${score >= 65 ? 'var(--rust)' : 'var(--dust)'}"></div>
+          </div>
+          <p class="ec-desc">${esc(c.description)}</p>
+          <div class="ec-stats">
+            <div class="ec-stat">
+              <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <strong>INR ${esc(c.avg_salary_lpa)} LPA</strong>
+            </div>
+            <span class="ec-stat-sep">&middot;</span>
+            <div class="ec-stat">
+              <svg class="icon-svg icon-xs" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+              ${esc(c.required_education)}
+            </div>
+            <span class="ec-stat-sep">&middot;</span>
+            <div class="ec-stat">${demandBadge(c.future_demand)}</div>
+          </div>
+        </article>`;
+      }).join("");
+    }
+
+    // ── Career Comparator Controller ──────────────────────────────
+    window.toggleCareerComparison = function(careerName) {
+      const idx = comparedCareers.indexOf(careerName);
+      if (idx >= 0) {
+        comparedCareers.splice(idx, 1);
+      } else {
+        if (comparedCareers.length >= 2) {
+          comparedCareers.shift();
+        }
+        comparedCareers.push(careerName);
+      }
+      updateCompareDock();
+      filterExplorer();
+    };
+
+    window.clearCareerComparison = function() {
+      comparedCareers = [];
+      updateCompareDock();
+      filterExplorer();
+    };
+
+    function updateCompareDock() {
+      const dock = document.getElementById("floatingCompareDock");
+      const countEl = document.getElementById("compareDockCount");
+      const namesEl = document.getElementById("compareDockNames");
+      const launchBtn = document.getElementById("btnLaunchCompare");
+      if (!dock) return;
+
+      if (comparedCareers.length === 0) {
+        dock.classList.remove("show");
+      } else {
+        dock.classList.add("show");
+        if (countEl) {
+          countEl.textContent = comparedCareers.length === 2 
+            ? "Ready to Compare (2/2)"
+            : "Select 1 More Career (1/2)";
+        }
+        if (namesEl) {
+          namesEl.textContent = comparedCareers.join(" vs ");
+        }
+        if (launchBtn) {
+          launchBtn.style.opacity = comparedCareers.length === 2 ? "1" : "0.75";
+        }
+      }
+    }
+
+    window.openCareerComparisonModal = function() {
+      if (comparedCareers.length < 2) {
+        alert("Please click '+ Compare' on two different careers in the explorer below to view side-by-side analysis.");
+        return;
+      }
+      const backdrop = document.getElementById("compareModalBackdrop");
+      const content = document.getElementById("compareModalContent");
+      if (!backdrop || !content) return;
+
+      const c1 = allCareers.find(c => c.career === comparedCareers[0]) || { career: comparedCareers[0] };
+      const c2 = allCareers.find(c => c.career === comparedCareers[1]) || { career: comparedCareers[1] };
+
+      const s1 = getCareerScore(c1.career);
+      const s2 = getCareerScore(c2.career);
+      const t1 = getCompatibilityTier(s1);
+      const t2 = getCompatibilityTier(s2);
+
+      content.innerHTML = `
+        <div class="compare-grid">
+          <div class="compare-col">
+            <div style="font-size:16px;font-weight:600;color:var(--ink);">${esc(c1.career)}</div>
+            <div style="margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+              <span class="fit-tier-badge ${t1.cls}">${esc(t1.label)} &middot; ${Math.round(s1)}%</span>
+              <span class="ec-category">${esc(c1.category || 'General')}</span>
+            </div>
+            <div class="bar-wrap" style="height:3px;margin:8px 0;">
+              <div class="bar-fill" style="width:${Math.round(s1)}%;background:var(--rust);"></div>
+            </div>
+            <p style="font-size:12.5px;color:var(--dust);line-height:1.5;margin-bottom:12px;">${esc(c1.description || '')}</p>
+            <div style="display:flex;flex-direction:column;gap:6px;font-size:12px;border-top:1px solid var(--line);padding-top:10px;">
+              <div><strong>Compensation:</strong> INR ${esc(c1.avg_salary_lpa || '—')} LPA</div>
+              <div><strong>Future Demand:</strong> ${demandBadge(c1.future_demand)}</div>
+              <div><strong>Prerequisites:</strong> ${esc(c1.required_education || 'Bachelor Degree')}</div>
+              <div><strong>Industry:</strong> ${esc(c1.industry || c1.category || 'Technology')}</div>
+            </div>
+          </div>
+
+          <div class="compare-col">
+            <div style="font-size:16px;font-weight:600;color:var(--ink);">${esc(c2.career)}</div>
+            <div style="margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+              <span class="fit-tier-badge ${t2.cls}">${esc(t2.label)} &middot; ${Math.round(s2)}%</span>
+              <span class="ec-category">${esc(c2.category || 'General')}</span>
+            </div>
+            <div class="bar-wrap" style="height:3px;margin:8px 0;">
+              <div class="bar-fill" style="width:${Math.round(s2)}%;background:var(--rust);"></div>
+            </div>
+            <p style="font-size:12.5px;color:var(--dust);line-height:1.5;margin-bottom:12px;">${esc(c2.description || '')}</p>
+            <div style="display:flex;flex-direction:column;gap:6px;font-size:12px;border-top:1px solid var(--line);padding-top:10px;">
+              <div><strong>Compensation:</strong> INR ${esc(c2.avg_salary_lpa || '—')} LPA</div>
+              <div><strong>Future Demand:</strong> ${demandBadge(c2.future_demand)}</div>
+              <div><strong>Prerequisites:</strong> ${esc(c2.required_education || 'Bachelor Degree')}</div>
+              <div><strong>Industry:</strong> ${esc(c2.industry || c2.category || 'Technology')}</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      backdrop.classList.add("show");
+    };
+
+    window.closeCareerComparisonModal = function() {
+      const backdrop = document.getElementById("compareModalBackdrop");
+      if (backdrop) backdrop.classList.remove("show");
+    };
+
+    function renderTierChips() {
+      const container = document.getElementById("tierChipsContainer");
+      if (!container) return;
+
+      const tiers = [
+        { key: "", label: "All Careers" },
+        { key: "best", label: "Best Option" },
+        { key: "very_high", label: "Very High" },
+        { key: "high", label: "High" },
+        { key: "med", label: "Medium" },
+        { key: "low", label: "Low" },
+        { key: "very_low", label: "Very Low" },
+        { key: "avoid", label: "Avoid" },
+      ];
+
+      const counts = { "": allCareers.length };
+      tiers.forEach(t => { if (t.key) counts[t.key] = 0; });
+      allCareers.forEach(c => {
+        const score = getCareerScore(c.career);
+        const tier = getCompatibilityTier(score);
+        if (counts[tier.key] !== undefined) {
+          counts[tier.key]++;
+        }
+      });
+
+      container.innerHTML = tiers.map(t => {
+        const isActive = (selectedTierChip === t.key);
+        const count = counts[t.key] || 0;
+        return `
+          <button class="tier-chip ${isActive ? 'active' : ''}" data-tier="${t.key}">
+            <span>${esc(t.label)}</span>
+            <span class="chip-count">(${count})</span>
+          </button>
+        `;
+      }).join("");
+
+      container.querySelectorAll(".tier-chip").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const tier = btn.getAttribute("data-tier");
+          selectedTierChip = tier;
+          const tierSelect = document.getElementById("explorer-tier");
+          if (tierSelect) tierSelect.value = tier;
+          renderTierChips();
+          filterExplorer();
+        });
+      });
+    }
+
+    function filterExplorer() {
+      const query = (document.getElementById("explorer-search")?.value ?? "").toLowerCase().trim();
+      const category = document.getElementById("explorer-category")?.value ?? "";
+      const tierFilter = selectedTierChip || (document.getElementById("explorer-tier")?.value ?? "");
+      const sortMode = document.getElementById("explorer-sort")?.value ?? "match_desc";
+
+      let filtered = allCareers.filter(c => {
+        const matchQ = !query || c.career.toLowerCase().includes(query) || c.description.toLowerCase().includes(query);
+        const matchC = !category || c.category === category;
+
+        let matchT = true;
+        if (tierFilter) {
+          const score = getCareerScore(c.career);
+          const tier = getCompatibilityTier(score);
+          matchT = (tier.key === tierFilter);
+        }
+
+        return matchQ && matchC && matchT;
+      });
+
+      filtered.sort((a, b) => {
+        const scoreA = getCareerScore(a.career);
+        const scoreB = getCareerScore(b.career);
+        const salaryA = parseFloat(a.avg_salary_lpa) || 0;
+        const salaryB = parseFloat(b.avg_salary_lpa) || 0;
+
+        if (sortMode === "match_desc") return scoreB - scoreA;
+        if (sortMode === "match_asc") return scoreA - scoreB;
+        if (sortMode === "salary_desc") return salaryB - salaryA;
+        if (sortMode === "name_asc") return a.career.localeCompare(b.career);
+        return 0;
+      });
+
+      renderExplorerCards(filtered);
+    }
+
+    async function loadCareerExplorer() {
+      const grid = document.getElementById("explorer-grid");
+      const selCat = document.getElementById("explorer-category");
+      const selTier = document.getElementById("explorer-tier");
+      const selSort = document.getElementById("explorer-sort");
+      const searchBox = document.getElementById("explorer-search");
+
+      if (!allCareers || !allCareers.length) {
+        try {
+          const res = await fetch(`${API_BASE}/careers`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          allCareers = await res.json();
+          window.allCareers = allCareers;
+        } catch (err) {
+          if (grid) grid.innerHTML = `
+            <div class="explorer-empty" style="grid-column:1/-1;text-align:center;padding:36px;color:var(--dust);">
+              Could not load careers catalog (${esc(err.message)}).
+            </div>`;
+          return;
+        }
+      }
+
+      if (selCat && selCat.options.length <= 1) {
+        const categories = [...new Set(allCareers.map(c => c.category).filter(Boolean))].sort();
+        categories.forEach(cat => {
+          const opt = document.createElement("option");
+          opt.value = cat;
+          opt.textContent = cat;
+          selCat.appendChild(opt);
+        });
+        selCat.addEventListener("change", filterExplorer);
+      }
+
+      if (selTier) {
+        selTier.addEventListener("change", (e) => {
+          selectedTierChip = e.target.value;
+          renderTierChips();
+          filterExplorer();
+        });
+      }
+
+      if (selSort) {
+        selSort.addEventListener("change", filterExplorer);
+      }
+
+      if (searchBox) {
+        searchBox.addEventListener("input", filterExplorer);
+      }
+
+      renderTierChips();
+      filterExplorer();
+
+      if (currentResultsData && currentResultsData.skill_profile) {
+        initSkillSimulation(currentResultsData.skill_profile, currentResultsData.top5 || []);
+      }
+    }
+
+    let isPageInitialized = false;
+    async function initResultsPage() {
+      if (isPageInitialized) return;
+      isPageInitialized = true;
+
+      const raw = sessionStorage.getItem("cl_results");
+      const userId = sessionStorage.getItem("cl_user_id");
+      let parsed = null;
+
+      // Eagerly initiate career catalog fetch
+      const careersPromise = fetch(`${API_BASE}/careers`)
+        .then(r => r.ok ? r.json() : [])
+        .then(list => {
+          if (list && list.length) {
+            allCareers = list;
+            window.allCareers = list;
+          }
+          return list;
+        })
+        .catch(() => []);
+
+      if (raw) {
+        try {
+          parsed = JSON.parse(raw);
+          if (parsed && parsed.assessment_id) {
+            activeAssessmentId = parsed.assessment_id;
+          }
+        } catch (e) {
+          parsed = null;
+        }
+      }
+
+      if (userId) {
+        try {
+          const res = await fetch(`${API_BASE}/user/${userId}/history`);
+          if (res.ok) {
+            userAssessmentHistory = await res.json();
+            if (userAssessmentHistory.length > 0 && !activeAssessmentId) {
+              activeAssessmentId = userAssessmentHistory[0].assessment_id;
+            }
+          }
+        } catch (e) {
+          console.warn("Could not fetch user history:", e);
+        }
+      }
+
+      if (activeAssessmentId) {
+        try {
+          const res = await fetch(`${API_BASE}/assessment/${activeAssessmentId}/results`);
+          if (res.ok) {
+            parsed = await res.json();
+            currentResultsData = parsed;
+            sessionStorage.setItem("cl_results", JSON.stringify(parsed));
+          }
+        } catch (e) {
+          console.warn("Could not reload fresh assessment from API:", e);
+        }
+      } else if (userId && userAssessmentHistory.length > 0) {
+        try {
+          const res = await fetch(`${API_BASE}/results/${userId}`);
+          if (res.ok) {
+            parsed = await res.json();
+            currentResultsData = parsed;
+            sessionStorage.setItem("cl_results", JSON.stringify(parsed));
+          }
+        } catch (e) {
+          console.warn("Could not reload latest results from API:", e);
+        }
+      }
+
+      // Await careers catalog before final render
+      await careersPromise;
+
+      if (parsed) {
+        const isLatest = !activeAssessmentId || (userAssessmentHistory.length > 0 && activeAssessmentId === userAssessmentHistory[0].assessment_id);
+        renderFullReport(parsed, isLatest, userAssessmentHistory);
+      } else {
+        const content = document.getElementById("content");
+        if (content) {
+          const isUserLoggedIn = !!(sessionStorage.getItem("cl_user_id") || localStorage.getItem("cl_user_id"));
+          const targetUrl = isUserLoggedIn ? "assessment.html" : "login.html?redirect=assessment";
+          content.innerHTML = `
+            <div class="no-results" style="text-align:center;padding:60px 20px;color:var(--dust);background:var(--card-bg);border:1px solid var(--line);max-width:540px;margin:40px auto;">
+              <div class="tag-eyebrow" style="justify-content:center;margin-bottom:12px;">
+                <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Assessment Required
+              </div>
+              <p style="font-size:20px;margin-bottom:8px;font-weight:600;font-family:'Playfair Display',serif;color:var(--ink);">No Assessment Record Found</p>
+              <p style="font-size:13px;line-height:1.5;color:var(--dust);margin-bottom:20px;">
+                ${isUserLoggedIn ? "You have not completed the 70-statement diagnostic evaluation yet. Start your assessment now to generate your career recommendations, skill radar, and personalized roadmap." : "You are not logged in. Please sign in or register to take the assessment and unlock your personalized career blueprint."}
+              </p>
+              <a href="${targetUrl}" class="btn-home" style="display:inline-flex;text-decoration:none;padding:10px 24px;border-color:var(--rust);color:var(--rust);">
+                ${isUserLoggedIn ? "Start Assessment →" : "Sign In to Begin Assessment →"}
+              </a>
+            </div>`;
+        }
+      }
+
+      // Intercept any click on assessment links if user is not logged in
+      document.addEventListener("click", (e) => {
+        const anchor = e.target.closest('a[href="assessment.html"]');
+        if (anchor) {
+          const uid = sessionStorage.getItem("cl_user_id") || localStorage.getItem("cl_user_id");
+          if (!uid) {
+            e.preventDefault();
+            window.location.href = "login.html?redirect=assessment";
+          }
+        }
+      });
+
+      loadCareerExplorer();
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initResultsPage);
+    } else {
+      initResultsPage();
+    }
+
+    // ── Custom Cursor Logic (Instant Follow & Snappy Lerp) ─────────
+    (function initCustomCursor() {
+      const dot = document.getElementById("cursor-dot");
+      const ring = document.getElementById("cursor-ring");
+      if (!dot || !ring) return;
+
+      let mouseX = -100;
+      let mouseY = -100;
+      let ringX = -100;
+      let ringY = -100;
+      let isVisible = false;
+
+      window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!isVisible) {
+          isVisible = true;
+          ringX = mouseX;
+          ringY = mouseY;
+          dot.style.opacity = "1";
+          ring.style.opacity = "1";
+        }
+        dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+      }, { passive: true });
+
+      document.addEventListener("mouseleave", () => {
+        isVisible = false;
+        dot.style.opacity = "0";
+        ring.style.opacity = "0";
+      });
+
+      document.addEventListener("mouseenter", () => {
+        isVisible = true;
+        dot.style.opacity = "1";
+        ring.style.opacity = "1";
+      });
+
+      function renderRing() {
+        if (isVisible) {
+          ringX += (mouseX - ringX) * 0.35;
+          ringY += (mouseY - ringY) * 0.35;
+          ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+        }
+        requestAnimationFrame(renderRing);
+      }
+      requestAnimationFrame(renderRing);
+
+      const interactiveSelector = "a, button, input, select, textarea, [role='button'], label, .btn, .btn-retake, .btn-home, .btn-top30, .tier-chip, .btn-compare-chip, .acc-trigger, .theme-toggle, .track-btn, .play-btn, .vol-btn, .floating-compare-dock, .floating-compare-dock *, .compare-modal-card, .compare-modal-card *, .sim-outcome-item";
+
+      document.addEventListener("mouseover", (e) => {
+        if (e.target.closest(interactiveSelector)) {
+          document.body.classList.add("cursor-hover");
+        }
+      }, { passive: true });
+
+      document.addEventListener("mouseout", (e) => {
+        if (e.target.closest(interactiveSelector)) {
+          document.body.classList.remove("cursor-hover");
+        }
+      }, { passive: true });
+    })();
+
+    // ── Smooth Scroll Navigation ────────────────────────────────────
+    (function initSmoothScroll() {
+      function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+
+      function smoothScrollTo(targetY, duration = 800) {
+        const startY = window.pageYOffset;
+        const diff = targetY - startY;
+        let startTime = null;
+
+        function step(currentTime) {
+          if (!startTime) startTime = currentTime;
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = easeInOutCubic(progress);
+          window.scrollTo(0, startY + diff * ease);
+          if (elapsed < duration) {
+            requestAnimationFrame(step);
+          }
+        }
+        requestAnimationFrame(step);
+      }
+
+      document.addEventListener("click", (e) => {
+        const anchor = e.target.closest('a[href^="#"]');
+        if (anchor) {
+          const href = anchor.getAttribute("href");
+          if (href && href.length > 1) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              const targetY = target.getBoundingClientRect().top + window.pageYOffset - 80;
+              smoothScrollTo(targetY, 800);
+            }
+          }
+        }
+      });
+    })();
+
+    // ── Scroll-Driven Reveal Observer ───────────────────────────────
+    let revealObserver = null;
+    function setupRevealObserver() {
+      if (!("IntersectionObserver" in window)) {
+        document.querySelectorAll(".reveal").forEach(el => el.classList.add("revealed"));
+        return;
+      }
+
+      if (!revealObserver) {
+        revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("revealed");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+      }
+
+      document.querySelectorAll(".reveal:not(.revealed)").forEach(el => {
+        revealObserver.observe(el);
+      });
+    }
+
+    window.setupRevealObserver = setupRevealObserver;
+    window.addEventListener("DOMContentLoaded", setupRevealObserver);
+  </script>
+
+  <!-- ===== MUSIC PLAYER ===== -->
+  <div class="music-player" id="musicPlayer">
+    <div class="player-info">
+      <span class="now-playing">
+        <svg class="icon-svg icon-xs" viewBox="0 0 24 24">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+        <strong>Now Playing:</strong> Fred again..
+      </span>
+    </div>
+    <div class="player-controls">
+      <button id="musicPlayer3dToggle" class="bg3d-toggle-btn" type="button" onclick="window.toggle3dBackground && window.toggle3dBackground()" aria-label="Toggle 3D Background" title="Toggle 3D Background (ON/OFF)"></button>
+      <button id="prevTrackBtn" onclick="window.playPrevTrack && window.playPrevTrack()" class="track-btn" aria-label="Previous Track" title="Previous Track" style="background:none;border:none;cursor:pointer;color:inherit;padding:6px;display:inline-flex;align-items:center;border-radius:6px;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button id="playPauseBtn" class="play-btn" aria-label="Play/Pause">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </button>
+      <button id="nextTrackBtn" onclick="window.playNextTrack && window.playNextTrack()" class="track-btn" aria-label="Next Track" title="Next Track" style="background:none;border:none;cursor:pointer;color:inherit;padding:6px;display:inline-flex;align-items:center;border-radius:6px;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <button id="shuffleBtn" onclick="window.playRandomTrack && window.playRandomTrack()" class="track-btn" aria-label="Shuffle Random Track" title="Shuffle / Random Track" style="background:none;border:none;cursor:pointer;color:inherit;padding:6px;display:inline-flex;align-items:center;border-radius:6px;">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+      </button>
+    </div>
+    <div class="player-volume">
+      <button class="vol-btn" id="muteBtn" aria-label="Mute/Unmute"
+        style="background:none;border:none;cursor:pointer;color:inherit;display:flex;align-items:center;">
+        <svg class="icon-svg" viewBox="0 0 24 24">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+        </svg>
+      </button>
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.1" />
+    </div>
+  </div>
+
+  <audio id="bgAudio" src="Fred_Again_Rooftop_live.mp3" preload="auto" loop></audio>
+
+  <script src="js/music.js"></script>
+  <script src="js/bg3d-control.js"></script>
+  <script src="js/ambient-particles.js"></script>
+</body>
+
+</html>

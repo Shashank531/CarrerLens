@@ -1,0 +1,631 @@
+Career,Step Order,Step,Skill Targeted,Estimated Duration,Resource Type,Milestone
+AI/ML Engineer,1,"Master Python, NumPy, Pandas, Vectorized Linear Algebra and Multivariable Calculus",Math,4-6 weeks,Interactive Math & Code Labs,No
+AI/ML Engineer,2,"Train Classic ML Models (XGBoost, Random Forests) and Feature Engineering with Scikit-Learn",Problem Solving,6-8 weeks,Applied ML Course,No
+AI/ML Engineer,3,"Deep Learning Architecture Design with PyTorch, CNNs, Transformers, and HuggingFace LLMs",Programming,8-10 weeks,Specialization Bootcamp,No
+AI/ML Engineer,4,"Build & Deploy an End-to-End RAG AI System with LangChain, ChromaDB, and FastAPI in Docker",Innovation,6-8 weeks,Production Capstone Project,Yes
+AI/ML Engineer,5,Fine-tune Open Source Models (Llama/Mistral) with LoRA/QLoRA & Benchmark on Kaggle,Research Interest,4-8 weeks,Competitive ML Track,No
+AI/ML Engineer,6,"ML System Design, Scalable GPU Inference Optimization (vLLM/Triton) & Interview Prep",Decision Making,3-5 weeks,System Design & Mock Interviews,Yes
+Data Scientist,1,"Advanced SQL, Exploratory Data Analysis, Probability Distributions, and Hypothesis Testing",Math,4-6 weeks,Foundational Data Course,No
+Data Scientist,2,"Predictive Modeling, Regression/Classification, and Feature Selection using Python & R",Problem Solving,6-8 weeks,Practical Modeling Lab,No
+Data Scientist,3,"Time Series Forecasting (ARIMA, Prophet), Causal Inference, and Customer Segmentation",Logical Thinking,6-8 weeks,Advanced Analytics Track,No
+Data Scientist,4,End-to-End Churn & Revenue Forecasting Pipeline with Interactive Streamlit Dashboard,Communication,4-6 weeks,Industry Portfolio Project,Yes
+Data Scientist,5,"Production A/B Testing Experimentation Frameworks, Bayesian Inference & Business Metrics",Business Thinking,4-8 weeks,Experimentation Lab,No
+Data Scientist,6,"Executive Data Storytelling, Business ROI Translation & Technical Portfolio Defense",Decision Making,2-4 weeks,Interview & Presentation Prep,Yes
+Cybersecurity Analyst,1,"Computer Networking, TCP/IP, OSI Model, Linux Bash Scripting & Network Security Protocols",Logical Thinking,4-6 weeks,Network Fundamentals,No
+Cybersecurity Analyst,2,"Vulnerability Scanning, Port Scanning (Nmap), and Wireshark Packet Inspection Analysis",Attention To Detail,6-8 weeks,Security Lab Environment,No
+Cybersecurity Analyst,3,"SOC Operations, SIEM Log Monitoring (Splunk / Elastic Security), and Threat Hunting (MITRE ATT&CK)",Problem Solving,6-8 weeks,SOC Simulation Platform,No
+Cybersecurity Analyst,4,Comprehensive Vulnerability Assessment and Security Incident Runbook Capstone Project,Discipline,4-6 weeks,Hands-on Security Audit,Yes
+Cybersecurity Analyst,5,"Capture The Flag (CTF) Challenges, Kali Linux Penetration Testing & Active Directory Defense",Adaptability,4-8 weeks,TryHackMe / HackTheBox Labs,No
+Cybersecurity Analyst,6,"CompTIA Security+ / CEH Certification Prep, Malware Triage & Security Interview Readiness",Decision Making,3-5 weeks,Certification & Case Studies,Yes
+UI/UX Designer,1,"Design Theory, Visual Hierarchy, Typography, Color Palettes, and WCAG Accessibility Standards",Artistic Skill,3-5 weeks,Design Fundamentals Course,No
+UI/UX Designer,2,"User Research Methodologies, Empathy Mapping, User Interviews, and Persona Creation",Empathy,4-6 weeks,UX Research Practicum,No
+UI/UX Designer,3,"Advanced Figma Mastery: Auto-Layout, Component Variants, Interactive Micro-animations & Tokens",Creativity,6-8 weeks,Interactive Tooling Lab,No
+UI/UX Designer,4,Design a Full Multi-Platform Mobile & Web SaaS Product with Complete Design System,Problem Solving,6-8 weeks,End-to-End Design Portfolio,Yes
+UI/UX Designer,5,"Usability Testing, Heatmap Analysis (Hotjar), Design Critiques & Dev Handoff Workflows",Communication,4-6 weeks,Live Product Sprint,No
+UI/UX Designer,6,"UX Case Study Storytelling, Portfolio Presentation Defense & Design Leadership Prep",Decision Making,2-4 weeks,Portfolio Review & Defense,Yes
+Software Engineer,1,"Core Data Structures, Algorithms, Time Complexity (Big O) and Object-Oriented Programming",Programming,6-8 weeks,CS Fundamentals Course,No
+Software Engineer,2,"Design Patterns, Clean Architecture, SOLID Principles, and Git Branching Strategies",Logical Thinking,4-6 weeks,Hands-on Software Workshop,No
+Software Engineer,3,"Full-Stack Development with REST/GraphQL APIs, Relational DBs (PostgreSQL) and Redis Caching",Problem Solving,6-8 weeks,Full-Stack Project Lab,No
+Software Engineer,4,Build a Distributed High-Throughput Web Application with Async Queues and CI/CD Automation,Innovation,6-8 weeks,Production Capstone Project,Yes
+Software Engineer,5,"Open-Source Contributions, Rigorous Peer Code Reviews, and Unit/Integration Testing (TDD)",Adaptability,4-6 weeks,Collaborative Codebase,No
+Software Engineer,6,"System Design (Scalability, Sharding, Load Balancers) and LeetCode Mock Interview Rounds",Decision Making,4-6 weeks,System Design & Coding Prep,Yes
+Cloud Engineer,1,"Linux System Administration, Bash Scripting, DNS, Networking, and IAM Role Governance",Logical Thinking,4-6 weeks,Cloud Infrastructure Foundations,No
+Cloud Engineer,2,"Core Cloud Services: EC2/Compute, VPC Networking, S3/Storage, and RDS on AWS or Azure",Problem Solving,6-8 weeks,Cloud Provider Labs,No
+Cloud Engineer,3,"Infrastructure as Code (IaC) with Terraform, CloudFormation, and Automated State Management",Programming,4-6 weeks,Automated IaC Workshop,No
+Cloud Engineer,4,Architect High-Availability Multi-Tier Auto-Scaling Cloud Infrastructure with CloudWatch,Attention To Detail,6-8 weeks,Production Architecture Capstone,Yes
+Cloud Engineer,5,"Cloud Cost FinOps Optimization, Disaster Recovery Drills, and Zero-Trust Security Policies",Discipline,4-6 weeks,Operational Resilience Lab,No
+Cloud Engineer,6,AWS Solutions Architect / Azure Administrator Certification & Cloud System Design Prep,Decision Making,3-5 weeks,Certification & Case Defense,Yes
+Product Manager,1,"Product Discovery, Customer Problem Framing, Market Sizing & Competitive Landscaping",Business Thinking,4-6 weeks,Product Strategy Foundations,No
+Product Manager,2,"Agile/Scrum Frameworks, User Story Writing, Jira Management, and Backlog Prioritization (RICE)",Decision Making,4-6 weeks,Agile Execution Lab,No
+Product Manager,3,"Product Analytics (Mixpanel/Amplitude), KPI Frameworks (AARRR, HEART) & North Star Metrics",Logical Thinking,4-6 weeks,Product Analytics Course,No
+Product Manager,4,Author a Comprehensive Product Requirement Document (PRD) and Go-To-Market (GTM) Strategy,Communication,6-8 weeks,Product PRD Capstone,Yes
+Product Manager,5,"Cross-Functional Collaboration with Engineering & Design, Stakeholder Trade-off Simulations",Leadership,4-6 weeks,Product Sprint Simulation,No
+Product Manager,6,"Product Sense, Estimation Drills, Metric Defense & PM Case Study Interview Preparation",Innovation,3-5 weeks,PM Interview & Case Prep,Yes
+Research Scientist,1,"Literature Review Techniques, Systematic Surveying & Academic Research Methodology",Research Interest,4-6 weeks,Academic Foundations,No
+Research Scientist,2,"Experimental Design, Statistical Power Analysis, and Research Hypothesis Testing in Python/R",Math,6-8 weeks,Scientific Research Lab,No
+Research Scientist,3,"Novel Algorithm Implementation, Mathematical Proofs, and Benchmarking against Baselines",Logical Thinking,8-10 weeks,Advanced Research Track,No
+Research Scientist,4,"Draft, Format, and Author a Research Paper in LaTeX for IEEE / ACM / Nature Conference Submission",Attention To Detail,8-12 weeks,Original Research Paper,Yes
+Research Scientist,5,"Peer Review Analysis, Collaborative Interdisciplinary Experiments & Research Grant Writing",Communication,6-8 weeks,Collaborative Academic Workshop,No
+Research Scientist,6,"Research Seminar Defense, Academic Conference Poster Presentation & Grant Defense Prep",Curiosity,3-5 weeks,Academic Defense & Launch,Yes
+Business Analyst,1,"Business Process Modeling (BPMN), Gap Analysis, and Stakeholder Requirements Elicitation",Business Thinking,4-6 weeks,BA Fundamentals Course,No
+Business Analyst,2,"Advanced Excel (VLOOKUP, Pivot Tables, Solver, Macros) and Relational SQL Data Extraction",Logical Thinking,6-8 weeks,Analytical Tooling Lab,No
+Business Analyst,3,Business Intelligence Dashboarding with Power BI / Tableau and Executive KPI Visualizations,Communication,5-7 weeks,BI Reporting Practicum,No
+Business Analyst,4,Deliver a Complete Business Requirements Document (BRD) & ROI Cost-Benefit Feasibility Study,Problem Solving,6-8 weeks,Industry Advisory Capstone,Yes
+Business Analyst,5,"Agile Sprint Requirements Translation, User Acceptance Testing (UAT) & Change Management",Attention To Detail,4-6 weeks,Agile BA Workshop,No
+Business Analyst,6,"CBAP / ECBA Certification Prep, Business Case Presentation & Stakeholder Interview Drills",Decision Making,3-5 weeks,Certification & Case Defense,Yes
+Digital Marketing Specialist,1,"Marketing Funnel Fundamentals, Customer Persona Segmentation & Brand Positioning Strategy",Creativity,3-5 weeks,Digital Marketing Foundations,No
+Digital Marketing Specialist,2,"Search Engine Optimization (SEO): Keyword Research, On-Page Optimization, Technical SEO & Ahrefs",Attention To Detail,5-7 weeks,Applied SEO Lab,No
+Digital Marketing Specialist,3,"Paid Media Advertising: Google Search/Display Ads, Meta Ads Manager, and Pixel Tracking",Business Thinking,6-8 weeks,PPC Campaign Workshop,No
+Digital Marketing Specialist,4,Design & Execute a Multi-Channel Growth Campaign with Conversion Rate Optimization (CRO),Innovation,6-8 weeks,Live Campaign Capstone,Yes
+Digital Marketing Specialist,5,"Google Analytics 4 (GA4), Looker Studio Reporting, Attribution Modeling & ROAS Analysis",Logical Thinking,4-6 weeks,Marketing Analytics Track,No
+Digital Marketing Specialist,6,"HubSpot / Google Ads Certification, Marketing Portfolio Presentation & Growth Strategy Interview",Communication,3-4 weeks,Certification & Portfolio Launch,Yes
+Mobile App Developer,1,"Mobile Fundamentals: Kotlin/Java for Android or Swift for iOS, UI Layouts & Lifecycle",Programming,6-8 weeks,Native Mobile Course,No
+Mobile App Developer,2,Cross-Platform Framework Mastery with Flutter (Dart) or React Native (TypeScript),Problem Solving,6-8 weeks,Cross-Platform Frameworks,No
+Mobile App Developer,3,"State Management (Bloc/Riverpod/Redux), Offline SQLite/Room Storage & REST API Integration",Logical Thinking,6-8 weeks,Mobile State Architecture,No
+Mobile App Developer,4,"Build & Publish a Full-Featured Mobile App with Push Notifications, Auth & Camera/Location APIs",Innovation,6-8 weeks,App Store / Play Store Project,Yes
+Mobile App Developer,5,"Mobile CI/CD (Fastlane), Performance Profiling, Memory Optimization & Crashlytics Monitoring",Attention To Detail,4-6 weeks,Mobile DevOps & Optimization,No
+Mobile App Developer,6,"App Store Guidelines Compliance, Live Portfolio Demo on Device & Mobile System Design Prep",Decision Making,3-5 weeks,Store Release & Interview Prep,Yes
+DevOps Engineer,1,"Linux Kernel & Shell Automation, GitOps Version Control, and Networking Fundamentals",Logical Thinking,4-6 weeks,DevOps Core Course,No
+DevOps Engineer,2,"Containerization with Docker, Multi-stage Builds, and Secure Microservices Packaging",Programming,4-6 weeks,Containerization Lab,No
+DevOps Engineer,3,"Container Orchestration with Kubernetes (Pods, Services, Ingress, Helm Charts & Operators)",Problem Solving,6-8 weeks,Kubernetes Hands-on Track,No
+DevOps Engineer,4,Build an Automated CI/CD Pipeline (GitHub Actions/GitLab) with Security Scanning (SonarQube/Trivy),Attention To Detail,6-8 weeks,Production CI/CD Capstone,Yes
+DevOps Engineer,5,"Observability & SRE: Prometheus Metrics, Grafana Dashboards, ELK Logging & PagerDuty Alerts",Discipline,4-6 weeks,SRE Observability Practicum,No
+DevOps Engineer,6,CKA (Certified Kubernetes Administrator) Exam Prep & Scalable Infrastructure Interview Rounds,Decision Making,3-5 weeks,Certification & Defense,Yes
+Game Developer,1,"Game Math (Vector Geometry, Trigonometry, Quaternion Rotations) and C# / C++ Programming",Math,5-7 weeks,Game Math & Programming,No
+Game Developer,2,"Game Engine Architecture in Unity or Unreal Engine 5: Game Loops, Physics, and Prefabs",Programming,6-8 weeks,Game Engine Fundamentals,No
+Game Developer,3,"Gameplay Mechanics, AI Pathfinding (A* Algorithm), State Machines, and Audio Systems",Problem Solving,6-8 weeks,Gameplay Scripting Lab,No
+Game Developer,4,Develop and Polish a Playable 3D / 2D Indie Game Prototype with Custom Shader Effects,Creativity,8-10 weeks,Indie Game Capstone,Yes
+Game Developer,5,"3D Asset Optimization, Texture Atlasing, Frame Rate Profiling & Multiplayer Networking (Photon/Mirror)",Attention To Detail,5-7 weeks,Game Performance Sprint,No
+Game Developer,6,"Steam / itch.io Game Release, Gameplay Trailer Creation, and Technical Game Dev Interview Prep",Innovation,3-5 weeks,Game Launch & Portfolio Defense,Yes
+Data Engineer,1,"Advanced SQL Query Optimization, Data Normalization, and Python OOP for Data Pipelines",Programming,4-6 weeks,Data Fundamentals Course,No
+Data Engineer,2,"Data Warehouse Modeling (Star/Snowflake Schema), dbt (data build tool) & Snowflake/BigQuery",Logical Thinking,6-8 weeks,Modern Data Warehouse Lab,No
+Data Engineer,3,"Distributed Processing with Apache Spark (PySpark), Data Partitioning, and Parquet Formats",Problem Solving,6-8 weeks,Distributed Compute Track,No
+Data Engineer,4,Build an End-to-End Automated Batch & Streaming ETL Pipeline with Apache Airflow & Kafka,Attention To Detail,6-8 weeks,Production ETL Capstone,Yes
+Data Engineer,5,"Data Lakehouse Architecture (Delta Lake / Apache Iceberg), Schema Governance & Data Quality Tests",Discipline,4-6 weeks,Lakehouse Optimization,No
+Data Engineer,6,"Data Architecture System Design, Cloud Data Engineer Certification & Interview Defense",Decision Making,3-5 weeks,System Design & Interview Prep,Yes
+Financial Analyst,1,"Financial Accounting, Three-Statement Financial Modeling, and Ratio Analysis in Excel",Math,4-6 weeks,Financial Accounting Course,No
+Financial Analyst,2,"Discounted Cash Flow (DCF) Valuation, Comparable Company Analysis, and Precedent Transactions",Logical Thinking,6-8 weeks,Valuation Modeling Lab,No
+Financial Analyst,3,"Corporate Finance, Capital Budgeting, WACC Estimation, and Scenario/Sensitivity Modeling",Business Thinking,6-8 weeks,Corporate Finance Practicum,No
+Financial Analyst,4,Author a Comprehensive Equity Research Report & Valuation Pitch Deck for a Public Company,Attention To Detail,6-8 weeks,Equity Research Capstone,Yes
+Financial Analyst,5,"Bloomberg Terminal / FactSet Market Data Analysis, Python for Financial Data Extraction",Research Interest,4-6 weeks,Financial Analytics Lab,No
+Financial Analyst,6,"CFA Level 1 Exam Preparation, Financial Statement Defense & Investment Banking Interview Prep",Decision Making,4-6 weeks,CFA Prep & Case Defense,Yes
+HR Manager,1,"Human Resource Management Principles, Labor Law Compliance & Employment Regulations",Discipline,4-6 weeks,HR Fundamentals Course,No
+HR Manager,2,"Talent Acquisition Strategy, Structured Competency Interviewing & Candidate Assessment",Communication,4-6 weeks,Recruitment Workshop,No
+HR Manager,3,"Performance Management Systems, OKR/KPI Design, and Employee Engagement Programs",Leadership,5-7 weeks,People Strategy Lab,No
+HR Manager,4,"Design a Full Organizational HR Policy Handbook, Compensation & Benefits Grid",Decision Making,6-8 weeks,HR Policy Capstone,Yes
+HR Manager,5,"Workplace Conflict Mediation, Employee Grievance Handling & Empathy-Driven Counseling",Empathy,4-6 weeks,Conflict Resolution Practicum,No
+HR Manager,6,"SHRM / HRCI Certification Preparation, Strategic HR Business Partner (HRBP) Interview Prep",Business Thinking,3-5 weeks,Certification & Case Studies,Yes
+Content Strategist,1,"Content Strategy Principles, Audience Persona Mapping, and Brand Voice & Tone Architecture",Creativity,3-5 weeks,Content Strategy Course,No
+Content Strategist,2,"Content Auditing, Gap Analysis, Keyword Research & Topic Clustering for Organic Growth",Research Interest,4-6 weeks,Content Audit Lab,No
+Content Strategist,3,"Editorial Calendar Planning, Multi-Platform Content Distribution (Blogs, Newsletters, Video)",Communication,5-7 weeks,Editorial Workshop,No
+Content Strategist,4,Develop a Comprehensive 12-Month Inbound Content Marketing Playbook for a Brand,Innovation,6-8 weeks,Content Playbook Capstone,Yes
+Content Strategist,5,"Content Analytics: Bounce Rates, Time-on-Page, Lead Generation Attribution & Content Repurposing",Logical Thinking,4-6 weeks,Analytics & CRO Sprint,No
+Content Strategist,6,"Content Portfolio Showcase, Copywriting Pitch Deck & Editorial Leadership Interview Prep",Decision Making,3-4 weeks,Portfolio Presentation Prep,Yes
+Entrepreneur / Founder,1,"Idea Validation, Lean Startup Methodology, Customer Discovery Interviews & Problem-Solution Fit",Curiosity,4-6 weeks,Startup Foundations,No
+Entrepreneur / Founder,2,"Business Model Canvas Design, Unit Economics, Pricing Strategy, and TAM/SAM/SOM Calculation",Business Thinking,4-6 weeks,Business Modeling Lab,No
+Entrepreneur / Founder,3,"Rapid Prototyping, Minimum Viable Product (MVP) Development, and No-Code/Low-Code Launch",Innovation,6-8 weeks,MVP Build Sprint,No
+Entrepreneur / Founder,4,"Build, Launch, and Acquire First 100 Paying Customers or Active Users with Live Feedback Loops",Adaptability,8-12 weeks,Live Venture Launch,Yes
+Entrepreneur / Founder,5,"Financial Projections, Startup Pitch Deck Creation & Angel/VC Investor Outreach Simulation",Leadership,4-6 weeks,Investor Pitch Simulation,No
+Entrepreneur / Founder,6,"Term Sheet Negotiation, Legal Company Incorporation & Scaling Strategy Execution",Decision Making,3-5 weeks,Venture Scaling Mastery,Yes
+Doctor / Physician,1,"Medical Sciences: Human Anatomy, Physiology, Biochemistry, and Medical Terminology",Research Interest,8-12 weeks,Pre-Clinical Academic Foundations,No
+Doctor / Physician,2,"Pathology, Pharmacology, Medical Microbiology & Evidence-Based Clinical Diagnostics",Logical Thinking,8-12 weeks,Pathology & Clinical Course,No
+Doctor / Physician,3,"Physical Examination Techniques, Patient History Taking & Clinical Differential Diagnosis",Attention To Detail,8-12 weeks,Clinical Skills Laboratory,No
+Doctor / Physician,4,"Complete Clinical Case Examinations, OSCE Objective Structured Clinical Exams & Safety Protocols",Decision Making,8-12 weeks,Clinical Examination Checkpoint,Yes
+Doctor / Physician,5,"Hospital Clinical Rotations: Internal Medicine, General Surgery, Pediatrics, and Emergency Care",Empathy,16-24 weeks,Supervised Clinical Internship,No
+Doctor / Physician,6,"Medical Licensing Board Exams (USMLE / NEET-PG / PLAB), Medical Ethics & Residency Match",Discipline,6-12 weeks,Licensing & Residency Placement,Yes
+Registered Nurse,1,"Fundamentals of Nursing Care, Patient Assessment, Anatomy & Infection Control Protocols",Discipline,6-8 weeks,Nursing Fundamentals Course,No
+Registered Nurse,2,"Pharmacology for Nurses, Safe Medication Administration & Dosages Calculation",Attention To Detail,6-8 weeks,Pharmacology Clinical Lab,No
+Registered Nurse,3,"Medical-Surgical Nursing, Acute Care Protocols, Vital Sign Monitoring & Wound Care",Problem Solving,8-10 weeks,Skills Simulation Lab,No
+Registered Nurse,4,"Pass Clinical Nursing Competency Assessments, IV Cannulation & Emergency Code Simulations",Physical Stamina,6-8 weeks,Clinical Competency Checkpoint,Yes
+Registered Nurse,5,"Hospital Bedside Care Rotations across ICU, Emergency, Maternity, and Post-Op Units",Empathy,12-16 weeks,Clinical Hospital Practicum,No
+Registered Nurse,6,NCLEX-RN / State Nursing Board Examination Preparation & Hospital Unit Placement,Communication,4-6 weeks,Licensure & Hospital Launch,Yes
+Psychologist / Counselor,1,"Theories of Personality, Developmental Psychology, Cognitive Processes & Psychological Foundations",Research Interest,6-8 weeks,Psychology Core Curriculum,No
+Psychologist / Counselor,2,"Psychopathology & DSM-5 Diagnostic Criteria for Mood, Anxiety, and Personality Disorders",Attention To Detail,6-8 weeks,Diagnostic Criteria Lab,No
+Psychologist / Counselor,3,"Therapeutic Methodologies: Cognitive Behavioral Therapy (CBT), Active Listening & Mindfulness",Empathy,8-10 weeks,Therapeutic Practicum,No
+Psychologist / Counselor,4,Conduct Supervised Counseling Simulations with Verbatim Transcription & Case Analysis,Communication,6-8 weeks,Case Study Portfolio,Yes
+Psychologist / Counselor,5,Supervised Clinical Internship at Mental Health Clinic / Hospital Counseling Department,Discipline,12-16 weeks,Supervised Practicum,No
+Psychologist / Counselor,6,"Psychology Licensing Examination, Ethics & Confidentiality Board Certification Prep",Decision Making,4-6 weeks,Licensure & Private Practice Prep,Yes
+Physiotherapist,1,"Musculoskeletal Anatomy, Kinesiology, Biomechanics, and Exercise Physiology",Physical Stamina,6-8 weeks,Anatomy & Biomechanics Course,No
+Physiotherapist,2,"Patient Assessment: Range of Motion (ROM), Muscle Testing & Postural Analysis",Attention To Detail,6-8 weeks,Orthopedic Assessment Lab,No
+Physiotherapist,3,"Manual Therapy Techniques, Electrotherapy Modalities & Therapeutic Exercise Prescription",Problem Solving,8-10 weeks,Physiotherapy Skills Workshop,No
+Physiotherapist,4,Design Evidence-Based Rehabilitation Protocols for Post-Surgical & Sports Injury Patients,Decision Making,6-8 weeks,Rehab Protocol Capstone,Yes
+Physiotherapist,5,"Clinical Hospital & Sports Clinic Rotations: Neurological, Orthopedic & Geriatric Care",Empathy,12-16 weeks,Clinical Supervised Rotations,No
+Physiotherapist,6,"Physiotherapy Board Licensing Exam, Clinical Certification & Sports Team/Clinic Placement",Discipline,4-6 weeks,Licensing & Clinical Placement,Yes
+Lawyer,1,"Constitutional Law, Jurisprudence, Legal Research Methods & Case Law Precedent Analysis",Research Interest,6-8 weeks,Legal Theory Foundations,No
+Lawyer,2,"Statutory Interpretation, Contract Drafting, Tort Law, and Legal Writing Standards",Logical Thinking,6-8 weeks,Legal Drafting Workshop,No
+Lawyer,3,"Civil & Criminal Procedure, Evidence Rules, and Oral Argumentation Techniques",Communication,8-10 weeks,Trial Advocacy Practicum,No
+Lawyer,4,Draft a Comprehensive Appellate Moot Court Brief with Multi-Jurisdictional Citations,Attention To Detail,6-8 weeks,Appellate Brief Capstone,Yes
+Lawyer,5,"Judicial Clerkship or Law Firm Litigation Internship, Client Interviewing & Deposition Prep",Discipline,8-12 weeks,Law Firm Clerkship,No
+Lawyer,6,"Bar Examination Qualification, Professional Ethics Clearance & Associate Placement",Decision Making,6-10 weeks,Bar Exam & Firm Launch,Yes
+School Teacher,1,"Educational Psychology, Child Development Stages, and Differentiated Learning Theories",Learning Ability,4-6 weeks,Pedagogy Foundations,No
+School Teacher,2,"Curriculum Design, Lesson Plan Structuring & Bloom's Taxonomy Learning Objectives",Teaching Ability,5-7 weeks,Instructional Design Lab,No
+School Teacher,3,"Classroom Management Strategies, Positive Behavioral Interventions & EdTech Tools (Kahoot, Google Classroom)",Leadership,6-8 weeks,Classroom Management Workshop,No
+School Teacher,4,Develop a Comprehensive 1-Semester Curriculum Unit with Formative & Summative Assessments,Creativity,6-8 weeks,Teaching Portfolio Capstone,Yes
+School Teacher,5,Student Teaching Practicum in an Accredited Classroom with Mentor Teacher Observations,Empathy,10-14 weeks,Student Teaching Residency,No
+School Teacher,6,"Teacher Certification Exam (B.Ed / State Licensing), Teaching Philosophy Defense & School Hiring",Communication,3-5 weeks,Certification & School Placement,Yes
+College Professor / Academic,1,"Subject Matter Mastery, Comprehensive Doctoral Literature Review & Epistemological Theory",Research Interest,8-12 weeks,Advanced Academic Research,No
+College Professor / Academic,2,"Advanced Research Methodologies, Statistical Validation & Academic Grant Proposal Writing",Logical Thinking,8-10 weeks,Grant & Methodology Track,No
+College Professor / Academic,3,"Higher Education Pedagogy, Syllabus Construction, and Interactive Seminar Facilitation",Teaching Ability,6-8 weeks,University Teaching Seminar,No
+College Professor / Academic,4,Publish Peer-Reviewed Journal Articles in High-Impact Quartile 1 (Q1) Journals,Attention To Detail,12-16 weeks,Journal Publication Milestone,Yes
+College Professor / Academic,5,"Deliver Keynote Conference Presentations, Supervise Graduate Theses & Departmental Governance",Leadership,6-8 weeks,Academic Conference Practicum,No
+College Professor / Academic,6,"Doctoral Dissertation Defense, Academic CV Portfolio & Faculty Tenure-Track Hiring Process",Communication,6-10 weeks,Faculty Tenure Interview Prep,Yes
+Architect,1,"Architectural History, Spatial Design Principles, Structural Mechanics & Building Codes",Artistic Skill,5-7 weeks,Architecture Foundations,No
+Architect,2,2D Drafting & 3D Building Information Modeling (BIM) with AutoCAD and Revit Architecture,Attention To Detail,6-8 weeks,BIM Technical Lab,No
+Architect,3,"Parametric Design (Rhino, Grasshopper), Daylight Analysis, and Sustainable Materials (LEED)",Innovation,6-8 weeks,Sustainable Design Track,No
+Architect,4,Design a Complete Mixed-Use Architectural Complex with Physical Model & Full Blueprints,Creativity,8-12 weeks,Architectural Thesis Portfolio,Yes
+Architect,5,"Architecture Firm Apprenticeship, Structural Engineering Coordination & Site Inspections",Problem Solving,8-12 weeks,Studio Apprenticeship,No
+Architect,6,"Architect Registration Exam (ARE), Professional License Portfolio & Design Pitch Defense",Decision Making,4-6 weeks,Licensure & Studio Launch,Yes
+Civil Engineer,1,"Engineering Mechanics, Statics, Strength of Materials & Fluid Mechanics Fundamentals",Math,6-8 weeks,Engineering Core Course,No
+Civil Engineer,2,"Structural Analysis, Concrete Technology, and Steel Design using STAAD.Pro / ETABS",Problem Solving,6-8 weeks,Structural Modeling Lab,No
+Civil Engineer,3,"Geotechnical Engineering, Soil Mechanics, Foundation Design & Highway/Surveying Tech",Attention To Detail,6-8 weeks,Geotechnical & Surveying Track,No
+Civil Engineer,4,Execute an Infrastructure Blueprint Design (Bridge / Multistory Frame) with Quantity Estimation,Logical Thinking,6-8 weeks,Infrastructure Capstone,Yes
+Civil Engineer,5,"On-Site Construction Management, Bar Bending Schedule (BBS) Quality Audits & Safety Compliance",Physical Stamina,8-12 weeks,Construction Site Internship,No
+Civil Engineer,6,FE / PE (Principles and Practice of Engineering) Exam Prep & Project Management Hiring,Discipline,4-6 weeks,PE Exam & Contractor Placement,Yes
+Mechanical Engineer,1,"Thermodynamics, Fluid Dynamics, Kinematics of Machines & Material Science",Math,6-8 weeks,Mechanical Engineering Core,No
+Mechanical Engineer,2,3D CAD Solid Modeling & GD&T (Geometric Dimensioning and Tolerancing) in SolidWorks / CATIA,Attention To Detail,6-8 weeks,CAD Modeling Lab,No
+Mechanical Engineer,3,Finite Element Analysis (FEA) and Computational Fluid Dynamics (CFD) in ANSYS,Problem Solving,6-8 weeks,ANSYS Simulation Track,No
+Mechanical Engineer,4,Design and Prototype a Functional Mechanical Mechanism / Thermal Cooling System,Innovation,6-8 weeks,Mechanical Prototyping Capstone,Yes
+Mechanical Engineer,5,"CNC Machining, 3D Printing, DFM (Design for Manufacturing) & Assembly Line Optimization",Adaptability,6-8 weeks,Manufacturing Workshop,No
+Mechanical Engineer,6,"PE Mechanical License Exam Prep, Engineering Portfolio Defense & Automotive/Aerospace Hiring",Decision Making,4-6 weeks,Licensing & Industry Launch,Yes
+Graphic Designer,1,"Design Elements: Typography, Grid Systems, Color Harmonies, and Compositional Balance",Artistic Skill,3-5 weeks,Graphic Design Theory,No
+Graphic Designer,2,Adobe Creative Cloud Mastery: Vector Art in Illustrator & Image Manipulation in Photoshop,Creativity,6-8 weeks,Creative Suite Studio Lab,No
+Graphic Designer,3,"Editorial & Publication Layouts in InDesign, Packaging Design & Pre-press Production",Attention To Detail,5-7 weeks,Print & Packaging Workshop,No
+Graphic Designer,4,"Create an End-to-End Brand Identity System (Logo, Guidelines, Collateral, Merch & Web Banners)",Innovation,6-8 weeks,Brand Identity Capstone,Yes
+Graphic Designer,5,"Freelance Client Management, Design Brief Pitching & Iterative Feedback Revisions",Communication,4-6 weeks,Client Studio Sprint,No
+Graphic Designer,6,"Behance / Dribbble Portfolio Showcase, Digital PDF Book Defense & Creative Agency Interview",Decision Making,3-4 weeks,Portfolio Showcase & Defense,Yes
+Video Editor / Filmmaker,1,"Film Language, Cinematic Composition, Camera Settings (ISO/Shutter/Aperture) & Lighting",Creativity,4-6 weeks,Cinematography Foundations,No
+Video Editor / Filmmaker,2,NLE Video Editing Mastery in Adobe Premiere Pro or DaVinci Resolve: Pacing & Storytelling,Attention To Detail,6-8 weeks,NLE Editing Workshop,No
+Video Editor / Filmmaker,3,"Advanced Color Grading (Color Wheels, LUTs, Scopes) & Sound Design in DaVinci Fairlight",Artistic Skill,5-7 weeks,Color & Audio Masterclass,No
+Video Editor / Filmmaker,4,"Produce, Direct, Edit, and Color Grade a Polished Short Film or Commercial Brand Video",Problem Solving,6-8 weeks,Short Film Capstone,Yes
+Video Editor / Filmmaker,5,"Motion Graphics Integration with Adobe After Effects (Keyframing, Lower Thirds, VFX Rotoscoping)",Innovation,4-6 weeks,Motion VFX Sprint,No
+Video Editor / Filmmaker,6,"Showreel Portfolio Assembly, Film Festival Submission & Production Studio Interview Prep",Communication,3-4 weeks,Showreel Launch & Defense,Yes
+Journalist / Writer,1,"News Gathering Principles, Investigative Interviewing & AP Style Grammar Guidelines",Communication,4-6 weeks,Journalism Foundations,No
+Journalist / Writer,2,"Fact-Checking Standards, Primary Source Verification & Public Records Freedom of Information (FOIA)",Research Interest,4-6 weeks,Investigative Research Lab,No
+Journalist / Writer,3,"Feature Writing, Long-form Narrative Nonfiction, Op-Eds & Digital Headline Hook Crafting",Creativity,5-7 weeks,Narrative Writing Workshop,No
+Journalist / Writer,4,Publish a Multi-Part Investigative Report or In-Depth Magazine Feature Article,Attention To Detail,6-8 weeks,Investigative Article Capstone,Yes
+Journalist / Writer,5,"Newsroom Pitching, Stringer Freelance Reporting under Tight Deadlines & Editor Revisions",Adaptability,4-6 weeks,Live Newsroom Practicum,No
+Journalist / Writer,6,"Bylines Portfolio Curation, Media Law / Libel Ethics Compliance & Publication Staff Hiring",Decision Making,3-4 weeks,Portfolio Pitch & Interview,Yes
+Chef,1,"Culinary Foundations: Professional Knife Skills, Classic French Mother Sauces & Mise en Place",Discipline,4-6 weeks,Culinary Arts Fundamentals,No
+Chef,2,"Cooking Techniques: Braising, Searing, Poaching, Sous-Vide & Advanced Baking/Pastry",Creativity,6-8 weeks,Hot Line & Pastry Lab,No
+Chef,3,"Food Chemistry, Flavor Pairing Science, Seasoning Balance & Plating Aesthetics",Artistic Skill,5-7 weeks,Gastronomy Masterclass,No
+Chef,4,"Curate, Cost, and Execute a 5-Course Signature Tasting Menu under Timed Service Pressure",Problem Solving,6-8 weeks,Signature Menu Capstone,Yes
+Chef,5,"Kitchen Line Station Management (Sauté/Grill/Garde Manger), HACCP Safety & Inventory Control",Physical Stamina,8-12 weeks,Restaurant Kitchen Stage,No
+Chef,6,"ServSafe Food Manager Certification, Food Costing Optimization & Executive Chef Tasting Audition",Leadership,3-5 weeks,Chef Audition & Kitchen Launch,Yes
+Civil Services Officer,1,"Indian/National Constitution, Governance Frameworks, Public Administration & Modern History",Research Interest,8-12 weeks,Civil Services Foundations,No
+Civil Services Officer,2,"Macroeconomic Policy, Fiscal Budgeting, Social Welfare Schemes & International Relations",Logical Thinking,8-12 weeks,Policy & Economics Lab,No
+Civil Services Officer,3,"Administrative Ethics, Integrity in Governance, Case Study Dilemmas & Public Order Decision Making",Decision Making,6-8 weeks,Administrative Ethics Seminar,No
+Civil Services Officer,4,Comprehensive Multi-Disciplinary Analytical Essay & Public Policy Solution Formulation,Communication,8-10 weeks,Policy Solution Milestone,Yes
+Civil Services Officer,5,"District Administration Shadowing, Rural Development Field Practicum & Revenue Management",Leadership,8-12 weeks,Public Administration Internship,No
+Civil Services Officer,6,Civil Services Examination (UPSC / State PSC) Mains & Personality Interview Board Defense,Discipline,8-16 weeks,Civil Services Board Prep,Yes
+Sales Manager,1,"B2B Sales Methodologies (MEDDIC, SPIN Selling, Challenger Sale) & Inbound/Outbound Funnels",Communication,4-6 weeks,Sales Mastery Course,No
+Sales Manager,2,"CRM Architecture in Salesforce / HubSpot, Lead Scoring, Pipeline Stages & Deal Qualification",Logical Thinking,4-6 weeks,CRM Operations Lab,No
+Sales Manager,3,"Quota Setting, Sales Commission Compensation Design & Predictive Revenue Forecasting",Math,5-7 weeks,Sales Strategy & Planning,No
+Sales Manager,4,"Execute a Complete Enterprise Sales Pitch, High-Stakes Negotiation & Contract Closure",Leadership,6-8 weeks,Enterprise Deal Capstone,Yes
+Sales Manager,5,"Sales Coaching, Call Shadowing (Gong/Chorus analytics) & Sales Rep Performance Turnarounds",Empathy,4-6 weeks,Sales Leadership Practicum,No
+Sales Manager,6,"Sales Leadership Case Presentation, Board Revenue Target Defense & VP of Sales Interview",Decision Making,3-4 weeks,Executive Sales Defense,Yes
+Operations Manager,1,"Operations Strategy, Process Mapping (VSM), Capacity Planning & Productivity Metrics",Business Thinking,4-6 weeks,Operations Management Core,No
+Operations Manager,2,"Lean Six Sigma Principles: DMAIC Framework, Root Cause Analysis (5 Whys, Ishikawa Fishbone)",Problem Solving,6-8 weeks,Lean Six Sigma Lab,No
+Operations Manager,3,"Enterprise Resource Planning (ERP - SAP / Oracle), Inventory Turnover & Warehouse Logistics",Logical Thinking,5-7 weeks,ERP Systems Workshop,No
+Operations Manager,4,Design & Implement a Process Transformation Project Reducing Cycle Time by 25%,Leadership,6-8 weeks,Operational Transformation Capstone,Yes
+Operations Manager,5,"Supply Chain Bottleneck Resolution, Vendor SLA Management & Continuous Improvement Kaizen",Adaptability,4-6 weeks,Live Operations Practicum,No
+Operations Manager,6,Six Sigma Green/Black Belt Certification Exam & Operational Excellence Executive Defense,Decision Making,3-5 weeks,Certification & Case Defense,Yes
+Commercial Pilot,1,"Aviation Meteorology, Principles of Flight, Aerodynamics & Air Regulations Ground School",Discipline,6-8 weeks,Ground School Groundwork,No
+Commercial Pilot,2,"Aircraft Systems, Engines, Flight Instruments, Navigation (VOR/GPS/ILS) & Radio Telephony",Logical Thinking,6-8 weeks,Aviation Technical Lab,No
+Commercial Pilot,3,"Single-Engine Flight Training: Takeoffs, Landings, Cross-Country Navigation & Emergency Stalls",Physical Stamina,8-12 weeks,Flight School Dual Hours,No
+Commercial Pilot,4,"Complete 250+ Logged Flight Hours, Solo Cross-Country Flights & Instrument Flight Rating (IFR)",Attention To Detail,12-16 weeks,Flight Rating Milestone,Yes
+Commercial Pilot,5,Multi-Engine Aircraft Rating & Glass Cockpit Simulator (Boeing 737 / Airbus A320 Type Rating),Problem Solving,6-10 weeks,Flight Simulator Practicum,No
+Commercial Pilot,6,"Commercial Pilot License (CPL) Flight Test, DGCA/FAA Checkride & Airline Pilot Interview",Decision Making,4-6 weeks,CPL Checkride & Airline Prep,Yes
+Fashion Designer,1,"Fashion History, Textile Science, Fiber Properties, Weaves & Color Trend Forecasting",Artistic Skill,4-6 weeks,Fashion Fundamentals,No
+Fashion Designer,2,"Fashion Illustration, Croquis Figure Drawing & Digital Technical Flats in Adobe Illustrator",Creativity,5-7 weeks,Fashion CAD Studio,No
+Fashion Designer,3,"Draping on Mannequin, Pattern Making, Garment Grading & Tailoring Construction Techniques",Attention To Detail,6-8 weeks,Pattern Making Workshop,No
+Fashion Designer,4,Create a 6-Look Thematic Runway Collection from Moodboard to Stitched Sample Garments,Innovation,8-12 weeks,Fashion Collection Capstone,Yes
+Fashion Designer,5,3D Virtual Garment Modeling with Clo3D / Browzwear & Sustainable Fabric Sourcing,Adaptability,4-6 weeks,Digital Apparel Lab,No
+Fashion Designer,6,"Lookbook Photography, Fashion Week Runway Presentation & Apparel Brand Pitch Defense",Communication,3-5 weeks,Runway Portfolio Launch,Yes
+Environmental Scientist,1,"Ecology, Environmental Chemistry, Earth Systems & Environmental Law/Regulations (EPA/NEPA)",Research Interest,5-7 weeks,Environmental Science Core,No
+Environmental Scientist,2,"Field Sampling Techniques: Water Quality, Soil Contamination, Air Particulates & GIS Mapping",Attention To Detail,6-8 weeks,Field Sampling Practicum,No
+Environmental Scientist,3,"Environmental Impact Assessment (EIA) Methodologies, Carbon Footprint Accounting & LCA",Logical Thinking,6-8 weeks,EIA & Sustainability Lab,No
+Environmental Scientist,4,Execute a Comprehensive Ecological Risk Assessment & Remediation Strategy for an Ecosystem,Problem Solving,6-8 weeks,Environmental Capstone,Yes
+Environmental Scientist,5,GIS Spatial Analysis in ArcGIS / QGIS for Habitat Fragmentation & Climate Vulnerability,Curiosity,4-6 weeks,Spatial Modeling Workshop,No
+Environmental Scientist,6,"Environmental Consultant Report Defense, ISO 14001 Audit Training & Sustainability Hiring",Decision Making,3-5 weeks,Consulting Report Defense,Yes
+Sports Coach / Trainer,1,"Exercise Physiology, Functional Movement Patterns, Bioenergetics & Applied Biomechanics",Physical Stamina,4-6 weeks,Sports Science Core,No
+Sports Coach / Trainer,2,"Strength & Conditioning Programming, Periodization Cycles (Macro/Meso/Micro), and Hypertrophy",Discipline,5-7 weeks,Strength & Conditioning Lab,No
+Sports Coach / Trainer,3,"Sports Psychology: Goal Setting, Mental Toughness, Athlete Motivation & Team Cohesion",Leadership,4-6 weeks,Sports Psychology Seminar,No
+Sports Coach / Trainer,4,Design a Comprehensive 1-Year Periodized Athletic Performance Program for an Elite Team,Problem Solving,6-8 weeks,Coaching Program Capstone,Yes
+Sports Coach / Trainer,5,"Live Athlete Coaching Sessions, Video Movement Screen (FMS) & Injury Prevention Protocols",Communication,6-8 weeks,Live Coaching Practicum,No
+Sports Coach / Trainer,6,CSCS / NSCA Certified Strength & Conditioning Specialist Exam & High-Performance Team Hiring,Decision Making,3-5 weeks,Certification & Team Placement,Yes
+Frontend Developer,1,"Modern HTML5 Semantic Architecture, CSS3 (Grid, Flexbox, Custom Properties) & Responsive Design",Creativity,4-6 weeks,Web Foundations Course,No
+Frontend Developer,2,"JavaScript ES6+ Deep Dive: Closures, Event Loop, Promises, Async/Await & DOM Manipulation",Programming,6-8 weeks,JavaScript Masterclass,No
+Frontend Developer,3,"React.js & Next.js Frameworks: Server Components, Hooks, State Management (Zustand) & TypeScript",Problem Solving,6-8 weeks,Next.js Application Lab,No
+Frontend Developer,4,"Build a High-Performance SaaS Web App with Tailwind CSS, Dark Mode & Lighthouse 100 Score",Innovation,6-8 weeks,Production Frontend Capstone,Yes
+Frontend Developer,5,"Web Performance Optimization: Core Web Vitals, Bundle Splitting, SSR/SSG & Unit Tests (Jest)",Attention To Detail,4-6 weeks,Performance Optimization Sprint,No
+Frontend Developer,6,"Frontend System Design (Micro-frontends, State Architecture), Vercel Deploy & Live Coding Prep",Decision Making,3-4 weeks,System Design & Interview Prep,Yes
+Backend Developer,1,"Core Backend Languages (Node.js/Express, Go, or Python/FastAPI) and HTTP Protocol Standards",Programming,5-7 weeks,Backend Foundations,No
+Backend Developer,2,"Relational Database Design (PostgreSQL), Indexing, ACID Transactions & ORM/Query Builders",Logical Thinking,6-8 weeks,Database Engineering Lab,No
+Backend Developer,3,"Authentication (JWT, OAuth2), Redis Caching, Rate Limiting & REST/gRPC API Microservices",Problem Solving,6-8 weeks,Microservices Track,No
+Backend Developer,4,Architect a High-Concurrency Distributed Backend System with Message Queues (RabbitMQ/Kafka),Innovation,6-8 weeks,Distributed Backend Capstone,Yes
+Backend Developer,5,"Docker Containerization, CI/CD Automated Pipelines, Load Testing with k6 & Database Sharding",Attention To Detail,4-6 weeks,Scalability & Testing Sprint,No
+Backend Developer,6,"Backend System Design (Distributed Locking, CAP Theorem, CDN Caching) & Interview Defense",Decision Making,4-6 weeks,System Design & Coding Prep,Yes
+QA Automation Engineer,1,"Software Testing Fundamentals: Test Plans, Test Cases, Bug Life Cycle & Black/White Box Testing",Attention To Detail,4-6 weeks,QA Core Course,No
+QA Automation Engineer,2,"Core Automation with Java or TypeScript, Object-Oriented Test Architecture & Page Object Model",Programming,5-7 weeks,Automation Scripting Lab,No
+QA Automation Engineer,3,"Web Automation Frameworks with Selenium WebDriver, Playwright, and Cypress Testing Suites",Problem Solving,6-8 weeks,Web Automation Workshop,No
+QA Automation Engineer,4,Build an End-to-End Test Automation Framework with CI/CD Integration (GitHub Actions / Jenkins),Discipline,6-8 weeks,Automation Framework Capstone,Yes
+QA Automation Engineer,5,"API Automation with Postman / RestAssured, Mobile Testing (Appium) & Performance Testing (JMeter)",Logical Thinking,4-6 weeks,API & Performance Testing,No
+QA Automation Engineer,6,"ISTQB Advanced Level Certification Prep, Test Coverage Metrics Presentation & QA Interview Prep",Decision Making,3-4 weeks,Certification & Interview Defense,Yes
+Database Administrator,1,"Relational Database Internals, Storage Engines, WAL Logs & Advanced SQL Query Tuning",Logical Thinking,5-7 weeks,Database Internals Course,No
+Database Administrator,2,"Database Installation, Configuration, User Role Privileges & Security Hardening on PostgreSQL/MySQL",Discipline,5-7 weeks,DBA Configuration Lab,No
+Database Administrator,3,"Backup & Disaster Recovery Strategies, Point-in-Time Recovery (PITR) & Replication Topologies",Attention To Detail,6-8 weeks,Replication & Recovery Track,No
+Database Administrator,4,Design & Deploy a High-Availability Multi-Node Database Cluster with Automated Failover,Problem Solving,6-8 weeks,High-Availability DB Capstone,Yes
+Database Administrator,5,"Database Performance Tuning: Index Optimization, Connection Pooling (PgBouncer), and Sharding",Math,4-6 weeks,Performance Optimization Sprint,No
+Database Administrator,6,Oracle / AWS Certified Database Specialty Certification Prep & Production DBA Incident Drills,Decision Making,3-5 weeks,Certification & On-Call Prep,Yes
+Solutions Architect,1,"Enterprise Architecture Frameworks (TOGAF), Non-Functional Requirements & Solution Scoping",Business Thinking,4-6 weeks,Architecture Foundations,No
+Solutions Architect,2,"Cloud Native Architecture: Event-Driven Systems, Serverless, Microservices & API Gateways",Problem Solving,6-8 weeks,Cloud Architecture Lab,No
+Solutions Architect,3,"Enterprise Security Architecture, Data Governance, Zero Trust & Compliance Standards (SOC2/GDPR)",Attention To Detail,5-7 weeks,Security & Governance Track,No
+Solutions Architect,4,Author an End-to-End Enterprise Cloud Migration & Modernization Solution Blueprint Document,Communication,6-8 weeks,Enterprise Solution Capstone,Yes
+Solutions Architect,5,"Total Cost of Ownership (TCO) Financial Modeling, SLA/RTO/RPO Architecture Trade-off Reviews",Leadership,4-6 weeks,Financial & SLA Architecture,No
+Solutions Architect,6,AWS Certified Solutions Architect Professional / TOGAF Exam & Executive Board Pitch Defense,Decision Making,4-6 weeks,Executive Architecture Defense,Yes
+Business Intelligence Analyst,1,"Data Literacy, Star Schema Dimensional Modeling, Fact/Dimension Tables & Business KPI Metrics",Logical Thinking,4-6 weeks,BI Fundamentals Course,No
+Business Intelligence Analyst,2,"Advanced SQL for Analytics: Window Functions, CTEs, Aggregations & Query Optimization",Math,5-7 weeks,SQL Analytics Workshop,No
+Business Intelligence Analyst,3,"Power BI Mastery: DAX Formulas, Power Query Data Transformation & Interactive Drill-down Reports",Creativity,6-8 weeks,Power BI & DAX Practicum,No
+Business Intelligence Analyst,4,Build an Executive Revenue & Operations Analytics Dashboard Suite with Automated Data Refresh,Communication,6-8 weeks,Executive BI Capstone,Yes
+Business Intelligence Analyst,5,"Tableau Dashboarding, Looker Semantic Modeling & Data Storytelling for C-Suite Decision Makers",Attention To Detail,4-6 weeks,Tableau & Looker Sprint,No
+Business Intelligence Analyst,6,Microsoft Certified: Power BI Data Analyst (PL-300) Certification & BI Portfolio Defense,Decision Making,3-4 weeks,Certification & Portfolio Launch,Yes
+Data Analyst,1,"Descriptive Statistics, Data Cleaning Methodologies, and Advanced Excel Modeling",Math,4-6 weeks,Data Analytics Foundations,No
+Data Analyst,2,"SQL Data Extraction, Filtering, Grouping, Joining Multi-Table Datasets & Subqueries",Logical Thinking,5-7 weeks,SQL Querying Lab,No
+Data Analyst,3,"Python for Data Analysis: Pandas DataFrames, NumPy Arrays & Matplotlib/Seaborn Visualizations",Programming,6-8 weeks,Python Data Lab,No
+Data Analyst,4,Conduct an In-Depth E-Commerce Customer Cohort & Retention Analysis with Actionable Insights,Problem Solving,6-8 weeks,Data Analysis Capstone,Yes
+Data Analyst,5,Interactive Dashboarding in Tableau / Power BI & Automated Stakeholder Email Reporting,Communication,4-6 weeks,Dashboard Reporting Track,No
+Data Analyst,6,"Google Data Analytics Professional Certificate, Portfolio Case Study Defense & Interview Prep",Decision Making,3-4 weeks,Certification & Case Defense,Yes
+MLOps Engineer,1,"Machine Learning Foundations, Python Scripting & Packaging ML Code into Modular Packages",Programming,4-6 weeks,ML Code Engineering,No
+MLOps Engineer,2,"ML Experiment Tracking and Model Registry with MLflow, Weights & Biases (WandB)",Attention To Detail,5-7 weeks,Experiment Tracking Lab,No
+MLOps Engineer,3,Automated ML Pipelines with Kubeflow / Apache Airflow and Feature Stores (Feast),Problem Solving,6-8 weeks,Pipeline Automation Track,No
+MLOps Engineer,4,"Deploy a Real-Time Model Serving API with Docker, Triton Server, KServe & Drift Monitoring",Innovation,6-8 weeks,Production MLOps Capstone,Yes
+MLOps Engineer,5,"Continuous Training (CT) CI/CD Workflows (CML, GitHub Actions) & Model Performance Observability",Discipline,4-6 weeks,CT & Observability Sprint,No
+MLOps Engineer,6,"MLOps Architecture System Design, Cloud Machine Learning Specialty Certification & Interview Prep",Decision Making,3-5 weeks,System Design & Interview Prep,Yes
+Robotics Engineer,1,"Robotics Math: Rigid Body Transformations, Forward & Inverse Kinematics, Matrix Algebra",Math,6-8 weeks,Robotics Kinematics Core,No
+Robotics Engineer,2,"Robot Operating System 2 (ROS 2) Architecture: Nodes, Topics, Services, Actions & URDF Modeling",Programming,6-8 weeks,ROS 2 Engineering Lab,No
+Robotics Engineer,3,"Robotic Sensing & Perception: LiDAR Point Clouds, OpenCV Computer Vision & Sensor Fusion (Kalman Filter)",Problem Solving,6-8 weeks,Perception & Fusion Track,No
+Robotics Engineer,4,Simulate and Control an Autonomous Mobile Robot (AMR) in Gazebo with Nav2 Navigation Stack,Innovation,8-10 weeks,Autonomous Robot Capstone,Yes
+Robotics Engineer,5,"Hardware-in-the-Loop Integration: Motor Drivers, CAN Bus, Microcontrollers & Real Robot Testing",Attention To Detail,6-8 weeks,Hardware Robotics Lab,No
+Robotics Engineer,6,"Robotics Control System Design Defense, Hardware Demo Video Showcase & Industry Interview Prep",Decision Making,3-5 weeks,System Defense & Portfolio,Yes
+Embedded Systems Engineer,1,"C / C++ for Embedded Systems: Bitwise Operations, Pointers, Memory Maps & Registers",Programming,5-7 weeks,Embedded C Foundations,No
+Embedded Systems Engineer,2,"Microcontroller Architecture (ARM Cortex-M / STM32), GPIO, Timers, Interrupts & ADC/DAC",Attention To Detail,6-8 weeks,Microcontroller Hardware Lab,No
+Embedded Systems Engineer,3,"Communication Protocols: UART, SPI, I2C, CAN Bus, and Oscilloscope / Logic Analyzer Debugging",Problem Solving,6-8 weeks,Protocols & Debugging Workshop,No
+Embedded Systems Engineer,4,Develop a Real-Time Embedded IoT Device running FreeRTOS with Multi-Threaded Task Scheduling,Innovation,6-8 weeks,FreeRTOS Embedded Capstone,Yes
+Embedded Systems Engineer,5,"Low-Power Optimization, Bootloader Development, Over-the-Air (OTA) Firmware Updates",Discipline,4-6 weeks,Firmware Engineering Sprint,No
+Embedded Systems Engineer,6,"Embedded Hardware Board Bring-Up Defense, Code Review & Semiconductor/IoT Interview Prep",Decision Making,3-5 weeks,Firmware Defense & Interview,Yes
+Network Engineer,1,"OSI 7-Layer & TCP/IP Networking, IPv4/IPv6 Subnetting Calculations & Network Topologies",Math,4-6 weeks,Network Foundations Course,No
+Network Engineer,2,"Switching & Routing: VLANs, Trunking (802.1Q), Spanning Tree (STP), OSPF & BGP Routing",Logical Thinking,6-8 weeks,Cisco Packet Tracer / GNS3 Lab,No
+Network Engineer,3,"Network Security: Access Control Lists (ACLs), Firewalls (Palo Alto/Fortinet), NAT & VPN Tunnels",Attention To Detail,6-8 weeks,Enterprise Security Lab,No
+Network Engineer,4,"Architect, Configure and Troubleshoot an Enterprise Multi-Site WAN/LAN Network Infrastructure",Problem Solving,6-8 weeks,Enterprise Network Capstone,Yes
+Network Engineer,5,"Network Automation with Python (Netmiko/Paramiko), Ansible Playbooks & RESTCONF/NETCONF",Programming,4-6 weeks,Network Automation Workshop,No
+Network Engineer,6,Cisco Certified Network Associate (CCNA / CCNP) Certification & Network Incident Interview Prep,Decision Making,3-5 weeks,CCNA/CCNP & Case Defense,Yes
+Security Engineer,1,"Security Principles (CIA Triad), Cryptography (AES, RSA, ECC, PKI) & Secure Architecture",Logical Thinking,4-6 weeks,Security Principles Core,No
+Security Engineer,2,"Application Security: OWASP Top 10 Vulnerabilities, Static/Dynamic Code Analysis (SAST/DAST)",Problem Solving,6-8 weeks,AppSec Vulnerability Lab,No
+Security Engineer,3,"DevSecOps Integration: Automated Security Gates in CI/CD, Container Scanning & Secret Management",Programming,6-8 weeks,DevSecOps Engineering Track,No
+Security Engineer,4,Conduct Comprehensive Threat Modeling (STRIDE) and Security Architecture Redesign Project,Attention To Detail,6-8 weeks,Threat Modeling Capstone,Yes
+Security Engineer,5,"Identity & Access Management (IAM), OAuth2/OIDC, Zero-Trust Architecture & Penetration Testing",Discipline,4-6 weeks,Identity & Pentest Lab,No
+Security Engineer,6,Certified Information Systems Security Professional (CISSP) Prep & Security System Design,Decision Making,4-6 weeks,CISSP Prep & Security Defense,Yes
+Cloud Security Engineer,1,"Cloud Security Shared Responsibility Model, IAM Least Privilege Policies & Cloud Governance",Logical Thinking,4-6 weeks,Cloud Security Core,No
+Cloud Security Engineer,2,"Securing Cloud Workloads: VPC Security Groups, Network ACLs, KMS Key Management & Encryption",Attention To Detail,5-7 weeks,Cloud Hardening Lab,No
+Cloud Security Engineer,3,"Cloud Security Posture Management (CSPM), AWS GuardDuty, Security Hub & Automated Remediation",Problem Solving,6-8 weeks,Cloud Detection & Response,No
+Cloud Security Engineer,4,Build a Zero-Trust Multi-Account Cloud Security Architecture with Automated Compliance Auditing,Discipline,6-8 weeks,Cloud Security Capstone,Yes
+Cloud Security Engineer,5,"Kubernetes & Container Security: Pod Security Standards, Falco Runtime Detection & Cilium Network Policies",Programming,4-6 weeks,Container Security Lab,No
+Cloud Security Engineer,6,AWS Certified Security - Specialty / CCSP Certification Exam & Cloud Incident Response Prep,Decision Making,3-5 weeks,Certification & Case Defense,Yes
+Blockchain Developer,1,"Cryptography Fundamentals (Hashing, Elliptic Curves), Consensus Mechanisms (PoW, PoS) & Blockchain Arch",Math,4-6 weeks,Blockchain Core Course,No
+Blockchain Developer,2,"Smart Contract Development with Solidity, Remix IDE, EVM Bytecode & Gas Optimization Patterns",Programming,6-8 weeks,Solidity Smart Contract Lab,No
+Blockchain Developer,3,"Decentralized Application (dApp) Development with Hardhat/Foundry, Ethers.js, and React Frontends",Problem Solving,6-8 weeks,dApp Development Track,No
+Blockchain Developer,4,"Build, Test, and Deploy an Audited DeFi Yield / NFT Staking Protocol with Comprehensive Test Suites",Attention To Detail,6-8 weeks,Web3 Protocol Capstone,Yes
+Blockchain Developer,5,"Smart Contract Security Auditing: Reentrancy, Flash Loan Attacks, Slither Static Analysis & Mythril",Logical Thinking,4-6 weeks,Security & Auditing Sprint,No
+Blockchain Developer,6,"Protocol Architecture Defense, Web3 Grant Proposal & Smart Contract Engineer Interview Prep",Decision Making,3-5 weeks,Web3 Portfolio & Code Review,Yes
+AR/VR Developer,1,"Spatial Computing Fundamentals, 3D Vector Math, Matrices, and Unity / Unreal Engine Basics",Math,4-6 weeks,Spatial Computing Core,No
+AR/VR Developer,2,"XR Interaction Toolkit: Raycasting, Direct Interaction, Teleportation & Hand Tracking in Unity",Programming,6-8 weeks,XR Interaction Lab,No
+AR/VR Developer,3,"AR Development with ARKit / ARCore: Plane Detection, Image Tracking, Light Estimation & Occlusion",Creativity,6-8 weeks,Augmented Reality Workshop,No
+AR/VR Developer,4,Build a Fully Immersive Interactive VR Experience for Meta Quest / Apple Vision Pro SDKs,Innovation,8-10 weeks,VR Experience Capstone,Yes
+AR/VR Developer,5,"VR Performance Optimization: Draw Calls Reduction, Foveated Rendering, LOD & Fixed Frame Rates (90fps)",Attention To Detail,4-6 weeks,VR Optimization Sprint,No
+AR/VR Developer,6,"XR App Store Publishing, Gameplay Video Pitch & Spatial Computing Technical Interview Prep",Decision Making,3-4 weeks,XR Launch & Portfolio Defense,Yes
+IT Support Specialist,1,"Computer Hardware Components, Motherboards, RAM, Storage Types & Assembly/Troubleshooting",Problem Solving,4-6 weeks,Hardware Fundamentals,No
+IT Support Specialist,2,"Operating Systems Administration: Windows 11, macOS, Linux Command Line & User Management",Discipline,4-6 weeks,OS Administration Lab,No
+IT Support Specialist,3,"Active Directory, Azure AD / Entra ID, Group Policy Objects (GPO), DNS & DHCP Configuration",Logical Thinking,5-7 weeks,Directory Services Workshop,No
+IT Support Specialist,4,Deploy a Full Enterprise Helpdesk Simulation with Ticketing (ServiceNow/Jira) & SLA Workflows,Communication,4-6 weeks,Helpdesk Operations Capstone,Yes
+IT Support Specialist,5,"Network Troubleshooting (Ping, Traceroute, Netstat), Hardware Diagnostic Tools & Endpoint Security",Attention To Detail,4-6 weeks,Diagnostic Practicum,No
+IT Support Specialist,6,CompTIA A+ / Network+ Certification Prep & Technical Support Interview Scenarios,Decision Making,3-4 weeks,Certification & Scenario Prep,Yes
+Chartered Accountant,1,"Advanced Accounting Standards (Ind AS / IFRS), Financial Statement Preparation & Consolidation",Math,6-8 weeks,Accounting Standards Core,No
+Chartered Accountant,2,"Direct Taxation (Corporate Income Tax, Transfer Pricing) & Indirect Taxation (GST Law & Filings)",Attention To Detail,6-8 weeks,Taxation Law Lab,No
+Chartered Accountant,3,"Statutory Audit Methodologies, Risk-Based Auditing Standards (SA), Internal Financial Controls",Discipline,6-8 weeks,Auditing Procedures Track,No
+Chartered Accountant,4,Complete a Simulated Statutory Audit & Tax Assessment File for a Multi-Million Enterprise,Logical Thinking,6-8 weeks,Statutory Audit Capstone,Yes
+Chartered Accountant,5,"Three-Year Mandatory Articleship Training in CA Firm covering Audit, Taxation, and Advisory",Leadership,12-24 weeks,Professional Articleship,No
+Chartered Accountant,6,"ICAI Final Examination Qualification, Professional Ethics Clearance & CA Practice Launch",Decision Making,8-12 weeks,ICAI Final & CA Placement,Yes
+Auditor,1,"Internal Control Frameworks (COSO), Audit Planning & Materiality Threshold Calculation",Logical Thinking,4-6 weeks,Auditing Foundations,No
+Auditor,2,"Sarbanes-Oxley (SOX 404) Compliance Testing, Walkthroughs & Key Control Deficiencies",Attention To Detail,5-7 weeks,SOX Compliance Lab,No
+Auditor,3,"Audit Sampling Techniques, Substantive Testing, Analytical Review Procedures & Workpapers",Math,6-8 weeks,Substantive Testing Workshop,No
+Auditor,4,Author a Formal Comprehensive Internal Audit Report with Risk Ratings & Management Action Plans,Communication,6-8 weeks,Audit Report Capstone,Yes
+Auditor,5,"Fraud Risk Assessment, Forensic Data Analytics with IDEA / ACL Audit Software & CAATs",Research Interest,4-6 weeks,Forensic Audit Practicum,No
+Auditor,6,Certified Internal Auditor (CIA) / CPA Exam Preparation & Audit Committee Presentation Defense,Decision Making,3-5 weeks,CIA Prep & Audit Defense,Yes
+Investment Analyst,1,"Corporate Valuation Methodologies: Discounted Cash Flow (DCF), LBO Models & M&A Accretion/Dilution",Math,5-7 weeks,Financial Modeling Mastery,No
+Investment Analyst,2,"Industry Landscape Analysis, Porters Five Forces & Competitive Advantage Moat Evaluation",Business Thinking,5-7 weeks,Industry Analysis Lab,No
+Investment Analyst,3,"Financial Database Fluency in FactSet, PitchBook, S&P Capital IQ & SEC Filing (10-K/10-Q) Mining",Attention To Detail,6-8 weeks,Financial Database Workshop,No
+Investment Analyst,4,Produce a Professional Buy-Side Investment Memo & Financial Model for an Acquisition Target,Logical Thinking,6-8 weeks,Investment Memo Capstone,Yes
+Investment Analyst,5,"Investment Committee Pitching, Deal Due Diligence Simulation & Management Team Q&A Drills",Communication,4-6 weeks,Due Diligence Practicum,No
+Investment Analyst,6,"CFA Level 1/2 Exam Preparation, Financial Modeling Test Drills & Private Equity / VC Interview Prep",Decision Making,4-6 weeks,CFA Prep & PE/VC Defense,Yes
+Risk Analyst,1,"Risk Management Frameworks (ISO 31000), Quantitative Probability Distributions & Loss Modeling",Math,5-7 weeks,Risk Principles Course,No
+Risk Analyst,2,"Credit Risk Modeling: Probability of Default (PD), Loss Given Default (LGD) & Expected Loss",Logical Thinking,6-8 weeks,Credit Risk Modeling Lab,No
+Risk Analyst,3,"Market Risk Analytics: Value at Risk (VaR - Historical, Parametric, Monte Carlo) & Stress Testing",Problem Solving,6-8 weeks,Market Risk & VaR Workshop,No
+Risk Analyst,4,Build an Enterprise Risk Matrix & Stress Testing Model under Basel III/IV Regulatory Scenarios,Attention To Detail,6-8 weeks,Enterprise Risk Capstone,Yes
+Risk Analyst,5,"Operational Risk Incident Tracking, Key Risk Indicators (KRIs) & Liquidity Coverage Ratios (LCR)",Discipline,4-6 weeks,Operational Risk Practicum,No
+Risk Analyst,6,Financial Risk Manager (FRM) Certification Exam Preparation & Chief Risk Officer Case Defense,Decision Making,4-6 weeks,FRM Prep & Case Defense,Yes
+Actuary,1,"Calculus-Based Probability, Stochastic Processes, Survival Models & Life Contingencies",Math,6-8 weeks,Actuarial Mathematics Core,No
+Actuary,2,"Financial Mathematics: Present Value of Annuities, Yield Curves, Bond Amortization & Cash Flows",Logical Thinking,6-8 weeks,Financial Mathematics Lab,No
+Actuary,3,"Loss Models: Frequency & Severity Distributions, Aggregate Loss Models & Extreme Value Theory",Problem Solving,6-8 weeks,Loss Modeling Workshop,No
+Actuary,4,Construct an Insurance Pricing & Reserving Model (Chain Ladder Method) in R / Python,Attention To Detail,8-10 weeks,Actuarial Pricing Capstone,Yes
+Actuary,5,"Pension Valuation, Solvency II / IFRS 17 Insurance Regulatory Standards & Capital Requirements",Discipline,6-8 weeks,Regulatory Capital Practicum,No
+Actuary,6,"Society of Actuaries (SOA / IFoA) Associate Exams (P, FM, FAM, ASTAM) & Actuarial Consulting Prep",Decision Making,8-12 weeks,Actuarial Exam Series Prep,Yes
+Supply Chain Analyst,1,"Supply Chain Dynamics, Bullwhip Effect, SCOR Model & Inventory Holding Cost Equations",Business Thinking,4-6 weeks,Supply Chain Core,No
+Supply Chain Analyst,2,"Demand Forecasting: Exponential Smoothing, Holt-Winters Method, Moving Averages in Python",Math,5-7 weeks,Demand Forecasting Lab,No
+Supply Chain Analyst,3,"Inventory Optimization: Economic Order Quantity (EOQ), Safety Stock Calculations & Reorder Points",Logical Thinking,5-7 weeks,Inventory Optimization Workshop,No
+Supply Chain Analyst,4,Build an End-to-End Supply Chain Dashboard with Real-Time Stockout & Logistics Delay Alerts,Problem Solving,6-8 weeks,Logistics Dashboard Capstone,Yes
+Supply Chain Analyst,5,"Transportation Route Optimization (Traveling Salesperson Problem), Fleet Cost Modeling & SAP S/4HANA",Attention To Detail,4-6 weeks,Route Optimization Sprint,No
+Supply Chain Analyst,6,APICS CSCP (Certified Supply Chain Professional) Exam Prep & Supply Chain Strategy Interview,Decision Making,3-5 weeks,Certification & Case Defense,Yes
+Procurement Manager,1,"Strategic Sourcing Methodology (Kraljic Matrix), Total Cost of Ownership (TCO) & Sourcing Categories",Business Thinking,4-6 weeks,Procurement Core Course,No
+Procurement Manager,2,"Vendor Selection, Request for Proposal (RFP/RFQ) Drafting, Vendor Scorecards & Prequalification",Attention To Detail,4-6 weeks,RFP & Vendor Scoring Lab,No
+Procurement Manager,3,"Supplier Contract Negotiation, Pricing Models, Payment Terms & Force Majeure Clauses",Leadership,5-7 weeks,Contract Negotiation Practicum,No
+Procurement Manager,4,Deliver a Strategic Sourcing Program Yielding 15% Annualized Procurement Cost Reduction,Problem Solving,6-8 weeks,Strategic Sourcing Capstone,Yes
+Procurement Manager,5,"Supplier Relationship Management (SRM), Ethical Sourcing Audits & Global Supply Risk Hedging",Communication,4-6 weeks,SRM & Risk Management,No
+Procurement Manager,6,CIPS / CPSM (Certified Professional in Supply Management) Certification & Procurement Defense,Decision Making,3-5 weeks,Certification & Executive Defense,Yes
+Customer Success Manager,1,"Customer Lifecycle Frameworks, SaaS Recurring Revenue Metrics (ARR, MRR, GRR, NRR, CAC)",Business Thinking,4-6 weeks,Customer Success Foundations,No
+Customer Success Manager,2,"Customer Onboarding Workflows, Time-to-Value (TTV) Optimization & Milestone Journey Mapping",Communication,4-6 weeks,Onboarding Playbook Lab,No
+Customer Success Manager,3,"Health Scoring Modeling (Usage Frequency, Feature Adoption, Ticket Escalations) in Gainsight",Logical Thinking,5-7 weeks,Health Score Modeling Workshop,No
+Customer Success Manager,4,Design a Comprehensive Customer Retention & Proactive Churn Mitigation Playbook,Empathy,6-8 weeks,Churn Mitigation Capstone,Yes
+Customer Success Manager,5,"Executive Business Reviews (EBR / QBR) Structuring, Upsell / Cross-sell Identification & NPS Audits",Leadership,4-6 weeks,Executive Review Practicum,No
+Customer Success Manager,6,"Customer Success Leadership Case Defense, Account Rescue Simulations & SaaS CSM Interview Prep",Decision Making,3-4 weeks,CSM Case Defense & Launch,Yes
+Management Consultant,1,"Structured Problem Solving: Issue Trees, Hypothesis-Driven Consulting & MECE Framework",Logical Thinking,4-6 weeks,Consulting Foundations,No
+Management Consultant,2,"Financial Analysis, Market Entry Sizing, Profitability Diagnostics & Cost Reduction Modeling",Business Thinking,5-7 weeks,Consulting Modeling Lab,No
+Management Consultant,3,"Executive Storylining, Pyramidal Principle Communication & Top-Tier Consulting Slide Decks",Communication,5-7 weeks,Slide Storyboarding Workshop,No
+Management Consultant,4,Deliver a Complete Corporate Turnaround / Market Expansion Strategy Recommendation Deck,Problem Solving,6-8 weeks,Strategy Advisory Capstone,Yes
+Management Consultant,5,"C-Suite Stakeholder Interviews, Organizational Change Management & Workshop Facilitation",Leadership,4-6 weeks,Stakeholder Facilitation Practicum,No
+Management Consultant,6,"Case Interview Mastery (Market Sizing, Profitability, M&A Cases) for MBB / Big 4 Consulting",Decision Making,4-6 weeks,MBB Case Interview Drills,Yes
+Recruiter,1,"Talent Acquisition Funnels, Job Architecture, Role Competency Profiling & Intake Briefs",Communication,3-5 weeks,Recruitment Core Course,No
+Recruiter,2,"Advanced Sourcing: Boolean Search Queries, LinkedIn Recruiter, GitHub / X-Ray Talent Mining",Curiosity,4-6 weeks,Talent Sourcing Lab,No
+Recruiter,3,Competency-Based Behavioral Interviewing (STAR Method) & Structured Candidate Evaluation Rubrics,Attention To Detail,4-6 weeks,Interview Assessment Workshop,No
+Recruiter,4,Execute an End-to-End Technical / Executive Search Campaign Closing 5 Hard-to-Fill Roles,Problem Solving,6-8 weeks,Hiring Search Capstone,Yes
+Recruiter,5,"Applicant Tracking Systems (Greenhouse/Lever), Candidate Experience Nurturing & Salary Negotiations",Empathy,4-6 weeks,ATS & Offer Negotiation,No
+Recruiter,6,"Talent Acquisition Analytics (Time-to-Hire, Offer Acceptance Rate) & Head of Recruiting Prep",Decision Making,3-4 weeks,Recruitment Leadership Launch,Yes
+Learning and Development Specialist,1,"Adult Learning Principles (Andragogy), Cognitive Load Theory & Competency Frameworks",Teaching Ability,4-6 weeks,Adult Learning Foundations,No
+Learning and Development Specialist,2,"Training Needs Analysis (TNA), Skills Gap Diagnostics & Organizational Capability Mapping",Research Interest,4-6 weeks,Needs Analysis Lab,No
+Learning and Development Specialist,3,"Instructional Design Models: ADDIE, SAM, Bloom's Taxonomy & Interactive Workshop Structuring",Creativity,5-7 weeks,Curriculum Design Workshop,No
+Learning and Development Specialist,4,Build a Corporate Leadership Development Academy Program with Interactive Simulations,Leadership,6-8 weeks,Corporate Academy Capstone,Yes
+Learning and Development Specialist,5,"Learning Management System (LMS) Administration, Micro-Learning Video Production & Gamification",Innovation,4-6 weeks,EdTech & LMS Administration,No
+Learning and Development Specialist,6,Kirkpatrick 4-Level Training Evaluation (ROI Impact Analysis) & L&D Leadership Defense,Decision Making,3-4 weeks,L&D Program Defense,Yes
+Registered Dietitian,1,"Nutritional Biochemistry, Human Metabolism, Macronutrient/Micronutrient Pathways & Digestion",Research Interest,5-7 weeks,Nutritional Science Core,No
+Registered Dietitian,2,"Medical Nutrition Therapy (MNT) for Diabetes, Cardiovascular Diseases, Renal & GI Disorders",Attention To Detail,6-8 weeks,Clinical Nutrition Lab,No
+Registered Dietitian,3,"Dietary Assessment: 24-Hour Food Recall, Anthropometric Measurements & Caloric Energy Equations",Math,5-7 weeks,Dietary Assessment Practicum,No
+Registered Dietitian,4,Formulate Comprehensive Evidence-Based Therapeutic Meal Plans for Complex Clinical Cases,Problem Solving,6-8 weeks,Clinical Meal Plan Capstone,Yes
+Registered Dietitian,5,Supervised Clinical Dietetics Internship in Inpatient Hospital & Community Nutrition Clinics,Empathy,12-16 weeks,Supervised Dietetic Rotations,No
+Registered Dietitian,6,Commission on Dietetic Registration (CDR / RD Exam) Preparation & Private Practice Licensing,Discipline,4-6 weeks,RD Licensure & Launch,Yes
+Pharmacist,1,"Medicinal Chemistry, Pharmacology, Mechanisms of Drug Action & Drug Classification",Research Interest,6-8 weeks,Pharmacology Core Curriculum,No
+Pharmacist,2,"Pharmacokinetics (ADME), Bioavailability, Dosage Regimens & Therapeutic Drug Monitoring (TDM)",Math,6-8 weeks,Pharmacokinetics Lab,No
+Pharmacist,3,"Pharmacy Law, Drug Schedules, Controlled Substances Compliance & Prescription Verification",Discipline,5-7 weeks,Pharmacy Jurisprudence,No
+Pharmacist,4,"Pass Clinical Prescription Dispensing Safety Audits, Compounding Labs & Drug Interaction Screens",Attention To Detail,6-8 weeks,Clinical Compounding Milestone,Yes
+Pharmacist,5,Hospital & Community Pharmacy Rotations: Inpatient Drug Dispensing & Patient Medication Counseling,Empathy,12-16 weeks,Pharmacy Practice Residency,No
+Pharmacist,6,NAPLEX / Pharmacy Board Licensure Examination & Pharmacist-in-Charge Registration,Decision Making,4-6 weeks,Licensure & Pharmacy Launch,Yes
+Medical Laboratory Technologist,1,"Clinical Laboratory Safety, Specimen Handling Protocols, Microscopy & Quality Control Standards",Discipline,4-6 weeks,Lab Safety & Operations,No
+Medical Laboratory Technologist,2,"Clinical Hematology: Complete Blood Counts (CBC), Peripheral Blood Smears & Coagulation Studies",Attention To Detail,5-7 weeks,Hematology Lab Practicum,No
+Medical Laboratory Technologist,3,"Clinical Chemistry: Spectrophotometry, Automated Immunoassays, Electrolytes & Liver/Renal Panels",Problem Solving,6-8 weeks,Clinical Chemistry Workshop,No
+Medical Laboratory Technologist,4,"Execute Full Diagnostic Microbiology Bacterial Culturing, Staining & Antibiotic Susceptibility Testing",Logical Thinking,6-8 weeks,Microbiology Diagnostic Capstone,Yes
+Medical Laboratory Technologist,5,"Blood Banking & Transfusion Medicine: ABO/Rh Blood Typing, Crossmatching & Antibody Screening",Physical Stamina,6-8 weeks,Blood Bank Practicum,No
+Medical Laboratory Technologist,6,ASCP / Medical Laboratory Scientist (MLS) Board Certification Exam & Hospital Lab Placement,Decision Making,3-5 weeks,Certification & Lab Placement,Yes
+Occupational Therapist,1,"Functional Anatomy, Neuroanatomy, Motor Control & Occupational Therapy Practice Framework (OTPF)",Research Interest,5-7 weeks,OT Foundations Course,No
+Occupational Therapist,2,"Occupational Performance Evaluation: Activities of Daily Living (ADL), Range of Motion & Sensory Processing",Attention To Detail,6-8 weeks,Evaluation Skills Lab,No
+Occupational Therapist,3,"Therapeutic Interventions: Adaptive Equipment Prescription, Splinting, Ergonomic Modifications & Hand Therapy",Creativity,6-8 weeks,Therapeutic Interventions Track,No
+Occupational Therapist,4,Design a Comprehensive Patient-Centered Occupational Rehabilitation Plan with Measurable Goals,Problem Solving,6-8 weeks,Rehabilitation Plan Capstone,Yes
+Occupational Therapist,5,"Fieldwork Level II Supervised Clinical Rotations in Inpatient Rehab, Pediatrics, and Mental Health",Empathy,12-16 weeks,Fieldwork Clinical Rotations,No
+Occupational Therapist,6,"NBCOT Board Certification Examination Preparation, State OT Licensing & Clinical Practice Placement",Decision Making,4-6 weeks,Licensure & Clinical Placement,Yes
+Veterinarian,1,"Comparative Veterinary Anatomy, Animal Physiology, Histology & Veterinary Terminology",Research Interest,6-8 weeks,Veterinary Pre-Clinical Core,No
+Veterinarian,2,"Veterinary Pathology, Infectious Animal Diseases, Parasitology & Veterinary Pharmacology",Logical Thinking,6-8 weeks,Veterinary Disease Lab,No
+Veterinarian,3,"Small & Large Animal Clinical Diagnostics: Physical Exams, Radiology, Ultrasound & Bloodwork",Attention To Detail,8-10 weeks,Clinical Diagnostics Practicum,No
+Veterinarian,4,Perform Supervised Soft Tissue Surgical Procedures (Spay/Neuter) & Anesthetic Monitoring,Physical Stamina,8-10 weeks,Surgical Skills Milestone,Yes
+Veterinarian,5,"Veterinary Teaching Hospital Clinical Rotations: Small Animal Surgery, Equine, Farm Animal & ER",Empathy,16-20 weeks,Clinical Hospital Internship,No
+Veterinarian,6,NAVLE (North American Veterinary Licensing Exam) / Veterinary Board Exam & Clinic Placement,Decision Making,6-8 weeks,Licensing & Veterinary Launch,Yes
+Paralegal,1,"Legal System Fundamentals, Civil Litigation Stages, Legal Terminology & Ethics Rules",Discipline,4-6 weeks,Paralegal Foundations,No
+Paralegal,2,Legal Research Mastery with Westlaw / LexisNexis: Boolean Queries & Bluebook Legal Citations,Research Interest,5-7 weeks,Legal Research Lab,No
+Paralegal,3,"Litigation Drafting: Pleadings, Interrogatories, Subpoenas, Deposition Summaries & Affidavits",Attention To Detail,5-7 weeks,Litigation Drafting Workshop,No
+Paralegal,4,"Compile a Full Trial Notebook with Witness Exhibits, Deposition Digests & Motion Papers",Logical Thinking,6-8 weeks,Trial Notebook Capstone,Yes
+Paralegal,5,"Electronic Discovery (eDiscovery) Document Review in Relativity, Privilege Logs & Case Management",Problem Solving,4-6 weeks,eDiscovery Practicum,No
+Paralegal,6,Certified Paralegal (CP / CLA) Exam Preparation & Law Firm Litigation Department Placement,Decision Making,3-4 weeks,Certification & Law Firm Hiring,Yes
+Compliance Officer,1,"Regulatory Frameworks (SEC, FINRA, FCA), Compliance Governance & Code of Conduct Standards",Discipline,4-6 weeks,Compliance Governance Core,No
+Compliance Officer,2,"Anti-Money Laundering (AML), Know Your Customer (KYC) Protocols & Sanctions Screening Systems",Attention To Detail,5-7 weeks,AML & KYC Workshop,No
+Compliance Officer,3,"Compliance Risk Assessments, Transaction Monitoring Alerts Triage & Policy Manual Drafting",Logical Thinking,5-7 weeks,Risk Assessment Lab,No
+Compliance Officer,4,Design an Enterprise Compliance Monitoring Program with Automated Audit Log Auditing,Problem Solving,6-8 weeks,Compliance Program Capstone,Yes
+Compliance Officer,5,"Regulatory Examination Management, Suspicious Activity Report (SAR) Filing & Whistleblower Inquiries",Communication,4-6 weeks,Regulatory Inquiry Practicum,No
+Compliance Officer,6,CAMS (Certified Anti-Money Laundering Specialist) Certification & Chief Compliance Officer Prep,Decision Making,3-5 weeks,CAMS Prep & Case Defense,Yes
+Public Relations Specialist,1,"PR Fundamentals, Media Landscape Mapping, Journalist Relations & Brand Narrative Structuring",Communication,4-6 weeks,PR Foundations Course,No
+Public Relations Specialist,2,"Press Release Writing (AP Style), Media Pitch Emails, Press Kits & Media List Building (Muck Rack/Cision)",Creativity,4-6 weeks,Media Pitching Workshop,No
+Public Relations Specialist,3,"Crisis Communication Strategy: Holding Statements, Scenario Planning & Spokesperson Coaching",Leadership,5-7 weeks,Crisis Management Lab,No
+Public Relations Specialist,4,Execute a Complete Product Launch PR Campaign Securing Tier-1 Publications Coverage (Forbes/TechCrunch),Innovation,6-8 weeks,PR Campaign Capstone,Yes
+Public Relations Specialist,5,"Media Training Facilitation, Press Conference Management & Reputation Monitoring (Brandwatch)",Adaptability,4-6 weeks,Media Event Practicum,No
+Public Relations Specialist,6,"PR Portfolio Showcase (Media Clippings, Coverage Metrics, Share of Voice) & Agency Interview Prep",Decision Making,3-4 weeks,Portfolio Pitch & Launch,Yes
+SEO Specialist,1,"Search Engine Algorithms, Crawling & Indexing Mechanics, Keyword Research & Search Intent",Research Interest,4-6 weeks,SEO Core Foundations,No
+SEO Specialist,2,"On-Page SEO Optimization: Title Tags, Semantic Headings, Internal Linking & Content Optimization",Creativity,4-6 weeks,On-Page SEO Lab,No
+SEO Specialist,3,"Technical SEO: Core Web Vitals, XML Sitemaps, Robots.txt, Canonical Tags & Screaming Frog Audits",Attention To Detail,6-8 weeks,Technical SEO Workshop,No
+SEO Specialist,4,Execute a Complete Technical & Content SEO Audit with Actionable 6-Month Organic Growth Roadmap,Problem Solving,6-8 weeks,SEO Strategy Capstone,Yes
+SEO Specialist,5,"Off-Page SEO: Link Building Campaigns, Digital PR Outreach & Google Search Console / GA4 Reporting",Communication,4-6 weeks,Link Building Practicum,No
+SEO Specialist,6,"Ahrefs / Moz SEO Certification, Organic Traffic Case Study Defense & SEO Lead Interview Prep",Decision Making,3-4 weeks,Certification & Portfolio Launch,Yes
+Performance Marketing Specialist,1,"Paid Advertising Unit Economics: CAC, LTV, ROAS, CPC, CPM, CTR & Attribution Models",Math,4-6 weeks,Performance Marketing Core,No
+Performance Marketing Specialist,2,"Google Ads Search & Performance Max Mastery: Keyword Match Types, Bidding Strategies & Ad Copy",Logical Thinking,5-7 weeks,Google Ads Masterclass,No
+Performance Marketing Specialist,3,"Paid Social Media Advertising on Meta Ads Manager (Facebook/Instagram), TikTok Ads & Pixel Tracking",Creativity,5-7 weeks,Paid Social Workshop,No
+Performance Marketing Specialist,4,Manage a Live $10k+ Paid Ad Campaign Delivering 3.5x+ ROAS with Scalable Creative Testing,Business Thinking,6-8 weeks,Live Campaign Capstone,Yes
+Performance Marketing Specialist,5,"Conversion Rate Optimization (CRO): Landing Page A/B Testing (Unbounce), Heatmaps & Funnel Optimization",Attention To Detail,4-6 weeks,CRO & Funnel Optimization,No
+Performance Marketing Specialist,6,Google Ads & Meta Certified Media Buying Professional Certification & Growth Marketer Hiring,Decision Making,3-4 weeks,Certification & Growth Defense,Yes
+Social Media Manager,1,"Social Media Platform Algorithms (Instagram, LinkedIn, TikTok, X), Content Hooks & Formats",Creativity,3-5 weeks,Social Media Foundations,No
+Social Media Manager,2,"Visual Content Creation: Short-Form Video Editing (CapCut/Premiere), Canva Graphics & Copywriting",Artistic Skill,4-6 weeks,Content Creation Studio,No
+Social Media Manager,3,"Content Calendar Planning, Scheduling Tools (Hootsuite/Buffer) & Trend Jacking Strategies",Communication,4-6 weeks,Content Scheduling Lab,No
+Social Media Manager,4,Design and Execute a Viral Social Media Growth Campaign Generating 500k+ Impressions,Innovation,6-8 weeks,Viral Campaign Capstone,Yes
+Social Media Manager,5,"Community Management, Influencer Outreach Campaigns, Social Listening & Brand Sentiment Tracking",Empathy,4-6 weeks,Community Engagement Sprint,No
+Social Media Manager,6,"Social Media Analytics Report Presentation (Engagement Rate, Follower Growth) & Agency Hiring",Decision Making,3-4 weeks,Analytics Portfolio Defense,Yes
+Copywriter,1,"Direct Response Principles, Human Psychology Triggers, Value Propositions & AIDA / PAS Frameworks",Creativity,3-5 weeks,Copywriting Foundations,No
+Copywriter,2,"High-Converting Landing Page Copywriting: Compelling Headlines, Benefit Bullets & CTAs",Communication,4-6 weeks,Landing Page Copy Lab,No
+Copywriter,3,"Email Marketing Copywriting: Subject Line Open Rates, Story-Driven Email Sequences & Newsletters",Empathy,4-6 weeks,Email Copywriting Workshop,No
+Copywriter,4,"Write a Complete High-Converting Sales Funnel (Landing Page, 5-Part Email Nurture, Paid Ad Hooks)",Innovation,6-8 weeks,Sales Funnel Copy Capstone,Yes
+Copywriter,5,"B2B Whitepapers, Ad Copy Variants for Paid Campaigns (Facebook/Google) & A/B Split Testing",Attention To Detail,4-6 weeks,Ad Copy Split Testing Sprint,No
+Copywriter,6,"Copywriting Spec Portfolio Website, Conversion Case Studies & Copy Agency Interview Prep",Decision Making,3-4 weeks,Copy Portfolio Launch,Yes
+Interior Designer,1,"Interior Design Principles: Scale, Proportion, Lighting Design, Color Harmonies & Materiality",Artistic Skill,4-6 weeks,Interior Design Core,No
+Interior Designer,2,"2D Floor Planning, Elevations & Electrical/Plumbing Schematics in AutoCAD",Attention To Detail,5-7 weeks,AutoCAD Drafting Lab,No
+Interior Designer,3,3D Interior Modeling & Photorealistic Rendering in SketchUp / 3ds Max with V-Ray / Enscape,Creativity,6-8 weeks,3D Rendering Studio,No
+Interior Designer,4,"Design a Complete Residential / Commercial Interior Project with Moodboards, FF&E & Budget Bill",Problem Solving,6-8 weeks,Interior Project Capstone,Yes
+Interior Designer,5,"On-Site Contractor Coordination, Material Finishes Sourcing & Quality Installation Inspections",Communication,4-6 weeks,Site Execution Practicum,No
+Interior Designer,6,"NCIDQ Certification Exam Preparation, Interior Design Portfolio Book Defense & Studio Hiring",Decision Making,3-5 weeks,Portfolio Book & Studio Launch,Yes
+Animator,1,"12 Principles of Animation: Squash & Stretch, Timing, Spacing, Anticipation, Arcs & Exaggeration",Artistic Skill,4-6 weeks,Animation Principles Core,No
+Animator,2,2D Character Animation in Adobe Animate / Toon Boom Harmony: Keyframing & Lip Sync,Creativity,6-8 weeks,2D Animation Workshop,No
+Animator,3,3D Character Rigging & Skeletal Animation in Maya or Blender: Weight Painting & Inverse Kinematics,Problem Solving,6-8 weeks,3D Character Rigging Lab,No
+Animator,4,Animate a Polished 30-Second Character Acting & Action Sequence with Dynamic Camera Angles,Attention To Detail,8-10 weeks,Character Animation Capstone,Yes
+Animator,5,"Lighting, Texturing, Particle Effects & Post-Production Compositing in Adobe After Effects",Innovation,4-6 weeks,Lighting & VFX Sprint,No
+Animator,6,"Professional Animation Demo Reel Assembly, Breakdown Sheet & Animation Studio Portfolio Review",Communication,3-4 weeks,Demo Reel Launch & Review,Yes
+Photographer,1,"Exposure Triangle (Aperture, Shutter Speed, ISO), Focal Lengths & Manual Camera Operation",Attention To Detail,3-5 weeks,Photography Foundations,No
+Photographer,2,"Lighting Techniques: Natural Light Direction, Studio Strobes, Softboxes, Modifiers & Reflector Setups",Artistic Skill,5-7 weeks,Studio Lighting Lab,No
+Photographer,3,"Specialized Composition: Portraiture Posing, Commercial Product Staging, Landscape & Architecture",Creativity,5-7 weeks,Composition Masterclass,No
+Photographer,4,Execute a Professional Editorial / Commercial Photoshoot from Concept Moodboard to Final Selects,Problem Solving,6-8 weeks,Commercial Shoot Capstone,Yes
+Photographer,5,"RAW Post-Processing & Retouching in Adobe Lightroom & Photoshop (Frequency Separation, Color Grading)",Discipline,4-6 weeks,Retouching Workshop,No
+Photographer,6,"Print/Digital Photography Portfolio Presentation, Client Contracts & Commercial Gallery Showcase",Communication,3-4 weeks,Portfolio Showcase & Launch,Yes
+Podcast Producer,1,"Audio Production Fundamentals: Acoustics, Microphone Polar Patterns (Dynamic vs Condenser) & Gain Staging",Attention To Detail,3-5 weeks,Audio Engineering Core,No
+Podcast Producer,2,"Digital Audio Workstation (DAW) Mastery in Adobe Audition, Pro Tools, or Reaper: Multitrack Editing",Problem Solving,5-7 weeks,DAW Editing Workshop,No
+Podcast Producer,3,"Audio Processing: EQ Shaping, Compression, Noise Reduction (iZotope RX) & Mastering for -16 LUFS",Discipline,5-7 weeks,Audio Mastering Lab,No
+Podcast Producer,4,"Produce, Edit, Mix, and Master a Full 5-Episode Narrative Podcast Season with Custom Sound Design",Creativity,6-8 weeks,Podcast Season Capstone,Yes
+Podcast Producer,5,"Episode Scripting, Guest Interview Direction, RSS Feed Hosting (Megaphone/Buzzsprout) & Show Notes",Communication,4-6 weeks,Podcast Operations Track,No
+Podcast Producer,6,"Podcast Pitch Deck, Distribution Syndication (Spotify/Apple) & Audio Network Producer Hiring Prep",Decision Making,3-4 weeks,Audio Portfolio Launch,Yes
+Electrical Engineer,1,"Circuit Theory, Ohms/Kirchhoffs Laws, AC/DC Power, RLC Transient Response & Phasor Analysis",Math,5-7 weeks,Electrical Circuit Core,No
+Electrical Engineer,2,"Analog & Digital Electronics: Op-Amps, Transistors (MOSFET/BJT), Logic Gates & Microcontrollers",Problem Solving,6-8 weeks,Electronics Hardware Lab,No
+Electrical Engineer,3,"Printed Circuit Board (PCB) Schematic Design, Routing & DRC Rules in Altium Designer / KiCad",Attention To Detail,6-8 weeks,PCB Design Workshop,No
+Electrical Engineer,4,"Design, Fabricate, Solder, and Test a Custom Functional PCB with Embedded Sensor Integration",Innovation,6-8 weeks,Custom PCB Capstone,Yes
+Electrical Engineer,5,"Power Systems Simulation, High Voltage Safety, Electromagnetic Compatibility (EMC) & MATLAB/Simulink",Discipline,5-7 weeks,Power Systems & Simulation,No
+Electrical Engineer,6,"FE Electrical Exam Prep, Hardware Validation Test Report Defense & Semiconductor/Power Hiring",Decision Making,4-6 weeks,FE Exam & Hardware Defense,Yes
+Chemical Engineer,1,"Chemical Engineering Thermodynamics, Mass & Energy Balances & Phase Equilibria",Math,6-8 weeks,Chemical Thermodynamics Core,No
+Chemical Engineer,2,"Fluid Flow, Heat Transfer & Mass Transfer Unit Operations (Distillation, Absorption, Extraction)",Problem Solving,6-8 weeks,Unit Operations Lab,No
+Chemical Engineer,3,"Chemical Reaction Engineering: Reactor Design (CSTR, PFR), Kinetics & Catalysis Mechanisms",Logical Thinking,6-8 weeks,Reactor Engineering Track,No
+Chemical Engineer,4,Simulate a Full-Scale Industrial Chemical Processing Plant Flowsheet in Aspen Plus / HYSYS,Attention To Detail,6-8 weeks,Process Simulation Capstone,Yes
+Chemical Engineer,5,"Process Safety Management (HAZOP Studies), Piping & Instrumentation Diagrams (P&ID), Plant Safety",Discipline,4-6 weeks,HAZOP Safety Workshop,No
+Chemical Engineer,6,"FE Chemical Exam Preparation, Process Economics Feasibility Defense & Chemical Plant Placement",Decision Making,4-6 weeks,FE Exam & Plant Placement,Yes
+Aerospace Engineer,1,"Incompressible & Compressible Aerodynamics, Airfoil Theory, Lift/Drag Polars & Shock Waves",Math,6-8 weeks,Aerodynamics Core Course,No
+Aerospace Engineer,2,"Aerospace Structures, Aircraft Materials, Stress Analysis & Aeroelasticity in ANSYS / Nastran",Problem Solving,6-8 weeks,Structural Analysis Lab,No
+Aerospace Engineer,3,"Propulsion Systems: Gas Turbines, Jet Engines, Rocket Combustion Chambers & Specific Impulse",Logical Thinking,6-8 weeks,Propulsion Engineering Track,No
+Aerospace Engineer,4,Design and Simulate the Aerodynamic Flight Profile of a Fixed-Wing UAV / Rocket in OpenVSP & CFD,Innovation,8-10 weeks,Flight Vehicle Capstone,Yes
+Aerospace Engineer,5,"Flight Dynamics, Stability & Control Derivatives, Avionics Systems & Wind Tunnel Testing Practicum",Attention To Detail,5-7 weeks,Flight Dynamics & Testing,No
+Aerospace Engineer,6,"PE Aerospace Exam Preparation, AIAA Conference Project Defense & Aerospace Defense Hiring",Decision Making,4-6 weeks,Aero Defense & Launch,Yes
+Renewable Energy Engineer,1,"Renewable Energy Thermodynamics, Solar Irradiance, Photovoltaic Physics & Wind Energy Principles",Math,4-6 weeks,Renewable Energy Core,No
+Renewable Energy Engineer,2,"Solar PV System Design: String Sizing, Inverters, Shading Analysis & Simulation in PVsyst / Helioscope",Attention To Detail,6-8 weeks,Solar PV Engineering Lab,No
+Renewable Energy Engineer,3,"Wind Turbine Aerodynamics, Betz Limit, Wind Farm Layout Design & Micro-Siting with WindPRO",Problem Solving,5-7 weeks,Wind Farm Engineering Track,No
+Renewable Energy Engineer,4,Engineer a Megawatt-Scale Hybrid Solar + Battery Energy Storage System (BESS) Blueprint,Innovation,6-8 weeks,Hybrid Grid Energy Capstone,Yes
+Renewable Energy Engineer,5,"Grid Interconnection Standards (IEEE 1547), Power Flow Analysis & Environmental Feasibility Audits",Discipline,4-6 weeks,Grid Integration Practicum,No
+Renewable Energy Engineer,6,"NABCEP PV Installation Professional Exam Prep, Energy Yield Assessment Defense & CleanTech Hiring",Decision Making,3-5 weeks,NABCEP Prep & CleanTech Launch,Yes
+Urban Planner,1,"Urban Planning Theory, Land Use Regulations, Zoning Bylaws & Municipal Governance Structures",Research Interest,4-6 weeks,Urban Planning Core,No
+Urban Planner,2,"Geographic Information Systems (GIS) for Urban Planning: Spatial Mapping, Demographics in ArcGIS",Attention To Detail,6-8 weeks,GIS Urban Modeling Lab,No
+Urban Planner,3,"Transportation Planning: Transit-Oriented Development (TOD), Traffic Flow & Complete Streets Design",Problem Solving,5-7 weeks,Transit & Infrastructure Track,No
+Urban Planner,4,Author a Comprehensive Municipal Master Plan & Sustainable Urban Redevelopment Framework,Creativity,6-8 weeks,Master Plan Capstone,Yes
+Urban Planner,5,"Public Stakeholder Consultation, Community Hearings, Environmental Resilience & Housing Policy",Communication,4-6 weeks,Public Hearing Practicum,No
+Urban Planner,6,AICP (American Institute of Certified Planners) Exam Prep & Municipal City Planning Board Hiring,Decision Making,3-5 weeks,AICP Prep & Board Defense,Yes
+Policy Analyst,1,"Policy Analysis Methodologies, Problem Definition, Stakeholder Mapping & Institutional Policy Levers",Research Interest,4-6 weeks,Policy Analysis Core,No
+Policy Analyst,2,"Quantitative Policy Evaluation: Econometrics, Difference-in-Differences, Regression Discontinuity in Stata/R",Math,6-8 weeks,Quantitative Policy Lab,No
+Policy Analyst,3,"Cost-Benefit Analysis (CBA), Cost-Effectiveness Ratio Calculations & Regulatory Impact Analysis",Logical Thinking,5-7 weeks,CBA Modeling Workshop,No
+Policy Analyst,4,Author an Actionable Policy Briefing Memorandum with Evidence-Based Legislative Recommendations,Communication,6-8 weeks,Policy Memorandum Capstone,Yes
+Policy Analyst,5,"Legislative Testimony Preparation, Policy Advocacy Campaigns & Think-Tank Policy Briefings",Leadership,4-6 weeks,Advocacy & Testimony Practicum,No
+Policy Analyst,6,Policy Defense Presentation to Government Stakeholders & Think Tank / Policy Directorate Hiring,Decision Making,3-4 weeks,Policy Presentation & Placement,Yes
+Social Worker,1,"Social Welfare Systems, Human Behavior in Social Environment (HBSE) & Social Justice Principles",Empathy,4-6 weeks,Social Work Foundations,No
+Social Worker,2,"Case Management Methodologies: Intake Assessments, Needs Identification & Care Plan Structuring",Communication,5-7 weeks,Case Management Lab,No
+Social Worker,3,"Crisis Intervention Techniques, De-escalation Strategies, Trauma-Informed Care & Suicide Prevention",Problem Solving,5-7 weeks,Crisis Intervention Workshop,No
+Social Worker,4,Deliver a Community Empowerment Intervention Project for Vulnerable/Underserved Populations,Leadership,6-8 weeks,Community Intervention Capstone,Yes
+Social Worker,5,"Supervised Field Practicum in Child Welfare, Healthcare Social Work, or Mental Health Agencies",Discipline,12-16 weeks,Supervised Field Practicum,No
+Social Worker,6,LCSW / LSW Social Work Licensing Board Exam Preparation & Agency Clinical Placement,Decision Making,4-6 weeks,Licensure & Agency Launch,Yes
+Librarian,1,"Information Science, Library Organization Systems, Dewey Decimal & Library of Congress (LOC)",Attention To Detail,4-6 weeks,Information Science Core,No
+Librarian,2,"Bibliographic Metadata & Cataloging Standards: MARC 21, RDA (Resource Description and Access)",Logical Thinking,4-6 weeks,Cataloging Standards Lab,No
+Librarian,3,"Reference Interview Methodologies, Scholarly Research Database Navigation & Information Literacy",Communication,5-7 weeks,Reference Services Workshop,No
+Librarian,4,Build a Digital Institutional Repository with Dublin Core Metadata & Open Access Archiving,Research Interest,6-8 weeks,Digital Repository Capstone,Yes
+Librarian,5,"Library Collection Development, Budget Allocation, Community Literacy Programs & Archival Preservation",Teaching Ability,4-6 weeks,Collection Management Track,No
+Librarian,6,ALA-Accredited MLIS Portfolio Defense & Academic/Public Library Faculty Placement,Decision Making,3-4 weeks,MLIS Defense & Placement,Yes
+Instructional Designer,1,"Adult Learning Theories, Cognitive Load Principles & ADDIE / SAM Instructional Design Models",Teaching Ability,4-6 weeks,Instructional Design Core,No
+Instructional Designer,2,"Learning Needs Assessment, Task Analysis & Formulating Measurable Bloom's Taxonomy Objectives",Research Interest,4-6 weeks,Needs Analysis Lab,No
+Instructional Designer,3,E-Learning Authoring Tools Mastery: Articulate Storyline 360 & Rise 360 Interactive Scenarios,Creativity,6-8 weeks,Storyline 360 Workshop,No
+Instructional Designer,4,Design & Develop a Complete Gamified SCORM/xAPI Interactive E-Learning Course with Assessments,Innovation,6-8 weeks,E-Learning Course Capstone,Yes
+Instructional Designer,5,Learning Management System (LMS) Integration (Canvas/Moodle/Cornerstone) & Learner Accessibility,Attention To Detail,4-6 weeks,LMS Integration Practicum,No
+Instructional Designer,6,"Instructional Design Portfolio Showcase, Kirkpatrick Course Evaluation Defense & Corporate Hiring",Communication,3-4 weeks,Portfolio Showcase & Interview,Yes
+Translator / Interpreter,1,"Comparative Linguistics, Syntax Structures, Idiomatic Nuances & Cultural Pragmatics",Communication,4-6 weeks,Linguistics Foundations,No
+Translator / Interpreter,2,"Computer-Assisted Translation (CAT) Tools: SDL Trados Studio, MemoQ, Translation Memories & Glossaries",Attention To Detail,5-7 weeks,CAT Tooling Workshop,No
+Translator / Interpreter,3,"Specialized Domain Translation: Legal Contracts, Medical Records, Patents & Technical Documentation",Research Interest,6-8 weeks,Specialized Translation Lab,No
+Translator / Interpreter,4,"Deliver a Complete Certified Translation Portfolio of a Complex 20,000-Word Technical/Legal Corpus",Discipline,6-8 weeks,Translation Corpus Capstone,Yes
+Translator / Interpreter,5,Consecutive & Simultaneous Interpretation Practicum with Audio Booth & Note-Taking Techniques,Adaptability,5-7 weeks,Simultaneous Interpretation Lab,No
+Translator / Interpreter,6,ATA (American Translators Association) / UN Interpreter Certification Exam & Agency Placement,Decision Making,3-5 weeks,ATA Certification & Launch,Yes
+Agronomist,1,"Crop Physiology, Soil Science, Soil Chemistry (pH, NPK Ratios) & Soil Organic Matter",Research Interest,4-6 weeks,Soil & Crop Science Core,No
+Agronomist,2,"Integrated Pest Management (IPM), Plant Pathology, Weed Ecology & Biological Crop Controls",Problem Solving,5-7 weeks,Pest Management Lab,No
+Agronomist,3,"Precision Agriculture: Satellite Vegetation Indices (NDVI), Soil Moisture Sensors & Drone Imagery",Innovation,6-8 weeks,Precision Ag Technology,No
+Agronomist,4,Formulate a Comprehensive 1-Year Sustainable Crop Rotation & Nutrient Management Plan for Farm,Logical Thinking,6-8 weeks,Agronomy Management Capstone,Yes
+Agronomist,5,"Field Crop Trial Experiments, Yield Variance Analysis & Sustainable Drip Irrigation Modeling",Attention To Detail,5-7 weeks,Field Trials Practicum,No
+Agronomist,6,Certified Crop Adviser (CCA) Exam Preparation & Agricultural Consulting Firm Placement,Decision Making,3-5 weeks,CCA Certification & Launch,Yes
+Food Technologist,1,"Food Chemistry, Food Microbiology, Macronutrient Interactions & Food Preservation Principles",Research Interest,4-6 weeks,Food Science Core,No
+Food Technologist,2,"Food Processing Unit Operations: Thermal Pasteurization, Dehydration, Extrusion & Aseptic Packaging",Problem Solving,5-7 weeks,Food Processing Lab,No
+Food Technologist,3,"HACCP Food Safety Frameworks, GMP, FDA/FSSAI Compliance & Microbial Contamination Control",Discipline,5-7 weeks,HACCP Safety Workshop,No
+Food Technologist,4,"Formulate, Prototype, and Shelf-Life Test a Novel Nutritious Packaged Food Product",Creativity,6-8 weeks,Food Product Capstone,Yes
+Food Technologist,5,"Sensory Evaluation Science: Triangle Tests, Hedonic Scaling Panels & Texture/Rheology Profiling",Attention To Detail,4-6 weeks,Sensory Analysis Lab,No
+Food Technologist,6,Certified Food Scientist (CFS) Exam Prep & Food Manufacturing R&D Director Interview Prep,Decision Making,3-4 weeks,CFS Prep & R&D Launch,Yes
+Geologist,1,"Physical Geology, Mineralogy, Optical Petrography & Rock Identification under Polarizing Microscope",Research Interest,4-6 weeks,Mineralogy & Petrography Core,No
+Geologist,2,"Structural Geology, Fault Mechanics, Stratigraphy & Geologic Mapping with Brunton Compass",Attention To Detail,5-7 weeks,Field Geological Mapping,No
+Geologist,3,"Subsurface Geophysical Exploration: Seismic Reflection/Refraction, Well Logging & GIS Spatial Modeling",Logical Thinking,6-8 weeks,Geophysics & GIS Lab,No
+Geologist,4,Construct a 3D Subsurface Geological Cross-Section Model & Hydrogeological Resource Assessment,Problem Solving,6-8 weeks,Subsurface Geology Capstone,Yes
+Geologist,5,"Field Core Drilling Logging, Geochemical Soil Sampling & Mineral Resource Reserve Estimation",Physical Stamina,6-8 weeks,Field Exploration Practicum,No
+Geologist,6,Professional Geologist (PG / ASBOG) Licensing Exam Prep & Energy/Mining Industry Placement,Decision Making,3-5 weeks,PG Exam & Industry Launch,Yes
+Statistician,1,"Mathematical Statistics: Probability Theory, Expectation, Moment Generating Functions & Distributions",Math,6-8 weeks,Mathematical Statistics Core,No
+Statistician,2,"Statistical Inference: Maximum Likelihood Estimation (MLE), Hypothesis Testing & Confidence Intervals",Logical Thinking,6-8 weeks,Statistical Inference Lab,No
+Statistician,3,"Generalized Linear Models (GLM), Logistic Regression, Survival Analysis & Mixed-Effects Models in R",Programming,6-8 weeks,Applied Statistical Modeling,No
+Statistician,4,Execute a High-Powered Clinical Trial / Population Survey Design with Monte Carlo Simulations,Problem Solving,6-8 weeks,Statistical Design Capstone,Yes
+Statistician,5,"Bayesian Statistics: MCMC Algorithms, Prior/Posterior Modeling in Stan/PyMC & Statistical Power Analysis",Research Interest,5-7 weeks,Bayesian Statistics Workshop,No
+Statistician,6,Professional Statistician (PStat / CStat) Accreditation Defense & BioStats / Research Hiring,Decision Making,3-5 weeks,Accreditation & Placement,Yes
+UX Researcher,1,"UX Research Foundations: Qualitative vs Quantitative Methods, Research Ethics & Bias Mitigation",Research Interest,4-6 weeks,UX Research Core,No
+UX Researcher,2,"Generative User Research: Semi-Structured User Interviews, Contextual Inquiries & Diary Studies",Empathy,5-7 weeks,Interviewing & Observation Lab,No
+UX Researcher,3,"Evaluative Research: Moderated/Unmoderated Usability Testing, Treejack & Card Sorting (Optimal Workshop)",Attention To Detail,5-7 weeks,Usability Testing Workshop,No
+UX Researcher,4,Conduct a Comprehensive Mixed-Methods Product UX Research Study with Journey Maps & Insights Report,Communication,6-8 weeks,UX Research Report Capstone,Yes
+UX Researcher,5,"Quantitative UX Metrics: System Usability Scale (SUS), Time-on-Task, UX Benchmarking & Surveys",Logical Thinking,4-6 weeks,Quantitative UX Lab,No
+UX Researcher,6,UX Research Insights Executive Readout Presentation & Product Design Team Interview Prep,Decision Making,3-4 weeks,Research Presentation & Defense,Yes
+Product Marketing Manager,1,"Product Marketing Foundations: Value Proposition Design, Target Market Segmentation & Positioning Matrix",Business Thinking,4-6 weeks,PMM Fundamentals Core,No
+Product Marketing Manager,2,"Competitive Intelligence: Competitor Battlecards, Win/Loss Analysis & Feature Differentiation Tables",Research Interest,4-6 weeks,Competitive Analysis Lab,No
+Product Marketing Manager,3,"Go-To-Market (GTM) Tiered Launch Strategy, Internal Sales Enablement & Product Pitch Decks",Communication,5-7 weeks,GTM Strategy Workshop,No
+Product Marketing Manager,4,Lead a Full Tier-1 Product Launch Campaign Generating Qualified Pipeline & Press Attention,Innovation,6-8 weeks,Product Launch Capstone,Yes
+Product Marketing Manager,5,"Customer Case Study Creation, Website Product Messaging Conversion Optimization & Analyst Briefings",Creativity,4-6 weeks,Sales Enablement Sprint,No
+Product Marketing Manager,6,"Product Marketing Alliance (PMA) Certification, GTM Pitch Defense & Senior PMM Interview Prep",Decision Making,3-4 weeks,PMM Portfolio & Launch,Yes
+Business Development Manager,1,"Business Development Frameworks, Strategic Partnerships, Ecosystem Mapping & Value Exchange Models",Business Thinking,4-6 weeks,BD Foundations Core,No
+Business Development Manager,2,"Partner Sourcing, Cold Executive Outreach (Email/LinkedIn), Pipeline Management & Partner Fit Scoring",Communication,4-6 weeks,Partner Sourcing Workshop,No
+Business Development Manager,3,"Commercial Deal Structuring: Revenue Share Models, Co-Marketing Agreements & Joint Venture Term Sheets",Logical Thinking,5-7 weeks,Deal Structuring Lab,No
+Business Development Manager,4,"Negotiate, Close, and Launch a High-Impact Multi-Enterprise Strategic Distribution Partnership",Leadership,6-8 weeks,Strategic Alliance Capstone,Yes
+Business Development Manager,5,"Partner Relationship Management, Joint Go-To-Market Execution & Revenue Attribution Tracking",Adaptability,4-6 weeks,Alliance Execution Practicum,No
+Business Development Manager,6,"Enterprise BD Deal Presentation Defense, Revenue Strategy Case & VP of BD Interview Prep",Decision Making,3-4 weeks,Executive BD Defense,Yes
+Travel Consultant,1,"Global Geography, Tourist Destinations, Visa Regulations, Passport Requirements & Travel Insurance",Curiosity,3-5 weeks,Tourism Geography Core,No
+Travel Consultant,2,"Global Distribution Systems (GDS) Mastery: Sabre, Amadeus, Flight Booking & Fare Class Codes",Attention To Detail,5-7 weeks,GDS System Lab,No
+Travel Consultant,3,"Custom Luxury Itinerary Curation, Hotel/Resort Contracting & High-End Excursion Sourcing",Creativity,4-6 weeks,Itinerary Curation Workshop,No
+Travel Consultant,4,Build a Bespoke Multi-Country Luxury Itinerary Package with Complete Budgeting & Booking Logic,Problem Solving,6-8 weeks,Luxury Itinerary Capstone,Yes
+Travel Consultant,5,"Traveler Crisis Support: Flight Cancellation Rerouting, Emergency Travel Logistics & Customer Care",Empathy,4-6 weeks,Traveler Support Practicum,No
+Travel Consultant,6,IATA / CTA (Certified Travel Associate) Exam Preparation & Luxury Travel Agency Placement,Communication,3-4 weeks,IATA Certification & Launch,Yes
+Event Manager,1,"Event Planning Lifecycle, Concept Theming, Venue Feasibility & Permitting/Safety Regulations",Creativity,4-6 weeks,Event Planning Core,No
+Event Manager,2,"Event Budgeting, Vendor RFP Procurement, Catering, Audiovisual & Lighting Contract Management",Attention To Detail,5-7 weeks,Event Budgeting Lab,No
+Event Manager,3,"Run-of-Show Timelines, Stage Production Schedules, Event Ticketing & Registration Platforms",Discipline,4-6 weeks,Event Production Workshop,No
+Event Manager,4,"Plan, Coordinate, and Execute a Full 500+ Attendee Corporate Conference / Gala Festival",Leadership,8-10 weeks,Live Event Capstone,Yes
+Event Manager,5,"On-Site Crisis Management, VIP Guest Hospitality Coordination & Event Breakdown Operations",Adaptability,4-6 weeks,On-Site Event Practicum,No
+Event Manager,6,CMP (Certified Meeting Professional) Exam Preparation & Event Production Agency Interview Prep,Decision Making,3-4 weeks,CMP Prep & Portfolio Launch,Yes
+Fitness Trainer,1,"Functional Anatomy, Joint Actions, Energy Systems, Cardiovascular & Muscular Physiology",Physical Stamina,4-6 weeks,Fitness Anatomy Core,No
+Fitness Trainer,2,"Movement Screening: Functional Movement Screen (FMS), Postural Assessment & Muscle Imbalances",Attention To Detail,4-6 weeks,Movement Screening Lab,No
+Fitness Trainer,3,"Exercise Programming: Progressive Overload, Hypertrophy, Fat Loss & Periodization Structuring",Problem Solving,5-7 weeks,Exercise Programming Workshop,No
+Fitness Trainer,4,Design a 16-Week Transformative Personalized Fitness & Nutrition Protocol for a Client,Creativity,6-8 weeks,Client Transformation Capstone,Yes
+Fitness Trainer,5,"One-on-One Coaching Execution, Cueing Form Corrections, Client Motivation & Injury Prevention",Empathy,6-8 weeks,Live Coaching Practicum,No
+Fitness Trainer,6,NASM / ACE Certified Personal Trainer (CPT) Exam Preparation & Health Club/Studio Placement,Communication,3-5 weeks,CPT Certification & Placement,Yes
+Sports Analyst,1,"Sports Analytics Fundamentals, Tactical Formations & Sport-Specific Performance Metrics",Research Interest,4-6 weeks,Sports Analytics Core,No
+Sports Analyst,2,Video Breakdown Software Mastery in Hudl / Sportscode: Tagging Events & Tactical Clipping,Attention To Detail,5-7 weeks,Video Analysis Lab,No
+Sports Analyst,3,"Advanced Sports Metrics Modeling in Python/R: Expected Goals (xG), Possession Value & Player Tracking",Math,6-8 weeks,Sports Modeling Workshop,No
+Sports Analyst,4,Deliver a Complete Pre-Match Opposition Tactical Scouting Report & Player Recruitment Model,Logical Thinking,6-8 weeks,Tactical Scouting Capstone,Yes
+Sports Analyst,5,"GPS Tracking Data Analysis (Catapult), Player Workload Monitoring & Injury Risk Screening",Problem Solving,4-6 weeks,Athlete Tracking Practicum,No
+Sports Analyst,6,"Sports Analytics Conference Presentation, Tactical Dossier Defense & Pro Sports Club Hiring",Communication,3-4 weeks,Tactical Dossier Defense,Yes
+Real Estate Analyst,1,"Real Estate Principles, Property Types (Multifamily, Office, Retail, Industrial) & Lease Structures",Business Thinking,4-6 weeks,Real Estate Core,No
+Real Estate Analyst,2,"Real Estate Financial Modeling in Excel: NOI, Cap Rates, Cash-on-Cash Return, IRR & Unlevered Yields",Math,5-7 weeks,Real Estate Modeling Lab,No
+Real Estate Analyst,3,"ARGUS Enterprise Software Mastery: DCF Property Valuations, Lease Expirations & Scenario Modeling",Attention To Detail,6-8 weeks,ARGUS Modeling Workshop,No
+Real Estate Analyst,4,Construct a Full Institutional Acquisition Underwriting Model & Investment Memorandum for Property,Logical Thinking,6-8 weeks,Acquisition Memo Capstone,Yes
+Real Estate Analyst,5,"Market Feasibility Studies: Rent Comps, Submarket Vacancy Trends & Debt Financing (LTV/DSCR)",Problem Solving,4-6 weeks,Underwriting Practicum,No
+Real Estate Analyst,6,Real Estate Investment Committee Defense & Private Equity Real Estate (PERE) Interview Prep,Decision Making,3-5 weeks,PERE Defense & Interview,Yes
+Economist,1,"Microeconomic Theory (Consumer/Producer Optimization) & Macroeconomic Growth Models (Solow, IS-LM)",Math,5-7 weeks,Economic Theory Core,No
+Economist,2,"Econometrics: OLS Regression, Instrumental Variables, Panel Data & Time Series (VAR/GARCH) in Stata/R",Logical Thinking,6-8 weeks,Econometrics Lab,No
+Economist,3,"Macroeconomic Forecasting: Inflation Dynamics, Interest Rate Modeling & Central Bank Policy Analysis",Research Interest,6-8 weeks,Macroeconomic Modeling Track,No
+Economist,4,Publish an In-Depth Empirical Research Paper on Fiscal Policy Impact with Rigorous Identification Strategy,Attention To Detail,8-10 weeks,Empirical Economics Capstone,Yes
+Economist,5,"Public Policy Simulation, Economic Data Mining (FRED / World Bank / IMF APIs) & Scenario Analysis",Problem Solving,4-6 weeks,Economic Data Practicum,No
+Economist,6,"Economic Research Seminar Presentation, Central Bank / Economic Consulting Interview Prep",Communication,3-5 weeks,Economic Defense & Placement,Yes

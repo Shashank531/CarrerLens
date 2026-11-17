@@ -1,0 +1,421 @@
+Rule ID,IF1_Skill,IF1_Level,IF2_Skill,IF2_Level,IF3_Skill,IF3_Level,IF4_Skill,IF4_Level,THEN_Career,THEN_Level
+R1,Programming,Very High,Math,Very High,Problem Solving,Very High,Learning Ability,Very High,AI/ML Engineer,Excellent
+R2,Programming,Very High,Math,Very High,Problem Solving,Very High,Learning Ability,High,AI/ML Engineer,High
+R3,Programming,High,Math,High,Problem Solving,Medium,Learning Ability,Medium,AI/ML Engineer,Medium
+R4,Programming,Low,Math,Low,Problem Solving,Low,Learning Ability,Low,AI/ML Engineer,Low
+R5,Problem Solving,Very High,Math,Very High,Research Interest,Very High,Programming,Very High,Data Scientist,Excellent
+R6,Problem Solving,Very High,Math,Very High,Research Interest,Very High,Programming,High,Data Scientist,High
+R7,Problem Solving,High,Math,High,Research Interest,Medium,Programming,Medium,Data Scientist,Medium
+R8,Problem Solving,Low,Math,Low,Research Interest,Low,Programming,Low,Data Scientist,Low
+R9,Programming,Very High,Discipline,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Cybersecurity Analyst,Excellent
+R10,Programming,Very High,Discipline,Very High,Logical Thinking,Very High,Attention To Detail,High,Cybersecurity Analyst,High
+R11,Programming,High,Discipline,High,Logical Thinking,Medium,Attention To Detail,Medium,Cybersecurity Analyst,Medium
+R12,Programming,Low,Discipline,Low,Logical Thinking,Low,Attention To Detail,Low,Cybersecurity Analyst,Low
+R13,Creativity,Very High,Innovation,Very High,Artistic Skill,Very High,Empathy,Very High,UI/UX Designer,Excellent
+R14,Creativity,Very High,Innovation,Very High,Artistic Skill,Very High,Empathy,High,UI/UX Designer,High
+R15,Creativity,High,Innovation,High,Artistic Skill,Medium,Empathy,Medium,UI/UX Designer,Medium
+R16,Creativity,Low,Innovation,Low,Artistic Skill,Low,Empathy,Low,UI/UX Designer,Low
+R17,Programming,Very High,Problem Solving,Very High,Logical Thinking,Very High,Learning Ability,Very High,Software Engineer,Excellent
+R18,Programming,Very High,Problem Solving,Very High,Logical Thinking,Very High,Learning Ability,High,Software Engineer,High
+R19,Programming,High,Problem Solving,High,Logical Thinking,Medium,Learning Ability,Medium,Software Engineer,Medium
+R20,Programming,Low,Problem Solving,Low,Logical Thinking,Low,Learning Ability,Low,Software Engineer,Low
+R21,Programming,Very High,Problem Solving,Very High,Discipline,Very High,Learning Ability,Very High,Cloud Engineer,Excellent
+R22,Programming,Very High,Problem Solving,Very High,Discipline,Very High,Learning Ability,High,Cloud Engineer,High
+R23,Programming,High,Problem Solving,High,Discipline,Medium,Learning Ability,Medium,Cloud Engineer,Medium
+R24,Programming,Low,Problem Solving,Low,Discipline,Low,Learning Ability,Low,Cloud Engineer,Low
+R25,Programming,Very High,Learning Ability,Very High,Problem Solving,Very High,Adaptability,Very High,Mobile App Developer,Excellent
+R26,Programming,Very High,Learning Ability,Very High,Problem Solving,Very High,Adaptability,High,Mobile App Developer,High
+R27,Programming,High,Learning Ability,High,Problem Solving,Medium,Adaptability,Medium,Mobile App Developer,Medium
+R28,Programming,Low,Learning Ability,Low,Problem Solving,Low,Adaptability,Low,Mobile App Developer,Low
+R29,Programming,Very High,Discipline,Very High,Adaptability,Very High,Curiosity,Very High,DevOps Engineer,Excellent
+R30,Programming,Very High,Discipline,Very High,Adaptability,Very High,Curiosity,High,DevOps Engineer,High
+R31,Programming,High,Discipline,High,Adaptability,Medium,Curiosity,Medium,DevOps Engineer,Medium
+R32,Programming,Low,Discipline,Low,Adaptability,Low,Curiosity,Low,DevOps Engineer,Low
+R33,Programming,Very High,Creativity,Very High,Innovation,Very High,Problem Solving,Very High,Game Developer,Excellent
+R34,Programming,Very High,Creativity,Very High,Innovation,Very High,Problem Solving,High,Game Developer,High
+R35,Programming,High,Creativity,High,Innovation,Medium,Problem Solving,Medium,Game Developer,Medium
+R36,Programming,Low,Creativity,Low,Innovation,Low,Problem Solving,Low,Game Developer,Low
+R37,Programming,Very High,Math,Very High,Logical Thinking,Very High,Discipline,Very High,Data Engineer,Excellent
+R38,Programming,Very High,Math,Very High,Logical Thinking,Very High,Discipline,High,Data Engineer,High
+R39,Programming,High,Math,High,Logical Thinking,Medium,Discipline,Medium,Data Engineer,Medium
+R40,Programming,Low,Math,Low,Logical Thinking,Low,Discipline,Low,Data Engineer,Low
+R41,Programming,Very High,Attention To Detail,Very High,Creativity,Very High,Learning Ability,Very High,Frontend Developer,Excellent
+R42,Programming,Very High,Attention To Detail,Very High,Creativity,Very High,Learning Ability,High,Frontend Developer,High
+R43,Programming,High,Attention To Detail,High,Creativity,Medium,Learning Ability,Medium,Frontend Developer,Medium
+R44,Programming,Low,Attention To Detail,Low,Creativity,Low,Learning Ability,Low,Frontend Developer,Low
+R45,Programming,Very High,Problem Solving,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Backend Developer,Excellent
+R46,Programming,Very High,Problem Solving,Very High,Logical Thinking,Very High,Attention To Detail,High,Backend Developer,High
+R47,Programming,High,Problem Solving,High,Logical Thinking,Medium,Attention To Detail,Medium,Backend Developer,Medium
+R48,Programming,Low,Problem Solving,Low,Logical Thinking,Low,Attention To Detail,Low,Backend Developer,Low
+R49,Programming,Very High,Problem Solving,Very High,Learning Ability,Very High,Curiosity,Very High,MLOps Engineer,Excellent
+R50,Programming,Very High,Problem Solving,Very High,Learning Ability,Very High,Curiosity,High,MLOps Engineer,High
+R51,Programming,High,Problem Solving,High,Learning Ability,Medium,Curiosity,Medium,MLOps Engineer,Medium
+R52,Programming,Low,Problem Solving,Low,Learning Ability,Low,Curiosity,Low,MLOps Engineer,Low
+R53,Programming,Very High,Learning Ability,Very High,Logical Thinking,Very High,Math,Very High,Blockchain Developer,Excellent
+R54,Programming,Very High,Learning Ability,Very High,Logical Thinking,Very High,Math,High,Blockchain Developer,High
+R55,Programming,High,Learning Ability,High,Logical Thinking,Medium,Math,Medium,Blockchain Developer,Medium
+R56,Programming,Low,Learning Ability,Low,Logical Thinking,Low,Math,Low,Blockchain Developer,Low
+R57,Programming,Very High,Creativity,Very High,Problem Solving,Very High,Math,Very High,AR/VR Developer,Excellent
+R58,Programming,Very High,Creativity,Very High,Problem Solving,Very High,Math,High,AR/VR Developer,High
+R59,Programming,High,Creativity,High,Problem Solving,Medium,Math,Medium,AR/VR Developer,Medium
+R60,Programming,Low,Creativity,Low,Problem Solving,Low,Math,Low,AR/VR Developer,Low
+R61,Programming,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Math,Very High,Embedded Systems Engineer,Excellent
+R62,Programming,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Math,High,Embedded Systems Engineer,High
+R63,Programming,High,Logical Thinking,High,Attention To Detail,Medium,Math,Medium,Embedded Systems Engineer,Medium
+R64,Programming,Low,Logical Thinking,Low,Attention To Detail,Low,Math,Low,Embedded Systems Engineer,Low
+R65,Logical Thinking,Very High,Attention To Detail,Very High,Problem Solving,Very High,Learning Ability,Very High,Network Engineer,Excellent
+R66,Logical Thinking,Very High,Attention To Detail,Very High,Problem Solving,Very High,Learning Ability,High,Network Engineer,High
+R67,Logical Thinking,High,Attention To Detail,High,Problem Solving,Medium,Learning Ability,Medium,Network Engineer,Medium
+R68,Logical Thinking,Low,Attention To Detail,Low,Problem Solving,Low,Learning Ability,Low,Network Engineer,Low
+R69,Attention To Detail,Very High,Problem Solving,Very High,Learning Ability,Very High,Curiosity,Very High,Security Engineer,Excellent
+R70,Attention To Detail,Very High,Problem Solving,Very High,Learning Ability,Very High,Curiosity,High,Security Engineer,High
+R71,Attention To Detail,High,Problem Solving,High,Learning Ability,Medium,Curiosity,Medium,Security Engineer,Medium
+R72,Attention To Detail,Low,Problem Solving,Low,Learning Ability,Low,Curiosity,Low,Security Engineer,Low
+R73,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Problem Solving,Very High,Cloud Security Engineer,Excellent
+R74,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Problem Solving,High,Cloud Security Engineer,High
+R75,Attention To Detail,High,Discipline,High,Logical Thinking,Medium,Problem Solving,Medium,Cloud Security Engineer,Medium
+R76,Attention To Detail,Low,Discipline,Low,Logical Thinking,Low,Problem Solving,Low,Cloud Security Engineer,Low
+R77,Attention To Detail,Very High,Problem Solving,Very High,Discipline,Very High,Programming,Very High,QA Automation Engineer,Excellent
+R78,Attention To Detail,Very High,Problem Solving,Very High,Discipline,Very High,Programming,High,QA Automation Engineer,High
+R79,Attention To Detail,High,Problem Solving,High,Discipline,Medium,Programming,Medium,QA Automation Engineer,Medium
+R80,Attention To Detail,Low,Problem Solving,Low,Discipline,Low,Programming,Low,QA Automation Engineer,Low
+R81,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Learning Ability,Very High,Database Administrator,Excellent
+R82,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Learning Ability,High,Database Administrator,High
+R83,Attention To Detail,High,Discipline,High,Logical Thinking,Medium,Learning Ability,Medium,Database Administrator,Medium
+R84,Attention To Detail,Low,Discipline,Low,Logical Thinking,Low,Learning Ability,Low,Database Administrator,Low
+R85,Problem Solving,Very High,Communication,Very High,Business Thinking,Very High,Programming,Very High,Solutions Architect,Excellent
+R86,Problem Solving,Very High,Communication,Very High,Business Thinking,Very High,Programming,High,Solutions Architect,High
+R87,Problem Solving,High,Communication,High,Business Thinking,Medium,Programming,Medium,Solutions Architect,Medium
+R88,Problem Solving,Low,Communication,Low,Business Thinking,Low,Programming,Low,Solutions Architect,Low
+R89,Communication,Very High,Problem Solving,Very High,Adaptability,Very High,Learning Ability,Very High,IT Support Specialist,Excellent
+R90,Communication,Very High,Problem Solving,Very High,Adaptability,Very High,Learning Ability,High,IT Support Specialist,High
+R91,Communication,High,Problem Solving,High,Adaptability,Medium,Learning Ability,Medium,IT Support Specialist,Medium
+R92,Communication,Low,Problem Solving,Low,Adaptability,Low,Learning Ability,Low,IT Support Specialist,Low
+R93,Math,Very High,Problem Solving,Very High,Programming,Very High,Innovation,Very High,Robotics Engineer,Excellent
+R94,Math,Very High,Problem Solving,Very High,Programming,Very High,Innovation,High,Robotics Engineer,High
+R95,Math,High,Problem Solving,High,Programming,Medium,Innovation,Medium,Robotics Engineer,Medium
+R96,Math,Low,Problem Solving,Low,Programming,Low,Innovation,Low,Robotics Engineer,Low
+R97,Math,Very High,Problem Solving,Very High,Innovation,Very High,Attention To Detail,Very High,Electrical Engineer,Excellent
+R98,Math,Very High,Problem Solving,Very High,Innovation,Very High,Attention To Detail,High,Electrical Engineer,High
+R99,Math,High,Problem Solving,High,Innovation,Medium,Attention To Detail,Medium,Electrical Engineer,Medium
+R100,Math,Low,Problem Solving,Low,Innovation,Low,Attention To Detail,Low,Electrical Engineer,Low
+R101,Math,Very High,Problem Solving,Very High,Research Interest,Very High,Discipline,Very High,Chemical Engineer,Excellent
+R102,Math,Very High,Problem Solving,Very High,Research Interest,Very High,Discipline,High,Chemical Engineer,High
+R103,Math,High,Problem Solving,High,Research Interest,Medium,Discipline,Medium,Chemical Engineer,Medium
+R104,Math,Low,Problem Solving,Low,Research Interest,Low,Discipline,Low,Chemical Engineer,Low
+R105,Math,Very High,Logical Thinking,Very High,Innovation,Very High,Attention To Detail,Very High,Aerospace Engineer,Excellent
+R106,Math,Very High,Logical Thinking,Very High,Innovation,Very High,Attention To Detail,High,Aerospace Engineer,High
+R107,Math,High,Logical Thinking,High,Innovation,Medium,Attention To Detail,Medium,Aerospace Engineer,Medium
+R108,Math,Low,Logical Thinking,Low,Innovation,Low,Attention To Detail,Low,Aerospace Engineer,Low
+R109,Math,Very High,Problem Solving,Very High,Discipline,Very High,Curiosity,Very High,Mechanical Engineer,Excellent
+R110,Math,Very High,Problem Solving,Very High,Discipline,Very High,Curiosity,High,Mechanical Engineer,High
+R111,Math,High,Problem Solving,High,Discipline,Medium,Curiosity,Medium,Mechanical Engineer,Medium
+R112,Math,Low,Problem Solving,Low,Discipline,Low,Curiosity,Low,Mechanical Engineer,Low
+R113,Problem Solving,Very High,Math,Very High,Innovation,Very High,Research Interest,Very High,Renewable Energy Engineer,Excellent
+R114,Problem Solving,Very High,Math,Very High,Innovation,Very High,Research Interest,High,Renewable Energy Engineer,High
+R115,Problem Solving,High,Math,High,Innovation,Medium,Research Interest,Medium,Renewable Energy Engineer,Medium
+R116,Problem Solving,Low,Math,Low,Innovation,Low,Research Interest,Low,Renewable Energy Engineer,Low
+R117,Attention To Detail,Very High,Math,Very High,Discipline,Very High,Problem Solving,Very High,Civil Engineer,Excellent
+R118,Attention To Detail,Very High,Math,Very High,Discipline,Very High,Problem Solving,High,Civil Engineer,High
+R119,Attention To Detail,High,Math,High,Discipline,Medium,Problem Solving,Medium,Civil Engineer,Medium
+R120,Attention To Detail,Low,Math,Low,Discipline,Low,Problem Solving,Low,Civil Engineer,Low
+R121,Research Interest,Very High,Math,Very High,Problem Solving,Very High,Curiosity,Very High,Research Scientist,Excellent
+R122,Research Interest,Very High,Math,Very High,Problem Solving,Very High,Curiosity,High,Research Scientist,High
+R123,Research Interest,High,Math,High,Problem Solving,Medium,Curiosity,Medium,Research Scientist,Medium
+R124,Research Interest,Low,Math,Low,Problem Solving,Low,Curiosity,Low,Research Scientist,Low
+R125,Business Thinking,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Math,Very High,Business Intelligence Analyst,Excellent
+R126,Business Thinking,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Math,High,Business Intelligence Analyst,High
+R127,Business Thinking,High,Logical Thinking,High,Attention To Detail,Medium,Math,Medium,Business Intelligence Analyst,Medium
+R128,Business Thinking,Low,Logical Thinking,Low,Attention To Detail,Low,Math,Low,Business Intelligence Analyst,Low
+R129,Problem Solving,Very High,Math,Very High,Attention To Detail,Very High,Business Thinking,Very High,Data Analyst,Excellent
+R130,Problem Solving,Very High,Math,Very High,Attention To Detail,Very High,Business Thinking,High,Data Analyst,High
+R131,Problem Solving,High,Math,High,Attention To Detail,Medium,Business Thinking,Medium,Data Analyst,Medium
+R132,Problem Solving,Low,Math,Low,Attention To Detail,Low,Business Thinking,Low,Data Analyst,Low
+R133,Business Thinking,Very High,Math,Very High,Attention To Detail,Very High,Decision Making,Very High,Financial Analyst,Excellent
+R134,Business Thinking,Very High,Math,Very High,Attention To Detail,Very High,Decision Making,High,Financial Analyst,High
+R135,Business Thinking,High,Math,High,Attention To Detail,Medium,Decision Making,Medium,Financial Analyst,Medium
+R136,Business Thinking,Low,Math,Low,Attention To Detail,Low,Decision Making,Low,Financial Analyst,Low
+R137,Discipline,Very High,Attention To Detail,Very High,Math,Very High,Logical Thinking,Very High,Chartered Accountant,Excellent
+R138,Discipline,Very High,Attention To Detail,Very High,Math,Very High,Logical Thinking,High,Chartered Accountant,High
+R139,Discipline,High,Attention To Detail,High,Math,Medium,Logical Thinking,Medium,Chartered Accountant,Medium
+R140,Discipline,Low,Attention To Detail,Low,Math,Low,Logical Thinking,Low,Chartered Accountant,Low
+R141,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Research Interest,Very High,Auditor,Excellent
+R142,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Research Interest,High,Auditor,High
+R143,Attention To Detail,High,Discipline,High,Logical Thinking,Medium,Research Interest,Medium,Auditor,Medium
+R144,Attention To Detail,Low,Discipline,Low,Logical Thinking,Low,Research Interest,Low,Auditor,Low
+R145,Math,Very High,Research Interest,Very High,Logical Thinking,Very High,Decision Making,Very High,Investment Analyst,Excellent
+R146,Math,Very High,Research Interest,Very High,Logical Thinking,Very High,Decision Making,High,Investment Analyst,High
+R147,Math,High,Research Interest,High,Logical Thinking,Medium,Decision Making,Medium,Investment Analyst,Medium
+R148,Math,Low,Research Interest,Low,Logical Thinking,Low,Decision Making,Low,Investment Analyst,Low
+R149,Logical Thinking,Very High,Math,Very High,Problem Solving,Very High,Decision Making,Very High,Risk Analyst,Excellent
+R150,Logical Thinking,Very High,Math,Very High,Problem Solving,Very High,Decision Making,High,Risk Analyst,High
+R151,Logical Thinking,High,Math,High,Problem Solving,Medium,Decision Making,Medium,Risk Analyst,Medium
+R152,Logical Thinking,Low,Math,Low,Problem Solving,Low,Decision Making,Low,Risk Analyst,Low
+R153,Math,Very High,Discipline,Very High,Logical Thinking,Very High,Research Interest,Very High,Actuary,Excellent
+R154,Math,Very High,Discipline,Very High,Logical Thinking,Very High,Research Interest,High,Actuary,High
+R155,Math,High,Discipline,High,Logical Thinking,Medium,Research Interest,Medium,Actuary,Medium
+R156,Math,Low,Discipline,Low,Logical Thinking,Low,Research Interest,Low,Actuary,Low
+R157,Math,Very High,Logical Thinking,Very High,Research Interest,Very High,Problem Solving,Very High,Statistician,Excellent
+R158,Math,Very High,Logical Thinking,Very High,Research Interest,Very High,Problem Solving,High,Statistician,High
+R159,Math,High,Logical Thinking,High,Research Interest,Medium,Problem Solving,Medium,Statistician,Medium
+R160,Math,Low,Logical Thinking,Low,Research Interest,Low,Problem Solving,Low,Statistician,Low
+R161,Math,Very High,Research Interest,Very High,Logical Thinking,Very High,Communication,Very High,Economist,Excellent
+R162,Math,Very High,Research Interest,Very High,Logical Thinking,Very High,Communication,High,Economist,High
+R163,Math,High,Research Interest,High,Logical Thinking,Medium,Communication,Medium,Economist,Medium
+R164,Math,Low,Research Interest,Low,Logical Thinking,Low,Communication,Low,Economist,Low
+R165,Research Interest,Very High,Math,Very High,Attention To Detail,Very High,Curiosity,Very High,Sports Analyst,Excellent
+R166,Research Interest,Very High,Math,Very High,Attention To Detail,Very High,Curiosity,High,Sports Analyst,High
+R167,Research Interest,High,Math,High,Attention To Detail,Medium,Curiosity,Medium,Sports Analyst,Medium
+R168,Research Interest,Low,Math,Low,Attention To Detail,Low,Curiosity,Low,Sports Analyst,Low
+R169,Math,Very High,Business Thinking,Very High,Research Interest,Very High,Logical Thinking,Very High,Real Estate Analyst,Excellent
+R170,Math,Very High,Business Thinking,Very High,Research Interest,Very High,Logical Thinking,High,Real Estate Analyst,High
+R171,Math,High,Business Thinking,High,Research Interest,Medium,Logical Thinking,Medium,Real Estate Analyst,Medium
+R172,Math,Low,Business Thinking,Low,Research Interest,Low,Logical Thinking,Low,Real Estate Analyst,Low
+R173,Business Thinking,Very High,Problem Solving,Very High,Logical Thinking,Very High,Math,Very High,Supply Chain Analyst,Excellent
+R174,Business Thinking,Very High,Problem Solving,Very High,Logical Thinking,Very High,Math,High,Supply Chain Analyst,High
+R175,Business Thinking,High,Problem Solving,High,Logical Thinking,Medium,Math,Medium,Supply Chain Analyst,Medium
+R176,Business Thinking,Low,Problem Solving,Low,Logical Thinking,Low,Math,Low,Supply Chain Analyst,Low
+R177,Business Thinking,Very High,Math,Very High,Logical Thinking,Very High,Curiosity,Very High,Performance Marketing Specialist,Excellent
+R178,Business Thinking,Very High,Math,Very High,Logical Thinking,Very High,Curiosity,High,Performance Marketing Specialist,High
+R179,Business Thinking,High,Math,High,Logical Thinking,Medium,Curiosity,Medium,Performance Marketing Specialist,Medium
+R180,Business Thinking,Low,Math,Low,Logical Thinking,Low,Curiosity,Low,Performance Marketing Specialist,Low
+R181,Communication,Very High,Business Thinking,Very High,Decision Making,Very High,Leadership,Very High,Product Manager,Excellent
+R182,Communication,Very High,Business Thinking,Very High,Decision Making,Very High,Leadership,High,Product Manager,High
+R183,Communication,High,Business Thinking,High,Decision Making,Medium,Leadership,Medium,Product Manager,Medium
+R184,Communication,Low,Business Thinking,Low,Decision Making,Low,Leadership,Low,Product Manager,Low
+R185,Business Thinking,Very High,Communication,Very High,Logical Thinking,Very High,Decision Making,Very High,Business Analyst,Excellent
+R186,Business Thinking,Very High,Communication,Very High,Logical Thinking,Very High,Decision Making,High,Business Analyst,High
+R187,Business Thinking,High,Communication,High,Logical Thinking,Medium,Decision Making,Medium,Business Analyst,Medium
+R188,Business Thinking,Low,Communication,Low,Logical Thinking,Low,Decision Making,Low,Business Analyst,Low
+R189,Leadership,Very High,Business Thinking,Very High,Learning Ability,Very High,Adaptability,Very High,Entrepreneur / Founder,Excellent
+R190,Leadership,Very High,Business Thinking,Very High,Learning Ability,Very High,Adaptability,High,Entrepreneur / Founder,High
+R191,Leadership,High,Business Thinking,High,Learning Ability,Medium,Adaptability,Medium,Entrepreneur / Founder,Medium
+R192,Leadership,Low,Business Thinking,Low,Learning Ability,Low,Adaptability,Low,Entrepreneur / Founder,Low
+R193,Problem Solving,Very High,Business Thinking,Very High,Communication,Very High,Learning Ability,Very High,Management Consultant,Excellent
+R194,Problem Solving,Very High,Business Thinking,Very High,Communication,Very High,Learning Ability,High,Management Consultant,High
+R195,Problem Solving,High,Business Thinking,High,Communication,Medium,Learning Ability,Medium,Management Consultant,Medium
+R196,Problem Solving,Low,Business Thinking,Low,Communication,Low,Learning Ability,Low,Management Consultant,Low
+R197,Leadership,Very High,Business Thinking,Very High,Discipline,Very High,Decision Making,Very High,Operations Manager,Excellent
+R198,Leadership,Very High,Business Thinking,Very High,Discipline,Very High,Decision Making,High,Operations Manager,High
+R199,Leadership,High,Business Thinking,High,Discipline,Medium,Decision Making,Medium,Operations Manager,Medium
+R200,Leadership,Low,Business Thinking,Low,Discipline,Low,Decision Making,Low,Operations Manager,Low
+R201,Communication,Very High,Leadership,Very High,Adaptability,Very High,Decision Making,Very High,HR Manager,Excellent
+R202,Communication,Very High,Leadership,Very High,Adaptability,Very High,Decision Making,High,HR Manager,High
+R203,Communication,High,Leadership,High,Adaptability,Medium,Decision Making,Medium,HR Manager,Medium
+R204,Communication,Low,Leadership,Low,Adaptability,Low,Decision Making,Low,HR Manager,Low
+R205,Communication,Very High,Business Thinking,Very High,Adaptability,Very High,Leadership,Very High,Sales Manager,Excellent
+R206,Communication,Very High,Business Thinking,Very High,Adaptability,Very High,Leadership,High,Sales Manager,High
+R207,Communication,High,Business Thinking,High,Adaptability,Medium,Leadership,Medium,Sales Manager,Medium
+R208,Communication,Low,Business Thinking,Low,Adaptability,Low,Leadership,Low,Sales Manager,Low
+R209,Business Thinking,Very High,Communication,Very High,Decision Making,Very High,Attention To Detail,Very High,Procurement Manager,Excellent
+R210,Business Thinking,Very High,Communication,Very High,Decision Making,Very High,Attention To Detail,High,Procurement Manager,High
+R211,Business Thinking,High,Communication,High,Decision Making,Medium,Attention To Detail,Medium,Procurement Manager,Medium
+R212,Business Thinking,Low,Communication,Low,Decision Making,Low,Attention To Detail,Low,Procurement Manager,Low
+R213,Communication,Very High,Empathy,Very High,Problem Solving,Very High,Business Thinking,Very High,Customer Success Manager,Excellent
+R214,Communication,Very High,Empathy,Very High,Problem Solving,Very High,Business Thinking,High,Customer Success Manager,High
+R215,Communication,High,Empathy,High,Problem Solving,Medium,Business Thinking,Medium,Customer Success Manager,Medium
+R216,Communication,Low,Empathy,Low,Problem Solving,Low,Business Thinking,Low,Customer Success Manager,Low
+R217,Communication,Very High,Business Thinking,Very High,Adaptability,Very High,Decision Making,Very High,Business Development Manager,Excellent
+R218,Communication,Very High,Business Thinking,Very High,Adaptability,Very High,Decision Making,High,Business Development Manager,High
+R219,Communication,High,Business Thinking,High,Adaptability,Medium,Decision Making,Medium,Business Development Manager,Medium
+R220,Communication,Low,Business Thinking,Low,Adaptability,Low,Decision Making,Low,Business Development Manager,Low
+R221,Communication,Very High,Adaptability,Very High,Empathy,Very High,Business Thinking,Very High,Recruiter,Excellent
+R222,Communication,Very High,Adaptability,Very High,Empathy,Very High,Business Thinking,High,Recruiter,High
+R223,Communication,High,Adaptability,High,Empathy,Medium,Business Thinking,Medium,Recruiter,Medium
+R224,Communication,Low,Adaptability,Low,Empathy,Low,Business Thinking,Low,Recruiter,Low
+R225,Communication,Very High,Business Thinking,Very High,Creativity,Very High,Decision Making,Very High,Product Marketing Manager,Excellent
+R226,Communication,Very High,Business Thinking,Very High,Creativity,Very High,Decision Making,High,Product Marketing Manager,High
+R227,Communication,High,Business Thinking,High,Creativity,Medium,Decision Making,Medium,Product Marketing Manager,Medium
+R228,Communication,Low,Business Thinking,Low,Creativity,Low,Decision Making,Low,Product Marketing Manager,Low
+R229,Communication,Very High,Business Thinking,Very High,Creativity,Very High,Curiosity,Very High,Digital Marketing Specialist,Excellent
+R230,Communication,Very High,Business Thinking,Very High,Creativity,Very High,Curiosity,High,Digital Marketing Specialist,High
+R231,Communication,High,Business Thinking,High,Creativity,Medium,Curiosity,Medium,Digital Marketing Specialist,Medium
+R232,Communication,Low,Business Thinking,Low,Creativity,Low,Curiosity,Low,Digital Marketing Specialist,Low
+R233,Creativity,Very High,Communication,Very High,Research Interest,Very High,Adaptability,Very High,Content Strategist,Excellent
+R234,Creativity,Very High,Communication,Very High,Research Interest,Very High,Adaptability,High,Content Strategist,High
+R235,Creativity,High,Communication,High,Research Interest,Medium,Adaptability,Medium,Content Strategist,Medium
+R236,Creativity,Low,Communication,Low,Research Interest,Low,Adaptability,Low,Content Strategist,Low
+R237,Curiosity,Very High,Business Thinking,Very High,Attention To Detail,Very High,Communication,Very High,SEO Specialist,Excellent
+R238,Curiosity,Very High,Business Thinking,Very High,Attention To Detail,Very High,Communication,High,SEO Specialist,High
+R239,Curiosity,High,Business Thinking,High,Attention To Detail,Medium,Communication,Medium,SEO Specialist,Medium
+R240,Curiosity,Low,Business Thinking,Low,Attention To Detail,Low,Communication,Low,SEO Specialist,Low
+R241,Communication,Very High,Creativity,Very High,Adaptability,Very High,Curiosity,Very High,Social Media Manager,Excellent
+R242,Communication,Very High,Creativity,Very High,Adaptability,Very High,Curiosity,High,Social Media Manager,High
+R243,Communication,High,Creativity,High,Adaptability,Medium,Curiosity,Medium,Social Media Manager,Medium
+R244,Communication,Low,Creativity,Low,Adaptability,Low,Curiosity,Low,Social Media Manager,Low
+R245,Communication,Very High,Creativity,Very High,Curiosity,Very High,Attention To Detail,Very High,Copywriter,Excellent
+R246,Communication,Very High,Creativity,Very High,Curiosity,Very High,Attention To Detail,High,Copywriter,High
+R247,Communication,High,Creativity,High,Curiosity,Medium,Attention To Detail,Medium,Copywriter,Medium
+R248,Communication,Low,Creativity,Low,Curiosity,Low,Attention To Detail,Low,Copywriter,Low
+R249,Communication,Very High,Curiosity,Very High,Creativity,Very High,Research Interest,Very High,Journalist / Writer,Excellent
+R250,Communication,Very High,Curiosity,Very High,Creativity,Very High,Research Interest,High,Journalist / Writer,High
+R251,Communication,High,Curiosity,High,Creativity,Medium,Research Interest,Medium,Journalist / Writer,Medium
+R252,Communication,Low,Curiosity,Low,Creativity,Low,Research Interest,Low,Journalist / Writer,Low
+R253,Communication,Very High,Creativity,Very High,Empathy,Very High,Adaptability,Very High,Public Relations Specialist,Excellent
+R254,Communication,Very High,Creativity,Very High,Empathy,Very High,Adaptability,High,Public Relations Specialist,High
+R255,Communication,High,Creativity,High,Empathy,Medium,Adaptability,Medium,Public Relations Specialist,Medium
+R256,Communication,Low,Creativity,Low,Empathy,Low,Adaptability,Low,Public Relations Specialist,Low
+R257,Communication,Very High,Creativity,Very High,Discipline,Very High,Attention To Detail,Very High,Podcast Producer,Excellent
+R258,Communication,Very High,Creativity,Very High,Discipline,Very High,Attention To Detail,High,Podcast Producer,High
+R259,Communication,High,Creativity,High,Discipline,Medium,Attention To Detail,Medium,Podcast Producer,Medium
+R260,Communication,Low,Creativity,Low,Discipline,Low,Attention To Detail,Low,Podcast Producer,Low
+R261,Creativity,Very High,Artistic Skill,Very High,Innovation,Very High,Learning Ability,Very High,Graphic Designer,Excellent
+R262,Creativity,Very High,Artistic Skill,Very High,Innovation,Very High,Learning Ability,High,Graphic Designer,High
+R263,Creativity,High,Artistic Skill,High,Innovation,Medium,Learning Ability,Medium,Graphic Designer,Medium
+R264,Creativity,Low,Artistic Skill,Low,Innovation,Low,Learning Ability,Low,Graphic Designer,Low
+R265,Creativity,Very High,Artistic Skill,Very High,Communication,Very High,Innovation,Very High,Video Editor / Filmmaker,Excellent
+R266,Creativity,Very High,Artistic Skill,Very High,Communication,Very High,Innovation,High,Video Editor / Filmmaker,High
+R267,Creativity,High,Artistic Skill,High,Communication,Medium,Innovation,Medium,Video Editor / Filmmaker,Medium
+R268,Creativity,Low,Artistic Skill,Low,Communication,Low,Innovation,Low,Video Editor / Filmmaker,Low
+R269,Artistic Skill,Very High,Creativity,Very High,Innovation,Very High,Curiosity,Very High,Fashion Designer,Excellent
+R270,Artistic Skill,Very High,Creativity,Very High,Innovation,Very High,Curiosity,High,Fashion Designer,High
+R271,Artistic Skill,High,Creativity,High,Innovation,Medium,Curiosity,Medium,Fashion Designer,Medium
+R272,Artistic Skill,Low,Creativity,Low,Innovation,Low,Curiosity,Low,Fashion Designer,Low
+R273,Creativity,Very High,Artistic Skill,Very High,Math,Very High,Innovation,Very High,Architect,Excellent
+R274,Creativity,Very High,Artistic Skill,Very High,Math,Very High,Innovation,High,Architect,High
+R275,Creativity,High,Artistic Skill,High,Math,Medium,Innovation,Medium,Architect,Medium
+R276,Creativity,Low,Artistic Skill,Low,Math,Low,Innovation,Low,Architect,Low
+R277,Creativity,Very High,Artistic Skill,Very High,Attention To Detail,Very High,Communication,Very High,Interior Designer,Excellent
+R278,Creativity,Very High,Artistic Skill,Very High,Attention To Detail,Very High,Communication,High,Interior Designer,High
+R279,Creativity,High,Artistic Skill,High,Attention To Detail,Medium,Communication,Medium,Interior Designer,Medium
+R280,Creativity,Low,Artistic Skill,Low,Attention To Detail,Low,Communication,Low,Interior Designer,Low
+R281,Creativity,Very High,Artistic Skill,Very High,Discipline,Very High,Attention To Detail,Very High,Animator,Excellent
+R282,Creativity,Very High,Artistic Skill,Very High,Discipline,Very High,Attention To Detail,High,Animator,High
+R283,Creativity,High,Artistic Skill,High,Discipline,Medium,Attention To Detail,Medium,Animator,Medium
+R284,Creativity,Low,Artistic Skill,Low,Discipline,Low,Attention To Detail,Low,Animator,Low
+R285,Creativity,Very High,Artistic Skill,Very High,Attention To Detail,Very High,Curiosity,Very High,Photographer,Excellent
+R286,Creativity,Very High,Artistic Skill,Very High,Attention To Detail,Very High,Curiosity,High,Photographer,High
+R287,Creativity,High,Artistic Skill,High,Attention To Detail,Medium,Curiosity,Medium,Photographer,Medium
+R288,Creativity,Low,Artistic Skill,Low,Attention To Detail,Low,Curiosity,Low,Photographer,Low
+R289,Empathy,Very High,Attention To Detail,Very High,Problem Solving,Very High,Learning Ability,Very High,Doctor / Physician,Excellent
+R290,Empathy,Very High,Attention To Detail,Very High,Problem Solving,Very High,Learning Ability,High,Doctor / Physician,High
+R291,Empathy,High,Attention To Detail,High,Problem Solving,Medium,Learning Ability,Medium,Doctor / Physician,Medium
+R292,Empathy,Low,Attention To Detail,Low,Problem Solving,Low,Learning Ability,Low,Doctor / Physician,Low
+R293,Empathy,Very High,Discipline,Very High,Attention To Detail,Very High,Adaptability,Very High,Registered Nurse,Excellent
+R294,Empathy,Very High,Discipline,Very High,Attention To Detail,Very High,Adaptability,High,Registered Nurse,High
+R295,Empathy,High,Discipline,High,Attention To Detail,Medium,Adaptability,Medium,Registered Nurse,Medium
+R296,Empathy,Low,Discipline,Low,Attention To Detail,Low,Adaptability,Low,Registered Nurse,Low
+R297,Empathy,Very High,Communication,Very High,Learning Ability,Very High,Curiosity,Very High,Psychologist / Counselor,Excellent
+R298,Empathy,Very High,Communication,Very High,Learning Ability,Very High,Curiosity,High,Psychologist / Counselor,High
+R299,Empathy,High,Communication,High,Learning Ability,Medium,Curiosity,Medium,Psychologist / Counselor,Medium
+R300,Empathy,Low,Communication,Low,Learning Ability,Low,Curiosity,Low,Psychologist / Counselor,Low
+R301,Empathy,Very High,Physical Stamina,Very High,Discipline,Very High,Attention To Detail,Very High,Physiotherapist,Excellent
+R302,Empathy,Very High,Physical Stamina,Very High,Discipline,Very High,Attention To Detail,High,Physiotherapist,High
+R303,Empathy,High,Physical Stamina,High,Discipline,Medium,Attention To Detail,Medium,Physiotherapist,Medium
+R304,Empathy,Low,Physical Stamina,Low,Discipline,Low,Attention To Detail,Low,Physiotherapist,Low
+R305,Empathy,Very High,Communication,Very High,Problem Solving,Very High,Creativity,Very High,Occupational Therapist,Excellent
+R306,Empathy,Very High,Communication,Very High,Problem Solving,Very High,Creativity,High,Occupational Therapist,High
+R307,Empathy,High,Communication,High,Problem Solving,Medium,Creativity,Medium,Occupational Therapist,Medium
+R308,Empathy,Low,Communication,Low,Problem Solving,Low,Creativity,Low,Occupational Therapist,Low
+R309,Empathy,Very High,Communication,Very High,Problem Solving,Very High,Adaptability,Very High,Social Worker,Excellent
+R310,Empathy,Very High,Communication,Very High,Problem Solving,Very High,Adaptability,High,Social Worker,High
+R311,Empathy,High,Communication,High,Problem Solving,Medium,Adaptability,Medium,Social Worker,Medium
+R312,Empathy,Low,Communication,Low,Problem Solving,Low,Adaptability,Low,Social Worker,Low
+R313,Attention To Detail,Very High,Decision Making,Very High,Empathy,Very High,Research Interest,Very High,Veterinarian,Excellent
+R314,Attention To Detail,Very High,Decision Making,Very High,Empathy,Very High,Research Interest,High,Veterinarian,High
+R315,Attention To Detail,High,Decision Making,High,Empathy,Medium,Research Interest,Medium,Veterinarian,Medium
+R316,Attention To Detail,Low,Decision Making,Low,Empathy,Low,Research Interest,Low,Veterinarian,Low
+R317,Communication,Very High,Discipline,Very High,Empathy,Very High,Attention To Detail,Very High,Registered Dietitian,Excellent
+R318,Communication,Very High,Discipline,Very High,Empathy,Very High,Attention To Detail,High,Registered Dietitian,High
+R319,Communication,High,Discipline,High,Empathy,Medium,Attention To Detail,Medium,Registered Dietitian,Medium
+R320,Communication,Low,Discipline,Low,Empathy,Low,Attention To Detail,Low,Registered Dietitian,Low
+R321,Attention To Detail,Very High,Discipline,Very High,Learning Ability,Very High,Empathy,Very High,Pharmacist,Excellent
+R322,Attention To Detail,Very High,Discipline,Very High,Learning Ability,Very High,Empathy,High,Pharmacist,High
+R323,Attention To Detail,High,Discipline,High,Learning Ability,Medium,Empathy,Medium,Pharmacist,Medium
+R324,Attention To Detail,Low,Discipline,Low,Learning Ability,Low,Empathy,Low,Pharmacist,Low
+R325,Attention To Detail,Very High,Discipline,Very High,Problem Solving,Very High,Curiosity,Very High,Medical Laboratory Technologist,Excellent
+R326,Attention To Detail,Very High,Discipline,Very High,Problem Solving,Very High,Curiosity,High,Medical Laboratory Technologist,High
+R327,Attention To Detail,High,Discipline,High,Problem Solving,Medium,Curiosity,Medium,Medical Laboratory Technologist,Medium
+R328,Attention To Detail,Low,Discipline,Low,Problem Solving,Low,Curiosity,Low,Medical Laboratory Technologist,Low
+R329,Communication,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Problem Solving,Very High,Lawyer,Excellent
+R330,Communication,Very High,Logical Thinking,Very High,Attention To Detail,Very High,Problem Solving,High,Lawyer,High
+R331,Communication,High,Logical Thinking,High,Attention To Detail,Medium,Problem Solving,Medium,Lawyer,Medium
+R332,Communication,Low,Logical Thinking,Low,Attention To Detail,Low,Problem Solving,Low,Lawyer,Low
+R333,Attention To Detail,Very High,Research Interest,Very High,Discipline,Very High,Communication,Very High,Paralegal,Excellent
+R334,Attention To Detail,Very High,Research Interest,Very High,Discipline,Very High,Communication,High,Paralegal,High
+R335,Attention To Detail,High,Research Interest,High,Discipline,Medium,Communication,Medium,Paralegal,Medium
+R336,Attention To Detail,Low,Research Interest,Low,Discipline,Low,Communication,Low,Paralegal,Low
+R337,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Empathy,Very High,Compliance Officer,Excellent
+R338,Attention To Detail,Very High,Discipline,Very High,Logical Thinking,Very High,Empathy,High,Compliance Officer,High
+R339,Attention To Detail,High,Discipline,High,Logical Thinking,Medium,Empathy,Medium,Compliance Officer,Medium
+R340,Attention To Detail,Low,Discipline,Low,Logical Thinking,Low,Empathy,Low,Compliance Officer,Low
+R341,Leadership,Very High,Discipline,Very High,Decision Making,Very High,Communication,Very High,Civil Services Officer,Excellent
+R342,Leadership,Very High,Discipline,Very High,Decision Making,Very High,Communication,High,Civil Services Officer,High
+R343,Leadership,High,Discipline,High,Decision Making,Medium,Communication,Medium,Civil Services Officer,Medium
+R344,Leadership,Low,Discipline,Low,Decision Making,Low,Communication,Low,Civil Services Officer,Low
+R345,Teaching Ability,Very High,Communication,Very High,Empathy,Very High,Discipline,Very High,School Teacher,Excellent
+R346,Teaching Ability,Very High,Communication,Very High,Empathy,Very High,Discipline,High,School Teacher,High
+R347,Teaching Ability,High,Communication,High,Empathy,Medium,Discipline,Medium,School Teacher,Medium
+R348,Teaching Ability,Low,Communication,Low,Empathy,Low,Discipline,Low,School Teacher,Low
+R349,Research Interest,Very High,Learning Ability,Very High,Curiosity,Very High,Teaching Ability,Very High,College Professor / Academic,Excellent
+R350,Research Interest,Very High,Learning Ability,Very High,Curiosity,Very High,Teaching Ability,High,College Professor / Academic,High
+R351,Research Interest,High,Learning Ability,High,Curiosity,Medium,Teaching Ability,Medium,College Professor / Academic,Medium
+R352,Research Interest,Low,Learning Ability,Low,Curiosity,Low,Teaching Ability,Low,College Professor / Academic,Low
+R353,Communication,Very High,Teaching Ability,Very High,Empathy,Very High,Business Thinking,Very High,Learning and Development Specialist,Excellent
+R354,Communication,Very High,Teaching Ability,Very High,Empathy,Very High,Business Thinking,High,Learning and Development Specialist,High
+R355,Communication,High,Teaching Ability,High,Empathy,Medium,Business Thinking,Medium,Learning and Development Specialist,Medium
+R356,Communication,Low,Teaching Ability,Low,Empathy,Low,Business Thinking,Low,Learning and Development Specialist,Low
+R357,Teaching Ability,Very High,Communication,Very High,Creativity,Very High,Attention To Detail,Very High,Instructional Designer,Excellent
+R358,Teaching Ability,Very High,Communication,Very High,Creativity,Very High,Attention To Detail,High,Instructional Designer,High
+R359,Teaching Ability,High,Communication,High,Creativity,Medium,Attention To Detail,Medium,Instructional Designer,Medium
+R360,Teaching Ability,Low,Communication,Low,Creativity,Low,Attention To Detail,Low,Instructional Designer,Low
+R361,Research Interest,Very High,Curiosity,Very High,Learning Ability,Very High,Attention To Detail,Very High,Environmental Scientist,Excellent
+R362,Research Interest,Very High,Curiosity,Very High,Learning Ability,Very High,Attention To Detail,High,Environmental Scientist,High
+R363,Research Interest,High,Curiosity,High,Learning Ability,Medium,Attention To Detail,Medium,Environmental Scientist,Medium
+R364,Research Interest,Low,Curiosity,Low,Learning Ability,Low,Attention To Detail,Low,Environmental Scientist,Low
+R365,Research Interest,Very High,Problem Solving,Very High,Attention To Detail,Very High,Math,Very High,Geologist,Excellent
+R366,Research Interest,Very High,Problem Solving,Very High,Attention To Detail,Very High,Math,High,Geologist,High
+R367,Research Interest,High,Problem Solving,High,Attention To Detail,Medium,Math,Medium,Geologist,Medium
+R368,Research Interest,Low,Problem Solving,Low,Attention To Detail,Low,Math,Low,Geologist,Low
+R369,Problem Solving,Very High,Research Interest,Very High,Attention To Detail,Very High,Communication,Very High,Agronomist,Excellent
+R370,Problem Solving,Very High,Research Interest,Very High,Attention To Detail,Very High,Communication,High,Agronomist,High
+R371,Problem Solving,High,Research Interest,High,Attention To Detail,Medium,Communication,Medium,Agronomist,Medium
+R372,Problem Solving,Low,Research Interest,Low,Attention To Detail,Low,Communication,Low,Agronomist,Low
+R373,Attention To Detail,Very High,Problem Solving,Very High,Research Interest,Very High,Discipline,Very High,Food Technologist,Excellent
+R374,Attention To Detail,Very High,Problem Solving,Very High,Research Interest,Very High,Discipline,High,Food Technologist,High
+R375,Attention To Detail,High,Problem Solving,High,Research Interest,Medium,Discipline,Medium,Food Technologist,Medium
+R376,Attention To Detail,Low,Problem Solving,Low,Research Interest,Low,Discipline,Low,Food Technologist,Low
+R377,Research Interest,Very High,Communication,Very High,Decision Making,Very High,Leadership,Very High,Urban Planner,Excellent
+R378,Research Interest,Very High,Communication,Very High,Decision Making,Very High,Leadership,High,Urban Planner,High
+R379,Research Interest,High,Communication,High,Decision Making,Medium,Leadership,Medium,Urban Planner,Medium
+R380,Research Interest,Low,Communication,Low,Decision Making,Low,Leadership,Low,Urban Planner,Low
+R381,Research Interest,Very High,Communication,Very High,Logical Thinking,Very High,Decision Making,Very High,Policy Analyst,Excellent
+R382,Research Interest,Very High,Communication,Very High,Logical Thinking,Very High,Decision Making,High,Policy Analyst,High
+R383,Research Interest,High,Communication,High,Logical Thinking,Medium,Decision Making,Medium,Policy Analyst,Medium
+R384,Research Interest,Low,Communication,Low,Logical Thinking,Low,Decision Making,Low,Policy Analyst,Low
+R385,Research Interest,Very High,Curiosity,Very High,Empathy,Very High,Communication,Very High,UX Researcher,Excellent
+R386,Research Interest,Very High,Curiosity,Very High,Empathy,Very High,Communication,High,UX Researcher,High
+R387,Research Interest,High,Curiosity,High,Empathy,Medium,Communication,Medium,UX Researcher,Medium
+R388,Research Interest,Low,Curiosity,Low,Empathy,Low,Communication,Low,UX Researcher,Low
+R389,Attention To Detail,Very High,Research Interest,Very High,Discipline,Very High,Adaptability,Very High,Librarian,Excellent
+R390,Attention To Detail,Very High,Research Interest,Very High,Discipline,Very High,Adaptability,High,Librarian,High
+R391,Attention To Detail,High,Research Interest,High,Discipline,Medium,Adaptability,Medium,Librarian,Medium
+R392,Attention To Detail,Low,Research Interest,Low,Discipline,Low,Adaptability,Low,Librarian,Low
+R393,Physical Stamina,Very High,Discipline,Very High,Leadership,Very High,Teaching Ability,Very High,Sports Coach / Trainer,Excellent
+R394,Physical Stamina,Very High,Discipline,Very High,Leadership,Very High,Teaching Ability,High,Sports Coach / Trainer,High
+R395,Physical Stamina,High,Discipline,High,Leadership,Medium,Teaching Ability,Medium,Sports Coach / Trainer,Medium
+R396,Physical Stamina,Low,Discipline,Low,Leadership,Low,Teaching Ability,Low,Sports Coach / Trainer,Low
+R397,Physical Stamina,Very High,Communication,Very High,Discipline,Very High,Teaching Ability,Very High,Fitness Trainer,Excellent
+R398,Physical Stamina,Very High,Communication,Very High,Discipline,Very High,Teaching Ability,High,Fitness Trainer,High
+R399,Physical Stamina,High,Communication,High,Discipline,Medium,Teaching Ability,Medium,Fitness Trainer,Medium
+R400,Physical Stamina,Low,Communication,Low,Discipline,Low,Teaching Ability,Low,Fitness Trainer,Low
+R401,Discipline,Very High,Attention To Detail,Very High,Decision Making,Very High,Logical Thinking,Very High,Commercial Pilot,Excellent
+R402,Discipline,Very High,Attention To Detail,Very High,Decision Making,Very High,Logical Thinking,High,Commercial Pilot,High
+R403,Discipline,High,Attention To Detail,High,Decision Making,Medium,Logical Thinking,Medium,Commercial Pilot,Medium
+R404,Discipline,Low,Attention To Detail,Low,Decision Making,Low,Logical Thinking,Low,Commercial Pilot,Low
+R405,Creativity,Very High,Discipline,Very High,Attention To Detail,Very High,Physical Stamina,Very High,Chef,Excellent
+R406,Creativity,Very High,Discipline,Very High,Attention To Detail,Very High,Physical Stamina,High,Chef,High
+R407,Creativity,High,Discipline,High,Attention To Detail,Medium,Physical Stamina,Medium,Chef,Medium
+R408,Creativity,Low,Discipline,Low,Attention To Detail,Low,Physical Stamina,Low,Chef,Low
+R409,Communication,Very High,Attention To Detail,Very High,Discipline,Very High,Curiosity,Very High,Translator / Interpreter,Excellent
+R410,Communication,Very High,Attention To Detail,Very High,Discipline,Very High,Curiosity,High,Translator / Interpreter,High
+R411,Communication,High,Attention To Detail,High,Discipline,Medium,Curiosity,Medium,Translator / Interpreter,Medium
+R412,Communication,Low,Attention To Detail,Low,Discipline,Low,Curiosity,Low,Translator / Interpreter,Low
+R413,Communication,Very High,Adaptability,Very High,Attention To Detail,Very High,Learning Ability,Very High,Travel Consultant,Excellent
+R414,Communication,Very High,Adaptability,Very High,Attention To Detail,Very High,Learning Ability,High,Travel Consultant,High
+R415,Communication,High,Adaptability,High,Attention To Detail,Medium,Learning Ability,Medium,Travel Consultant,Medium
+R416,Communication,Low,Adaptability,Low,Attention To Detail,Low,Learning Ability,Low,Travel Consultant,Low
+R417,Communication,Very High,Adaptability,Very High,Attention To Detail,Very High,Leadership,Very High,Event Manager,Excellent
+R418,Communication,Very High,Adaptability,Very High,Attention To Detail,Very High,Leadership,High,Event Manager,High
+R419,Communication,High,Adaptability,High,Attention To Detail,Medium,Leadership,Medium,Event Manager,Medium
+R420,Communication,Low,Adaptability,Low,Attention To Detail,Low,Leadership,Low,Event Manager,Low

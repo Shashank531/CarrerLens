@@ -1,0 +1,106 @@
+Career ID,Career Name,Category,Description,Future Demand,Avg Salary (LPA),Difficulty,Required Education,Remote Work,Growth Rate,Industry
+AI001,AI/ML Engineer,Technology,Builds and trains machine learning models that let software learn from data.,Very High,12,Very High,B.Tech/B.E. (CS or related),Yes,High,IT/Software
+DS001,Data Scientist,Technology,Extracts insight and predictions from large datasets using statistics and ML.,Very High,11,High,B.Tech/B.E. or M.Sc (Stats/CS),Yes,High,IT/Software
+CS001,Cybersecurity Analyst,Technology,Protects systems and networks from digital attacks and vulnerabilities.,Very High,9,High,B.Tech/B.E. (CS/IT),Partial,High,IT/Software
+UX001,UI/UX Designer,Design,"Designs how digital products look, feel and flow for the end user.",High,7,Medium,Any degree + design portfolio,Yes,Medium,Design/Tech
+SE001,Software Engineer,Technology,"Designs, builds and maintains software applications and systems.",Very High,9,Medium,B.Tech/B.E. (CS or related),Yes,High,IT/Software
+CC001,Cloud Engineer,Technology,Builds and manages cloud infrastructure (AWS/Azure/GCP) that applications run on.,Very High,10,High,B.Tech/B.E. (CS/IT),Yes,High,IT/Software
+PM001,Product Manager,Management,"Defines what a product should do next by balancing users, business and tech.",High,14,High,"Any degree, MBA a plus",Partial,Medium,Tech/Business
+RS001,Research Scientist,Research,"Runs original research to advance a field, often publishing findings.",Medium,8,Very High,M.Sc/M.Tech/PhD,Partial,Low,Academia/R&D
+BA001,Business Analyst,Business,Bridges business needs and technical teams by analyzing processes and data.,High,7,Medium,Any degree (Commerce/CS a plus),Yes,Medium,Business/Tech
+DM001,Digital Marketing Specialist,Marketing,"Plans and runs campaigns across search, social and content to grow a brand.",High,6,Low,Any degree + certifications,Yes,Medium,Marketing
+MD001,Mobile App Developer,Technology,Builds native or cross-platform apps for Android and iOS.,High,8,Medium,B.Tech/B.E. (CS or related),Yes,Medium,IT/Software
+DO001,DevOps Engineer,Technology,Automates and manages the pipeline between writing code and running it in production.,Very High,10,High,B.Tech/B.E. (CS/IT),Yes,High,IT/Software
+GD001,Game Developer,Technology,"Builds interactive games, combining programming with design and storytelling.",Medium,7,High,B.Tech/B.E. or specialized diploma,Yes,Low,Gaming/Tech
+DE001,Data Engineer,Technology,Builds the pipelines that move and prepare data for analysts and ML models.,Very High,10,High,B.Tech/B.E. (CS/IT),Yes,High,IT/Software
+FA001,Financial Analyst,Finance,Evaluates financial data to guide investment and business decisions.,Medium,8,Medium,B.Com/BBA/B.Tech + finance certs,Partial,Medium,Finance
+HR001,HR Manager,Management,"Manages hiring, culture and people-operations for an organization.",Medium,7,Low,"Any degree, MBA(HR) a plus",Partial,Low,Business
+CT001,Content Strategist,Marketing,Plans and shapes the content a brand publishes across its channels.,Medium,6,Low,Any degree,Yes,Medium,Marketing
+EN001,Entrepreneur / Founder,Business,"Starts and runs a new venture, wearing every hat until the team grows.",Medium,0,Very High,Any / self-taught,Yes,Medium,Cross-industry
+DR001,Doctor / Physician,Healthcare,"Diagnoses and treats patients, combining clinical knowledge with careful judgement.",High,8,Very High,MBBS/MD,No,Medium,Healthcare
+NU001,Registered Nurse,Healthcare,Delivers direct patient care and coordinates treatment on the front line of healthcare.,High,4,Medium,B.Sc Nursing / GNM,No,Medium,Healthcare
+PY001,Psychologist / Counselor,Healthcare,"Helps people work through emotional, behavioural and mental-health challenges.",High,6,High,M.A./M.Sc Psychology + license,Partial,Medium,Healthcare/Social
+PT001,Physiotherapist,Healthcare,Restores movement and function through hands-on therapy and exercise programs.,Medium,5,Medium,BPT (Bachelor of Physiotherapy),No,Medium,Healthcare
+LW001,Lawyer,Legal,Advises clients and argues cases by interpreting and applying the law.,Medium,8,Very High,LLB / BA LLB,Partial,Medium,Legal
+TC001,School Teacher,Education,Plans lessons and guides students through a subject at the school level.,Medium,4,Low,B.Ed + subject degree,Partial,Low,Education
+PR001,College Professor / Academic,Research,Teaches at the higher-education level while pursuing original research in a field.,Medium,7,Very High,M.Phil/PhD (UGC-NET where applicable),Partial,Low,Academia
+AR001,Architect,Design,"Designs buildings and spaces, balancing aesthetics, function and structural safety.",Medium,6,High,B.Arch,Partial,Medium,Design/Construction
+CE001,Civil Engineer,Engineering,"Designs, builds and maintains infrastructure like roads, bridges and buildings.",Medium,5,Medium,B.Tech/B.E. (Civil),No,Medium,Construction/Infrastructure
+ME001,Mechanical Engineer,Engineering,"Designs, builds and tests mechanical systems and machinery across industries.",Medium,5,Medium,B.Tech/B.E. (Mechanical),No,Medium,Manufacturing
+GR001,Graphic Designer,Design,Creates visual concepts and layouts that communicate ideas for brands and media.,Medium,4,Low,Any degree + design portfolio,Yes,Medium,Design/Media
+VE001,Video Editor / Filmmaker,Media,"Shoots and edits video content, shaping raw footage into a finished story.",High,5,Medium,Any degree + portfolio/reel,Yes,High,Media/Entertainment
+JR001,Journalist / Writer,Media,"Researches, reports and writes stories for print, digital or broadcast media.",Medium,5,Medium,"Any degree, journalism degree a plus",Partial,Low,Media
+CH001,Chef,Hospitality,"Plans menus and prepares food professionally in restaurants, hotels or catering.",Medium,5,Medium,Culinary diploma/degree,No,Medium,Hospitality
+CV001,Civil Services Officer,Government,Administers public policy and government services after clearing a national exam.,Medium,10,Very High,Any degree + UPSC/State PSC,No,Medium,Government
+SM001,Sales Manager,Business,Leads a sales team and owns revenue targets for a product or region.,High,8,Medium,"Any degree, MBA a plus",Partial,Medium,Business
+OM001,Operations Manager,Business,"Keeps day-to-day business processes efficient, on-budget and on-schedule.",Medium,9,High,"Any degree, MBA a plus",Partial,Medium,Business
+PL001,Commercial Pilot,Aviation,Flies passenger or cargo aircraft after rigorous licensing and simulator training.,Medium,15,Very High,CPL (Commercial Pilot License),No,Medium,Aviation
+FD001,Fashion Designer,Design,"Designs clothing and accessories, taking concepts from sketch to finished collection.",Medium,5,Medium,B.Des (Fashion),Partial,Medium,Fashion
+ES001,Environmental Scientist,Science,Studies environmental problems and designs solutions for sustainability and policy.,High,6,High,M.Sc Environmental Science,Partial,High,Science/Government
+SC001,Sports Coach / Trainer,Sports,"Trains athletes or fitness clients, designing programs to build skill and performance.",Medium,5,Medium,Diploma/Degree in Sports Science,No,Medium,Sports/Fitness
+FE001,Frontend Developer,Technology,Builds responsive web interfaces that users interact with.,Very High,8,High,B.Tech/BCA or portfolio-based training,Yes,High,IT/Software
+BE001,Backend Developer,Technology,"Builds server-side services, APIs, and databases for applications.",Very High,9,High,B.Tech/BCA or equivalent practical training,Yes,High,IT/Software
+QA001,QA Automation Engineer,Technology,Designs tests that verify software quality and prevent regressions.,High,7,Medium,B.Tech/BCA or software testing training,Yes,High,IT/Software
+DB001,Database Administrator,Technology,"Maintains secure, reliable, and performant database systems.",High,8,High,B.Tech/BCA or database administration certification,Partial,Medium,IT/Software
+SA001,Solutions Architect,Technology,Designs technical solutions that meet product and business needs.,Very High,16,Very High,B.Tech/BCA plus significant industry experience,Partial,High,IT/Software
+BI001,Business Intelligence Analyst,Technology,Builds reports and dashboards that turn business data into decisions.,High,7,Medium,B.Tech/BBA/B.Com or analytics training,Yes,High,Analytics
+DA001,Data Analyst,Technology,"Cleans, analyzes, and communicates insights from structured data.",Very High,6,Medium,Bachelor degree or analytics certification,Yes,High,Analytics
+ML001,MLOps Engineer,Technology,Operationalizes machine-learning models through reliable deployment and monitoring.,Very High,14,Very High,B.Tech/B.E. in CS/IT or related experience,Yes,High,IT/Software
+RO001,Robotics Engineer,Engineering,"Designs, tests, and integrates robotic systems and controls.",High,10,Very High,"B.Tech/B.E. in Robotics, Mechanical, Electronics, or CS",Partial,High,Manufacturing/Robotics
+EM001,Embedded Systems Engineer,Engineering,Develops software and electronics for devices and connected products.,High,9,Very High,"B.Tech/B.E. in ECE, EE, or CS",Partial,High,Electronics/IoT
+NE001,Network Engineer,Technology,Designs and maintains reliable computer networks and connectivity.,High,7,High,B.Tech/BCA or networking certification,Partial,Medium,IT/Telecom
+SECU01,Security Engineer,Technology,"Builds security controls into systems, applications, and cloud environments.",Very High,12,Very High,B.Tech/BCA plus security certifications or experience,Partial,High,Cybersecurity
+CL001,Cloud Security Engineer,Technology,"Secures cloud identities, workloads, networks, and compliance controls.",Very High,13,Very High,B.Tech/BCA plus cloud and security training,Partial,High,Cybersecurity/Cloud
+BC001,Blockchain Developer,Technology,Builds decentralized applications and smart contracts.,Medium,10,Very High,B.Tech/BCA or strong software development experience,Yes,Medium,Fintech/Web3
+ARVR01,AR/VR Developer,Technology,Creates immersive interactive applications for augmented and virtual reality.,High,9,High,B.Tech/BCA or portfolio-based development training,Partial,High,Gaming/Spatial Computing
+IT001,IT Support Specialist,Technology,"Resolves user hardware, software, and access issues.",High,4,Medium,"Diploma, BCA, or IT support certification",Partial,Medium,IT Services
+AC001,Chartered Accountant,Finance,"Audits accounts, manages tax compliance, and advises on financial reporting.",High,9,Very High,CA qualification,Partial,Medium,Accounting/Finance
+AU001,Auditor,Finance,Examines records and controls to assess financial accuracy and compliance.,High,7,High,B.Com/M.Com/CA/CMA or audit training,Partial,Medium,Accounting/Finance
+INV001,Investment Analyst,Finance,Researches investments and prepares valuation and market analysis.,High,10,Very High,B.Com/BBA/MBA/CA/CFA pathway,Partial,High,Finance/Investment
+RISK01,Risk Analyst,Finance,"Identifies, measures, and reports financial or operational risks.",High,8,High,B.Com/BBA/Finance/Analytics degree,Partial,High,Finance/Insurance
+ACT001,Actuary,Finance,"Uses statistics to model insurance, pension, and financial risk.",High,12,Very High,Actuarial exams plus quantitative degree,Partial,High,Insurance/Finance
+SCM001,Supply Chain Analyst,Business,"Improves inventory, sourcing, logistics, and demand planning decisions.",High,7,High,BBA/B.E./MBA or supply-chain training,Partial,High,Logistics/Manufacturing
+PROC01,Procurement Manager,Business,Sources goods and services while managing supplier value and risk.,High,10,High,BBA/B.Com/MBA or procurement experience,Partial,Medium,Supply Chain
+CRM001,Customer Success Manager,Business,Helps customers achieve outcomes and retain value from a product or service.,High,9,Medium,Bachelor degree or relevant customer-facing experience,Yes,High,SaaS/Services
+CONS01,Management Consultant,Business,Analyzes business problems and recommends practical improvement plans.,High,12,Very High,Bachelor degree; MBA often valued,Partial,High,Consulting
+RE001,Recruiter,Human Resources,"Finds, assesses, and engages candidates for open roles.",High,5,Medium,Bachelor degree or recruiting experience,Yes,Medium,Human Resources
+LND001,Learning and Development Specialist,Human Resources,Designs employee learning programs and evaluates capability development.,High,7,Medium,"Bachelor/Master in HR, education, or related field",Partial,High,Human Resources
+RN001,Registered Dietitian,Healthcare,Assesses nutrition needs and develops evidence-based food plans.,High,5,High,B.Sc/M.Sc Nutrition and required registration where applicable,Partial,Medium,Healthcare
+PH001,Pharmacist,Healthcare,Dispenses medicines safely and counsels patients on appropriate use.,High,5,High,D.Pharm/B.Pharm/Pharm.D and registration where applicable,Partial,Medium,Healthcare
+LT001,Medical Laboratory Technologist,Healthcare,Performs laboratory tests that support clinical diagnosis and treatment.,High,4,High,BMLT/DMLT or equivalent accredited qualification,No,Medium,Healthcare
+OT001,Occupational Therapist,Healthcare,Helps people develop or regain independence in daily activities.,High,5,High,BOT/MOT and required registration where applicable,Partial,Medium,Healthcare
+VET001,Veterinarian,Healthcare,Diagnoses and treats health conditions in animals.,High,7,Very High,BVSc & AH and required registration,Partial,Medium,Veterinary Healthcare
+PA001,Paralegal,Legal,"Supports legal research, documentation, case preparation, and filings.",High,5,High,"Law degree, legal studies, or supervised legal support training",Partial,Medium,Legal
+COM001,Compliance Officer,Legal,Builds compliance processes and monitors regulatory obligations.,High,9,High,Law/finance/business degree plus compliance experience,Partial,High,Regulated Industries
+PR001A,Public Relations Specialist,Marketing,Manages media relationships and communications that protect or build reputation.,High,6,Medium,"Bachelor degree in communications, PR, or related field",Yes,Medium,Communications
+SEO001,SEO Specialist,Marketing,Improves a website's visibility in organic search through content and technical optimization.,High,6,Medium,Marketing degree or practical SEO portfolio,Yes,High,Digital Marketing
+PPC001,Performance Marketing Specialist,Marketing,Plans and optimizes paid digital campaigns against measurable business outcomes.,High,7,High,Marketing/analytics degree or campaign experience,Yes,High,Digital Marketing
+SOC001,Social Media Manager,Marketing,"Plans content, community engagement, and social channel performance.",High,6,Medium,Marketing/communications degree or portfolio,Yes,High,Digital Marketing
+COPY01,Copywriter,Marketing,"Writes persuasive, audience-focused content for brands and campaigns.",Medium,5,Medium,Degree or strong writing portfolio,Yes,Medium,Marketing/Advertising
+INT001,Interior Designer,Design,"Designs functional interior spaces, materials, lighting, and layouts.",Medium,6,High,B.Des/B.Arch/interior design diploma or portfolio,Partial,Medium,Design/Construction
+AN001,Animator,Media,"Creates 2D or 3D motion assets for film, games, and digital media.",High,6,High,Animation degree or strong portfolio,Yes,High,Media/Gaming
+PHO001,Photographer,Media,"Produces visual images for editorial, commercial, event, or artistic use.",Medium,5,Medium,Photography training or portfolio,Partial,Medium,Media/Creative
+POD001,Podcast Producer,Media,"Plans, records, edits, and publishes audio programs.",Medium,6,Medium,Media training or demonstrated production portfolio,Partial,High,Media
+EE001,Electrical Engineer,Engineering,"Designs, tests, and maintains electrical systems and equipment.",High,8,Very High,B.Tech/B.E. in Electrical Engineering,Partial,Medium,Engineering
+CHE001,Chemical Engineer,Engineering,Applies chemistry and engineering to design safe industrial processes.,High,8,Very High,B.Tech/B.E. in Chemical Engineering,Partial,Medium,Engineering/Manufacturing
+AE001,Aerospace Engineer,Engineering,"Designs and tests aircraft, spacecraft, and aerospace systems.",Medium,10,Very High,B.Tech/B.E. in Aerospace or Mechanical Engineering,Partial,High,Aerospace
+RENEW01,Renewable Energy Engineer,Engineering,"Designs and improves solar, wind, storage, and other clean-energy systems.",High,8,High,"B.Tech/B.E. in Electrical, Mechanical, or Energy Engineering",Partial,High,Energy
+URB001,Urban Planner,Government,"Plans land use, transport, housing, and public spaces for communities.",High,7,High,"Bachelor/Master in planning, architecture, geography, or public policy",Partial,High,Urban Development
+POL001,Policy Analyst,Government,Researches policy choices and communicates evidence-based recommendations.,High,8,High,"Bachelor/Master in public policy, economics, law, or social sciences",Partial,High,Government/Think Tanks
+NGO001,Social Worker,Social Services,"Connects people and communities with support, advocacy, and services.",High,4,High,BSW/MSW and required registration where applicable,Partial,Medium,Social Services
+LIB001,Librarian,Education,Organizes information resources and supports research and learning.,Medium,5,Medium,Bachelor/Master in library and information science,Partial,Medium,Education/Information Services
+EDT001,Instructional Designer,Education,"Designs effective learning experiences, materials, and assessments.",High,8,High,"Education, instructional design, or relevant domain degree",Yes,High,Education/EdTech
+TRAN01,Translator / Interpreter,Language,Converts meaning accurately between languages in written or spoken form.,Medium,5,High,Language degree or demonstrated bilingual proficiency,Yes,Medium,Language Services
+AG001,Agronomist,Agriculture,"Advises on crop production, soil management, and sustainable farming practices.",High,6,High,B.Sc/M.Sc Agriculture or agronomy,Partial,Medium,Agriculture
+FOOD01,Food Technologist,Science,"Develops and improves food products, processing, safety, and quality systems.",High,6,High,B.Tech/B.Sc/M.Sc Food Technology,Partial,Medium,Food Manufacturing
+GEOS01,Geologist,Science,Studies earth materials and processes to support resource and environmental decisions.,Medium,7,High,B.Sc/M.Sc Geology or Earth Science,Partial,Medium,Earth Sciences
+STAT01,Statistician,Science,Designs studies and analyzes data to draw reliable conclusions.,High,9,Very High,"M.Sc/PhD in Statistics, Mathematics, or related field",Yes,High,Research/Analytics
+UXR001,UX Researcher,Design,Studies user behavior and needs to guide product design decisions.,High,9,High,"Design, psychology, HCI, or research background",Yes,High,Technology/Design
+PMM001,Product Marketing Manager,Marketing,"Defines product positioning, launches, and market-facing narratives.",High,12,High,Marketing/business degree or product marketing experience,Yes,High,Technology/Marketing
+BD001,Business Development Manager,Business,Develops partnerships and new revenue opportunities.,High,10,High,Bachelor degree or demonstrated sales and partnership experience,Partial,High,Business Development
+TR001,Travel Consultant,Hospitality,Plans travel itineraries and advises clients on suitable options.,Medium,4,Medium,Travel/tourism degree or relevant experience,Partial,Medium,Travel/Hospitality
+EVENT01,Event Manager,Hospitality,"Plans and delivers events by coordinating clients, vendors, budgets, and logistics.",High,6,High,Hospitality/event management degree or experience,Partial,High,Events/Hospitality
+FIT001,Fitness Trainer,Sports,Coaches clients on safe exercise and healthy training routines.,High,4,Medium,Fitness certification; degree helpful,Partial,High,Fitness/Wellness
+SPORT01,Sports Analyst,Sports,Analyzes performance data and video to inform athlete and team decisions.,High,7,High,"Sports science, analytics, or related degree",Partial,High,Sports/Analytics
+REAL001,Real Estate Analyst,Business,"Evaluates property markets, financial feasibility, and investment opportunities.",High,8,High,"Finance, real estate, economics, or business degree",Partial,High,Real Estate
+ECO001,Economist,Research,Studies economic data and policy to explain trends and forecast outcomes.,High,10,Very High,Master/PhD in Economics or related quantitative field,Partial,High,Research/Government/Finance

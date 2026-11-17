@@ -1,0 +1,5700 @@
+{
+  "status": "success",
+  "timestamp": "2026-08-24T19:14:14.972842+00:00",
+  "dataset_file": "ground_truth_demo.csv",
+  "is_synthetic": true,
+  "disclaimer": "SYNTHETIC DEMONSTRATION DATA \u2014 NOT REAL-WORLD ACCURACY",
+  "total_cases": 105,
+  "metrics": {
+    "top1_correct": 69,
+    "top1_accuracy": 65.71,
+    "top5_correct": 97,
+    "top5_accuracy": 92.38,
+    "acceptable_top1_correct": 80,
+    "acceptable_top1_accuracy": 76.19,
+    "acceptable_top5_correct": 101,
+    "acceptable_top5_accuracy": 96.19,
+    "category_correct": 89,
+    "category_accuracy": 84.76,
+    "top5_category_correct": 104,
+    "top5_category_accuracy": 99.05,
+    "mrr": 0.7788,
+    "mean_expected_rank": 1.89
+  },
+  "rank_distribution": {
+    "rank_1": 69,
+    "rank_2_to_3": 26,
+    "rank_4_to_5": 2,
+    "rank_6_to_10": 8,
+    "rank_gt_10": 0
+  },
+  "category_breakdown": {
+    "Agriculture": {
+      "total_cases": 1,
+      "top1_correct": 0,
+      "top1_accuracy": 0.0,
+      "top5_correct": 1,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 0.0
+    },
+    "Aviation": {
+      "total_cases": 1,
+      "top1_correct": 1,
+      "top1_accuracy": 100.0,
+      "top5_correct": 1,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Business": {
+      "total_cases": 10,
+      "top1_correct": 8,
+      "top1_accuracy": 80.0,
+      "top5_correct": 10,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 80.0
+    },
+    "Design": {
+      "total_cases": 6,
+      "top1_correct": 3,
+      "top1_accuracy": 50.0,
+      "top5_correct": 5,
+      "top5_accuracy": 83.3,
+      "category_accuracy": 100.0
+    },
+    "Education": {
+      "total_cases": 3,
+      "top1_correct": 3,
+      "top1_accuracy": 100.0,
+      "top5_correct": 3,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Engineering": {
+      "total_cases": 8,
+      "top1_correct": 3,
+      "top1_accuracy": 37.5,
+      "top5_correct": 8,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 75.0
+    },
+    "Finance": {
+      "total_cases": 6,
+      "top1_correct": 2,
+      "top1_accuracy": 33.3,
+      "top5_correct": 4,
+      "top5_accuracy": 66.7,
+      "category_accuracy": 33.3
+    },
+    "Government": {
+      "total_cases": 3,
+      "top1_correct": 3,
+      "top1_accuracy": 100.0,
+      "top5_correct": 3,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Healthcare": {
+      "total_cases": 9,
+      "top1_correct": 5,
+      "top1_accuracy": 55.6,
+      "top5_correct": 9,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 88.9
+    },
+    "Hospitality": {
+      "total_cases": 3,
+      "top1_correct": 2,
+      "top1_accuracy": 66.7,
+      "top5_correct": 3,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 66.7
+    },
+    "Human Resources": {
+      "total_cases": 2,
+      "top1_correct": 2,
+      "top1_accuracy": 100.0,
+      "top5_correct": 2,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Language": {
+      "total_cases": 1,
+      "top1_correct": 0,
+      "top1_accuracy": 0.0,
+      "top5_correct": 0,
+      "top5_accuracy": 0.0,
+      "category_accuracy": 0.0
+    },
+    "Legal": {
+      "total_cases": 3,
+      "top1_correct": 1,
+      "top1_accuracy": 33.3,
+      "top5_correct": 3,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 33.3
+    },
+    "Management": {
+      "total_cases": 2,
+      "top1_correct": 2,
+      "top1_accuracy": 100.0,
+      "top5_correct": 2,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Marketing": {
+      "total_cases": 8,
+      "top1_correct": 7,
+      "top1_accuracy": 87.5,
+      "top5_correct": 8,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Media": {
+      "total_cases": 5,
+      "top1_correct": 5,
+      "top1_accuracy": 100.0,
+      "top5_correct": 5,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Research": {
+      "total_cases": 3,
+      "top1_correct": 3,
+      "top1_accuracy": 100.0,
+      "top5_correct": 3,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Science": {
+      "total_cases": 4,
+      "top1_correct": 4,
+      "top1_accuracy": 100.0,
+      "top5_correct": 4,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Social Services": {
+      "total_cases": 1,
+      "top1_correct": 1,
+      "top1_accuracy": 100.0,
+      "top5_correct": 1,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Sports": {
+      "total_cases": 3,
+      "top1_correct": 3,
+      "top1_accuracy": 100.0,
+      "top5_correct": 3,
+      "top5_accuracy": 100.0,
+      "category_accuracy": 100.0
+    },
+    "Technology": {
+      "total_cases": 23,
+      "top1_correct": 11,
+      "top1_accuracy": 47.8,
+      "top5_correct": 19,
+      "top5_accuracy": 82.6,
+      "category_accuracy": 91.3
+    }
+  },
+  "student_results": [
+    {
+      "student_id": "CAND_001",
+      "name": "Cohort Student #1 (AI/ML Engineer)",
+      "expected_career": "AI/ML Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer",
+        "Cloud Engineer"
+      ],
+      "predicted_career": "Data Scientist",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Data Scientist",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Blockchain Developer",
+          "compatibility": 92.8,
+          "category": "Technology"
+        },
+        {
+          "career": "AI/ML Engineer",
+          "compatibility": 90.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 87.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Statistician",
+          "compatibility": 87.6,
+          "category": "Science"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Problem Solving, Programming, Math, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_002",
+      "name": "Cohort Student #2 (Data Scientist)",
+      "expected_career": "Data Scientist",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Data Scientist",
+        "AI/ML Engineer",
+        "Cybersecurity Analyst",
+        "Software Engineer",
+        "Cloud Engineer"
+      ],
+      "predicted_career": "Statistician",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Statistician",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Data Scientist",
+          "compatibility": 95.6,
+          "category": "Technology"
+        },
+        {
+          "career": "AI/ML Engineer",
+          "compatibility": 93.4,
+          "category": "Technology"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 93.1,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 89.0,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Math, Logical Thinking, Research Interest, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_003",
+      "name": "Cohort Student #3 (Cybersecurity Analyst)",
+      "expected_career": "Cybersecurity Analyst",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Cybersecurity Analyst",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Software Engineer",
+        "Cloud Engineer"
+      ],
+      "predicted_career": "Software Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Software Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 95.7,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 92.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Blockchain Developer",
+          "compatibility": 83.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 72.1,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 9,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.1111,
+      "explanation": "Recommended because: Programming, Problem Solving, Logical Thinking, and Discipline."
+    },
+    {
+      "student_id": "CAND_004",
+      "name": "Cohort Student #4 (UI/UX Designer)",
+      "expected_career": "UI/UX Designer",
+      "expected_category": "Design",
+      "acceptable_careers": [
+        "UI/UX Designer",
+        "Architect",
+        "Graphic Designer",
+        "Fashion Designer",
+        "Interior Designer"
+      ],
+      "predicted_career": "Fashion Designer",
+      "predicted_category": "Design",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Fashion Designer",
+          "compatibility": 96.0,
+          "category": "Design"
+        },
+        {
+          "career": "Graphic Designer",
+          "compatibility": 89.3,
+          "category": "Design"
+        },
+        {
+          "career": "UI/UX Designer",
+          "compatibility": 72.2,
+          "category": "Design"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 71.2,
+          "category": "Media"
+        },
+        {
+          "career": "Content Strategist",
+          "compatibility": 65.0,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Creativity, Artistic Skill, Curiosity, and Innovation."
+    },
+    {
+      "student_id": "CAND_005",
+      "name": "Cohort Student #5 (Software Engineer)",
+      "expected_career": "Software Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Software Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Cloud Engineer"
+      ],
+      "predicted_career": "Software Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Software Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 91.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Blockchain Developer",
+          "compatibility": 83.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Backend Developer",
+          "compatibility": 73.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 71.3,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Programming, Problem Solving, Logical Thinking, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_006",
+      "name": "Cohort Student #6 (Cloud Engineer)",
+      "expected_career": "Cloud Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Cloud Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Cloud Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 91.8,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 88.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 70.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Data Engineer",
+          "compatibility": 68.4,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Programming, Problem Solving, Learning Ability, and Discipline."
+    },
+    {
+      "student_id": "CAND_007",
+      "name": "Cohort Student #7 (Product Manager)",
+      "expected_career": "Product Manager",
+      "expected_category": "Management",
+      "acceptable_careers": [
+        "Product Manager",
+        "HR Manager"
+      ],
+      "predicted_career": "Product Manager",
+      "predicted_category": "Management",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Product Manager",
+          "compatibility": 96.0,
+          "category": "Management"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 92.8,
+          "category": "Business"
+        },
+        {
+          "career": "Business Development Manager",
+          "compatibility": 89.8,
+          "category": "Business"
+        },
+        {
+          "career": "HR Manager",
+          "compatibility": 88.6,
+          "category": "Management"
+        },
+        {
+          "career": "Entrepreneur / Founder",
+          "compatibility": 86.0,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Leadership, Communication, Business Thinking, and Adaptability."
+    },
+    {
+      "student_id": "CAND_008",
+      "name": "Cohort Student #8 (Research Scientist)",
+      "expected_career": "Research Scientist",
+      "expected_category": "Research",
+      "acceptable_careers": [
+        "Research Scientist",
+        "College Professor / Academic",
+        "Economist"
+      ],
+      "predicted_career": "Research Scientist",
+      "predicted_category": "Research",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Research Scientist",
+          "compatibility": 96.0,
+          "category": "Research"
+        },
+        {
+          "career": "Mechanical Engineer",
+          "compatibility": 86.0,
+          "category": "Engineering"
+        },
+        {
+          "career": "Actuary",
+          "compatibility": 80.7,
+          "category": "Finance"
+        },
+        {
+          "career": "Statistician",
+          "compatibility": 75.5,
+          "category": "Science"
+        },
+        {
+          "career": "Chemical Engineer",
+          "compatibility": 75.5,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest, Curiosity, Math, and Problem Solving."
+    },
+    {
+      "student_id": "CAND_009",
+      "name": "Cohort Student #9 (Business Analyst)",
+      "expected_career": "Business Analyst",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Operations Manager",
+        "Supply Chain Analyst"
+      ],
+      "predicted_career": "Business Analyst",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Business Analyst",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 63.6,
+          "category": "Business"
+        },
+        {
+          "career": "Procurement Manager",
+          "compatibility": 60.7,
+          "category": "Business"
+        },
+        {
+          "career": "Business Intelligence Analyst",
+          "compatibility": 56.5,
+          "category": "Technology"
+        },
+        {
+          "career": "Real Estate Analyst",
+          "compatibility": 54.5,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Business Thinking, Communication, Logical Thinking, and Decision Making."
+    },
+    {
+      "student_id": "CAND_010",
+      "name": "Cohort Student #10 (Digital Marketing Specialist)",
+      "expected_career": "Digital Marketing Specialist",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "Digital Marketing Specialist",
+        "Content Strategist",
+        "Public Relations Specialist",
+        "SEO Specialist",
+        "Performance Marketing Specialist"
+      ],
+      "predicted_career": "Digital Marketing Specialist",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Digital Marketing Specialist",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Social Media Manager",
+          "compatibility": 87.5,
+          "category": "Marketing"
+        },
+        {
+          "career": "Content Strategist",
+          "compatibility": 70.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 63.3,
+          "category": "Marketing"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 59.0,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Business Thinking, Creativity, and Curiosity."
+    },
+    {
+      "student_id": "CAND_011",
+      "name": "Cohort Student #11 (Mobile App Developer)",
+      "expected_career": "Mobile App Developer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Mobile App Developer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Software Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Software Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 91.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 76.3,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 70.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Backend Developer",
+          "compatibility": 69.0,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Programming, Problem Solving, Logical Thinking, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_012",
+      "name": "Cohort Student #12 (DevOps Engineer)",
+      "expected_career": "DevOps Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "DevOps Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Cloud Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 92.1,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 71.3,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 69.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Data Engineer",
+          "compatibility": 69.6,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 6,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.1667,
+      "explanation": "Recommended because: Programming, Problem Solving, Learning Ability, and Discipline."
+    },
+    {
+      "student_id": "CAND_013",
+      "name": "Cohort Student #13 (Game Developer)",
+      "expected_career": "Game Developer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Game Developer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Game Developer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Game Developer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "AR/VR Developer",
+          "compatibility": 88.3,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 78.2,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 64.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Frontend Developer",
+          "compatibility": 57.8,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Programming, Creativity, Innovation, and Problem Solving."
+    },
+    {
+      "student_id": "CAND_014",
+      "name": "Cohort Student #14 (Data Engineer)",
+      "expected_career": "Data Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Data Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Cloud Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 93.2,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 90.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Blockchain Developer",
+          "compatibility": 82.5,
+          "category": "Technology"
+        },
+        {
+          "career": "Data Engineer",
+          "compatibility": 73.2,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 5,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.2,
+      "explanation": "Recommended because: Programming, Problem Solving, Learning Ability, and Discipline."
+    },
+    {
+      "student_id": "CAND_015",
+      "name": "Cohort Student #15 (Financial Analyst)",
+      "expected_career": "Financial Analyst",
+      "expected_category": "Finance",
+      "acceptable_careers": [
+        "Financial Analyst",
+        "Chartered Accountant",
+        "Auditor",
+        "Investment Analyst",
+        "Risk Analyst"
+      ],
+      "predicted_career": "Performance Marketing Specialist",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Performance Marketing Specialist",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Actuary",
+          "compatibility": 93.5,
+          "category": "Finance"
+        },
+        {
+          "career": "Financial Analyst",
+          "compatibility": 84.4,
+          "category": "Finance"
+        },
+        {
+          "career": "Real Estate Analyst",
+          "compatibility": 78.2,
+          "category": "Business"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 75.9,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 3,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Business Thinking, Math, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_016",
+      "name": "Cohort Student #16 (HR Manager)",
+      "expected_career": "HR Manager",
+      "expected_category": "Management",
+      "acceptable_careers": [
+        "HR Manager",
+        "Product Manager"
+      ],
+      "predicted_career": "HR Manager",
+      "predicted_category": "Management",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "HR Manager",
+          "compatibility": 96.0,
+          "category": "Management"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 67.6,
+          "category": "Business"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 59.2,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Event Manager",
+          "compatibility": 58.9,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Product Manager",
+          "compatibility": 56.6,
+          "category": "Management"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Leadership, Adaptability, and Decision Making."
+    },
+    {
+      "student_id": "CAND_017",
+      "name": "Cohort Student #17 (Content Strategist)",
+      "expected_career": "Content Strategist",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "Content Strategist",
+        "Digital Marketing Specialist",
+        "Public Relations Specialist",
+        "SEO Specialist",
+        "Performance Marketing Specialist"
+      ],
+      "predicted_career": "Social Media Manager",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Social Media Manager",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Content Strategist",
+          "compatibility": 78.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Digital Marketing Specialist",
+          "compatibility": 74.2,
+          "category": "Marketing"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 67.1,
+          "category": "Marketing"
+        },
+        {
+          "career": "Copywriter",
+          "compatibility": 58.9,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Creativity, Communication, Curiosity, and Adaptability."
+    },
+    {
+      "student_id": "CAND_018",
+      "name": "Cohort Student #18 (Entrepreneur / Founder)",
+      "expected_career": "Entrepreneur / Founder",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Entrepreneur / Founder",
+        "Business Analyst",
+        "Sales Manager",
+        "Operations Manager",
+        "Supply Chain Analyst"
+      ],
+      "predicted_career": "Entrepreneur / Founder",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Entrepreneur / Founder",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Product Manager",
+          "compatibility": 91.7,
+          "category": "Management"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 88.0,
+          "category": "Business"
+        },
+        {
+          "career": "Business Development Manager",
+          "compatibility": 76.8,
+          "category": "Business"
+        },
+        {
+          "career": "Management Consultant",
+          "compatibility": 72.8,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Leadership, Business Thinking, Adaptability, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_019",
+      "name": "Cohort Student #19 (Doctor / Physician)",
+      "expected_career": "Doctor / Physician",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Psychologist / Counselor",
+        "Physiotherapist",
+        "Registered Dietitian"
+      ],
+      "predicted_career": "Occupational Therapist",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Doctor / Physician",
+          "compatibility": 89.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Physiotherapist",
+          "compatibility": 87.6,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Veterinarian",
+          "compatibility": 86.9,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Social Worker",
+          "compatibility": 86.2,
+          "category": "Social Services"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Empathy, Problem Solving, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_020",
+      "name": "Cohort Student #20 (Registered Nurse)",
+      "expected_career": "Registered Nurse",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Registered Nurse",
+        "Doctor / Physician",
+        "Psychologist / Counselor",
+        "Physiotherapist",
+        "Registered Dietitian"
+      ],
+      "predicted_career": "Physiotherapist",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Physiotherapist",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Social Worker",
+          "compatibility": 93.9,
+          "category": "Social Services"
+        },
+        {
+          "career": "Registered Nurse",
+          "compatibility": 83.1,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 80.9,
+          "category": "Healthcare"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 78.6,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Empathy, Discipline, and Adaptability."
+    },
+    {
+      "student_id": "CAND_021",
+      "name": "Cohort Student #21 (Psychologist / Counselor)",
+      "expected_career": "Psychologist / Counselor",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Psychologist / Counselor",
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Physiotherapist",
+        "Registered Dietitian"
+      ],
+      "predicted_career": "Psychologist / Counselor",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Psychologist / Counselor",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Social Worker",
+          "compatibility": 94.9,
+          "category": "Social Services"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 84.9,
+          "category": "Healthcare"
+        },
+        {
+          "career": "UX Researcher",
+          "compatibility": 81.6,
+          "category": "Design"
+        },
+        {
+          "career": "Registered Dietitian",
+          "compatibility": 80.4,
+          "category": "Healthcare"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Empathy, Communication, and Curiosity."
+    },
+    {
+      "student_id": "CAND_022",
+      "name": "Cohort Student #22 (Physiotherapist)",
+      "expected_career": "Physiotherapist",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Physiotherapist",
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Psychologist / Counselor",
+        "Registered Dietitian"
+      ],
+      "predicted_career": "Physiotherapist",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Physiotherapist",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Fitness Trainer",
+          "compatibility": 83.3,
+          "category": "Sports"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 70.9,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Social Worker",
+          "compatibility": 70.5,
+          "category": "Social Services"
+        },
+        {
+          "career": "Registered Nurse",
+          "compatibility": 65.5,
+          "category": "Healthcare"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Empathy, Physical Stamina, and Discipline."
+    },
+    {
+      "student_id": "CAND_023",
+      "name": "Cohort Student #23 (Lawyer)",
+      "expected_career": "Lawyer",
+      "expected_category": "Legal",
+      "acceptable_careers": [
+        "Lawyer",
+        "Paralegal",
+        "Compliance Officer"
+      ],
+      "predicted_career": "Policy Analyst",
+      "predicted_category": "Government",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Policy Analyst",
+          "compatibility": 96.0,
+          "category": "Government"
+        },
+        {
+          "career": "Lawyer",
+          "compatibility": 74.8,
+          "category": "Legal"
+        },
+        {
+          "career": "Urban Planner",
+          "compatibility": 65.0,
+          "category": "Government"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 61.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 60.5,
+          "category": "Human Resources"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Research Interest, Communication, Decision Making, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_024",
+      "name": "Cohort Student #24 (School Teacher)",
+      "expected_career": "School Teacher",
+      "expected_category": "Education",
+      "acceptable_careers": [
+        "School Teacher",
+        "Librarian",
+        "Instructional Designer"
+      ],
+      "predicted_career": "School Teacher",
+      "predicted_category": "Education",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "School Teacher",
+          "compatibility": 96.0,
+          "category": "Education"
+        },
+        {
+          "career": "Learning and Development Specialist",
+          "compatibility": 62.3,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Social Worker",
+          "compatibility": 55.9,
+          "category": "Social Services"
+        },
+        {
+          "career": "Fitness Trainer",
+          "compatibility": 53.6,
+          "category": "Sports"
+        },
+        {
+          "career": "Instructional Designer",
+          "compatibility": 52.0,
+          "category": "Education"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Teaching Ability, Communication, Discipline, and Empathy."
+    },
+    {
+      "student_id": "CAND_025",
+      "name": "Cohort Student #25 (College Professor / Academic)",
+      "expected_career": "College Professor / Academic",
+      "expected_category": "Research",
+      "acceptable_careers": [
+        "College Professor / Academic",
+        "Research Scientist",
+        "Economist"
+      ],
+      "predicted_career": "College Professor / Academic",
+      "predicted_category": "Research",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "College Professor / Academic",
+          "compatibility": 96.0,
+          "category": "Research"
+        },
+        {
+          "career": "Environmental Scientist",
+          "compatibility": 57.4,
+          "category": "Science"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 51.7,
+          "category": "Sports"
+        },
+        {
+          "career": "UX Researcher",
+          "compatibility": 50.9,
+          "category": "Design"
+        },
+        {
+          "career": "Research Scientist",
+          "compatibility": 50.8,
+          "category": "Research"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest, Curiosity, Learning Ability, and Teaching Ability."
+    },
+    {
+      "student_id": "CAND_026",
+      "name": "Cohort Student #26 (Architect)",
+      "expected_career": "Architect",
+      "expected_category": "Design",
+      "acceptable_careers": [
+        "Architect",
+        "UI/UX Designer",
+        "Graphic Designer",
+        "Fashion Designer",
+        "Interior Designer"
+      ],
+      "predicted_career": "Fashion Designer",
+      "predicted_category": "Design",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Fashion Designer",
+          "compatibility": 96.0,
+          "category": "Design"
+        },
+        {
+          "career": "Graphic Designer",
+          "compatibility": 90.6,
+          "category": "Design"
+        },
+        {
+          "career": "Architect",
+          "compatibility": 71.5,
+          "category": "Design"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 68.2,
+          "category": "Media"
+        },
+        {
+          "career": "Photographer",
+          "compatibility": 63.0,
+          "category": "Media"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Creativity, Artistic Skill, Curiosity, and Innovation."
+    },
+    {
+      "student_id": "CAND_027",
+      "name": "Cohort Student #27 (Civil Engineer)",
+      "expected_career": "Civil Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Civil Engineer",
+        "Mechanical Engineer",
+        "Robotics Engineer",
+        "Embedded Systems Engineer",
+        "Electrical Engineer"
+      ],
+      "predicted_career": "Mechanical Engineer",
+      "predicted_category": "Engineering",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Mechanical Engineer",
+          "compatibility": 96.0,
+          "category": "Engineering"
+        },
+        {
+          "career": "Civil Engineer",
+          "compatibility": 94.4,
+          "category": "Engineering"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 89.4,
+          "category": "Technology"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 86.8,
+          "category": "Engineering"
+        },
+        {
+          "career": "Actuary",
+          "compatibility": 84.9,
+          "category": "Finance"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Math, and Discipline."
+    },
+    {
+      "student_id": "CAND_028",
+      "name": "Cohort Student #28 (Mechanical Engineer)",
+      "expected_career": "Mechanical Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Mechanical Engineer",
+        "Civil Engineer",
+        "Robotics Engineer",
+        "Embedded Systems Engineer",
+        "Electrical Engineer"
+      ],
+      "predicted_career": "Data Analyst",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Data Analyst",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Mechanical Engineer",
+          "compatibility": 94.4,
+          "category": "Engineering"
+        },
+        {
+          "career": "Electrical Engineer",
+          "compatibility": 94.2,
+          "category": "Engineering"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 93.6,
+          "category": "Engineering"
+        },
+        {
+          "career": "Chemical Engineer",
+          "compatibility": 88.0,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Math, Problem Solving, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_029",
+      "name": "Cohort Student #29 (Graphic Designer)",
+      "expected_career": "Graphic Designer",
+      "expected_category": "Design",
+      "acceptable_careers": [
+        "Graphic Designer",
+        "UI/UX Designer",
+        "Architect",
+        "Fashion Designer",
+        "Interior Designer"
+      ],
+      "predicted_career": "Graphic Designer",
+      "predicted_category": "Design",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Graphic Designer",
+          "compatibility": 96.0,
+          "category": "Design"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 94.0,
+          "category": "Media"
+        },
+        {
+          "career": "Fashion Designer",
+          "compatibility": 93.3,
+          "category": "Design"
+        },
+        {
+          "career": "Photographer",
+          "compatibility": 84.2,
+          "category": "Media"
+        },
+        {
+          "career": "Interior Designer",
+          "compatibility": 83.3,
+          "category": "Design"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Creativity, and Artistic Skill."
+    },
+    {
+      "student_id": "CAND_030",
+      "name": "Cohort Student #30 (Video Editor / Filmmaker)",
+      "expected_career": "Video Editor / Filmmaker",
+      "expected_category": "Media",
+      "acceptable_careers": [
+        "Video Editor / Filmmaker",
+        "Journalist / Writer",
+        "Animator",
+        "Photographer",
+        "Podcast Producer"
+      ],
+      "predicted_career": "Video Editor / Filmmaker",
+      "predicted_category": "Media",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 96.0,
+          "category": "Media"
+        },
+        {
+          "career": "Graphic Designer",
+          "compatibility": 91.5,
+          "category": "Design"
+        },
+        {
+          "career": "Photographer",
+          "compatibility": 90.3,
+          "category": "Media"
+        },
+        {
+          "career": "Fashion Designer",
+          "compatibility": 89.9,
+          "category": "Design"
+        },
+        {
+          "career": "Interior Designer",
+          "compatibility": 83.7,
+          "category": "Design"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Creativity, and Artistic Skill."
+    },
+    {
+      "student_id": "CAND_031",
+      "name": "Cohort Student #31 (Journalist / Writer)",
+      "expected_career": "Journalist / Writer",
+      "expected_category": "Media",
+      "acceptable_careers": [
+        "Journalist / Writer",
+        "Video Editor / Filmmaker",
+        "Animator",
+        "Photographer",
+        "Podcast Producer"
+      ],
+      "predicted_career": "Journalist / Writer",
+      "predicted_category": "Media",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Journalist / Writer",
+          "compatibility": 96.0,
+          "category": "Media"
+        },
+        {
+          "career": "Content Strategist",
+          "compatibility": 78.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 58.4,
+          "category": "Marketing"
+        },
+        {
+          "career": "Social Media Manager",
+          "compatibility": 57.2,
+          "category": "Marketing"
+        },
+        {
+          "career": "Copywriter",
+          "compatibility": 56.5,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Curiosity, Creativity, and Research Interest."
+    },
+    {
+      "student_id": "CAND_032",
+      "name": "Cohort Student #32 (Chef)",
+      "expected_career": "Chef",
+      "expected_category": "Hospitality",
+      "acceptable_careers": [
+        "Chef",
+        "Travel Consultant",
+        "Event Manager"
+      ],
+      "predicted_career": "Chef",
+      "predicted_category": "Hospitality",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Chef",
+          "compatibility": 96.0,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 68.6,
+          "category": "Media"
+        },
+        {
+          "career": "Fashion Designer",
+          "compatibility": 64.6,
+          "category": "Design"
+        },
+        {
+          "career": "Graphic Designer",
+          "compatibility": 62.4,
+          "category": "Design"
+        },
+        {
+          "career": "Animator",
+          "compatibility": 61.5,
+          "category": "Media"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Creativity, Discipline, and Physical Stamina."
+    },
+    {
+      "student_id": "CAND_033",
+      "name": "Cohort Student #33 (Civil Services Officer)",
+      "expected_career": "Civil Services Officer",
+      "expected_category": "Government",
+      "acceptable_careers": [
+        "Civil Services Officer",
+        "Urban Planner",
+        "Policy Analyst"
+      ],
+      "predicted_career": "Civil Services Officer",
+      "predicted_category": "Government",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Civil Services Officer",
+          "compatibility": 96.0,
+          "category": "Government"
+        },
+        {
+          "career": "HR Manager",
+          "compatibility": 88.3,
+          "category": "Management"
+        },
+        {
+          "career": "Operations Manager",
+          "compatibility": 57.6,
+          "category": "Business"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 56.5,
+          "category": "Technology"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 55.4,
+          "category": "Human Resources"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Discipline, Leadership, Decision Making, and Communication."
+    },
+    {
+      "student_id": "CAND_034",
+      "name": "Cohort Student #34 (Sales Manager)",
+      "expected_career": "Sales Manager",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Sales Manager",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Operations Manager",
+        "Supply Chain Analyst"
+      ],
+      "predicted_career": "Sales Manager",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Sales Manager",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Business Development Manager",
+          "compatibility": 86.6,
+          "category": "Business"
+        },
+        {
+          "career": "HR Manager",
+          "compatibility": 65.8,
+          "category": "Management"
+        },
+        {
+          "career": "Customer Success Manager",
+          "compatibility": 61.7,
+          "category": "Business"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 59.5,
+          "category": "Human Resources"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Business Thinking, and Adaptability."
+    },
+    {
+      "student_id": "CAND_035",
+      "name": "Cohort Student #35 (Operations Manager)",
+      "expected_career": "Operations Manager",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Operations Manager",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Supply Chain Analyst"
+      ],
+      "predicted_career": "Operations Manager",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Operations Manager",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Civil Services Officer",
+          "compatibility": 79.3,
+          "category": "Government"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 56.9,
+          "category": "Business"
+        },
+        {
+          "career": "Product Manager",
+          "compatibility": 51.6,
+          "category": "Management"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 50.9,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Leadership, Business Thinking, Discipline, and Decision Making."
+    },
+    {
+      "student_id": "CAND_036",
+      "name": "Cohort Student #36 (Commercial Pilot)",
+      "expected_career": "Commercial Pilot",
+      "expected_category": "Aviation",
+      "acceptable_careers": [
+        "Commercial Pilot"
+      ],
+      "predicted_career": "Commercial Pilot",
+      "predicted_category": "Aviation",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Commercial Pilot",
+          "compatibility": 96.0,
+          "category": "Aviation"
+        },
+        {
+          "career": "Civil Services Officer",
+          "compatibility": 90.7,
+          "category": "Government"
+        },
+        {
+          "career": "Network Engineer",
+          "compatibility": 83.7,
+          "category": "Technology"
+        },
+        {
+          "career": "Risk Analyst",
+          "compatibility": 82.7,
+          "category": "Finance"
+        },
+        {
+          "career": "Compliance Officer",
+          "compatibility": 78.3,
+          "category": "Legal"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Discipline, Decision Making, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_037",
+      "name": "Cohort Student #37 (Fashion Designer)",
+      "expected_career": "Fashion Designer",
+      "expected_category": "Design",
+      "acceptable_careers": [
+        "Fashion Designer",
+        "UI/UX Designer",
+        "Architect",
+        "Graphic Designer",
+        "Interior Designer"
+      ],
+      "predicted_career": "Graphic Designer",
+      "predicted_category": "Design",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Graphic Designer",
+          "compatibility": 96.0,
+          "category": "Design"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 94.2,
+          "category": "Media"
+        },
+        {
+          "career": "Interior Designer",
+          "compatibility": 82.9,
+          "category": "Design"
+        },
+        {
+          "career": "Animator",
+          "compatibility": 82.3,
+          "category": "Media"
+        },
+        {
+          "career": "Photographer",
+          "compatibility": 80.0,
+          "category": "Media"
+        }
+      ],
+      "rank_of_expected": 8,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.125,
+      "explanation": "Recommended because: Creativity, and Artistic Skill."
+    },
+    {
+      "student_id": "CAND_038",
+      "name": "Cohort Student #38 (Environmental Scientist)",
+      "expected_career": "Environmental Scientist",
+      "expected_category": "Science",
+      "acceptable_careers": [
+        "Environmental Scientist",
+        "Food Technologist",
+        "Geologist",
+        "Statistician"
+      ],
+      "predicted_career": "Environmental Scientist",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Environmental Scientist",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Geologist",
+          "compatibility": 89.2,
+          "category": "Science"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 83.8,
+          "category": "Sports"
+        },
+        {
+          "career": "UX Researcher",
+          "compatibility": 76.3,
+          "category": "Design"
+        },
+        {
+          "career": "Food Technologist",
+          "compatibility": 73.5,
+          "category": "Science"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Curiosity, Research Interest, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_039",
+      "name": "Cohort Student #39 (Sports Coach / Trainer)",
+      "expected_career": "Sports Coach / Trainer",
+      "expected_category": "Sports",
+      "acceptable_careers": [
+        "Sports Coach / Trainer",
+        "Fitness Trainer",
+        "Sports Analyst"
+      ],
+      "predicted_career": "Sports Coach / Trainer",
+      "predicted_category": "Sports",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Sports Coach / Trainer",
+          "compatibility": 96.0,
+          "category": "Sports"
+        },
+        {
+          "career": "Fitness Trainer",
+          "compatibility": 69.5,
+          "category": "Sports"
+        },
+        {
+          "career": "Physiotherapist",
+          "compatibility": 57.5,
+          "category": "Healthcare"
+        },
+        {
+          "career": "School Teacher",
+          "compatibility": 55.1,
+          "category": "Education"
+        },
+        {
+          "career": "HR Manager",
+          "compatibility": 50.3,
+          "category": "Management"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Physical Stamina, Discipline, Leadership, and Teaching Ability."
+    },
+    {
+      "student_id": "CAND_040",
+      "name": "Cohort Student #40 (Frontend Developer)",
+      "expected_career": "Frontend Developer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Frontend Developer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Frontend Developer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Frontend Developer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "AR/VR Developer",
+          "compatibility": 84.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 79.6,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 74.7,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 71.9,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Programming."
+    },
+    {
+      "student_id": "CAND_041",
+      "name": "Cohort Student #41 (Backend Developer)",
+      "expected_career": "Backend Developer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Backend Developer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Software Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Software Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Backend Developer",
+          "compatibility": 78.7,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 72.4,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 71.4,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 67.4,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Programming, Problem Solving, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_042",
+      "name": "Cohort Student #42 (QA Automation Engineer)",
+      "expected_career": "QA Automation Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "QA Automation Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Mobile App Developer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 92.2,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 92.0,
+          "category": "Technology"
+        },
+        {
+          "career": "DevOps Engineer",
+          "compatibility": 91.2,
+          "category": "Technology"
+        },
+        {
+          "career": "Network Engineer",
+          "compatibility": 91.2,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 7,
+      "best_acceptable_rank": 7,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": false,
+      "acceptable_top5": false,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.1429,
+      "explanation": "Recommended because: Problem Solving, and Discipline."
+    },
+    {
+      "student_id": "CAND_043",
+      "name": "Cohort Student #43 (Database Administrator)",
+      "expected_career": "Database Administrator",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Database Administrator",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Network Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Network Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Security Engineer",
+          "compatibility": 89.3,
+          "category": "Technology"
+        },
+        {
+          "career": "Database Administrator",
+          "compatibility": 85.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 85.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 81.9,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 3,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Logical Thinking, and Discipline."
+    },
+    {
+      "student_id": "CAND_044",
+      "name": "Cohort Student #44 (Solutions Architect)",
+      "expected_career": "Solutions Architect",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Solutions Architect",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Solutions Architect",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Solutions Architect",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Management Consultant",
+          "compatibility": 84.4,
+          "category": "Business"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 54.9,
+          "category": "Business"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 49.9,
+          "category": "Business"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 49.4,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Problem Solving, Communication, Business Thinking, and Programming."
+    },
+    {
+      "student_id": "CAND_045",
+      "name": "Cohort Student #45 (Business Intelligence Analyst)",
+      "expected_career": "Business Intelligence Analyst",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Business Intelligence Analyst",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Performance Marketing Specialist",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Performance Marketing Specialist",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Business Intelligence Analyst",
+          "compatibility": 77.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 73.0,
+          "category": "Business"
+        },
+        {
+          "career": "Real Estate Analyst",
+          "compatibility": 71.7,
+          "category": "Business"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 67.0,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Business Thinking, Math, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_046",
+      "name": "Cohort Student #46 (Data Analyst)",
+      "expected_career": "Data Analyst",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Data Analyst",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Data Analyst",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Data Analyst",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 86.2,
+          "category": "Engineering"
+        },
+        {
+          "career": "Electrical Engineer",
+          "compatibility": 84.8,
+          "category": "Engineering"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 82.2,
+          "category": "Business"
+        },
+        {
+          "career": "Risk Analyst",
+          "compatibility": 80.8,
+          "category": "Finance"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Math, Problem Solving, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_047",
+      "name": "Cohort Student #47 (MLOps Engineer)",
+      "expected_career": "MLOps Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "MLOps Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Software Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Software Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 95.5,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 94.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 71.3,
+          "category": "Technology"
+        },
+        {
+          "career": "Backend Developer",
+          "compatibility": 70.2,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Programming, Problem Solving, Logical Thinking, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_048",
+      "name": "Cohort Student #48 (Robotics Engineer)",
+      "expected_career": "Robotics Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Robotics Engineer",
+        "Civil Engineer",
+        "Mechanical Engineer",
+        "Embedded Systems Engineer",
+        "Electrical Engineer"
+      ],
+      "predicted_career": "Robotics Engineer",
+      "predicted_category": "Engineering",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Robotics Engineer",
+          "compatibility": 96.0,
+          "category": "Engineering"
+        },
+        {
+          "career": "AI/ML Engineer",
+          "compatibility": 81.6,
+          "category": "Technology"
+        },
+        {
+          "career": "AR/VR Developer",
+          "compatibility": 65.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 61.4,
+          "category": "Technology"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 60.2,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Math, Problem Solving, and Programming."
+    },
+    {
+      "student_id": "CAND_049",
+      "name": "Cohort Student #49 (Embedded Systems Engineer)",
+      "expected_career": "Embedded Systems Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Embedded Systems Engineer",
+        "Civil Engineer",
+        "Mechanical Engineer",
+        "Robotics Engineer",
+        "Electrical Engineer"
+      ],
+      "predicted_career": "Data Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Data Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Embedded Systems Engineer",
+          "compatibility": 80.3,
+          "category": "Engineering"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 70.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Blockchain Developer",
+          "compatibility": 70.3,
+          "category": "Technology"
+        },
+        {
+          "career": "Backend Developer",
+          "compatibility": 69.9,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Programming, Logical Thinking, and Math."
+    },
+    {
+      "student_id": "CAND_050",
+      "name": "Cohort Student #50 (Network Engineer)",
+      "expected_career": "Network Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Network Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Network Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Network Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Security Engineer",
+          "compatibility": 81.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 76.4,
+          "category": "Engineering"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 75.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Security Engineer",
+          "compatibility": 71.3,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Logical Thinking, Problem Solving, and Discipline."
+    },
+    {
+      "student_id": "CAND_051",
+      "name": "Cohort Student #51 (Security Engineer)",
+      "expected_career": "Security Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Security Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Software Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Software Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 92.4,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 71.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Backend Developer",
+          "compatibility": 69.2,
+          "category": "Technology"
+        },
+        {
+          "career": "Cloud Engineer",
+          "compatibility": 66.4,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 6,
+      "best_acceptable_rank": 1,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.1667,
+      "explanation": "Recommended because: Programming, Problem Solving, Logical Thinking, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_052",
+      "name": "Cohort Student #52 (Cloud Security Engineer)",
+      "expected_career": "Cloud Security Engineer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Cloud Security Engineer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Cloud Security Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Cloud Security Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Network Engineer",
+          "compatibility": 95.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Backend Developer",
+          "compatibility": 90.7,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 90.3,
+          "category": "Technology"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 88.8,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Problem Solving, Discipline, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_053",
+      "name": "Cohort Student #53 (Blockchain Developer)",
+      "expected_career": "Blockchain Developer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "Blockchain Developer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "Blockchain Developer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Blockchain Developer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 72.1,
+          "category": "Technology"
+        },
+        {
+          "career": "MLOps Engineer",
+          "compatibility": 70.5,
+          "category": "Technology"
+        },
+        {
+          "career": "Software Engineer",
+          "compatibility": 68.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Data Engineer",
+          "compatibility": 68.3,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Programming, Learning Ability, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_054",
+      "name": "Cohort Student #54 (AR/VR Developer)",
+      "expected_career": "AR/VR Developer",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "AR/VR Developer",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "AR/VR Developer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "AR/VR Developer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Game Developer",
+          "compatibility": 61.1,
+          "category": "Technology"
+        },
+        {
+          "career": "Frontend Developer",
+          "compatibility": 60.7,
+          "category": "Technology"
+        },
+        {
+          "career": "Mobile App Developer",
+          "compatibility": 59.4,
+          "category": "Technology"
+        },
+        {
+          "career": "Robotics Engineer",
+          "compatibility": 56.1,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Programming, Problem Solving, and Creativity."
+    },
+    {
+      "student_id": "CAND_055",
+      "name": "Cohort Student #55 (IT Support Specialist)",
+      "expected_career": "IT Support Specialist",
+      "expected_category": "Technology",
+      "acceptable_careers": [
+        "IT Support Specialist",
+        "AI/ML Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "Software Engineer"
+      ],
+      "predicted_career": "IT Support Specialist",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 57.7,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 57.0,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Travel Consultant",
+          "compatibility": 56.1,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Social Worker",
+          "compatibility": 55.2,
+          "category": "Social Services"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Problem Solving, and Adaptability."
+    },
+    {
+      "student_id": "CAND_056",
+      "name": "Cohort Student #56 (Chartered Accountant)",
+      "expected_career": "Chartered Accountant",
+      "expected_category": "Finance",
+      "acceptable_careers": [
+        "Chartered Accountant",
+        "Financial Analyst",
+        "Auditor",
+        "Investment Analyst",
+        "Risk Analyst"
+      ],
+      "predicted_career": "IT Support Specialist",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Actuary",
+          "compatibility": 93.4,
+          "category": "Finance"
+        },
+        {
+          "career": "Business Intelligence Analyst",
+          "compatibility": 93.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 92.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Mechanical Engineer",
+          "compatibility": 87.4,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 6,
+      "best_acceptable_rank": 6,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": false,
+      "acceptable_top5": false,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.1667,
+      "explanation": "Recommended because: Discipline."
+    },
+    {
+      "student_id": "CAND_057",
+      "name": "Cohort Student #57 (Auditor)",
+      "expected_career": "Auditor",
+      "expected_category": "Finance",
+      "acceptable_careers": [
+        "Auditor",
+        "Financial Analyst",
+        "Chartered Accountant",
+        "Investment Analyst",
+        "Risk Analyst"
+      ],
+      "predicted_career": "Data Analyst",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Data Analyst",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Actuary",
+          "compatibility": 88.5,
+          "category": "Finance"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 88.3,
+          "category": "Engineering"
+        },
+        {
+          "career": "Business Intelligence Analyst",
+          "compatibility": 86.5,
+          "category": "Technology"
+        },
+        {
+          "career": "Mechanical Engineer",
+          "compatibility": 86.2,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 9,
+      "best_acceptable_rank": 9,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": false,
+      "acceptable_top5": false,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.1111,
+      "explanation": "Recommended because: Math, Logical Thinking, and Discipline."
+    },
+    {
+      "student_id": "CAND_058",
+      "name": "Cohort Student #58 (Investment Analyst)",
+      "expected_career": "Investment Analyst",
+      "expected_category": "Finance",
+      "acceptable_careers": [
+        "Investment Analyst",
+        "Financial Analyst",
+        "Chartered Accountant",
+        "Auditor",
+        "Risk Analyst"
+      ],
+      "predicted_career": "Statistician",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Statistician",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Economist",
+          "compatibility": 95.6,
+          "category": "Research"
+        },
+        {
+          "career": "Investment Analyst",
+          "compatibility": 79.3,
+          "category": "Finance"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 72.8,
+          "category": "Sports"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 70.1,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 3,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Math, Logical Thinking, and Research Interest."
+    },
+    {
+      "student_id": "CAND_059",
+      "name": "Cohort Student #59 (Risk Analyst)",
+      "expected_career": "Risk Analyst",
+      "expected_category": "Finance",
+      "acceptable_careers": [
+        "Risk Analyst",
+        "Financial Analyst",
+        "Chartered Accountant",
+        "Auditor",
+        "Investment Analyst"
+      ],
+      "predicted_career": "Risk Analyst",
+      "predicted_category": "Finance",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Risk Analyst",
+          "compatibility": 96.0,
+          "category": "Finance"
+        },
+        {
+          "career": "Economist",
+          "compatibility": 67.7,
+          "category": "Research"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 64.7,
+          "category": "Technology"
+        },
+        {
+          "career": "Electrical Engineer",
+          "compatibility": 61.7,
+          "category": "Engineering"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 60.6,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Logical Thinking, Math, Problem Solving, and Decision Making."
+    },
+    {
+      "student_id": "CAND_060",
+      "name": "Cohort Student #60 (Actuary)",
+      "expected_career": "Actuary",
+      "expected_category": "Finance",
+      "acceptable_careers": [
+        "Actuary",
+        "Financial Analyst",
+        "Chartered Accountant",
+        "Auditor",
+        "Investment Analyst"
+      ],
+      "predicted_career": "Actuary",
+      "predicted_category": "Finance",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Actuary",
+          "compatibility": 96.0,
+          "category": "Finance"
+        },
+        {
+          "career": "Investment Analyst",
+          "compatibility": 65.7,
+          "category": "Finance"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 65.6,
+          "category": "Engineering"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 64.4,
+          "category": "Sports"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 64.3,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Math, Discipline, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_061",
+      "name": "Cohort Student #61 (Supply Chain Analyst)",
+      "expected_career": "Supply Chain Analyst",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Supply Chain Analyst",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Operations Manager"
+      ],
+      "predicted_career": "Supply Chain Analyst",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Business Intelligence Analyst",
+          "compatibility": 62.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Performance Marketing Specialist",
+          "compatibility": 60.6,
+          "category": "Marketing"
+        },
+        {
+          "career": "Real Estate Analyst",
+          "compatibility": 59.9,
+          "category": "Business"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 59.5,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Business Thinking, Problem Solving, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_062",
+      "name": "Cohort Student #62 (Procurement Manager)",
+      "expected_career": "Procurement Manager",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Procurement Manager",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Operations Manager"
+      ],
+      "predicted_career": "Procurement Manager",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Procurement Manager",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 84.6,
+          "category": "Business"
+        },
+        {
+          "career": "Business Development Manager",
+          "compatibility": 84.2,
+          "category": "Business"
+        },
+        {
+          "career": "Product Marketing Manager",
+          "compatibility": 82.1,
+          "category": "Marketing"
+        },
+        {
+          "career": "Business Analyst",
+          "compatibility": 79.8,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Business Thinking, Communication, and Decision Making."
+    },
+    {
+      "student_id": "CAND_063",
+      "name": "Cohort Student #63 (Customer Success Manager)",
+      "expected_career": "Customer Success Manager",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Customer Success Manager",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Operations Manager"
+      ],
+      "predicted_career": "Recruiter",
+      "predicted_category": "Human Resources",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Recruiter",
+          "compatibility": 96.0,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Customer Success Manager",
+          "compatibility": 76.9,
+          "category": "Business"
+        },
+        {
+          "career": "Travel Consultant",
+          "compatibility": 66.3,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 64.8,
+          "category": "Business"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 63.8,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Communication, Adaptability, Empathy, and Business Thinking."
+    },
+    {
+      "student_id": "CAND_064",
+      "name": "Cohort Student #64 (Management Consultant)",
+      "expected_career": "Management Consultant",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Management Consultant",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Operations Manager"
+      ],
+      "predicted_career": "Management Consultant",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Management Consultant",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Entrepreneur / Founder",
+          "compatibility": 66.3,
+          "category": "Business"
+        },
+        {
+          "career": "Solutions Architect",
+          "compatibility": 60.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 54.3,
+          "category": "Business"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 53.1,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Problem Solving, Business Thinking, Communication, and Learning Ability."
+    },
+    {
+      "student_id": "CAND_065",
+      "name": "Cohort Student #65 (Recruiter)",
+      "expected_career": "Recruiter",
+      "expected_category": "Human Resources",
+      "acceptable_careers": [
+        "Recruiter",
+        "Learning and Development Specialist"
+      ],
+      "predicted_career": "Recruiter",
+      "predicted_category": "Human Resources",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Recruiter",
+          "compatibility": 96.0,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Travel Consultant",
+          "compatibility": 85.6,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 84.1,
+          "category": "Marketing"
+        },
+        {
+          "career": "Customer Success Manager",
+          "compatibility": 82.9,
+          "category": "Business"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 80.0,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, and Adaptability."
+    },
+    {
+      "student_id": "CAND_066",
+      "name": "Cohort Student #66 (Learning and Development Specialist)",
+      "expected_career": "Learning and Development Specialist",
+      "expected_category": "Human Resources",
+      "acceptable_careers": [
+        "Learning and Development Specialist",
+        "Recruiter"
+      ],
+      "predicted_career": "Learning and Development Specialist",
+      "predicted_category": "Human Resources",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Learning and Development Specialist",
+          "compatibility": 96.0,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Instructional Designer",
+          "compatibility": 88.6,
+          "category": "Education"
+        },
+        {
+          "career": "School Teacher",
+          "compatibility": 79.6,
+          "category": "Education"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 77.2,
+          "category": "Marketing"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 75.0,
+          "category": "Human Resources"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, and Teaching Ability."
+    },
+    {
+      "student_id": "CAND_067",
+      "name": "Cohort Student #67 (Registered Dietitian)",
+      "expected_career": "Registered Dietitian",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Registered Dietitian",
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Psychologist / Counselor",
+        "Physiotherapist"
+      ],
+      "predicted_career": "Registered Dietitian",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Registered Dietitian",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 79.6,
+          "category": "Healthcare"
+        },
+        {
+          "career": "UX Researcher",
+          "compatibility": 77.0,
+          "category": "Design"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 76.4,
+          "category": "Technology"
+        },
+        {
+          "career": "Psychologist / Counselor",
+          "compatibility": 76.2,
+          "category": "Healthcare"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Discipline, and Empathy."
+    },
+    {
+      "student_id": "CAND_068",
+      "name": "Cohort Student #68 (Pharmacist)",
+      "expected_career": "Pharmacist",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Pharmacist",
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Psychologist / Counselor",
+        "Physiotherapist"
+      ],
+      "predicted_career": "Registered Dietitian",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Registered Dietitian",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 95.2,
+          "category": "Technology"
+        },
+        {
+          "career": "Pharmacist",
+          "compatibility": 94.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Food Technologist",
+          "compatibility": 85.0,
+          "category": "Science"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 84.8,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 3,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Discipline."
+    },
+    {
+      "student_id": "CAND_069",
+      "name": "Cohort Student #69 (Medical Laboratory Technologist)",
+      "expected_career": "Medical Laboratory Technologist",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Medical Laboratory Technologist",
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Psychologist / Counselor",
+        "Physiotherapist"
+      ],
+      "predicted_career": "Network Engineer",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Network Engineer",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Medical Laboratory Technologist",
+          "compatibility": 92.8,
+          "category": "Healthcare"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 88.2,
+          "category": "Technology"
+        },
+        {
+          "career": "Food Technologist",
+          "compatibility": 87.9,
+          "category": "Science"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 79.6,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Discipline."
+    },
+    {
+      "student_id": "CAND_070",
+      "name": "Cohort Student #70 (Occupational Therapist)",
+      "expected_career": "Occupational Therapist",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Occupational Therapist",
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Psychologist / Counselor",
+        "Physiotherapist"
+      ],
+      "predicted_career": "Occupational Therapist",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Social Worker",
+          "compatibility": 83.4,
+          "category": "Social Services"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 58.9,
+          "category": "Technology"
+        },
+        {
+          "career": "Psychologist / Counselor",
+          "compatibility": 51.6,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 49.9,
+          "category": "Human Resources"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Empathy, Communication, and Problem Solving."
+    },
+    {
+      "student_id": "CAND_071",
+      "name": "Cohort Student #71 (Veterinarian)",
+      "expected_career": "Veterinarian",
+      "expected_category": "Healthcare",
+      "acceptable_careers": [
+        "Veterinarian",
+        "Doctor / Physician",
+        "Registered Nurse",
+        "Psychologist / Counselor",
+        "Physiotherapist"
+      ],
+      "predicted_career": "Veterinarian",
+      "predicted_category": "Healthcare",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Veterinarian",
+          "compatibility": 96.0,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 83.7,
+          "category": "Healthcare"
+        },
+        {
+          "career": "UX Researcher",
+          "compatibility": 79.5,
+          "category": "Design"
+        },
+        {
+          "career": "Registered Dietitian",
+          "compatibility": 74.4,
+          "category": "Healthcare"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 73.9,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Decision Making, and Empathy."
+    },
+    {
+      "student_id": "CAND_072",
+      "name": "Cohort Student #72 (Paralegal)",
+      "expected_career": "Paralegal",
+      "expected_category": "Legal",
+      "acceptable_careers": [
+        "Paralegal",
+        "Lawyer",
+        "Compliance Officer"
+      ],
+      "predicted_career": "Food Technologist",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Food Technologist",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Paralegal",
+          "compatibility": 95.1,
+          "category": "Legal"
+        },
+        {
+          "career": "Network Engineer",
+          "compatibility": 93.7,
+          "category": "Technology"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 92.3,
+          "category": "Sports"
+        },
+        {
+          "career": "Policy Analyst",
+          "compatibility": 87.8,
+          "category": "Government"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Research Interest, and Discipline."
+    },
+    {
+      "student_id": "CAND_073",
+      "name": "Cohort Student #73 (Compliance Officer)",
+      "expected_career": "Compliance Officer",
+      "expected_category": "Legal",
+      "acceptable_careers": [
+        "Compliance Officer",
+        "Lawyer",
+        "Paralegal"
+      ],
+      "predicted_career": "Compliance Officer",
+      "predicted_category": "Legal",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Compliance Officer",
+          "compatibility": 96.0,
+          "category": "Legal"
+        },
+        {
+          "career": "Network Engineer",
+          "compatibility": 94.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Lawyer",
+          "compatibility": 83.8,
+          "category": "Legal"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 79.6,
+          "category": "Technology"
+        },
+        {
+          "career": "Civil Services Officer",
+          "compatibility": 76.1,
+          "category": "Government"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Discipline, Logical Thinking, and Decision Making."
+    },
+    {
+      "student_id": "CAND_074",
+      "name": "Cohort Student #74 (Public Relations Specialist)",
+      "expected_career": "Public Relations Specialist",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "Public Relations Specialist",
+        "Digital Marketing Specialist",
+        "Content Strategist",
+        "SEO Specialist",
+        "Performance Marketing Specialist"
+      ],
+      "predicted_career": "Public Relations Specialist",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 87.4,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Travel Consultant",
+          "compatibility": 81.8,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Social Media Manager",
+          "compatibility": 77.5,
+          "category": "Marketing"
+        },
+        {
+          "career": "Customer Success Manager",
+          "compatibility": 75.8,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, and Adaptability."
+    },
+    {
+      "student_id": "CAND_075",
+      "name": "Cohort Student #75 (SEO Specialist)",
+      "expected_career": "SEO Specialist",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "SEO Specialist",
+        "Digital Marketing Specialist",
+        "Content Strategist",
+        "Public Relations Specialist",
+        "Performance Marketing Specialist"
+      ],
+      "predicted_career": "SEO Specialist",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "SEO Specialist",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 69.0,
+          "category": "Business"
+        },
+        {
+          "career": "Business Analyst",
+          "compatibility": 67.2,
+          "category": "Business"
+        },
+        {
+          "career": "Social Media Manager",
+          "compatibility": 65.6,
+          "category": "Marketing"
+        },
+        {
+          "career": "Performance Marketing Specialist",
+          "compatibility": 65.6,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Curiosity, and Business Thinking."
+    },
+    {
+      "student_id": "CAND_076",
+      "name": "Cohort Student #76 (Performance Marketing Specialist)",
+      "expected_career": "Performance Marketing Specialist",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "Performance Marketing Specialist",
+        "Digital Marketing Specialist",
+        "Content Strategist",
+        "Public Relations Specialist",
+        "SEO Specialist"
+      ],
+      "predicted_career": "Performance Marketing Specialist",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Performance Marketing Specialist",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 91.6,
+          "category": "Business"
+        },
+        {
+          "career": "Business Intelligence Analyst",
+          "compatibility": 91.3,
+          "category": "Technology"
+        },
+        {
+          "career": "Real Estate Analyst",
+          "compatibility": 89.5,
+          "category": "Business"
+        },
+        {
+          "career": "SEO Specialist",
+          "compatibility": 79.0,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Business Thinking."
+    },
+    {
+      "student_id": "CAND_077",
+      "name": "Cohort Student #77 (Social Media Manager)",
+      "expected_career": "Social Media Manager",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "Social Media Manager",
+        "Digital Marketing Specialist",
+        "Content Strategist",
+        "Public Relations Specialist",
+        "SEO Specialist"
+      ],
+      "predicted_career": "Social Media Manager",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Social Media Manager",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 64.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Content Strategist",
+          "compatibility": 62.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Digital Marketing Specialist",
+          "compatibility": 61.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Copywriter",
+          "compatibility": 58.7,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Creativity, Curiosity, and Adaptability."
+    },
+    {
+      "student_id": "CAND_078",
+      "name": "Cohort Student #78 (Copywriter)",
+      "expected_career": "Copywriter",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "Copywriter",
+        "Digital Marketing Specialist",
+        "Content Strategist",
+        "Public Relations Specialist",
+        "SEO Specialist"
+      ],
+      "predicted_career": "Copywriter",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Copywriter",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Social Media Manager",
+          "compatibility": 89.1,
+          "category": "Marketing"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 87.1,
+          "category": "Marketing"
+        },
+        {
+          "career": "Podcast Producer",
+          "compatibility": 85.6,
+          "category": "Media"
+        },
+        {
+          "career": "Content Strategist",
+          "compatibility": 83.2,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Creativity, and Curiosity."
+    },
+    {
+      "student_id": "CAND_079",
+      "name": "Cohort Student #79 (Interior Designer)",
+      "expected_career": "Interior Designer",
+      "expected_category": "Design",
+      "acceptable_careers": [
+        "Interior Designer",
+        "UI/UX Designer",
+        "Architect",
+        "Graphic Designer",
+        "Fashion Designer"
+      ],
+      "predicted_career": "Interior Designer",
+      "predicted_category": "Design",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Interior Designer",
+          "compatibility": 96.0,
+          "category": "Design"
+        },
+        {
+          "career": "Graphic Designer",
+          "compatibility": 92.8,
+          "category": "Design"
+        },
+        {
+          "career": "Fashion Designer",
+          "compatibility": 91.8,
+          "category": "Design"
+        },
+        {
+          "career": "Photographer",
+          "compatibility": 90.9,
+          "category": "Media"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 90.8,
+          "category": "Media"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Creativity, and Artistic Skill."
+    },
+    {
+      "student_id": "CAND_080",
+      "name": "Cohort Student #80 (Animator)",
+      "expected_career": "Animator",
+      "expected_category": "Media",
+      "acceptable_careers": [
+        "Animator",
+        "Video Editor / Filmmaker",
+        "Journalist / Writer",
+        "Photographer",
+        "Podcast Producer"
+      ],
+      "predicted_career": "Animator",
+      "predicted_category": "Media",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Animator",
+          "compatibility": 96.0,
+          "category": "Media"
+        },
+        {
+          "career": "Graphic Designer",
+          "compatibility": 89.1,
+          "category": "Design"
+        },
+        {
+          "career": "Fashion Designer",
+          "compatibility": 88.0,
+          "category": "Design"
+        },
+        {
+          "career": "Interior Designer",
+          "compatibility": 87.7,
+          "category": "Design"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 87.5,
+          "category": "Media"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Creativity, Artistic Skill, and Discipline."
+    },
+    {
+      "student_id": "CAND_081",
+      "name": "Cohort Student #81 (Photographer)",
+      "expected_career": "Photographer",
+      "expected_category": "Media",
+      "acceptable_careers": [
+        "Photographer",
+        "Video Editor / Filmmaker",
+        "Journalist / Writer",
+        "Animator",
+        "Podcast Producer"
+      ],
+      "predicted_career": "Photographer",
+      "predicted_category": "Media",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Photographer",
+          "compatibility": 96.0,
+          "category": "Media"
+        },
+        {
+          "career": "Video Editor / Filmmaker",
+          "compatibility": 87.9,
+          "category": "Media"
+        },
+        {
+          "career": "Interior Designer",
+          "compatibility": 86.5,
+          "category": "Design"
+        },
+        {
+          "career": "Graphic Designer",
+          "compatibility": 83.5,
+          "category": "Design"
+        },
+        {
+          "career": "Fashion Designer",
+          "compatibility": 79.8,
+          "category": "Design"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Creativity, and Artistic Skill."
+    },
+    {
+      "student_id": "CAND_082",
+      "name": "Cohort Student #82 (Podcast Producer)",
+      "expected_career": "Podcast Producer",
+      "expected_category": "Media",
+      "acceptable_careers": [
+        "Podcast Producer",
+        "Video Editor / Filmmaker",
+        "Journalist / Writer",
+        "Animator",
+        "Photographer"
+      ],
+      "predicted_career": "Podcast Producer",
+      "predicted_category": "Media",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Podcast Producer",
+          "compatibility": 96.0,
+          "category": "Media"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 84.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Social Media Manager",
+          "compatibility": 77.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Copywriter",
+          "compatibility": 77.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Content Strategist",
+          "compatibility": 76.5,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, and Creativity."
+    },
+    {
+      "student_id": "CAND_083",
+      "name": "Cohort Student #83 (Electrical Engineer)",
+      "expected_career": "Electrical Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Electrical Engineer",
+        "Civil Engineer",
+        "Mechanical Engineer",
+        "Robotics Engineer",
+        "Embedded Systems Engineer"
+      ],
+      "predicted_career": "Electrical Engineer",
+      "predicted_category": "Engineering",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Electrical Engineer",
+          "compatibility": 96.0,
+          "category": "Engineering"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 87.9,
+          "category": "Engineering"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 86.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Aerospace Engineer",
+          "compatibility": 85.6,
+          "category": "Engineering"
+        },
+        {
+          "career": "Chemical Engineer",
+          "compatibility": 82.8,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Math, Problem Solving, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_084",
+      "name": "Cohort Student #84 (Chemical Engineer)",
+      "expected_career": "Chemical Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Chemical Engineer",
+        "Civil Engineer",
+        "Mechanical Engineer",
+        "Robotics Engineer",
+        "Embedded Systems Engineer"
+      ],
+      "predicted_career": "Electrical Engineer",
+      "predicted_category": "Engineering",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Electrical Engineer",
+          "compatibility": 96.0,
+          "category": "Engineering"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 91.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 90.6,
+          "category": "Engineering"
+        },
+        {
+          "career": "Chemical Engineer",
+          "compatibility": 87.7,
+          "category": "Engineering"
+        },
+        {
+          "career": "Aerospace Engineer",
+          "compatibility": 84.8,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 4,
+      "best_acceptable_rank": 4,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.25,
+      "explanation": "Recommended because: Math, Problem Solving, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_085",
+      "name": "Cohort Student #85 (Aerospace Engineer)",
+      "expected_career": "Aerospace Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Aerospace Engineer",
+        "Civil Engineer",
+        "Mechanical Engineer",
+        "Robotics Engineer",
+        "Embedded Systems Engineer"
+      ],
+      "predicted_career": "Renewable Energy Engineer",
+      "predicted_category": "Engineering",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 96.0,
+          "category": "Engineering"
+        },
+        {
+          "career": "Electrical Engineer",
+          "compatibility": 95.4,
+          "category": "Engineering"
+        },
+        {
+          "career": "Aerospace Engineer",
+          "compatibility": 93.4,
+          "category": "Engineering"
+        },
+        {
+          "career": "Chemical Engineer",
+          "compatibility": 87.4,
+          "category": "Engineering"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 85.4,
+          "category": "Technology"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 3,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Problem Solving, Math, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_086",
+      "name": "Cohort Student #86 (Renewable Energy Engineer)",
+      "expected_career": "Renewable Energy Engineer",
+      "expected_category": "Engineering",
+      "acceptable_careers": [
+        "Renewable Energy Engineer",
+        "Civil Engineer",
+        "Mechanical Engineer",
+        "Robotics Engineer",
+        "Embedded Systems Engineer"
+      ],
+      "predicted_career": "Renewable Energy Engineer",
+      "predicted_category": "Engineering",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 96.0,
+          "category": "Engineering"
+        },
+        {
+          "career": "Electrical Engineer",
+          "compatibility": 91.6,
+          "category": "Engineering"
+        },
+        {
+          "career": "Data Analyst",
+          "compatibility": 89.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 83.1,
+          "category": "Sports"
+        },
+        {
+          "career": "Chemical Engineer",
+          "compatibility": 82.7,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Problem Solving, Math, and Logical Thinking."
+    },
+    {
+      "student_id": "CAND_087",
+      "name": "Cohort Student #87 (Urban Planner)",
+      "expected_career": "Urban Planner",
+      "expected_category": "Government",
+      "acceptable_careers": [
+        "Urban Planner",
+        "Civil Services Officer",
+        "Policy Analyst"
+      ],
+      "predicted_career": "Urban Planner",
+      "predicted_category": "Government",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Urban Planner",
+          "compatibility": 96.0,
+          "category": "Government"
+        },
+        {
+          "career": "Policy Analyst",
+          "compatibility": 55.4,
+          "category": "Government"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 49.3,
+          "category": "Marketing"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 47.5,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Product Marketing Manager",
+          "compatibility": 47.3,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest, Communication, and Decision Making."
+    },
+    {
+      "student_id": "CAND_088",
+      "name": "Cohort Student #88 (Policy Analyst)",
+      "expected_career": "Policy Analyst",
+      "expected_category": "Government",
+      "acceptable_careers": [
+        "Policy Analyst",
+        "Civil Services Officer",
+        "Urban Planner"
+      ],
+      "predicted_career": "Policy Analyst",
+      "predicted_category": "Government",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Policy Analyst",
+          "compatibility": 96.0,
+          "category": "Government"
+        },
+        {
+          "career": "Urban Planner",
+          "compatibility": 90.1,
+          "category": "Government"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 72.2,
+          "category": "Sports"
+        },
+        {
+          "career": "UX Researcher",
+          "compatibility": 70.0,
+          "category": "Design"
+        },
+        {
+          "career": "Economist",
+          "compatibility": 66.7,
+          "category": "Research"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest, Communication, Curiosity, and Decision Making."
+    },
+    {
+      "student_id": "CAND_089",
+      "name": "Cohort Student #89 (Social Worker)",
+      "expected_career": "Social Worker",
+      "expected_category": "Social Services",
+      "acceptable_careers": [
+        "Social Worker"
+      ],
+      "predicted_career": "Social Worker",
+      "predicted_category": "Social Services",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Social Worker",
+          "compatibility": 96.0,
+          "category": "Social Services"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 84.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 82.9,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Psychologist / Counselor",
+          "compatibility": 79.7,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 78.2,
+          "category": "Human Resources"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Empathy, Communication, and Adaptability."
+    },
+    {
+      "student_id": "CAND_090",
+      "name": "Cohort Student #90 (Librarian)",
+      "expected_career": "Librarian",
+      "expected_category": "Education",
+      "acceptable_careers": [
+        "Librarian",
+        "School Teacher",
+        "Instructional Designer"
+      ],
+      "predicted_career": "Librarian",
+      "predicted_category": "Education",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Librarian",
+          "compatibility": 96.0,
+          "category": "Education"
+        },
+        {
+          "career": "Food Technologist",
+          "compatibility": 84.1,
+          "category": "Science"
+        },
+        {
+          "career": "Policy Analyst",
+          "compatibility": 81.9,
+          "category": "Government"
+        },
+        {
+          "career": "College Professor / Academic",
+          "compatibility": 80.6,
+          "category": "Research"
+        },
+        {
+          "career": "Paralegal",
+          "compatibility": 76.4,
+          "category": "Legal"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest, and Discipline."
+    },
+    {
+      "student_id": "CAND_091",
+      "name": "Cohort Student #91 (Instructional Designer)",
+      "expected_career": "Instructional Designer",
+      "expected_category": "Education",
+      "acceptable_careers": [
+        "Instructional Designer",
+        "School Teacher",
+        "Librarian"
+      ],
+      "predicted_career": "Instructional Designer",
+      "predicted_category": "Education",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Instructional Designer",
+          "compatibility": 96.0,
+          "category": "Education"
+        },
+        {
+          "career": "Learning and Development Specialist",
+          "compatibility": 86.3,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Podcast Producer",
+          "compatibility": 71.2,
+          "category": "Media"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 69.8,
+          "category": "Marketing"
+        },
+        {
+          "career": "School Teacher",
+          "compatibility": 68.0,
+          "category": "Education"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Teaching Ability, Communication, and Creativity."
+    },
+    {
+      "student_id": "CAND_092",
+      "name": "Cohort Student #92 (Translator / Interpreter)",
+      "expected_career": "Translator / Interpreter",
+      "expected_category": "Language",
+      "acceptable_careers": [
+        "Translator / Interpreter"
+      ],
+      "predicted_career": "IT Support Specialist",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 94.9,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 90.9,
+          "category": "Marketing"
+        },
+        {
+          "career": "Travel Consultant",
+          "compatibility": 89.7,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Podcast Producer",
+          "compatibility": 81.9,
+          "category": "Media"
+        }
+      ],
+      "rank_of_expected": 6,
+      "best_acceptable_rank": 6,
+      "correct_top1": false,
+      "correct_top5": false,
+      "acceptable_top1": false,
+      "acceptable_top5": false,
+      "category_match": false,
+      "top5_category_match": false,
+      "reciprocal_rank": 0.1667,
+      "explanation": "Recommended because: Communication, Adaptability, Learning Ability, and Discipline."
+    },
+    {
+      "student_id": "CAND_093",
+      "name": "Cohort Student #93 (Agronomist)",
+      "expected_career": "Agronomist",
+      "expected_category": "Agriculture",
+      "acceptable_careers": [
+        "Agronomist"
+      ],
+      "predicted_career": "Geologist",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Geologist",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Food Technologist",
+          "compatibility": 86.9,
+          "category": "Science"
+        },
+        {
+          "career": "Agronomist",
+          "compatibility": 84.3,
+          "category": "Agriculture"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 80.3,
+          "category": "Sports"
+        },
+        {
+          "career": "Environmental Scientist",
+          "compatibility": 76.9,
+          "category": "Science"
+        }
+      ],
+      "rank_of_expected": 3,
+      "best_acceptable_rank": 3,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.3333,
+      "explanation": "Recommended because: Research Interest, and Problem Solving."
+    },
+    {
+      "student_id": "CAND_094",
+      "name": "Cohort Student #94 (Food Technologist)",
+      "expected_career": "Food Technologist",
+      "expected_category": "Science",
+      "acceptable_careers": [
+        "Food Technologist",
+        "Environmental Scientist",
+        "Geologist",
+        "Statistician"
+      ],
+      "predicted_career": "Food Technologist",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Food Technologist",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Geologist",
+          "compatibility": 86.0,
+          "category": "Science"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 83.4,
+          "category": "Sports"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 74.7,
+          "category": "Engineering"
+        },
+        {
+          "career": "Environmental Scientist",
+          "compatibility": 72.3,
+          "category": "Science"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Problem Solving, Research Interest, and Discipline."
+    },
+    {
+      "student_id": "CAND_095",
+      "name": "Cohort Student #95 (Geologist)",
+      "expected_career": "Geologist",
+      "expected_category": "Science",
+      "acceptable_careers": [
+        "Geologist",
+        "Environmental Scientist",
+        "Food Technologist",
+        "Statistician"
+      ],
+      "predicted_career": "Geologist",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Geologist",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Environmental Scientist",
+          "compatibility": 81.5,
+          "category": "Science"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 81.1,
+          "category": "Sports"
+        },
+        {
+          "career": "Food Technologist",
+          "compatibility": 78.5,
+          "category": "Science"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 72.6,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest, Problem Solving, and Curiosity."
+    },
+    {
+      "student_id": "CAND_096",
+      "name": "Cohort Student #96 (Statistician)",
+      "expected_career": "Statistician",
+      "expected_category": "Science",
+      "acceptable_careers": [
+        "Statistician",
+        "Environmental Scientist",
+        "Food Technologist",
+        "Geologist"
+      ],
+      "predicted_career": "Statistician",
+      "predicted_category": "Science",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Statistician",
+          "compatibility": 96.0,
+          "category": "Science"
+        },
+        {
+          "career": "Investment Analyst",
+          "compatibility": 74.1,
+          "category": "Finance"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 68.9,
+          "category": "Sports"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 68.7,
+          "category": "Engineering"
+        },
+        {
+          "career": "Economist",
+          "compatibility": 67.1,
+          "category": "Research"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Math, Logical Thinking, and Research Interest."
+    },
+    {
+      "student_id": "CAND_097",
+      "name": "Cohort Student #97 (UX Researcher)",
+      "expected_career": "UX Researcher",
+      "expected_category": "Design",
+      "acceptable_careers": [
+        "UX Researcher",
+        "UI/UX Designer",
+        "Architect",
+        "Graphic Designer",
+        "Fashion Designer"
+      ],
+      "predicted_career": "UX Researcher",
+      "predicted_category": "Design",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "UX Researcher",
+          "compatibility": 96.0,
+          "category": "Design"
+        },
+        {
+          "career": "Environmental Scientist",
+          "compatibility": 54.1,
+          "category": "Science"
+        },
+        {
+          "career": "Policy Analyst",
+          "compatibility": 53.9,
+          "category": "Government"
+        },
+        {
+          "career": "Psychologist / Counselor",
+          "compatibility": 53.8,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Occupational Therapist",
+          "compatibility": 52.6,
+          "category": "Healthcare"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Curiosity, Research Interest, and Empathy."
+    },
+    {
+      "student_id": "CAND_098",
+      "name": "Cohort Student #98 (Product Marketing Manager)",
+      "expected_career": "Product Marketing Manager",
+      "expected_category": "Marketing",
+      "acceptable_careers": [
+        "Product Marketing Manager",
+        "Digital Marketing Specialist",
+        "Content Strategist",
+        "Public Relations Specialist",
+        "SEO Specialist"
+      ],
+      "predicted_career": "Product Marketing Manager",
+      "predicted_category": "Marketing",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Product Marketing Manager",
+          "compatibility": 96.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Digital Marketing Specialist",
+          "compatibility": 80.1,
+          "category": "Marketing"
+        },
+        {
+          "career": "Product Manager",
+          "compatibility": 75.8,
+          "category": "Management"
+        },
+        {
+          "career": "Business Development Manager",
+          "compatibility": 64.2,
+          "category": "Business"
+        },
+        {
+          "career": "Procurement Manager",
+          "compatibility": 63.5,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Business Thinking, Creativity, and Decision Making."
+    },
+    {
+      "student_id": "CAND_099",
+      "name": "Cohort Student #99 (Business Development Manager)",
+      "expected_career": "Business Development Manager",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Business Development Manager",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Operations Manager"
+      ],
+      "predicted_career": "Business Development Manager",
+      "predicted_category": "Business",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Business Development Manager",
+          "compatibility": 96.0,
+          "category": "Business"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 88.7,
+          "category": "Business"
+        },
+        {
+          "career": "Product Manager",
+          "compatibility": 81.3,
+          "category": "Management"
+        },
+        {
+          "career": "Procurement Manager",
+          "compatibility": 64.6,
+          "category": "Business"
+        },
+        {
+          "career": "Product Marketing Manager",
+          "compatibility": 62.1,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, Business Thinking, Adaptability, and Decision Making."
+    },
+    {
+      "student_id": "CAND_100",
+      "name": "Cohort Student #100 (Travel Consultant)",
+      "expected_career": "Travel Consultant",
+      "expected_category": "Hospitality",
+      "acceptable_careers": [
+        "Travel Consultant",
+        "Chef",
+        "Event Manager"
+      ],
+      "predicted_career": "Travel Consultant",
+      "predicted_category": "Hospitality",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Travel Consultant",
+          "compatibility": 96.0,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 88.8,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 87.8,
+          "category": "Marketing"
+        },
+        {
+          "career": "IT Support Specialist",
+          "compatibility": 86.8,
+          "category": "Technology"
+        },
+        {
+          "career": "Customer Success Manager",
+          "compatibility": 84.2,
+          "category": "Business"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Communication, and Adaptability."
+    },
+    {
+      "student_id": "CAND_101",
+      "name": "Cohort Student #101 (Event Manager)",
+      "expected_career": "Event Manager",
+      "expected_category": "Hospitality",
+      "acceptable_careers": [
+        "Event Manager",
+        "Chef",
+        "Travel Consultant"
+      ],
+      "predicted_career": "HR Manager",
+      "predicted_category": "Management",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "HR Manager",
+          "compatibility": 96.0,
+          "category": "Management"
+        },
+        {
+          "career": "Event Manager",
+          "compatibility": 70.8,
+          "category": "Hospitality"
+        },
+        {
+          "career": "Recruiter",
+          "compatibility": 65.9,
+          "category": "Human Resources"
+        },
+        {
+          "career": "Sales Manager",
+          "compatibility": 64.5,
+          "category": "Business"
+        },
+        {
+          "career": "Public Relations Specialist",
+          "compatibility": 63.5,
+          "category": "Marketing"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Communication, Adaptability, Leadership, and Decision Making."
+    },
+    {
+      "student_id": "CAND_102",
+      "name": "Cohort Student #102 (Fitness Trainer)",
+      "expected_career": "Fitness Trainer",
+      "expected_category": "Sports",
+      "acceptable_careers": [
+        "Fitness Trainer",
+        "Sports Coach / Trainer",
+        "Sports Analyst"
+      ],
+      "predicted_career": "Fitness Trainer",
+      "predicted_category": "Sports",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Fitness Trainer",
+          "compatibility": 96.0,
+          "category": "Sports"
+        },
+        {
+          "career": "Sports Coach / Trainer",
+          "compatibility": 60.3,
+          "category": "Sports"
+        },
+        {
+          "career": "School Teacher",
+          "compatibility": 58.8,
+          "category": "Education"
+        },
+        {
+          "career": "Physiotherapist",
+          "compatibility": 56.3,
+          "category": "Healthcare"
+        },
+        {
+          "career": "Learning and Development Specialist",
+          "compatibility": 47.9,
+          "category": "Human Resources"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Physical Stamina, Communication, Discipline, and Teaching Ability."
+    },
+    {
+      "student_id": "CAND_103",
+      "name": "Cohort Student #103 (Sports Analyst)",
+      "expected_career": "Sports Analyst",
+      "expected_category": "Sports",
+      "acceptable_careers": [
+        "Sports Analyst",
+        "Sports Coach / Trainer",
+        "Fitness Trainer"
+      ],
+      "predicted_career": "Sports Analyst",
+      "predicted_category": "Sports",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Sports Analyst",
+          "compatibility": 96.0,
+          "category": "Sports"
+        },
+        {
+          "career": "Economist",
+          "compatibility": 78.4,
+          "category": "Research"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 77.9,
+          "category": "Engineering"
+        },
+        {
+          "career": "Geologist",
+          "compatibility": 77.4,
+          "category": "Science"
+        },
+        {
+          "career": "Fitness Trainer",
+          "compatibility": 75.8,
+          "category": "Sports"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest."
+    },
+    {
+      "student_id": "CAND_104",
+      "name": "Cohort Student #104 (Real Estate Analyst)",
+      "expected_career": "Real Estate Analyst",
+      "expected_category": "Business",
+      "acceptable_careers": [
+        "Real Estate Analyst",
+        "Business Analyst",
+        "Entrepreneur / Founder",
+        "Sales Manager",
+        "Operations Manager"
+      ],
+      "predicted_career": "Business Intelligence Analyst",
+      "predicted_category": "Technology",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Business Intelligence Analyst",
+          "compatibility": 96.0,
+          "category": "Technology"
+        },
+        {
+          "career": "Real Estate Analyst",
+          "compatibility": 93.6,
+          "category": "Business"
+        },
+        {
+          "career": "Supply Chain Analyst",
+          "compatibility": 92.0,
+          "category": "Business"
+        },
+        {
+          "career": "Performance Marketing Specialist",
+          "compatibility": 88.0,
+          "category": "Marketing"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 80.3,
+          "category": "Sports"
+        }
+      ],
+      "rank_of_expected": 2,
+      "best_acceptable_rank": 2,
+      "correct_top1": false,
+      "correct_top5": true,
+      "acceptable_top1": false,
+      "acceptable_top5": true,
+      "category_match": false,
+      "top5_category_match": true,
+      "reciprocal_rank": 0.5,
+      "explanation": "Recommended because: Business Thinking, and Math."
+    },
+    {
+      "student_id": "CAND_105",
+      "name": "Cohort Student #105 (Economist)",
+      "expected_career": "Economist",
+      "expected_category": "Research",
+      "acceptable_careers": [
+        "Economist",
+        "Research Scientist",
+        "College Professor / Academic"
+      ],
+      "predicted_career": "Economist",
+      "predicted_category": "Research",
+      "predicted_compatibility": 96.0,
+      "top5_careers": [
+        {
+          "career": "Economist",
+          "compatibility": 96.0,
+          "category": "Research"
+        },
+        {
+          "career": "Statistician",
+          "compatibility": 87.1,
+          "category": "Science"
+        },
+        {
+          "career": "Sports Analyst",
+          "compatibility": 70.2,
+          "category": "Sports"
+        },
+        {
+          "career": "Investment Analyst",
+          "compatibility": 64.8,
+          "category": "Finance"
+        },
+        {
+          "career": "Renewable Energy Engineer",
+          "compatibility": 63.4,
+          "category": "Engineering"
+        }
+      ],
+      "rank_of_expected": 1,
+      "best_acceptable_rank": 1,
+      "correct_top1": true,
+      "correct_top5": true,
+      "acceptable_top1": true,
+      "acceptable_top5": true,
+      "category_match": true,
+      "top5_category_match": true,
+      "reciprocal_rank": 1.0,
+      "explanation": "Recommended because: Research Interest, Math, Curiosity, and Logical Thinking."
+    }
+  ]
+}

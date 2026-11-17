@@ -1,0 +1,10 @@
+# CareerLens — Real-World Ground Truth Dataset (PLACEHOLDER)
+# =========================================================================
+# Instructions for Real-World Evaluation:
+# To evaluate CareerLens against real student cohorts or expert annotations:
+# 1. Populate this file with actual verified student records or alumni placement data.
+# 2. Provide the student's ratings for the 20 competency skills (0.0 to 10.0 scale)
+#    OR provide their 70-question survey responses.
+# 3. Specify the verified placement or expert-advised career in 'expected_career'.
+# =========================================================================
+student_id,name,expected_career,expected_category,acceptable_careers,Programming,Math,Logical Thinking,Problem Solving,Attention to Detail,Creativity,Innovation,Curiosity,Research Interest,Learning Ability,Communication,Leadership,Empathy,Teaching Ability,Adaptability,Discipline,Decision Making,Business Thinking,Artistic Skill,Physical Stamina

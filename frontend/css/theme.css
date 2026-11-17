@@ -1,0 +1,183 @@
+/* ============================================================
+   CareerLens — Design Tokens
+   Signature: the "Skill Constellation" — a 3D particle field of
+   your 20 traits that reshapes and glows as your answers form it.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---- Cream / editorial (default) — matches index.html ---- */
+  --bg: #F2EEE4;
+  --bg-elevated: #F2EEE4cc;
+  --surface: #EAE4D6;
+  --surface-2: #E1DACB;
+  --border: rgba(28,26,22,.18);
+  --text: #1C1A16;
+  --text-dim: #55503f;
+  --text-faint: #8C8577;
+  --accent: #B5502E;       /* signature rust — matches the particle field */
+  --accent-dim: #8f3f24;
+  --accent-2: #5B4B63;     /* plum counterpoint, used sparingly */
+  --danger: #A6363F;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Space Grotesk', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-theme="light"] {
+  --bg: #F2EEE4;
+  --bg-elevated: #F2EEE4cc;
+  --surface: #EAE4D6;
+  --surface-2: #E1DACB;
+  --border: rgba(28,26,22,.18);
+  --text: #1C1A16;
+  --text-dim: #55503f;
+  --text-faint: #8C8577;
+  --accent: #B5502E;
+  --accent-dim: #8f3f24;
+  --accent-2: #5B4B63;
+  --danger: #A6363F;
+}
+
+[data-theme="dark"] {
+  --bg: #16140F;
+  --bg-elevated: #1E1B14cc;
+  --surface: #211D15;
+  --surface-2: #2A251A;
+  --border: rgba(238,230,210,.16);
+  --text: #EEE6D2;
+  --text-dim: #B6AC94;
+  --text-faint: #7C7562;
+  --accent: #D97A4E;
+  --accent-dim: #B5502E;
+  --accent-2: #8A7599;
+  --danger: #D9707C;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s var(--ease), color 0.4s var(--ease);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--accent); color: #100C02; }
+
+/* Focus visibility — accessibility floor */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Shared components ---- */
+
+.btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.7rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #100C02;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -8px var(--accent); }
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--text);
+  transition: border-color 0.25s var(--ease), transform 0.4s var(--ease);
+}
+.theme-toggle:hover { border-color: var(--accent); transform: rotate(20deg); }
+.theme-toggle svg { width: 18px; height: 18px; }
+
+.container { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
+
+nav.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+
+canvas#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
