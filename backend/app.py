@@ -917,6 +917,16 @@ def serve_evaluation_page():
     return send_from_directory(str(FRONTEND_DIR), "evaluation.html")
 
 
+@app.route("/favicon.ico")
+@app.route("/favicon.png")
+def serve_favicon():
+    """
+    Serves the website favicon.
+    """
+    from flask import send_from_directory
+    return send_from_directory(str(FRONTEND_DIR), "favicon.png", mimetype="image/png")
+
+
 @app.route("/", methods=["GET"])
 def index():
     """

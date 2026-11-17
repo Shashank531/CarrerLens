@@ -1,4 +1,4 @@
-﻿# CareerLens - Live Cloud Data Synchronizer (PowerShell Native)
+# CareerLens - Live Cloud Data Synchronizer (PowerShell Native)
 param (
     [string]$CloudUrl = "https://carrerlens-a3dl.onrender.com",
     [switch]$Auto
