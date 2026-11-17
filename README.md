@@ -280,9 +280,12 @@ Comprehensive project documentation is available in the `docs/` directory:
 
 ---
 
-## Academic Context
+## Academic Context & Team
 
 - **Project**: Engineering Mini Project (Semester 7)
 - **Program**: B.Tech / MBA Tech
 - **Core Focus**: Applied Artificial Intelligence, Fuzzy Logic, Decision Support Systems, and Human-Computer Interaction
-- **Author**: Shashank ([GitHub](https://github.com/Shashank531))
+- **Project Team**:
+  - **Shashank Jha** ([GitHub](https://github.com/Shashank531))
+  - **Anushka Singh**
+  - **Pawani Pandey**

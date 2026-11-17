@@ -258,6 +258,36 @@
       color: #171512;
     }
 
+    .header-btn-ghost {
+      background: transparent !important;
+      border: 1px solid var(--line) !important;
+      color: var(--ink) !important;
+      font-weight: 500;
+      box-shadow: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .header-btn-ghost:hover {
+      background: rgba(28, 26, 22, .06) !important;
+      border-color: var(--rust) !important;
+      color: var(--rust) !important;
+      transform: translateY(-1px);
+    }
+
+    [data-theme="dark"] .header-btn-ghost {
+      background: transparent !important;
+      border: 1px solid var(--line) !important;
+      color: var(--ink) !important;
+    }
+
+    [data-theme="dark"] .header-btn-ghost:hover {
+      background: rgba(250, 246, 237, .08) !important;
+      border-color: var(--rust) !important;
+      color: var(--rust) !important;
+    }
+
     .theme-toggle {
       position: relative;
       width: 44px;
@@ -703,15 +733,95 @@
       position: relative;
       z-index: 3;
       border-top: 1px solid var(--line);
-      padding: 20px 28px calc(20px + 60px);
+      padding: 22px 28px calc(22px + 60px);
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
       color: var(--text-muted);
       font: 500 10px 'DM Mono', monospace;
-      text-transform: uppercase;
-      letter-spacing: .1em;
+      letter-spacing: .08em;
       transition: color .4s ease, border-color .4s ease;
       background: var(--void);
+    }
+
+    .footer-col {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .footer-brand {
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .footer-meta {
+      font-size: 11px;
+      text-transform: none;
+      letter-spacing: .02em;
+      color: var(--text-muted);
+    }
+
+    .footer-meta b {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+
+    .footer-action {
+      color: var(--rust);
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: opacity .2s, transform .2s;
+    }
+
+    .footer-action:hover {
+      opacity: .8;
+      transform: translateY(-1px);
+    }
+
+    .footer-hint {
+      color: var(--dust);
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .team-credits-block {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.03em;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .team-credits-label {
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--rust);
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
     }
 
     /* ===== MUSIC PLAYER (sticky footer) ===== */
@@ -1032,7 +1142,11 @@
         CAREERLENS<b>®</b>
       </a>
       <div class="header-right">
-        <a href="evaluation.html" class="header-btn" style="background:transparent;border:1px solid var(--line);color:var(--ink);font-weight:500;">System Score ↗</a>
+        <a href="https://github.com/Shashank531/CarrerLens" target="_blank" rel="noopener noreferrer" class="header-btn header-btn-ghost" title="View Source on GitHub">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" style="vertical-align:-2px;margin-right:4px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub ↗
+        </a>
+        <a href="evaluation.html" class="header-btn header-btn-ghost">System Score ↗</a>
         <a href="login.html" class="header-btn">Begin assessment ↗</a>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
           <span class="icon-wrap"><span>☀</span><span>☽</span></span>
@@ -1109,16 +1223,35 @@
             <div class="stat"><b>20</b><span>Traits measured</span></div>
             <div class="stat"><b>~15</b><span>Minutes</span></div>
           </div>
-          <a href="login.html" class="command" style="margin-top:22px;">Begin the assessment ↗</a>
+          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px;">
+            <a href="login.html" class="command">Begin the assessment ↗</a>
+            <a href="https://github.com/Shashank531/CarrerLens" target="_blank" rel="noopener noreferrer" class="command" style="background:transparent;border:1px solid var(--line);color:var(--ink);display:inline-flex;align-items:center;gap:6px;">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="vertical-align:-2px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub Repo ↗
+            </a>
+          </div>
+          <div class="team-credits-block">
+            <span class="team-credits-label">Engineering Mini Project · Project Team</span>
+            <strong>Shashank Jha</strong> · <strong>Anushka Singh</strong> · <strong>Pawani Pandey</strong>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <span>CareerLens / precision cognitive career intelligence</span>
-    <a href="evaluation.html" style="color:var(--rust);text-decoration:none;font-weight:600;font-family:'DM Mono', monospace;font-size:12px;margin-left:auto;margin-right:24px;">Model Accuracy &amp; System Score ↗</a>
-    <span>Click anywhere to disturb the field</span>
+    <div class="footer-col">
+      <div class="footer-brand">CareerLens / Precision Cognitive Career Intelligence</div>
+      <div class="footer-meta">Mini Project by <b>Shashank Jha</b>, <b>Anushka Singh</b>, and <b>Pawani Pandey</b></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Shashank531/CarrerLens" target="_blank" rel="noopener noreferrer" class="footer-action">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub ↗
+      </a>
+      <a href="evaluation.html" class="footer-action">Model Accuracy &amp; System Score ↗</a>
+      <span class="footer-hint">Click anywhere to disturb the field</span>
+    </div>
   </footer>
 
   <!-- ===== MUSIC PLAYER ===== -->
