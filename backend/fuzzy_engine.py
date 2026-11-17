@@ -22,6 +22,7 @@ Usage:
 
 import csv
 import math
+import threading
 from pathlib import Path
 from typing import Dict, List, Optional
 
@@ -54,7 +55,10 @@ class FuzzyEngine:
         if matrix_path.exists():
             self.load_skill_matrix(str(matrix_path))
             
-        self._systems_cache: Dict[str, ctrl.ControlSystemSimulation] = {}
+        # ControlSystemSimulation mutates its own state on every compute(), so a
+        # simulation object must never be shared between threads. The cache is
+        # therefore per-thread rather than per-instance.
+        self._local = threading.local()
 
     # ---------- Loading ----------
 
@@ -123,9 +127,12 @@ class FuzzyEngine:
         return ctrl.ControlSystemSimulation(system)
 
     def _get_system(self, career: str) -> ctrl.ControlSystemSimulation:
-        if career not in self._systems_cache:
-            self._systems_cache[career] = self._build_system(career)
-        return self._systems_cache[career]
+        cache = getattr(self._local, "systems", None)
+        if cache is None:
+            cache = self._local.systems = {}
+        if career not in cache:
+            cache[career] = self._build_system(career)
+        return cache[career]
 
     # ---------- Public API ----------
 
