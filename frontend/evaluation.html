@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>CareerLens — Evaluation & Accuracy Dashboard</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
@@ -799,11 +799,67 @@
       }
     }
 
-    @media (max-width: 600px) {
-      body { padding: 80px 16px 60px; }
-      .topbar { padding: 0 16px; }
-      .page-title { font-size: 30px; }
-      .metrics-row { grid-template-columns: 1fr; }
+    @media (max-width: 768px) {
+      .topbar {
+        padding: 0 14px;
+        height: 58px;
+      }
+      .topbar-right .nav-btn:not(:first-child):not(:nth-child(3)) {
+        display: none; /* Keep Home and Results on tablet/mobile */
+      }
+      .nav-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+      }
+      body {
+        padding: 78px 14px calc(40px + 60px);
+      }
+      .table-container,
+      .results-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar {
+        height: 52px;
+        padding: 0 10px;
+      }
+      .brand {
+        font-size: 14.5px;
+        gap: 6px;
+      }
+      .logo-img {
+        height: 20px;
+      }
+      .brand .badge {
+        display: none;
+      }
+      .topbar-right {
+        gap: 6px;
+      }
+      .nav-btn {
+        padding: 5px 9px;
+        font-size: 10px;
+      }
+      body {
+        padding: 68px 10px calc(36px + 60px);
+      }
+      .page-title {
+        font-size: 24px;
+        line-height: 1.15;
+      }
+      .metrics-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .metric-val {
+        font-size: 28px;
+      }
+      .benchmark-card {
+        padding: 16px 12px;
+      }
     }
   </style>
 </head>

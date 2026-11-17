@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>CareerLens — Assessment</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" href="favicon.png" />
@@ -977,31 +977,100 @@
            ============================================================ */
         @media (max-width: 820px) {
             .topbar {
-                height: 64px;
-                padding: 0 20px;
+                height: 60px;
+                padding: 0 18px;
             }
             .brand {
-                font-size: 18px;
+                font-size: 17px;
             }
             .assess-wrap {
-                padding-top: 96px;
+                padding-top: 84px;
+                padding-bottom: calc(36px + 60px);
             }
             .intro-card,
             .quiz-card,
             .transition-card {
-                padding: 32px 20px;
+                padding: 28px 18px;
+            }
+            .question-item .q-scale {
+                gap: 8px;
             }
             .question-item .q-scale .scale-opt {
-                min-width: 52px;
+                min-width: 0;
+                flex: 1 1 0;
                 height: 52px;
+                padding: 4px 2px;
             }
             .quiz-nav {
                 flex-direction: column;
                 align-items: stretch;
+                gap: 12px;
             }
             .quiz-nav .nav-group {
                 margin-left: 0;
-                justify-content: flex-end;
+                justify-content: stretch;
+                width: 100%;
+            }
+            .quiz-nav .btn {
+                flex: 1;
+                justify-content: center;
+                min-height: 44px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .topbar {
+                height: 54px;
+                padding: 0 12px;
+            }
+            .brand {
+                font-size: 15px;
+                gap: 6px;
+            }
+            .logo-img {
+                height: 22px;
+            }
+            .assess-wrap {
+                padding-top: 74px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-bottom: calc(28px + 60px);
+            }
+            .intro-card,
+            .quiz-card,
+            .transition-card {
+                padding: 20px 12px;
+                border-radius: 2px;
+            }
+            .question-item .q-num {
+                font-size: 10px;
+            }
+            .question-item .q-text {
+                font-size: 16px;
+                line-height: 1.4;
+                margin-bottom: 16px;
+            }
+            .question-item .q-scale {
+                gap: 5px;
+            }
+            .question-item .q-scale .scale-opt {
+                height: 48px;
+                padding: 3px 1px;
+            }
+            .question-item .q-scale .scale-num {
+                font-size: 15px;
+            }
+            .question-item .q-scale .scale-label {
+                font-size: 7px;
+                letter-spacing: -0.02em;
+            }
+            .quiz-nav .btn {
+                padding: 10px 14px;
+                font-size: 11px;
+                min-height: 44px;
+            }
+            .intro-card h1 {
+                font-size: clamp(24px, 7vw, 36px);
             }
         }
     </style>

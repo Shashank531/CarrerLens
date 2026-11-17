@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>CareerLens — User Dashboard &amp; Intelligence</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
@@ -1140,13 +1140,69 @@
     /* ─── Responsive adjustments ────────────────────────────────────── */
     @media (max-width: 768px) {
       body {
-        padding: 84px 16px 80px;
+        padding: 76px 14px calc(40px + 60px);
       }
       .topbar {
-        padding: 0 18px;
+        padding: 0 14px;
+        height: 58px;
       }
       .topbar-center {
         display: none;
+      }
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .charts-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar {
+        height: 52px;
+        padding: 0 10px;
+      }
+      .brand {
+        font-size: 14.5px;
+        gap: 6px;
+      }
+      .logo-img {
+        height: 20px;
+      }
+      .brand .badge {
+        display: none;
+      }
+      .topbar-right {
+        gap: 5px;
+      }
+      .nav-btn {
+        padding: 6px 10px;
+        font-size: 9px;
+      }
+      body {
+        padding: 68px 10px calc(36px + 60px);
+      }
+      .dash-title {
+        font-size: 26px;
+        line-height: 1.15;
+      }
+      .stat-val {
+        font-size: 24px;
+      }
+      .stat-label {
+        font-size: 9.5px;
+      }
+      .chart-card {
+        padding: 16px 12px;
+      }
+      .chart-title {
+        font-size: 16px;
+      }
+      .history-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
     }
   </style>

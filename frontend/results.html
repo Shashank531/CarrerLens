@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>CareerLens — Your Results &amp; Blueprint</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
@@ -1751,17 +1751,101 @@
     /* ─── Responsive Media Queries ─── */
     @media (max-width: 768px) {
       .topbar {
-        padding: 0 16px;
-        height: 64px;
+        padding: 0 14px;
+        height: 60px;
       }
       body {
-        padding: 90px 16px 80px;
+        padding: 80px 14px calc(40px + 60px);
+      }
+      .topbar-right {
+        gap: 8px;
+      }
+      .btn-retake {
+        padding: 6px 12px;
+        font-size: 10px;
       }
       .explorer-controls {
         grid-template-columns: 1fr;
       }
       .explorer-grid {
         grid-template-columns: 1fr;
+      }
+      .hero-header h1 {
+        font-size: clamp(28px, 8vw, 44px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .topbar {
+        height: 52px;
+        padding: 0 10px;
+      }
+      .brand {
+        font-size: 14.5px;
+        gap: 6px;
+      }
+      .logo-img {
+        height: 20px;
+      }
+      .brand .badge {
+        display: none;
+      }
+      .topbar-right {
+        gap: 5px;
+      }
+      .btn-retake {
+        padding: 5px 8px;
+        font-size: 9px;
+      }
+      .btn-retake svg {
+        margin-right: 2px;
+      }
+      body {
+        padding: 68px 10px calc(36px + 60px);
+      }
+      .hero-header {
+        margin-bottom: 24px;
+      }
+      .hero-header h1 {
+        font-size: 26px;
+        line-height: 1.15;
+      }
+      .hero-header .sub {
+        font-size: 13px;
+      }
+      .career-card {
+        padding: 18px 14px;
+      }
+      .career-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .career-title {
+        font-size: 20px;
+      }
+      .career-meta {
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .skill-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .skill-chip {
+        padding: 8px 10px;
+      }
+      .sim-box {
+        padding: 16px 12px;
+      }
+      .career-explorer {
+        padding: 16px 12px;
+      }
+      .gaps-table-container,
+      .table-wrap,
+      .history-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
       }
     }
   </style>

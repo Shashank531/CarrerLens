@@ -2,7 +2,7 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>CareerLens — Sign In &amp; Profile Access</title>
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
@@ -1077,25 +1077,65 @@
       .editorial-panel {
         flex: none;
         min-height: auto;
-        padding: 96px 24px 36px;
+        padding: 76px 20px 28px;
         border-right: none;
         border-bottom: 1px solid var(--line);
       }
+      .editorial-hero {
+        margin: 20px 0;
+      }
+      .editorial-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
       .form-panel {
-        padding: 40px 20px 80px;
+        padding: 32px 16px calc(40px + 60px);
         min-height: auto;
       }
     }
 
     @media (max-width: 520px) {
-      .card {
-        padding: 26px 20px;
-      }
       .topbar {
-        padding: 0 16px;
+        padding: 0 14px;
+        height: 56px;
+      }
+      .editorial-panel {
+        padding: 68px 16px 20px;
+      }
+      .editorial-logo {
+        font-size: clamp(28px, 9vw, 38px);
+      }
+      .editorial-manifesto {
+        font-size: 14px;
+      }
+      .form-panel {
+        padding: 24px 12px calc(40px + 60px);
+      }
+      .card {
+        padding: 20px 14px;
+        border-radius: 2px;
+      }
+      .tab-btn {
+        padding: 10px 12px;
+        font-size: 11px;
+        min-height: 44px;
+      }
+      input, select {
+        font-size: 16px; /* Prevents auto-zoom on iOS */
+        padding: 10px 0;
+      }
+      .btn-submit {
+        min-height: 46px;
+        font-size: 11px;
       }
       .code-val {
-        font-size: 20px;
+        font-size: 19px;
+        letter-spacing: 0.08em;
+        word-break: break-all;
+      }
+      .code-box {
+        padding: 14px 12px;
       }
     }
   </style>

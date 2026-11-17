@@ -404,16 +404,64 @@ select optgroup {
 }
 
 @media(max-width:680px) {
-  .music-player { padding: 8px 16px; gap: 10px; }
-  .music-player .player-info .now-playing { font-size: 9px; }
-  .music-player .player-controls .play-btn { width: 34px; height: 34px; font-size: 18px; }
-  .music-player .player-volume input[type="range"] { width: 60px; }
+  .music-player {
+    padding: 6px 14px max(6px, env(safe-area-inset-bottom, 0px));
+    gap: 10px;
+    height: auto;
+    min-height: 46px;
+  }
+  .music-player .player-info {
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+  .music-player .player-info .now-playing {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .music-player .player-controls {
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .music-player .player-controls .play-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+  .bg3d-toggle-btn {
+    height: 26px !important;
+    padding: 2px 7px !important;
+    font-size: 10px !important;
+  }
+  .music-player .player-volume {
+    min-width: auto;
+    gap: 6px;
+  }
+  .music-player .player-volume input[type="range"] {
+    width: 50px;
+  }
 }
 
-@media(max-width:440px) {
-  .music-player { padding: 6px 12px; gap: 8px; flex-direction: column; align-items: stretch; }
-  .music-player .player-info { justify-content: center; min-width: unset; }
-  .music-player .player-controls { justify-content: center; }
-  .music-player .player-volume { justify-content: center; min-width: unset; }
-  .music-player .player-volume input[type="range"] { width: 100px; }
+@media(max-width:480px) {
+  .music-player {
+    padding: 5px 12px max(5px, env(safe-area-inset-bottom, 0px));
+    gap: 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .music-player .player-info {
+    max-width: 130px;
+  }
+  .music-player .player-info .now-playing {
+    font-size: 9.5px;
+  }
+  .music-player .player-volume input[type="range"] {
+    display: none;
+  }
+  .music-player .player-controls .track-btn {
+    padding: 4px;
+  }
 }
