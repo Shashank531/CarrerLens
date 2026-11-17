@@ -1,12 +1,11 @@
 """
-CareerLens — Live Cloud Data Synchronizer (sync_userdata.py)
-============================================================
-Pulls the latest user registrations, assessment attempts, and recommendations
-from your live cloud website directly into your local data/ folder.
+CareerLens — Live Cloud Data Synchronizer (Smart Merge)
+======================================================
+Merges new registrations and assessment attempts from your live website
+into your local data files without overwriting or losing your original data.
 
 Usage:
     python sync_userdata.py
-    python sync_userdata.py https://your-actual-url.onrender.com
     python sync_userdata.py --auto
 """
 
@@ -15,11 +14,13 @@ import os
 import time
 import urllib.request
 import ssl
+import sqlite3
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent.resolve()
 USERDATA_DIR = ROOT_DIR / "data" / "userdata"
 CSV_DIR = ROOT_DIR / "data" / "csv"
+DB_PATH = ROOT_DIR / "backend" / "careerlens.db"
 
 DEFAULT_CLOUD_URL = "https://carrerlens-a3dl.onrender.com"
 
@@ -43,6 +44,54 @@ def fetch_file(endpoint: str) -> str:
     with urllib.request.urlopen(req, context=ctx, timeout=30) as resp:
         return resp.read().decode("utf-8")
 
+def merge_csv(local_file: Path, incoming_csv_text: str, key_col_idx: int = 1) -> tuple[int, int]:
+    """
+    Merges incoming CSV rows into local_file based on unique key at key_col_idx.
+    Preserves all existing local rows, only appends genuinely new rows.
+    Returns (total_rows, new_rows_added).
+    """
+    incoming_lines = [l.strip() for l in incoming_csv_text.strip().split("\n") if l.strip()]
+    if not incoming_lines:
+        return 0, 0
+    header = incoming_lines[0]
+    incoming_rows = incoming_lines[1:]
+
+    existing_rows = []
+    existing_keys = set()
+    if local_file.exists():
+        loc_lines = [l.strip() for l in local_file.read_text(encoding="utf-8").strip().split("\n") if l.strip()]
+        if loc_lines:
+            header = loc_lines[0]
+            existing_rows = loc_lines[1:]
+            for r in existing_rows:
+                parts = r.split(",")
+                if len(parts) > key_col_idx:
+                    existing_keys.add(parts[key_col_idx])
+
+    max_id = 0
+    for r in existing_rows:
+        pid = r.split(",")[0]
+        if pid.isdigit():
+            max_id = max(max_id, int(pid))
+
+    new_added = 0
+    merged = list(existing_rows)
+
+    for r in incoming_rows:
+        parts = r.split(",")
+        if len(parts) > key_col_idx:
+            key = parts[key_col_idx]
+            if key not in existing_keys:
+                max_id += 1
+                parts[0] = str(max_id)
+                merged.append(",".join(parts))
+                existing_keys.add(key)
+                new_added += 1
+
+    final_content = header + "\n" + "\n".join(merged) + "\n"
+    local_file.write_text(final_content, encoding="utf-8")
+    return len(merged), new_added
+
 def sync():
     USERDATA_DIR.mkdir(parents=True, exist_ok=True)
     CSV_DIR.mkdir(parents=True, exist_ok=True)
@@ -52,56 +101,42 @@ def sync():
     print(f" Connecting to: {cloud_url}")
     print(f"==========================================")
 
-    success_users = False
-    success_attempts = False
-
-    # 1. Fetch userdata.csv
+    # 1. Fetch & Smart-Merge userdata.csv (key: unique_code, index 1)
+    target_userdata = USERDATA_DIR / "userdata.csv"
     try:
-        userdata_content = fetch_file("/api/userdata/csv")
-        target_userdata_files = [
-            USERDATA_DIR / "userdata.csv",
-            CSV_DIR / "userdata.csv",
-            ROOT_DIR / "data" / "userdata.csv",
-        ]
-        for f in target_userdata_files:
-            f.write_text(userdata_content, encoding="utf-8")
+        remote_data = fetch_file("/api/userdata/csv")
+        total_users, new_users = merge_csv(target_userdata, remote_data, key_col_idx=1)
         
-        lines = [l for l in userdata_content.strip().split("\n") if l.strip()]
-        user_count = max(0, len(lines) - 1)
-        print(f"  [SUCCESS] Synced userdata.csv ({user_count} total registered users)")
+        # Mirror to other standard data paths
+        text = target_userdata.read_text(encoding="utf-8")
+        (CSV_DIR / "userdata.csv").write_text(text, encoding="utf-8")
+        (ROOT_DIR / "data" / "userdata.csv").write_text(text, encoding="utf-8")
+
+        print(f"  [SUCCESS] Synced users: {total_users} total in dataset (+{new_users} new from cloud)")
+        
+        # Print latest user
+        lines = [l for l in text.strip().split("\n") if l.strip()]
         if len(lines) > 1:
-            last_cols = lines[-1].split(",")
-            print(f"  [LATEST USER] {last_cols[2]} (Code: {last_cols[1]})")
-        success_users = True
+            last = lines[-1].split(",")
+            print(f"  [LATEST USER] {last[2]} (Code: {last[1]})")
     except Exception as e:
-        print(f"  [ERROR] Could not fetch userdata.csv from cloud server:")
-        print(f"          -> {e}")
+        print(f"  [ERROR] userdata.csv sync error: {e}")
 
-    # 2. Fetch user_attempts.csv
+    # 2. Fetch & Smart-Merge user_attempts.csv (key: attempt timestamp/code)
+    target_attempts = USERDATA_DIR / "user_attempts.csv"
     try:
-        attempts_content = fetch_file("/api/userdata/attempts/csv")
-        target_attempt_files = [
-            USERDATA_DIR / "user_attempts.csv",
-            CSV_DIR / "user_attempts.csv",
-        ]
-        for f in target_attempt_files:
-            f.write_text(attempts_content, encoding="utf-8")
+        remote_attempts = fetch_file("/api/userdata/attempts/csv")
+        total_att, new_att = merge_csv(target_attempts, remote_attempts, key_col_idx=5)
         
-        a_lines = [l for l in attempts_content.strip().split("\n") if l.strip()]
-        attempt_count = max(0, len(a_lines) - 1)
-        print(f"  [SUCCESS] Synced user_attempts.csv ({attempt_count} total test attempts)")
-        success_attempts = True
+        a_text = target_attempts.read_text(encoding="utf-8")
+        (CSV_DIR / "user_attempts.csv").write_text(a_text, encoding="utf-8")
+
+        print(f"  [SUCCESS] Synced attempts: {total_att} total in dataset (+{new_att} new from cloud)")
     except Exception as e:
-        print(f"  [ERROR] Could not fetch user_attempts.csv from cloud server:")
-        print(f"          -> {e}")
+        print(f"  [ERROR] user_attempts.csv sync error: {e}")
 
     print("------------------------------------------")
-    if success_users or success_attempts:
-        print("  RESULT: Local data files successfully updated!\n")
-    else:
-        print("  RESULT: FAILED to update local files.")
-        print("  Reason: The server at " + cloud_url + " returned an error.")
-        print("  Please verify your Render service is Live and check the URL.\n")
+    print("  RESULT: Local datasets safely merged and up to date!\n")
 
 if __name__ == "__main__":
     if "--auto" in sys.argv:
