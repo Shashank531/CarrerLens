@@ -140,11 +140,11 @@ pip install flask flask-cors scikit-fuzzy numpy reportlab matplotlib
 
 ## 5. Master Documentation Index
 
-- **[Complete End-to-End Web & Backend Workflow](file:///c:/Users/Shashank/Downloads/CareerLens-Final-Project%20-%20V2/docs/end_to_end_web_and_backend_workflow.md)** — Step-by-step technical breakdown of every page, click, button, route, SQLite query, and math algorithm.
-- **[Master Examiner, Judge & Viva Defense Handbook](file:///c:/Users/Shashank/Downloads/CareerLens-Final-Project%20-%20V2/docs/complete_viva_examiner_qa_handbook.md)** — Exhaustive 35+ Q&A covering datasets, backend, math, and evaluation.
-- **[Whole Project Code & Formulas Explained](file:///c:/Users/Shashank/Downloads/CareerLens-Final-Project%20-%20V2/docs/whole_project_code_explained.md)** — In-depth line-by-line python code and mathematical formulations.
-- **[Evaluation & Accuracy Framework](file:///c:/Users/Shashank/Downloads/CareerLens-Final-Project%20-%20V2/docs/evaluation.md)** — Comprehensive IR ranking and benchmark methodologies.
-- **[Presentation & Viva Quick Reference Notes](file:///c:/Users/Shashank/Downloads/CareerLens-Final-Project%20-%20V2/docs/presentation_notes.md)** — Elevator pitch and killer one-liner examiner answers.
+- **[Complete End-to-End Web & Backend Workflow](end_to_end_web_and_backend_workflow.md)** — Step-by-step technical breakdown of every page, click, button, route, SQLite query, and math algorithm.
+- **[Master Examiner, Judge & Viva Defense Handbook](complete_viva_examiner_qa_handbook.md)** — Exhaustive 35+ Q&A covering datasets, backend, math, and evaluation.
+- **[Whole Project Code & Formulas Explained](whole_project_code_explained.md)** — In-depth line-by-line python code and mathematical formulations.
+- **[Evaluation & Accuracy Framework](evaluation.md)** — Comprehensive IR ranking and benchmark methodologies.
+- **[Presentation & Viva Quick Reference Notes](presentation_notes.md)** — Elevator pitch and killer one-liner examiner answers.
 
 ---
 
