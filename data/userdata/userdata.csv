@@ -46,5 +46,3 @@ user_id,unique_code,name,education,registered_at,total_attempts,completed_attemp
 45,AARTI-8344,aarti,,2026-09-01T04:17:27.676517+00:00,0,0,0,,,no_attempts,,,,,
 46,AARTI-9412,aarti,,2026-09-01T04:17:27.721928+00:00,0,0,0,,,no_attempts,,,,,
 47,AAYUS-2973,aayush,B.Tech / B.E.,2026-11-16T17:31:26.877552+00:00,0,0,0,,,no_attempts,,,,,
-48,TESTA-6474,Test Arjun,B.Tech,2026-11-17T12:08:14.984899+00:00,1,1,0,40,2026-11-17T12:08:15.000339+00:00,completed,Sports Analyst,96.0,Sports Analyst; Frontend Developer; Performance Marketing Specialist,Sports Analyst; Frontend Developer; Performance Marketing Specialist; Veterinarian; Business Intelligence Analyst,40
-49,PERFT-2146,Perf Test,B.Tech,2026-11-17T12:09:02.662786+00:00,1,1,0,41,2026-11-17T12:09:02.708685+00:00,completed,Sports Analyst,96.0,Sports Analyst; Frontend Developer; Performance Marketing Specialist,Sports Analyst; Frontend Developer; Performance Marketing Specialist; Veterinarian; Business Intelligence Analyst,41
