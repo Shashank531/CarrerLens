@@ -29,10 +29,17 @@ Desktop.ini
 ~$*
 *.tmp
 
-# SQLite temporary journal and lock files
+# SQLite databases & lock files (auto-generated on app startup)
+*.db
 *.db-shm
 *.db-wal
 *.db-journal
+
+# Live user attempt logs & PII data (excluded from public repo)
+data/userdata/
+data/userdata.csv
+data/csv/userdata.csv
+data/csv/user_attempts.csv
 
 # Antigravity agent scratch & cache
 .agents/
