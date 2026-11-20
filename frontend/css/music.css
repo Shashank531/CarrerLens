@@ -253,11 +253,86 @@ select optgroup {
 [data-3d="off"] #field,
 [data-3d="off"] #ambientField,
 [data-3d="off"] #bg-canvas,
-[data-3d="off"] canvas[aria-hidden="true"] {
+[data-3d="off"] canvas[aria-hidden="true"],
+[data-3d="off"] .grain,
+[data-3d="off"] .editorial-grain,
+[data-3d="off"] #gradient-layer,
+[data-3d="off"] #bg-vignette {
   display: none !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
+}
+
+/* Crisp, high-contrast, non-blurry background when 3D is off */
+[data-3d="off"][data-theme="dark"] html,
+[data-3d="off"][data-theme="dark"] body {
+  background-color: #110F0D !important;
+  background-image: radial-gradient(rgba(234, 230, 220, 0.08) 1px, transparent 1px) !important;
+  background-size: 28px 28px !important;
+  background-attachment: fixed !important;
+}
+
+[data-3d="off"][data-theme="light"] html,
+[data-3d="off"][data-theme="light"] body {
+  background-color: #F4F0E6 !important;
+  background-image: radial-gradient(rgba(28, 26, 22, 0.06) 1px, transparent 1px) !important;
+  background-size: 28px 28px !important;
+  background-attachment: fixed !important;
+}
+
+/* Sharp, solid cards without milky blur when 3D is off */
+[data-3d="off"][data-theme="dark"] .card,
+[data-3d="off"][data-theme="dark"] .quiz-card,
+[data-3d="off"][data-theme="dark"] .intro-card,
+[data-3d="off"][data-theme="dark"] .transition-card,
+[data-3d="off"][data-theme="dark"] .chart-card,
+[data-3d="off"][data-theme="dark"] .career-card,
+[data-3d="off"][data-theme="dark"] .compare-col,
+[data-3d="off"][data-theme="dark"] .career-explorer-card,
+[data-3d="off"][data-theme="dark"] .benchmark-card,
+[data-3d="off"][data-theme="dark"] .sim-box,
+[data-3d="off"][data-theme="dark"] .result-card {
+  background: #181512 !important;
+  border-color: rgba(234, 230, 220, 0.16) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-3d="off"][data-theme="light"] .card,
+[data-3d="off"][data-theme="light"] .quiz-card,
+[data-3d="off"][data-theme="light"] .intro-card,
+[data-3d="off"][data-theme="light"] .transition-card,
+[data-3d="off"][data-theme="light"] .chart-card,
+[data-3d="off"][data-theme="light"] .career-card,
+[data-3d="off"][data-theme="light"] .compare-col,
+[data-3d="off"][data-theme="light"] .career-explorer-card,
+[data-3d="off"][data-theme="light"] .benchmark-card,
+[data-3d="off"][data-theme="light"] .sim-box,
+[data-3d="off"][data-theme="light"] .result-card {
+  background: #F9F6EE !important;
+  border-color: rgba(28, 26, 22, 0.15) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 8px 24px rgba(28, 26, 22, 0.08) !important;
+}
+
+/* Sharp topbar and headers when 3D is off */
+[data-3d="off"] .topbar,
+[data-3d="off"] header {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+[data-3d="off"][data-theme="dark"] .topbar,
+[data-3d="off"][data-theme="dark"] header {
+  background: #151310 !important;
+  border-bottom-color: rgba(234, 230, 220, 0.14) !important;
+}
+[data-3d="off"][data-theme="light"] .topbar,
+[data-3d="off"][data-theme="light"] header {
+  background: #EFEBE0 !important;
+  border-bottom-color: rgba(28, 26, 22, 0.14) !important;
 }
 
 .bg3d-toggle-btn {

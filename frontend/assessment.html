@@ -44,8 +44,8 @@
             --grad-2: #E8DCC8;
             --grad-3: #C5B8A4;
             --grad-4: #F0E6D4;
-            --vignette-opacity: 0.5;
-            --gradient-opacity: 0.2;
+            --vignette-opacity: 0.25;
+            --gradient-opacity: 0.12;
             --gradient-blend: soft-light;
         }
 
@@ -72,8 +72,8 @@
             --grad-2: #1E1B17;
             --grad-3: #35302A;
             --grad-4: #28241E;
-            --vignette-opacity: 0.85;
-            --gradient-opacity: 0.35;
+            --vignette-opacity: 0.25;
+            --gradient-opacity: 0.10;
             --gradient-blend: screen;
         }
 
@@ -1511,7 +1511,7 @@
                 lines.material.color.set(rust);
                 lines.material.opacity = isDark ? 0.035 : 0.12;
                 particleMaterial.opacity = isDark ? 0.6 : 0.9;
-                document.documentElement.style.setProperty('--vignette-opacity', isDark ? '0.85' : '0.5');
+                document.documentElement.style.setProperty('--vignette-opacity', isDark ? '0.25' : '0.25');
             }
 
             window.addEventListener('themechange', (e) => {
